@@ -22,9 +22,8 @@ title: heyjoeway.
 email: joe@jojudge.com
 description: I hit a bunch of buttons and sometimes it makes light flash in a pattern that looks cool.
 baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://heyjoeway.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  heyjoeway
 
 # Build settings
 # theme: none
