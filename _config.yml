@@ -21,7 +21,7 @@
 title: heyjoeway.
 email: joe@jojudge.com
 description: I hit a bunch of buttons and sometimes it makes light flash in a pattern that looks cool.
-baseurl: "/blog" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://heyjoeway.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  heyjoeway
 
@@ -29,6 +29,8 @@ github_username:  heyjoeway
 # theme: none
 plugins:
   - jekyll-feed
+
+permalink: "/blog/:title/"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
