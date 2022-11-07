@@ -1,0 +1,12 @@
+{
+    "search.exclude": {
+        "_site": true,
+        ".jekyll-cache": true,
+        ".vscode": true
+    },
+    "files.exclude": {
+        "_site": true,
+        ".jekyll-cache": true,
+        ".vscode": true
+    }
+}

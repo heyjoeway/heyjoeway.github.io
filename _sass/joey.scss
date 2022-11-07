@@ -1,0 +1,80 @@
+* {
+    scrollbar-color: #111 #000;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ========================================================================= */
+
+.blur-in {
+    animation-name: blur-in;
+    animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    filter: opacity(0%);
+}
+
+@keyframes blur-in {
+    from {
+        filter: blur(128px) opacity(0%);
+        scale: 2;
+    }
+    to {
+        filter: blur(0px) opacity(100%);
+        scale: 1;
+    }
+}
+
+/* ========================================================================= */
+
+.bg-element {
+    font-family: 'franklin_gothicregular';
+    position: fixed;
+    font-size: 350px;
+    opacity: 0.075;
+    user-select: none;
+    -webkit-user-select: none;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+#bg-top-left { 
+    font-size: calc(min(25vw, 350px));
+    top: -0.4em;
+    left: -0.2em;
+    animation-delay: 0.1s;
+}
+
+#bg-bottom-right { 
+    font-size: calc(min(100vw, 800px));
+
+    rotate: 30deg;
+
+    bottom: -0.325em;
+    right: -0.1em;
+
+    animation-delay: 0.5s;
+}
+
+/* ========================================================================= */
+
+.clickable {
+    cursor: pointer;
+    scale: 100%;
+    transition: opacity 0.1s, scale 0.05s;
+    transition-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.clickable:hover {
+    opacity: 100%;
+    background-color: rgba(255,255,255,0.1);
+}
+
+.clickable:active {
+    scale: 90%;
+    opacity: 90%;
+    background-color: rgba(255,255,255,0.05);    
+}
