@@ -18,10 +18,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+markdown: CommonMark
+
 title: heyjoeway.
 email: joe@jojudge.com
 description: I hit a bunch of buttons and sometimes it makes light flash in a pattern that looks cool.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "https://heyjoeway.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  heyjoeway
 
@@ -30,7 +32,10 @@ github_username:  heyjoeway
 plugins:
   - jekyll-feed
 
-permalink: "/blog/:title/"
+permalink: "/:title/"
+
+discus:
+  shortname: heyjoeway
 
 # Exclude from processing.
 # The following items will not be processed, by default.

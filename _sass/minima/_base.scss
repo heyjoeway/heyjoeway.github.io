@@ -150,11 +150,6 @@ blockquote {
 pre,
 code {
   @include relative-font-size(0.8);
-  border: 1px solid #222;
-  background-color: #2e2e2e22;
-  backdrop-filter: blur(32px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-
 }
 
 code {

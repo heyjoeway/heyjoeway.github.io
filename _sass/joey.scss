@@ -15,15 +15,18 @@ a {
     animation-duration: 1s;
     animation-fill-mode: forwards;
     filter: opacity(0%);
+    -webkit-filter: opacity(0%);
 }
 
 @keyframes blur-in {
     from {
         filter: blur(128px) opacity(0%);
+        -webkit-filter: blur(128px) opacity(0%);
         scale: 2;
     }
     to {
         filter: blur(0px) opacity(100%);
+        -webkit-filter: blur(0px) opacity(100%);
         scale: 1;
     }
 }
@@ -43,9 +46,11 @@ a {
 
 #bg-top-left { 
     font-size: calc(min(25vw, 350px));
+    width: calc(100vw + 0.2em);
     top: -0.4em;
     left: -0.2em;
     animation-delay: 0.1s;
+    overflow-x: hidden;
 }
 
 #bg-bottom-right { 
@@ -79,10 +84,52 @@ a {
     background-color: rgba(255,255,255,0.05);    
 }
 
+/* ========================================================================= */
+
+.shadow, .fig-bg, code, pre {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.fig-bg, code, pre {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #222;
+    background-color: #2e2e2e66;
+    backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px);
+}
+
+.fig-bg-light {
+    border-color: #787878;
+    color: black;
+    background: transparent;
+    backdrop-filter: invert(1) brightness(50%) contrast(200%) brightness(200%) blur(16px);
+    -webkit-backdrop-filter: invert(1) brightness(50%) contrast(200%) brightness(200%) blur(16px);
+}
+
+.fig-bg {
+    margin: 16px;
+    padding: 16px;
+
+    &:not(.fig-right, .fig-left) > * {
+        // fuck you too css
+        width: 49.5%; 
+    }
+
+    & > *:first-child:nth-last-child(1) {
+        width: 100%;
+    }
+}
+
 .fig-right, .fig-left {
     padding: 8px;
     text-align: center;
     display: block;
+    width: 33%;
+
+    & > *:not(:last-child) {
+        padding-bottom: 8px;
+    }
 }
 
 .fig-right {

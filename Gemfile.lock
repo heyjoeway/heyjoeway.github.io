@@ -260,6 +260,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages (~> 227)
   http_parser.rb (~> 0.6.0)
+  jekyll-commonmark
   jekyll-feed (~> 0.12)
   jekyll-seo-tag (~> 2.6)
   tzinfo (>= 1, < 3)
