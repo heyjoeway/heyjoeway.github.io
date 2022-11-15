@@ -2,11 +2,6 @@
     scrollbar-color: #111 #000;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
 /* ========================================================================= */
 
 .blur-in {
@@ -113,7 +108,7 @@ a {
 
     &:not(.fig-right, .fig-left) > * {
         // fuck you too css
-        width: 49.5%; 
+        width: 49%; 
     }
 
     & > *:first-child:nth-last-child(1) {
@@ -125,10 +120,16 @@ a {
     padding: 8px;
     text-align: center;
     display: block;
-    width: 33%;
 
     & > *:not(:last-child) {
         padding-bottom: 8px;
+    }
+}
+
+@media (min-width: 600px) {
+    .fig-right, .fig-left {
+        width: 33%;
+    
     }
 }
 
@@ -138,4 +139,27 @@ a {
 
 .fig-left {
     float: left;
+}
+
+.page-content {
+    animation-duration: 0.5s !important;
+    transform-origin: 50% 50vh;
+}  
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    align-items: center;
+
+    img {
+        width: 215px;
+        // border: 2px lightgrey solid;
+        margin: 8px;
+    }
+
+    br {
+        display: none;
+    }
 }

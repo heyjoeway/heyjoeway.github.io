@@ -1,1 +1,4 @@
-<img src="{{ site.baseurl }}/assets/posts/{{ page.id }}/{{ include.src }}" />
+<img
+    class="{% if include contains 'shadow' %}shadow{% endif %}"
+    src="{{ site.baseurl }}/assets/posts/{{ page.id }}/{{ include.src }}"
+/>

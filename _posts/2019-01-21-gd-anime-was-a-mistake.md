@@ -10,7 +10,7 @@ last_modified_at: 2022-11-07
     img1="final.png"
 %}
 
-This design was published as a shirt design on Redbubble back in December of 2017. ~~You can view the design on Redbubble here.~~ Unfortunately, Nintendo themselves DMCA'd it because they felt like being petty.
+This design was published as a shirt design on RedBubble back in December of 2017. ~~You can view the design on RedBubble here.~~ Unfortunately, Nintendo themselves DMCA'd it because they felt like being petty.
 
 ## Making Of
 
@@ -60,7 +60,11 @@ There's definitely a lot of things that could be improved here. The planet from 
 
 If you'd like to download the original project file, you're in luck! Here it is:
 
-[Blender Project](/assets/posts/gd-anime-was-a-mistake/anime.blend)
+{% 
+    include asset-link.html
+    href="anime.blend"
+    text="Blender Project"
+%}
 
 If you want the render itself, you should be able to just right click and "Save As". Same goes for the SVGs.
 

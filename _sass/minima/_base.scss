@@ -24,7 +24,6 @@ body {
           font-feature-settings: "kern" 1;
   font-kerning: normal;
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -173,8 +172,6 @@ pre {
  * Wrapper
  */
 .wrapper {
-  animation-duration: 0.5s !important;
-    
   max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
   max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
   margin-right: auto;
