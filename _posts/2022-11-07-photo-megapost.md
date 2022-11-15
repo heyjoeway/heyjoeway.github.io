@@ -3,6 +3,7 @@ layout: post
 title:  "Photography Megapost"
 date:   2022-11-07
 categories: life photography
+comments: true
 ---
 [These photos are licensed under CC BY 4.0.](https://creativecommons.org/licenses/by/4.0/)
 

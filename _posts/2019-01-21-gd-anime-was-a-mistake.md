@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Graphic Design: \"Anime was a Mistake\" Shirt"
-date:   2019-01-21
+date: 2019-01-21
 categories: design ui
 last_modified_at: 2022-11-07
+comments: true
 ---
 {%
     include fig-img.html

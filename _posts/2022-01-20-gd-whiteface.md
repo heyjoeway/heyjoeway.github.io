@@ -3,6 +3,7 @@ layout: post
 title: "Graphic Design: Whiteface ASRC Logo"
 date:   2022-01-20
 categories: design
+comments: true
 ---
 {%
     include fig-img.html

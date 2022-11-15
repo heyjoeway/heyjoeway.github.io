@@ -34,7 +34,7 @@ plugins:
 
 permalink: "/:title/"
 
-discus:
+disqus:
   shortname: heyjoeway
 
 # Exclude from processing.

@@ -4,6 +4,7 @@ title:  "My Switch Ports, and the Journey"
 date:   2022-11-13
 categories: games programming life
 last_modified_at: 2022-11-13
+comments: true
 ---
 I was considering making this intro a lot more long winded, but instead I'll just say this: my motivation for porting these games to the Switch mostly came from wanting to play them there myself. At the time I ported these games, the Switch was the best option to play these games on for several reasons:
 
