@@ -1,4 +1,4 @@
 <img
-    class="{% if include contains 'shadow' %}shadow{% endif %}"
+    class="{% if include.shadow == 1 %}shadow{% endif %}"
     src="{{ site.baseurl }}/assets/posts/{{ page.id }}/{{ include.src }}"
 />

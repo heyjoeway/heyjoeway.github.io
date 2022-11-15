@@ -25,7 +25,7 @@ Obviously, I could've just put these games on a laptop and played them there, or
     img2="20221114185137_1.jpg"
 %}
 
-To people out of the know, this fangame has been in development for roughly 24 years. Twenty. Four. It's based on Doom of all things (can't recall which source port off the top of my head) and is unexpectedly super fun to play. I've followed the game since I was probably like 7 or 8 and wanted a portable version ever since. At the time I ported it, the best options were to play it on something like a GPD Win, OpenPandora, or a PSP, all pretty lacking consoles for the modern age. At the time, there was no Android or iOS port.
+To people out of the know, this fangame has been in development for roughly 24 years. Twenty. Four. It's based on Doom of all things (can't recall which source port off the top of my head) and is unexpectedly super fun to play. I've followed the game since I was probably like 7 or 8 and wanted a portable version ever since. At the time I ported it, the best options were to play it on something like a GPD Win, OpenPandora, or a PSP, all pretty lacking consoles for the modern age. This was also before an Android or iOS port.
 
 carstene1ns was responsible for the original port. They released a proof-of-concept port that ran at a pretty terrible framerate. I decided to attempt building their port myself, and found that the poor framerate wasn't their fault at all. In the time between our builds, the Switch port of SDL2 had been updated to where it just... worked. So, I picked up maintenance of the port and added some more quality of life things:
 

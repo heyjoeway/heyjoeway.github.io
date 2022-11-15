@@ -31,7 +31,7 @@ categories: life photography
 
 # Summer 2018
 ## Whiteface Mountain
-Some miscellaneous photos taken at g 2018.
+Some miscellaneous photos taken during my time working at the Whiteface ASRC in 2018.
 {%
     include gallery.html
     root="summer-2018-whiteface"

@@ -7,7 +7,11 @@
     {% for item in include %}
     {% unless item[0] == "light" or item[0] == "right" %}
     {% assign img = item[1] %}
-    {% include img.html src=img %}
+    {% assign shadow = 1 %}
+    {% if include contains "light" %}
+        {% assign shadow = 0 %}
+    {% endif %}
+    {% include img.html src=img shadow=shadow %}
     {% endunless %}
     {% endfor %}
 </div>

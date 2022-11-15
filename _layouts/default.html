@@ -11,14 +11,14 @@
       {%- if page.title -%}
         {{ page.title }}
       {%- else -%}
-        heyjoeway.
+        {{ site.title }}
       {%- endif -%}
       </div>
     <div class="bg-element blur-in" id="bg-bottom-right"></div>
 
     {%- include header.html -%}
 
-    <main class="page-content blur-in" aria-label="Content">
+    <main class="page-content blur-in-noscale" aria-label="Content">
       <div class="wrapper">
         {{ content }}
       </div>

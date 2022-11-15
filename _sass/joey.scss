@@ -26,6 +26,27 @@
     }
 }
 
+// Fuck you Safari
+.blur-in-noscale {
+    animation-name: blur-in-noscale;
+    animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    filter: opacity(0%);
+    -webkit-filter: opacity(0%);
+}
+
+@keyframes blur-in-noscale {
+    from {
+        filter: blur(128px) opacity(0%);
+        -webkit-filter: blur(128px) opacity(0%);
+    }
+    to {
+        filter: blur(0px) opacity(100%);
+        -webkit-filter: blur(0px) opacity(100%);
+    }
+}
+
 /* ========================================================================= */
 
 .bg-element {
@@ -81,11 +102,11 @@
 
 /* ========================================================================= */
 
-.shadow, .fig-bg, code, pre {
+.shadow, .fig-bg-light, code, pre {
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
-.fig-bg, code, pre {
+code, pre, .fig-bg-light {
     border-width: 1px;
     border-style: solid;
     border-color: #222;
@@ -103,16 +124,21 @@
 }
 
 .fig-bg {
-    margin: 16px;
-    padding: 16px;
+    margin-bottom: 16px;
+
+    & > * {
+        margin: 8px;
+    }
 
     &:not(.fig-right, .fig-left) > * {
         // fuck you too css
-        width: 49%; 
+        width: calc(49% - 16px); 
     }
 
     & > *:first-child:nth-last-child(1) {
         width: 100%;
+        margin: 8px 0;
+
     }
 }
 
@@ -143,8 +169,7 @@
 
 .page-content {
     animation-duration: 0.5s !important;
-    transform-origin: 50% 50vh;
-}  
+}
 
 .gallery {
     display: flex;
@@ -155,7 +180,6 @@
 
     img {
         width: 215px;
-        // border: 2px lightgrey solid;
         margin: 8px;
     }
 
