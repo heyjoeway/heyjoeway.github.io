@@ -23,8 +23,8 @@ markdown: CommonMark
 title: heyjoeway.
 email: joe@jojudge.com
 description: I hit a bunch of buttons and sometimes it makes light flash in a pattern that looks cool.
-baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "https://heyjoeway.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://jojudge.com/" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  heyjoeway
 
 # Build settings
