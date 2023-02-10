@@ -3,7 +3,7 @@ layout: post
 title:  "The Software Dump Part 1: macOS"
 date:   2022-12-28
 categories: software life macos
-last_modified_at: 2022-12-28
+last_modified_at: 2023-02-28
 comments: true
 ---
 You know those shitty tabloid articles you find on Google when you try to find software recommendations, all of them having the same 10 programs over and over? Yeah, this isn't another one of those. These are all programs I've spent a good deal of time with and will be giving genuine opinions on. Let's get to it.
@@ -111,6 +111,14 @@ Nice image viewer with an "invisible" header bar. Really nice for quickly previe
 Quick universal color picker.
 
 # System
+
+## Keka
+
+- **Price:** Free
+- **OSS:** Yes (<https://github.com/aonez/Keka>)
+- **Download:** <https://www.keka.io/ >
+
+A swiss army archival tool.
 
 ## iTerm2
 
