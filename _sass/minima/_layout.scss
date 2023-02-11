@@ -198,6 +198,7 @@
 
   > li {
     margin-bottom: $spacing-unit;
+    position: relative;
   }
 }
 
@@ -205,6 +206,9 @@
   font-family: "franklin_gothicregular", sans-serif;
   font-size: $small-font-size;
   color: $grey-color;
+  top: 8px;
+  position: absolute;
+  right: 0;
 }
 
 .post-link {
@@ -219,6 +223,7 @@
  */
 .post-header {
   margin-bottom: $spacing-unit;
+  position: relative;
 }
 
 .post-title {

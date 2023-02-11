@@ -6,6 +6,8 @@ categories: design ui
 last_modified_at: 2022-11-07
 comments: true
 ---
+A not-so-serious venture into 3D graphic design.
+
 {%
     include fig-img.html
     img1="final.png"

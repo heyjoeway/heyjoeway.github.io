@@ -5,6 +5,8 @@ date:   2022-11-07
 categories: life photography
 comments: true
 ---
+Various snapshots of my life.
+
 [These photos are licensed under CC BY 4.0.](https://creativecommons.org/licenses/by/4.0/)
 
 # January 2019

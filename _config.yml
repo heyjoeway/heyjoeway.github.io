@@ -27,6 +27,7 @@ baseurl: "/" # the subpath of your site, e.g. /blog
 externalurl: "https://raw.githubusercontent.com/heyjoeway/heyjoeway.github.io/master/" # root for external assets
 url: "https://jojudge.com/" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  heyjoeway
+show_excerpts: true
 
 # Build settings
 # theme: none

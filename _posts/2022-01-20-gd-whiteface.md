@@ -5,6 +5,8 @@ date:   2022-01-20
 categories: design
 comments: true
 ---
+A quick overview of my logo design.
+
 {%
     include fig-img.html
     light=1
