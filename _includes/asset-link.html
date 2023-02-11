@@ -1,3 +1,10 @@
-<a href="{{ site.baseurl }}/assets/posts/{{ page.id }}/{{ include.href }}">
+{% assign url = site.externalurl | append: "/assets_external/" %}
+{% if include contains "internal" %}
+    {% if include.internal == 1 %}
+        {% assign url = site.baseurl | append: "/assets/" %}
+    {% endif %}
+{% endif %}
+
+<a href="{{ url }}/posts/{{ page.id }}/{{ include.href }}">
     {{ include.text }}
 </a>

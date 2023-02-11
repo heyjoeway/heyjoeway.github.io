@@ -1,4 +1,10 @@
+{% assign url = site.externalurl | append: "/assets_external/" %}
+{% if include contains "internal" %}
+    {% if include.internal == 1 %}
+        {% assign url = site.baseurl | append: "/assets/" %}
+    {% endif %}
+{% endif %}
 <img
     class="{% if include.shadow == 1 %}shadow{% endif %}"
-    src="{{ site.baseurl }}/assets/posts/{{ page.id }}/{{ include.src }}"
+    src="{{ url }}/posts/{{ page.id }}/{{ include.src }}"
 />

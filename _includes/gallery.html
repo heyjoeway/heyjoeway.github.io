@@ -1,11 +1,18 @@
+{% assign url = site.externalurl | append: "/assets_external/" %}
+{% if include contains "internal" %}
+    {% if include.internal == 1 %}
+        {% assign url = site.baseurl | append: "/assets/" %}
+    {% endif %}
+{% endif %}
+
 <div class="gallery">
     {% for item in include %}
     {% unless item[0] == "root" %}
-    {% assign link = site.baseurl | append: "/assets/posts/" | append: page.id | append: "/" | append: include.root | append: "/full/" | append: item[1] %}
+    {% assign link = url | append: "/posts/" | append: page.id | append: "/" | append: include.root | append: "/full/" | append: item[1] %}
     {% assign thumb = include.root | append: "/thumb/" | append: item[1] %}
 
     <a href="{{ link }}">
-        {% include img.html src=thumb shadow=1 %}
+        {% include img.html src=thumb shadow=1 internal=include.internal %}
     </a>
     {% endunless %}
     {% endfor %}
