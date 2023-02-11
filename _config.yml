@@ -35,8 +35,10 @@ plugins:
 
 permalink: "/:title/"
 
-disqus:
-  shortname: heyjoeway
+github_comments_repository: heyjoeway/heyjoeway.github.io
+
+# disqus:
+#   shortname: heyjoeway
 
 # Exclude from processing.
 # The following items will not be processed, by default.
