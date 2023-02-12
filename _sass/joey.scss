@@ -128,11 +128,18 @@ code, pre, .fig-bg-light {
 
     & > * {
         margin: 8px;
+        height: auto;
     }
 
-    &:not(.fig-right, .fig-left) > * {
-        // fuck you too css
-        width: calc(49% - 16px); 
+    &:not(.fig-right, .fig-left) {
+        display: flex;
+        flex-wrap: wrap;
+
+        & > * {
+            flex-basis: 200px;
+            min-width: 256px;
+            flex-grow: 1;
+        }
     }
 
     & > *:first-child:nth-last-child(1) {

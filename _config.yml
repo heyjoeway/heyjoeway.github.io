@@ -32,6 +32,7 @@ show_excerpts: true
 # Build settings
 # theme: none
 plugins:
+  - jekyll-image-size
   - jekyll-feed
   - jekyll-category-pages
 

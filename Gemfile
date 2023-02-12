@@ -18,6 +18,7 @@ group :jekyll_plugins do
   gem 'jekyll-commonmark'
   gem "jekyll-paginate"
   gem "jekyll-category-pages"
+  gem "jekyll-image-size", "~> 1.2"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

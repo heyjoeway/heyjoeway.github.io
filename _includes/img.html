@@ -1,10 +1,15 @@
-{% assign url = site.externalurl | append: "/assets_external/" %}
+{% assign path = "/assets_external/" %}
+{% assign root = site.externalurl %}
 {% if include contains "internal" %}
     {% if include.internal == 1 %}
-        {% assign url = site.baseurl | append: "/assets/" %}
+        {% assign path = "/assets/" %}
+        {% assign root = site.baseurl %}
     {% endif %}
 {% endif %}
+{% assign localpath = path | append: "/posts/" | append: page.id | append: "/" | append: include.src %}
+{% assign url = root | append: localpath %}
 <img
     class="{% if include.shadow == 1 %}shadow{% endif %}"
-    src="{{ url }}/posts/{{ page.id }}/{{ include.src }}"
+    src="{{ url }}"
+    {% imagesize localpath:props %}
 />
