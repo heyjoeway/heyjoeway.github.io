@@ -1,0 +1,14 @@
+<li>
+    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+    <span class="post-meta">{{ include.post.date | date: date_format }}</span>
+    <h3>
+        <a class="post-link" href="{{ include.post.url | relative_url }}">
+        {{ include.post.title | escape }}
+        </a>
+    </h3>
+    {%- if site.show_excerpts -%}
+        {{ include.post.excerpt | strip_html | truncatewords: 25 }}
+    {%- endif -%}
+    <br>
+    {%- include categories.html categories=include.post.categories -%}
+</li>

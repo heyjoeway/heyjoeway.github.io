@@ -33,6 +33,7 @@ show_excerpts: true
 # theme: none
 plugins:
   - jekyll-feed
+  - jekyll-category-pages
 
 permalink: "/:title/"
 

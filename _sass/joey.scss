@@ -192,3 +192,25 @@ hr {
     border: none;
     border-bottom: rgba(128, 128, 128, 0.5) dashed 1px;
 }
+
+.categories {
+    display: inline;
+
+    a {
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        background: rgba(255, 255, 255, 0.3);
+        color: black;
+        height: 20px;
+        line-height: 20px;
+        text-transform: lowercase;
+        font-size: 11px;
+        margin-top: 8px;
+        margin-right: 8px;
+        border-radius: 6px;
+        padding: 0px 6px;
+        position: relative;
+        box-sizing: border-box;
+        display: inline-block;
+    }
+}

@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<div class="category">
+  {%- if page.posts.size > 0 -%}
+    <h1>Category: {{ page.category }}</h1>
+    <br>
+    <ul class="post-list">
+      {%- for post in page.posts -%}
+      {%- include home-item.html post=post -%}
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+</div>
