@@ -4,7 +4,7 @@
   {%- include head.html -%}
 
   <body>
-    <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
+    <script src="{{ '/assets/js/main.js' | relative_url | append: site.github.build_revision }}"></script>
 
     <div class="bg-element blur-in" id="bg-top-left">
       {%- if page.title -%}
