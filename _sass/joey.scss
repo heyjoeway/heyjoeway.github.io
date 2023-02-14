@@ -102,11 +102,11 @@
 
 /* ========================================================================= */
 
-.shadow, .fig-bg-light, code, pre {
+.shadow, .fig-bg-light, pre {
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
-code, pre, .fig-bg-light {
+pre, .fig-bg-light {
     border-width: 1px;
     border-style: solid;
     border-color: #222;
@@ -220,4 +220,20 @@ hr {
         box-sizing: border-box;
         display: inline-block;
     }
+}
+
+// Nicer placeholder for broken images
+img {
+    position: relative;
+}
+
+img::after {
+    content: "�";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 128px;
+    opacity: 25%;
 }
