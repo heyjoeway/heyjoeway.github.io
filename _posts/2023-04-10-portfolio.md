@@ -3,6 +3,7 @@ layout: post
 title:  "The Portfolio Post"
 date:   2023-04-10
 categories: life work portfolio
+tags: pinned
 ---
 Welcome to the site! If you're on this post, you're probably wondering who I am and what I do! In about a month, I'll be graduating from Clarkson University with a Master's in Computer Science. However, I'd like to use this post to show what I am outside of just this degree!
 
