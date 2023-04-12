@@ -2,6 +2,7 @@
 layout: post
 title:  "The Portfolio Post"
 date:   2023-04-10
+last_modified_at: 2023-04-11
 categories: life work portfolio
 tags: pinned
 ---
@@ -21,7 +22,7 @@ My goal is to write software and produce products that will stand the test of ti
 # Professional Projects
 
 ## Clarkson University Virtual Reality Coaster (VRC)
-In February of 2021, I began a refresh of Clarkson University's MaxFlight VR2004 motion simulator! This machine was purchased from a local arcade sometime in the mid-2000s, and it shows. The software is quite dated, and so I've produced several resources to bring it up towards 2023 standards:
+In February of 2021, I began a refresh of Clarkson University's MaxFlight VR2004 motion simulator! This machine was purchased from a local arcade sometime in the mid-2000s, and it shows. The software is quite dated, and so I've produced several resources to bring it up towards modern standards:
 
 ### pyMaxFlight
 **GitHub:** <https://github.com/Clarkson-IMPETUS/pyMaxFlight>
@@ -35,20 +36,17 @@ Exposes all capabilities of the MaxFlight Motion Client programmatically through
 
 Provides network communication via WebSockets, with a focus on stability and persistent connections. Uses a console-like interface and provides automatic help documentation.
 
-### VRC-Apps
-A collection of applets which add behaviors to the simulator using the above components.
-
-#### VRC-Apps.Server
+### VRC-Apps.Server
 **GitHub:** <https://github.com/Clarkson-IMPETUS/VRC-Apps/tree/main/src/VRC-Apps/Server>
 
 A WebSockets server that allows for remote operation of the pyMaxFlight library.
 
-#### VRC-Apps.LightsClient
+### VRC-Apps.LightsClient
 **GitHub:** <https://github.com/Clarkson-IMPETUS/VRC-Apps/tree/main/src/VRC-Apps/LightsClient>
 
 Controls the internal lights by communicating with an Arduino-controlled relay over serial and with VRC-Apps.Server.
 
-#### VRC-Apps.NL2Bridge
+### VRC-Apps.NL2Bridge
 **GitHub:** <https://github.com/Clarkson-IMPETUS/VRC-Apps/tree/main/src/VRC-Apps/NL2Bridge>
 
 Communicates with a machine-local NoLimits 2 instance and VRC-Apps.Server to send motion to the simulator only when a coaster is running. Will automatically connect to the running NoLimits 2 instance and VRC- Apps.Server instance, and thus can be kept in the background indefinitely. This can also be used as an example to develop future integrations.
@@ -69,3 +67,23 @@ The Nintendo Switch has a thriving homebrew scene that I took part in between 20
 **Link:** <http://jojudge.com/ICBINS1/>
 
 As a test to learn the ins-and-outs of Unity, I tried recreating the original Sonic the Hedgehog from observation! This was a great learning experience and taught me a lot about the game engine and C#. I later moved away from this project due to it being superseded in its goal by the decompilation of the 2013 remake, the exploration of other approaches, and shifting priorities in my personal life.
+
+## S2CX/Genesis Plus GX Wide
+**News Article:** <https://www.libretro.com/index.php/genesis-plus-gx-wide-now-available-for-libretroretroarch/>
+
+Another project launched before the 2013 remake decompilations that took the Genesis version of Sonic 2 and added widescreen capabilities. When first developed, my modification of Genesis Plus GX was only meant to add widescreen to that one game. After people began experimenting with other games, it was found that this approach worked for many other games, and so the project now lives on as an upstream RetroArch core (you can find it in the core downloader)! I no longer maintain this fork, but it has been picked up by other passionate community members!
+
+# Other Hobbies
+Believe it or not, I do get sick of programming! When I do, I like dipping my toes into other domains to pick up new skills! Some of my "side gigs" include:
+
+## Photography
+Check out my [photography megapost](/photo-megapost)!
+
+## Music
+Since 2022 I've been dabbling in mashups using Logic Pro X and AI tools such as demucs! You can find tracks on my [SoundCloud](https://soundcloud.com/heyjoeway). Be warned that my taste is... inexplicable? I often pull tracks from my mid-2000s childhood for material. Some of main inspirations include Neil Cicierega, Triple-Q, Galactic Hole, and SiivaGunner. I'm hoping to produce some original pieces in the future!
+
+## Graphic Design
+You can see my graphic design skills reflected in many of my projects, as I found it to be necessary to pair with programming for many projects. I tend to follow more minimalist standards such as Material Design and Metro while retaining some personalized flair.
+
+## 3D Modeling
+I'm familiar with the basics of modeling in Blender and SketchUp and can produce simple models/renders for both graphic design and CAD. (Some examples: ["Anime Was a Mistake"](/anime-was-a-mistake), ["Mayolo"](/mayolo)) I have 2 3D printers (one SLA, one FDM) and experiment with them from time to time to produce both figurines and more utilitarian parts.
