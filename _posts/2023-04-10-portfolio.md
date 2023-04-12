@@ -2,7 +2,7 @@
 layout: post
 title:  "The Portfolio Post"
 date:   2023-04-10
-last_modified_at: 2023-04-11
+last_modified_at: 2023-04-12
 categories: life work portfolio
 tags: pinned
 ---
@@ -11,18 +11,26 @@ Welcome to the site! If you're on this post, you're probably wondering who I am 
 # Philosophy
 I've spent a lot of time programming in a lot of different languages, working with many different technologies, and aiming for several different goals. It's easy to get lost in programming as an art in-and-of-itself, but as a goal-oriented individual, I see programming as a tool I use to accomplish said goals. That being said, I personally recognize it as one of the most important tools in modern society, and thus I have spent a lot of time refining it as a craft.
 
-I try to think about the long-term viability of projects when considering all possible approaches. There are many great ideas for products, but without a efficient plan many of them will lay on the table or the cutting-room floor. In these case, I often look to automation, even for tasks in my personal life. I always consider all available options and tools: sometimes the answer is to deploy pre-existing services, or to use an already deployed service in a different way. Very often, however, an idea will come along that is too specific to execute with anything other than my own code.
+I always consider the long-term viability of projects and weigh all possible approaches. There are many great ideas for products, but without a efficient plan, many of them lie on the table or the cutting-room floor. I often look to automation to avoid these scenarios, even for tasks in my personal life. I always consider all available options and tools: sometimes the answer is to deploy pre-existing services or generally change my workflow. Very often, however, an idea will come along that is too specific to execute with anything other than my own code.
 
-(Side note: As AI becomes more adept, I am constantly searching for ways to use it in optimizing my workflow. However, I am more interested in using AI tools than developing them, as I do not currently have a great interest in Data Science. I have experimented with tools including OpenAI Playground and GitHub Copilot and, while not perfect, I am very impressed with their results.)
+> **Side note:** As AI becomes more adept, I am constantly searching for ways to use it in optimizing my workflow. However, I am more interested in using AI tools than developing them, as I do not currently have a great interest in AI training and data science. I am experimenting with tools such as OpenAI Playground and GitHub Copilot and, while not perfect, I am very impressed with their results and have begun using them to increase my own efficiency.
 
-When I do use my own code to reach a goal, I make sure that it is readable, modular, and generally reusable. Sometimes this may be as simple as providing reasoning through comments. Other times it may be more complex, such as producing documentation (generally using a pre-existing documentation system like mkdocs), segmenting code into more readable chunks, or even developing libraries to use in multiple projects. One priority when writing is the code's compatibility with IntelliSense, which makes programming significantly more efficient. This is generally accomplished through documentation standards, such as type annotations (ala Python 3) or JSDoc.
+When writing my code, I make sure that it is readable, modular, and generally reusable. Sometimes this may be as simple as providing reasoning through comments. Other times it may be more complex, such as producing documentation (generally using a pre-existing documentation system like mkdocs), segmenting code into more readable chunks, or even developing libraries to use in multiple projects. I prioritize compatibility with IntelliSense, which makes any codebase significantly more navigable. This is generally accomplished by following documentation standards, such as type annotations (ala Python 3) or JSDoc.
 
-My goal is to write software and produce products that will stand the test of time, that I'll be able to look on years down the line and be proud of. Below are some of the projects I am proud of so far!
+My goal is to write software and produce products that will stand the test of time, that I'll be able to look on years down the line and be proud of. Below are some of the projects I take pride in right now!
+
+---
 
 # Professional Projects
 
-## Clarkson University Virtual Reality Coaster (VRC)
-In February of 2021, I began a refresh of Clarkson University's MaxFlight VR2004 motion simulator! This machine was purchased from a local arcade sometime in the mid-2000s, and it shows. The software is quite dated, and so I've produced several resources to bring it up towards modern standards:
+{%
+    include fig-img.html
+    right=1
+    img1="IMG_AA04362AF84B-1.jpeg"
+%}
+
+## Clarkson University Virtual Reality Coaster
+In February of 2021, I began a refresh of Clarkson University's MaxFlight VR2004 motion simulator, dubbed the Virtual Reality Coaster (VRC)! This machine was purchased from a local arcade sometime in the mid-2000s, and it shows. The software is quite dated, and so I've produced several resources to bring it up towards modern standards:
 
 ### pyMaxFlight
 **GitHub:** <https://github.com/Clarkson-IMPETUS/pyMaxFlight>
@@ -37,19 +45,15 @@ Exposes all capabilities of the MaxFlight Motion Client programmatically through
 Provides network communication via WebSockets, with a focus on stability and persistent connections. Uses a console-like interface and provides automatic help documentation.
 
 ### VRC-Apps.Server
-**GitHub:** <https://github.com/Clarkson-IMPETUS/VRC-Apps/tree/main/src/VRC-Apps/Server>
+**GitHub:** <https://github.com/Clarkson-IMPETUS/VRC-Apps>
 
-A WebSockets server that allows for remote operation of the pyMaxFlight library.
+A collection of Python applications to extend the functionality of the VRC using the aforementioned libraries.
 
-### VRC-Apps.LightsClient
-**GitHub:** <https://github.com/Clarkson-IMPETUS/VRC-Apps/tree/main/src/VRC-Apps/LightsClient>
-
-Controls the internal lights by communicating with an Arduino-controlled relay over serial and with VRC-Apps.Server.
-
-### VRC-Apps.NL2Bridge
-**GitHub:** <https://github.com/Clarkson-IMPETUS/VRC-Apps/tree/main/src/VRC-Apps/NL2Bridge>
-
-Communicates with a machine-local NoLimits 2 instance and VRC-Apps.Server to send motion to the simulator only when a coaster is running. Will automatically connect to the running NoLimits 2 instance and VRC- Apps.Server instance, and thus can be kept in the background indefinitely. This can also be used as an example to develop future integrations.
+{%
+    include fig-img.html
+    right=1
+    img1="SCR-20230412-r9e.png"
+    %}
 
 ## Whiteface Tour
 **Link:** <https://whitefacetour.app>
@@ -86,4 +90,4 @@ Since 2022 I've been dabbling in mashups using Logic Pro X and AI tools such as 
 You can see my graphic design skills reflected in many of my projects, as I found it to be necessary to pair with programming for many projects. I tend to follow more minimalist standards such as Material Design and Metro while retaining some personalized flair.
 
 ## 3D Modeling
-I'm familiar with the basics of modeling in Blender and SketchUp and can produce simple models/renders for both graphic design and CAD. (Some examples: ["Anime Was a Mistake"](/anime-was-a-mistake), ["Mayolo"](/mayolo)) I have 2 3D printers (one SLA, one FDM) and experiment with them from time to time to produce both figurines and more utilitarian parts.
+I'm familiar with the basics of modeling in Blender and SketchUp and can produce simple models/renders for both graphic design and CAD. (Some examples: ["Anime Was a Mistake"](/gd-anime-was-a-mistake), ["Mayolo"](/gd-mayolo)) I have 2 3D printers (one SLA, one FDM) and experiment with them from time to time to produce both figurines and more utilitarian parts.
