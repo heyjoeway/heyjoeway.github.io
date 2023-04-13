@@ -3,7 +3,7 @@ layout: post
 title:  "The Software Dump Part 1: macOS"
 date:   2022-12-28
 categories: software life macos
-last_modified_at: 2023-02-28
+last_modified_at: 2023-04-13
 comments: true
 ---
 You know those shitty tabloid articles you find on Google when you try to find software recommendations, all of them having the same 10 programs over and over? Yeah, this isn't another one of those. These are all programs I've spent a good deal of time with and will be giving genuine opinions on. Let's get to it.
@@ -109,6 +109,14 @@ Nice image viewer with an "invisible" header bar. Really nice for quickly previe
 - **Download:** <https://colorslurp.com/>
 
 Quick universal color picker.
+
+## Shottr {#shottr}
+
+- **Price:** Free
+- **OSS:** No (why?)
+- **Download:** <https://shottr.cc/>
+
+Screenshot tool that doesn't suck ass!
 
 # System
 
@@ -223,12 +231,12 @@ Lets you control the brightness of external displays from your Mac. No, I don't 
 
 # Other Notes
 
-You might notice I don't have a screenshot utility. I'd recommend Monosnap if it wasn't buggy as shit, though that may have changed since I last used it. Right now, I'm just using some Shortcuts (as in the Shortcuts app ala Monterey):
+~~You might notice I don't have a screenshot utility. I'd recommend Monosnap if it wasn't buggy as shit, though that may have changed since I last used it. Right now, I'm just using some Shortcuts (as in the Shortcuts app ala Monterey):~~
 
-- [Selection Screenshot](https://www.icloud.com/shortcuts/1c3f40fb719f4b6f9ab8564f429778e9)
-- [Full Screen Screenshot](https://www.icloud.com/shortcuts/0958cf10202a48f8929ca0567510037d)
-- [Window Screenshot](https://www.icloud.com/shortcuts/8dc40861f6f341d98abf8092d3ceaf39)
+- ~~[Selection Screenshot](https://www.icloud.com/shortcuts/1c3f40fb719f4b6f9ab8564f429778e9)~~
+- ~~[Full Screen Screenshot](https://www.icloud.com/shortcuts/0958cf10202a48f8929ca0567510037d)~~
+- ~~[Window Screenshot](https://www.icloud.com/shortcuts/8dc40861f6f341d98abf8092d3ceaf39)~~
 
-You may need to edit these to set the save paths properly. I've added these to my menu bar and they work okay-ish. I want to find a better solution in the long term. For screen recording I just open up QuickTime.
+~~You may need to edit these to set the save paths properly. I've added these to my menu bar and they work okay-ish. I want to find a better solution in the long term.~~ EDIT 4/13/23: [Just use Shottr.](#shottr) For screen recording I just open up QuickTime.
 
 I think that's it for now? I'll update this post if I find any big stuff in the future or if there's anything I missed. In the next part, I'll be covering multiplatform software.
