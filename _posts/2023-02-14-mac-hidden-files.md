@@ -42,9 +42,12 @@ on run {input, parameters}
 end run
 ```
 
+{% capture fig_contents %}
+    {% include img.html src="SCR-20230214-ext.png" %}
+{% endcapture %}
 {%
-    include fig-img.html
-    img1="SCR-20230214-ext.png"
+    include figure.html
+    contents=fig_contents
 %}
 
 You'll need to give both Shortcuts and `siriactionsd` Accessibility permissions. I think there might also be something you need to enable to use AppleScript. [Here's a pre-made shortcut if you'd like.](https://www.icloud.com/shortcuts/2d73e23025fd4a0e8f78c55600e92a04)
@@ -55,9 +58,12 @@ Here's a secret: you can turn any shortcut into a `.app` by right clicking on it
 
 Here's ANOTHER secret: you can add any `.app` to your Finder toolbar. Simply enter customization mode and drag the app in.
 
+{% capture fig_contents %}
+    {% include img.html src="SCR-20230214-f3i.png" %}
+{% endcapture %}
 {%
-    include fig-img.html
-    img1="SCR-20230214-f3i.png"
+    include figure.html
+    contents=fig_contents
 %}
 
 Apple sure does love to include useful features and never explain them, huh?

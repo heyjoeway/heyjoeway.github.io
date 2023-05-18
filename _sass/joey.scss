@@ -102,11 +102,11 @@
 
 /* ========================================================================= */
 
-.shadow, .fig-bg-light, pre {
+.shadow, pre {
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
-pre, .fig-bg-light {
+pre, .fig-bg-light > div {
     border-width: 1px;
     border-style: solid;
     border-color: #222;
@@ -115,7 +115,7 @@ pre, .fig-bg-light {
     -webkit-backdrop-filter: blur(32px);
 }
 
-.fig-bg-light {
+.fig-bg-light > div {
     border-color: #787878;
     color: black;
     background: transparent;
@@ -123,29 +123,52 @@ pre, .fig-bg-light {
     -webkit-backdrop-filter: invert(1) brightness(50%) contrast(200%) brightness(200%) blur(16px);
 }
 
-.fig-bg {
-    margin-bottom: 16px;
+figure {
+    display: inline-block;
+    width: 100%;
 
-    & > * {
-        margin: 8px;
-        height: auto;
-    }
-
-    &:not(.fig-right, .fig-left) {
+    // Contents
+    & > div {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
 
+        // Individual items
         & > * {
-            flex-basis: 200px;
-            min-width: 266px;
+            flex-basis: 195px;
+            min-width: 195px;
             flex-grow: 1;
+            object-fit: contain;
+            max-height: 512px;
+            height: auto;
+            margin: 8px;
         }
     }
 
-    & > *:first-child:nth-last-child(1) {
-        width: 100%;
-        margin: 8px 0;
+    // Caption
+    figcaption {
+        text-align: center;
+        margin: 8px;
+    }
 
+    @media (min-width: 600px) {
+        &.float-right, &.float-left {
+            width: 350px;
+        }
+    }
+
+    &.figure-original > div > * {
+        flex-basis: unset;
+        min-width: 0;
+        flex-grow: 0;
+        max-height: none;
+    }
+
+    &.figure-2col > div > * {
+        flex-basis: 300px;
+        min-width: 300px;
+        max-height: none;
     }
 }
 

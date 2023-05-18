@@ -1,16 +1,45 @@
 {% assign path = "/assets_external/" %}
 {% assign root = site.externalurl %}
-{% if include contains "internal" %}
-    {% if include.internal == 1 %}
-        {% assign path = "/assets/" %}
-        {% assign root = site.baseurl %}
-    {% endif %}
+
+{% assign internal = 0 %}
+{% if include contains "internal" and include.internal != 0 %}
+    {% assign internal = 1 %}
 {% endif %}
+{% if root == "" %}
+    {% assign internal = 1 %}
+{% endif %}
+{% if internal == 1 %}
+    {% assign path = "/assets/" %}
+    {% assign root = site.baseurl %}
+{% endif %}
+
 {% assign localpath = path | append: "/posts/" | append: page.id | append: "/" | append: include.src %}
 {% assign url = root | append: localpath %}
+
+{% assign class = "" %}
+{% if include contains "class" %}
+    {% assign class = include.class %}
+{% endif %}
+
+{% capture width %}
+{% imagesize localpath:width %}
+{% endcapture %}
+
+{% capture height %}
+{% imagesize localpath:height %}
+{% endcapture %}
+
+{% assign scale = 1 %}
+{% if include contains "scale" %}
+    {% assign scale = include.scale %}
+{% endif %}
+{% assign width = width | times: scale | round %}
+{% assign height = height | times: scale | round %}
+
 <img
-    class="{% if include.shadow == 1 %}shadow{% endif %}"
+    class="{{ class }}"
     src="{{ url }}"
     alt=" "
-    {% imagesize localpath:props %}
+    width="{{ width }}"
+    height="{{ height }}"
 />

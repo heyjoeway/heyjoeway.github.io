@@ -1,0 +1,13 @@
+<figure class="{{ include.class }}">
+    <div>
+        {{ include.contents }}
+    </div>
+    {% if include contains "id" or include contains "desc" %}
+    <figcaption>
+        {% if include contains "id" %}
+        <b>Figure {{ include.id }}{% if include contains "desc" %} • {% endif %}</b>
+        {% endif %}
+        {{ include.desc }}
+    </figcaption>
+    {% endif %}
+</figure>

@@ -8,9 +8,12 @@ comments: true
 ---
 A not-so-serious venture into 3D graphic design.
 
+{% capture fig_contents %}
+    {% include img.html src="final.png" %}
+{% endcapture %}
 {%
-    include fig-img.html
-    img1="final.png"
+    include figure.html
+    contents=fig_contents
 %}
 
 This design was published as a shirt design on RedBubble back in December of 2017. ~~You can view the design on RedBubble here.~~ Unfortunately, Nintendo themselves DMCA'd it because they felt like being petty.
@@ -19,40 +22,55 @@ This design was published as a shirt design on RedBubble back in December of 201
 
 The first thing that was done was obtaining the Super Mario 256 font. This was then used to type the words onto an SVG using Inkscape. A second SVG was used to make the borders for the letters.
 
+{% capture fig_contents %}
+    {% include img.html src="letters.svg" %}
+    {% include img.html src="border.svg" %}
+{% endcapture %}
 {%
-    include fig-img.html
-    light=1
-    img1="letters.svg"
-    img2="border.svg"
+    include figure.html
+    contents=fig_contents
+    class="fig-bg-light"
 %}
 
 These were then imported into Blender and extruded to make them 3D. Although the letters seem shallow in the final render, they are actually quite long. The letters were then given materials with appropriate colors.
 
+{% capture fig_contents %}
+    {% include img.html src="import.png" %}
+    {% include img.html src="top.png" %}
+{% endcapture %}
 {%
-    include fig-img.html
-    img1="import.png"
-    img2="top.png"
+    include figure.html
+    contents=fig_contents
 %}
 
 The raw render out of Blender is as follows:
 
+{% capture fig_contents %}
+    {% include img.html src="raw.png" %}
+{% endcapture %}
 {%
-    include fig-img.html
-    img1="raw.png"
+    include figure.html
+    contents=fig_contents
 %}
 
 It's lacking a lot of little details though. The letters have no gradients or sparkles, and the foreground graphic of Cappy is straight up missing. The final details were added in GIMP:
 
+{% capture fig_contents %}
+    {% include img.html src="final.png" %}
+{% endcapture %}
 {%
-    include fig-img.html
-    img1="final.png"
+    include figure.html
+    contents=fig_contents
 %}
 
 For comparison, here's the original logo:
 
+{% capture fig_contents %}
+    {% include img.html src="odyssey.png" %}
+{% endcapture %}
 {%
-    include fig-img.html
-    img1="odyssey.png"
+    include figure.html
+    contents=fig_contents
 %}
 
 ## Thoughts

@@ -20,10 +20,13 @@ Obviously, I could've just put these games on a laptop and played them there, or
 
 ## Sonic Robo Blast 2
 
+{% capture fig_contents %}
+    {% include img.html src="20221114185059_1.jpg" %}
+    {% include img.html src="20221114185137_1.jpg" %}
+{% endcapture %}
 {%
-    include fig-img.html
-    img1="20221114185059_1.jpg"
-    img2="20221114185137_1.jpg"
+    include figure.html
+    contents=fig_contents
 %}
 
 To people out of the know, this fangame has been in development for roughly 24 years. Twenty. Four. It's based on Doom of all things (can't recall which source port off the top of my head) and is unexpectedly super fun to play. I've followed the game since I was probably like 7 or 8 and wanted a portable version ever since. At the time I ported it, the best options were to play it on something like a GPD Win, OpenPandora, or a PSP, all pretty lacking consoles for the modern age. This was also before an Android or iOS port.
@@ -42,32 +45,42 @@ My only big regret was that I never got GL working. I made a few attempts, but t
 
 ## Sonic Robo Blast 2 Kart
 
+{% capture fig_contents %}
+    {% include img.html src="20221114191553_1.jpg" %}
+    {% include img.html src="20221114191630_1.jpg" %}
+{% endcapture %}
 {%
-    include fig-img.html
-    img1="20221114191553_1.jpg"
-    img2="20221114191630_1.jpg"
+    include figure.html
+    contents=fig_contents
 %}
 
 I could try and explain how a mod of a mod of Doom turned into a kart racer, but instead I'll just say that it was a fairly simple ordeal to port changes from SRB2 here. Not much else to say honestly. Play SRB2Kart.
 
 ## Sonic 1, 2, and CD Decompilations
 
+{% capture fig_contents %}
+    {% include img.html src="20221114185830_1.jpg" %}
+    {% include img.html src="20221114185444_1.jpg" %}
+    {% include img.html src="20221114185608_1.jpg" %}
+    {% include img.html src="20221114185539_1.jpg" %}
+{% endcapture %}
 {%
-    include fig-img.html
-    img1="20221114185830_1.jpg"
-    img2="20221114185444_1.jpg"
-    img3="20221114185608_1.jpg"
-    img4="20221114185539_1.jpg"
+    include figure.html
+    contents=fig_contents
+    class="figure-2col"
 %}
 
 Sonic CD got a remake from the ground up in 2011, and Sonic 1 and 2 followed suit in 2013. These were all done with Christian Whitehead's (taxman's) Retro Engine. I don't know the full details of how, but they all got decompiled in 2021 by RubberDuckyCooly and RMGRich (and probably a few others, sorry if I didn't list you guys here). At this point, the DevkitPro Switch portlibs had matured to the point where I could mostly just create a Makefile for them and they were good to go. A few fixes to input were needed here and there, along with some cflag changes. These ports were feature-complete, as far as I'm aware.
 
 ## Sonic 3 AIR
 
+{% capture fig_contents %}
+    {% include img.html src="20221114185702_1.jpg" %}
+    {% include img.html src="20221114185646_1.jpg" %}
+{% endcapture %}
 {%
-    include fig-img.html
-    img1="20221114185702_1.jpg"
-    img2="20221114185646_1.jpg"
+    include figure.html
+    contents=fig_contents
 %}
 
 Sonic 3 AIR is a fan-done translation of the original Sonic 3 and Knuckles source code into a custom engine and scripting language, done by the legendary Eukaryot. I reached out to them before the source code for this recreation was public, and they agreed to give me access for the production of a Switch port. I got it up and running, feature-complete in about a week, including hardware rendering.
@@ -78,9 +91,12 @@ This year has been filled with a lot of grief, anxiety, and pain. I had to make 
 
 On top of that, the whole motivation for wanting these ports had been torn to shreds... remember how I mentioned that the Switch and the GameCube were two of my favorite consoles? You may have also noticed all these screenshots are 16:10. Well, I've got something else sitting at number one now...
 
+{% capture fig_contents %}
+    {% include img.html src="IMG_2002.jpg" %}
+{% endcapture %}
 {%
-    include fig-img.html
-    img1="IMG_2002.jpg"
+    include figure.html
+    contents=fig_contents
 %}
 
 Yup. As soon as I got the thing in my hands, my motivation for Switch development honestly went out the window.

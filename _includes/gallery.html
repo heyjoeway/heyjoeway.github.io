@@ -12,7 +12,11 @@
     {% assign thumb = include.root | append: "/thumb/" | append: item[1] %}
 
     <a href="{{ link }}">
-        {% include img.html src=thumb shadow=1 internal=include.internal %}
+        {%
+            include img.html
+            src=thumb
+            class="shadow"
+        %}
     </a>
     {% endunless %}
     {% endfor %}

@@ -23,10 +23,13 @@ My goal is to write software and produce products that will stand the test of ti
 
 # Professional Projects
 
+{% capture fig_contents %}
+    {% include img.html src="IMG_AA04362AF84B-1.jpeg" %}
+{% endcapture %}
 {%
-    include fig-img.html
-    right=1
-    img1="IMG_AA04362AF84B-1.jpeg"
+    include figure.html
+    contents=fig_contents
+    class="fig-right"
 %}
 
 ## Clarkson University Virtual Reality Coaster
@@ -49,11 +52,14 @@ Provides network communication via WebSockets, with a focus on stability and per
 
 A collection of Python applications to extend the functionality of the VRC using the aforementioned libraries.
 
+{% capture fig_contents %}
+    {% include img.html src="SCR-20230412-r9e.png" %}
+{% endcapture %}
 {%
-    include fig-img.html
-    right=1
-    img1="SCR-20230412-r9e.png"
-    %}
+    include figure.html
+    contents=fig_contents
+    class="fig-right"
+%}
 
 ## Whiteface Tour
 **Link:** <https://whitefacetour.app>
