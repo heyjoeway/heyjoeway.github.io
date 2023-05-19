@@ -6,18 +6,7 @@ last_modified_at: 2023-04-12
 categories: life work portfolio
 tags: pinned
 ---
-Welcome to the site! If you're on this post, you're probably wondering who I am and what I do! In about a month, I'll be graduating from Clarkson University with a Master's in Computer Science. However, I'd like to use this post to show what I am outside of just this degree!
-
-# Philosophy
-I've spent a lot of time programming in a lot of different languages, working with many different technologies, and aiming for several different goals. It's easy to get lost in programming as an art in-and-of-itself, but as a goal-oriented individual, I see programming as a tool I use to accomplish said goals. That being said, I personally recognize it as one of the most important tools in modern society, and thus I have spent a lot of time refining it as a craft.
-
-I always consider the long-term viability of projects and weigh all possible approaches. There are many great ideas for products, but without a efficient plan, many of them lie on the table or the cutting-room floor. I often look to automation to avoid these scenarios, even for tasks in my personal life. I always consider all available options and tools: sometimes the answer is to deploy pre-existing services or generally change my workflow. Very often, however, an idea will come along that is too specific to execute with anything other than my own code.
-
-> **Side note:** As AI becomes more adept, I am constantly searching for ways to use it in optimizing my workflow. However, I am more interested in using AI tools than developing them, as I do not currently have a great interest in AI training and data science. I am experimenting with tools such as OpenAI Playground and GitHub Copilot and, while not perfect, I am very impressed with their results and have begun using them to increase my own efficiency.
-
-When writing my code, I make sure that it is readable, modular, and generally reusable. Sometimes this may be as simple as providing reasoning through comments. Other times it may be more complex, such as producing documentation (generally using a pre-existing documentation system like mkdocs), segmenting code into more readable chunks, or even developing libraries to use in multiple projects. I prioritize compatibility with IntelliSense, which makes any codebase significantly more navigable. This is generally accomplished by following documentation standards, such as type annotations (ala Python 3) or JSDoc.
-
-My goal is to write software and produce products that will stand the test of time, that I'll be able to look on years down the line and be proud of. Below are some of the projects I take pride in right now!
+Welcome to the site! If you're on this post, you're probably wondering who I am and what I do! I've recently graduated from Clarkson University with a Master's in Computer Science. However, I'd like to use this post to show what I am outside of just this degree!
 
 ---
 
@@ -42,7 +31,7 @@ Exposes all capabilities of the MaxFlight Motion Client programmatically through
 
 Provides network communication via WebSockets, with a focus on stability and persistent connections. Uses a console-like interface and provides automatic help documentation.
 
-### VRC-Apps.Server
+### VRC-Apps
 **GitHub:** <https://github.com/Clarkson-IMPETUS/VRC-Apps>
 
 A collection of Python applications to extend the functionality of the VRC using the aforementioned libraries.
@@ -55,6 +44,14 @@ A collection of Python applications to extend the functionality of the VRC using
 **Link:** <https://whitefacetour.app>
 
 In the summer of 2018, I had the opportunity to work as an intern at the Whiteface Mountain Atmospheric Sciences Research Center (ASRC). During my time there, I worked on several projects related to outreach. The most substantial of these is the Whiteface Tour: a 360-degree virtual tour of the mountain summit. This uses the library three.js for rendering, and a custom JSON-based system for scene management. This does not use a pre-existing game engine. All resources are packaged using webpack, deployed through GitHub Actions, and hosted using GitHub Pages. 
+
+<figure class="fig-right"><div>
+    {% include img.html src="localhost_3000_login.html.png" %}
+</div></figure>
+
+## lcatDB (Lake Champlain Anglers' Temperature Database)
+
+lcatDB (Lake Champlain Anglers' Temperature Database) was an online database and single page application (SPA) meant to provide a centralized means of recording, accessing, and analyzing vertical water temperature profiles to citizens of the Lake Champlain region. It was supported by the SUNY Plattsburgh Center for Earth & Environmental Science and the Lake Champlain Sea Grant. lcatDB was (what I consider to be) my first attempt at full stack software development. It primarily uses Bootstrap, jQuery, and Grunt for the frontend, while the backend was built using Node.JS, Express, and MongoDB. [Read the full retrospective here.](/lcatdb)
 
 # Personal Projects
 
@@ -73,6 +70,13 @@ As a test to learn the ins-and-outs of Unity, I tried recreating the original So
 
 Another project launched before the 2013 remake decompilations that took the Genesis version of Sonic 2 and added widescreen capabilities. When first developed, my modification of Genesis Plus GX was only meant to add widescreen to that one game. After people began experimenting with other games, it was found that this approach worked for many other games, and so the project now lives on as an upstream RetroArch core (you can find it in the core downloader)! I no longer maintain this fork, but it has been picked up by other passionate community members!
 
+# Other Stuff
+
+Here's a miscellaneous list of other things I written/done you should check out!
+
+- GitHub: [heyjoeway](https://github.com/heyjoeway)
+- [Responsive Design Showcase](/responsive-design)
+
 # Other Hobbies
 Believe it or not, I do get sick of programming! When I do, I like dipping my toes into other domains to pick up new skills! Some of my "side gigs" include:
 
@@ -87,3 +91,17 @@ You can see my graphic design skills reflected in many of my projects, as I foun
 
 ## 3D Modeling
 I'm familiar with the basics of modeling in Blender and SketchUp and can produce simple models/renders for both graphic design and CAD. (Some examples: ["Anime Was a Mistake"](/gd-anime-was-a-mistake), ["Mayolo"](/gd-mayolo)) I have 2 3D printers (one SLA, one FDM) and experiment with them from time to time to produce both figurines and more utilitarian parts.
+
+
+---
+
+# Philosophy
+I've spent a lot of time programming in a lot of different languages, working with many different technologies, and aiming for several different goals. It's easy to get lost in programming as an art in-and-of-itself, but as a goal-oriented individual, I see programming as a tool I use to accomplish said goals. That being said, I personally recognize it as one of the most important tools in modern society, and thus I have spent a lot of time refining it as a craft.
+
+I always consider the long-term viability of projects and weigh all possible approaches. There are many great ideas for products, but without a efficient plan, many of them lie on the table or the cutting-room floor. I often look to automation to avoid these scenarios, even for tasks in my personal life. I always consider all available options and tools: sometimes the answer is to deploy pre-existing services or generally change my workflow. Very often, however, an idea will come along that is too specific to execute with anything other than my own code.
+
+> **Side note:** As AI becomes more adept, I am constantly searching for ways to use it in optimizing my workflow. However, I am more interested in using AI tools than developing them, as I do not currently have a great interest in AI training and data science. I am experimenting with tools such as OpenAI Playground and GitHub Copilot and, while not perfect, I am very impressed with their results and have begun using them to increase my own efficiency.
+
+When writing my code, I make sure that it is readable, modular, and generally reusable. Sometimes this may be as simple as providing reasoning through comments. Other times it may be more complex, such as producing documentation (generally using a pre-existing documentation system like mkdocs), segmenting code into more readable chunks, or even developing libraries to use in multiple projects. I prioritize compatibility with IntelliSense, which makes any codebase significantly more navigable. This is generally accomplished by following documentation standards, such as type annotations (ala Python 3) or JSDoc.
+
+My goal is to write software and produce products that will stand the test of time, that I'll be able to look on years down the line and be proud of.
