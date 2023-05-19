@@ -23,14 +23,9 @@ My goal is to write software and produce products that will stand the test of ti
 
 # Professional Projects
 
-{% capture fig_contents %}
+<figure class="fig-right"><div>
     {% include img.html src="IMG_AA04362AF84B-1.jpeg" %}
-{% endcapture %}
-{%
-    include figure.html
-    contents=fig_contents
-    class="fig-right"
-%}
+</div></figure>
 
 ## Clarkson University Virtual Reality Coaster
 In February of 2021, I began a refresh of Clarkson University's MaxFlight VR2004 motion simulator, dubbed the Virtual Reality Coaster (VRC)! This machine was purchased from a local arcade sometime in the mid-2000s, and it shows. The software is quite dated, and so I've produced several resources to bring it up towards modern standards:
@@ -52,14 +47,9 @@ Provides network communication via WebSockets, with a focus on stability and per
 
 A collection of Python applications to extend the functionality of the VRC using the aforementioned libraries.
 
-{% capture fig_contents %}
+<figure class="fig-right"><div>
     {% include img.html src="SCR-20230412-r9e.png" %}
-{% endcapture %}
-{%
-    include figure.html
-    contents=fig_contents
-    class="fig-right"
-%}
+</div></figure>
 
 ## Whiteface Tour
 **Link:** <https://whitefacetour.app>
