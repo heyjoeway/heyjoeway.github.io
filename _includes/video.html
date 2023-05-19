@@ -1,0 +1,33 @@
+{% assign path = "/assets_external/" %}
+{% assign root = site.externalurl %}
+
+{% assign internal = 0 %}
+{% if include contains "internal" and include.internal != 0 %}
+    {% assign internal = 1 %}
+{% endif %}
+{% if root == "" %}
+    {% assign internal = 1 %}
+{% endif %}
+{% if internal == 1 %}
+    {% assign path = "assets/" %}
+    {% assign root = site.baseurl %}
+{% endif %}
+
+{% assign localpath = path | append: "/posts/" | append: page.id | append: "/" | append: include.src %}
+{% assign url = root | append: localpath %}
+
+{% assign class = "" %}
+{% if include contains "class" %}
+    {% assign class = include.class %}
+{% endif %}
+
+<video
+    width="{{ include.width }}"
+    height="{{ include.height }}"
+    autoplay
+    muted
+    loop
+>
+    <source src="{{ url }}" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
