@@ -12,8 +12,8 @@ Welcome to the site! If you're on this post, you're probably wondering who I am 
 
 # Professional Projects
 
-<figure class="fig-right"><div>
-    {% include img.html src="IMG_AA04362AF84B-1.jpeg" %}
+<figure class="fig-right figure-original"><div>
+    {% include img.html src="IMG_AA04362AF84B-1.jpeg" scale=0.25 %}
 </div></figure>
 
 ## Clarkson University Virtual Reality Coaster
@@ -26,7 +26,7 @@ In February of 2021, I began a refresh of Clarkson University's MaxFlight VR2004
 - **VRC-Apps:** A collection of Python applications to extend the functionality of the VRC using the aforementioned libraries. ([GitHub](https://github.com/Clarkson-IMPETUS/VRC-Apps))
 
 <figure class="fig-right figure-original"><div>
-    {% include img.html src="SCR-20230412-r9e.png" scale=0.17 %}
+    {% include img.html src="SCR-20230412-r9e.png" scale=0.16 %}
 </div></figure>
 
 ## Whiteface Tour
