@@ -19,25 +19,14 @@ Welcome to the site! If you're on this post, you're probably wondering who I am 
 ## Clarkson University Virtual Reality Coaster
 In February of 2021, I began a refresh of Clarkson University's MaxFlight VR2004 motion simulator, dubbed the Virtual Reality Coaster (VRC)! This machine was purchased from a local arcade sometime in the mid-2000s, and it shows. The software is quite dated, and so I've produced several resources to bring it up towards modern standards:
 
-### pyMaxFlight
-**GitHub:** <https://github.com/Clarkson-IMPETUS/pyMaxFlight>
+- **pyMaxFlight:** Exposes all capabilities of the MaxFlight Motion Client programmatically through Python on a the Control PC. This module only allows for local operation. MaxFlight did not provide their own public API for interfacing with the simulator, so this module works by directly accessing the Motion Client window using the Win32 API, simulating button presses and slider movements. ([GitHub](https://github.com/Clarkson-IMPETUS/pyMaxFlight), [Docs](https://pymaxflight.readthedocs.io/en/latest/src/pyMaxFlight/))
 
-**Documentation:** <https://pymaxflight.readthedocs.io/en/latest/src/pyMaxFlight/>
+- **pyWSConsole:** Provides network communication via WebSockets, with a focus on stability and persistent connections. Uses a console-like interface and provides automatic help documentation. ([GitHub](https://github.com/heyjoeway/pyWSConsole))
 
-Exposes all capabilities of the MaxFlight Motion Client programmatically through Python on a the Control PC. This module only allows for local operation. MaxFlight did not provide their own public API for interfacing with the simulator, so this module works by directly accessing the Motion Client window using the Win32 API, simulating button presses and slider movements.
+- **VRC-Apps:** A collection of Python applications to extend the functionality of the VRC using the aforementioned libraries. ([GitHub](https://github.com/Clarkson-IMPETUS/VRC-Apps))
 
-### pyWSConsole
-**GitHub:** <https://github.com/heyjoeway/pyWSConsole>
-
-Provides network communication via WebSockets, with a focus on stability and persistent connections. Uses a console-like interface and provides automatic help documentation.
-
-### VRC-Apps
-**GitHub:** <https://github.com/Clarkson-IMPETUS/VRC-Apps>
-
-A collection of Python applications to extend the functionality of the VRC using the aforementioned libraries.
-
-<figure class="fig-right"><div>
-    {% include img.html src="SCR-20230412-r9e.png" %}
+<figure class="fig-right figure-original"><div>
+    {% include img.html src="SCR-20230412-r9e.png" scale=0.17 %}
 </div></figure>
 
 ## Whiteface Tour
@@ -45,8 +34,8 @@ A collection of Python applications to extend the functionality of the VRC using
 
 In the summer of 2018, I had the opportunity to work as an intern at the Whiteface Mountain Atmospheric Sciences Research Center (ASRC). During my time there, I worked on several projects related to outreach. The most substantial of these is the Whiteface Tour: a 360-degree virtual tour of the mountain summit. This uses the library three.js for rendering, and a custom JSON-based system for scene management. This does not use a pre-existing game engine. All resources are packaged using webpack, deployed through GitHub Actions, and hosted using GitHub Pages. 
 
-<figure class="fig-right"><div>
-    {% include img.html src="localhost_3000_login.html.png" %}
+<figure class="fig-right figure-original"><div>
+    {% include img.html src="localhost_3000_login.html.png" scale=0.35 %}
 </div></figure>
 
 ## lcatDB (Lake Champlain Anglers' Temperature Database)
