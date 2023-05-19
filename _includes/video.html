@@ -27,6 +27,8 @@
     autoplay
     muted
     loop
+    playsinline
+    oncanplay="this.muted=true" {% comment %} hack because google and apple fucking suck 🤡 {% endcomment %}
 >
     <source src="{{ url }}" type="video/mp4">
     Your browser does not support the video tag.
