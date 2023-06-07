@@ -223,10 +223,24 @@ hr {
     border-bottom: rgba(128, 128, 128, 0.5) dashed 1px;
 }
 
+@keyframes fade-in {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
 .categories {
     display: inline;
-
+    
     a {
+        opacity: 0%;
+        animation-name: fade-in;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
         background: rgba(255, 255, 255, 0.3);
@@ -242,6 +256,10 @@ hr {
         position: relative;
         box-sizing: border-box;
         display: inline-block;
+
+        @for $i from 1 through 19 {
+            &:nth-child(#{$i}) { animation-delay: #{0.75 + $i * 0.25}s; }
+        }
     }
 }
 
