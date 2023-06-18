@@ -49,7 +49,7 @@
 
 /* ========================================================================= */
 
-.bg-element {
+.bg-element {   
     font-family: 'franklin_gothicregular';
     position: fixed;
     font-size: 350px;
@@ -61,24 +61,53 @@
 }
 
 #bg-top-left { 
-    font-size: calc(min(25vw, 350px));
-    width: calc(100vw + 0.2em);
-    top: -0.4em;
-    left: -0.2em;
+    animation-name: blur-in-top;
+    font-size: calc(min(40vw, 350px));
+    top: calc(-0.3 * min(40vw, 350px));
+    left: 0.95vh;
     animation-delay: 0.1s;
     overflow-x: hidden;
+    text-wrap: nowrap;
+}
+
+@keyframes blur-in-top {
+    from {
+        filter: contrast(1.5) brightness(1.5) grayscale(1) blur(128px) opacity(0%);
+        -webkit-filter: contrast(1.5) brightness(1.5) grayscale(1) blur(128px) opacity(0%);
+        transform: rotateZ(15deg);
+        scale: 2;
+    }
+    to {
+        filter: contrast(1.5) brightness(0.7) grayscale(1) blur(calc(min(40vw, 350px) / 32)) opacity(100%);
+        -webkit-filter: contrast(1.5) brightness(0.7) grayscale(1) blur(calc(min(40vw, 350px) / 32)) opacity(100%);
+        transform: rotateZ(0deg);
+        scale: 1;
+    }
 }
 
 #bg-bottom-right { 
-    font-size: calc(min(100vw, 800px));
-
-    rotate: 30deg;
-
-    bottom: -0.325em;
+    animation-name: blur-in-bottom;
+    font-size: calc(min(92vw, 1000px));
+    bottom: -0.5em;
     right: -0.1em;
-
     animation-delay: 0.5s;
 }
+
+@keyframes blur-in-bottom {
+    from {
+        filter: contrast(1.5) brightness(1.5) grayscale(1) blur(128px) opacity(0%);
+        -webkit-filter: contrast(1.5) brightness(1.5) grayscale(1) blur(128px) opacity(0%);
+        transform: rotateZ(60deg);
+        scale: 2;
+    }
+    to {
+        filter: contrast(1.5) brightness(0.7) grayscale(1) blur(calc(min(40vw, 350px) / 32)) opacity(100%);
+        -webkit-filter: contrast(1.5) brightness(0.7) grayscale(1) blur(calc(min(40vw, 350px) / 32)) opacity(100%);
+        transform: rotateZ(45deg);
+        scale: 1;
+    }
+}
+
 
 /* ========================================================================= */
 
@@ -277,4 +306,24 @@ img::after {
     transform: translate(-50%, -50%);
     font-size: 128px;
     opacity: 25%;
+}
+
+* {
+    &::-webkit-scrollbar {
+        background-color: transparent;
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        transition: background-color 0.1s;
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+    }
+
+    // scrollbar-color: #111 #000;
+    /* overflow: hidden; */
 }
