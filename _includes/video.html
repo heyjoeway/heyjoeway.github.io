@@ -1,29 +1,30 @@
-{% assign path = "/assets_external/" %}
-{% assign root = site.externalurl %}
+{% assign _video_path = "/assets_external/" %}
+{% assign _video_root = site.externalurl %}
 
-{% assign internal = 0 %}
+{% assign _video_internal = 0 %}
 {% if include contains "internal" and include.internal != 0 %}
-    {% assign internal = 1 %}
+    {% assign _video_internal = 1 %}
 {% endif %}
-{% if root == "" %}
-    {% assign internal = 1 %}
+{% if _video_root == "" %}
+    {% assign _video_internal = 1 %}
 {% endif %}
-{% if internal == 1 %}
-    {% assign path = "assets/" %}
-    {% assign root = site.baseurl %}
+{% if _video_internal == 1 %}
+    {% assign _video_path = "assets/" %}
+    {% assign _video_root = site.baseurl %}
 {% endif %}
 
-{% assign localpath = path | append: "/posts/" | append: page.id | append: "/" | append: include.src %}
-{% assign url = root | append: localpath %}
+{% assign localpath = _video_path | append: "/posts/" | append: page.id | append: "/" | append: include.src %}
+{% assign url = _video_root | append: localpath %}
 
-{% assign class = "" %}
+{% assign _video_class = "" %}
 {% if include contains "class" %}
-    {% assign class = include.class %}
+    {% assign _video_class = include.class %}
 {% endif %}
 
 <video
     width="{{ include.width }}"
     height="{{ include.height }}"
+    class="{{ _video_class }}"
     autoplay
     muted
     loop
