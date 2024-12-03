@@ -1,0 +1,1 @@
+import{h as a,g as y}from"./runtime.Dfx-lVnK.js";function u(e,s,t,f,i){var n;a&&y();var r=(n=s.$$slots)==null?void 0:n[t],l=!1;r===!0&&(r=s[t==="default"?"children":t],l=!0),r===void 0||r(e,l?()=>f:f)}function c(e,s,t,f){var i=e.__styles??(e.__styles={});i[s]!==t&&(i[s]=t,t==null?e.style.removeProperty(s):e.style.setProperty(s,t,""))}export{c as a,u as s};
