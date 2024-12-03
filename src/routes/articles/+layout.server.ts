@@ -7,5 +7,8 @@ export async function load({ route }) {
 	const postContents = fs.readFileSync(`src/routes/${route.id}/+page.svx`, 'utf-8');
 	const compiled = await compile(postContents);
 	const fm = compiled?.data?.fm as ArticleFrontmatter;
-	return { fm };
+	return {
+		fm,
+		id: route.id
+	};
 }

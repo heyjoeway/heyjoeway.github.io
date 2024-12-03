@@ -4,6 +4,7 @@ title:  "The Software Dump Part 2: Multiplatform"
 date:   2023-04-11
 categories: software life multiplatform
 last_modified_at: 2023-04-11
+comments: true
 ---
 <script lang="ts">
     import Link from "$lib/Link.svelte";

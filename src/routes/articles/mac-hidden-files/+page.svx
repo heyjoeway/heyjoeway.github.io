@@ -3,6 +3,7 @@ layout: post
 title:  "Toggling Hidden Files in macOS except it's actually good"
 date:   2023-02-14
 categories: software macos
+comments: true
 ---
 Happy Valentines Day. I've been trying to migrate from Forklift back to Finder since I'm not super happy with their progress and the issues that come with a non-native file manager, including but not limited to:
 

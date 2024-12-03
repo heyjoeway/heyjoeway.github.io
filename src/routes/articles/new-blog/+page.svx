@@ -4,7 +4,7 @@ title:  "New Blog?"
 date:   2022-11-07
 last_modified_at: 2023-02-11
 categories: meta life design ui
-comments_id: 1
+comments: true
 ---
 So, I'm restructuring a lot of things in life right now. Why don't we take care of the website too?
 

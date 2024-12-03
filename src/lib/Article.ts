@@ -9,6 +9,7 @@ export interface ArticleFrontmatter {
 	categories: string;
 	pinned: boolean;
 	bgText: string | undefined;
+	comments: boolean | undefined;
 }
 
 export interface ArticleLoaded {

@@ -18,6 +18,7 @@
 	import Tags from "$lib/Tags.svelte";
 	import Layout from "$lib/Layout.svelte";
 	import { strToTagDetails } from "$lib/Tags";
+	import Comments from "$lib/Comments.svelte";
 	
 	export let data;
 	
@@ -35,4 +36,10 @@
 	</div>
 	
 	<slot></slot>
+
+	{#if data.fm.comments}
+		<hr>
+		<Comments pageID={data.id} pageTitle={data.fm.title} />
+	{/if}
+
 </Layout>
