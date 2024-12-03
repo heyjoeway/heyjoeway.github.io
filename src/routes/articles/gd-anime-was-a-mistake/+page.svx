@@ -1,0 +1,79 @@
+---
+title:  "Graphic Design: \"Anime was a Mistake\" Shirt"
+date: 2019-01-21
+categories: design ui
+last_modified_at: 2022-11-07
+comments: true
+---
+A not-so-serious venture into 3D graphic design.
+
+<Figure>
+    <Image src={imgFinal} />
+</Figure>
+
+This design was published as a shirt design on RedBubble back in December of 2017. ~~You can view the design on RedBubble here.~~ Unfortunately, Nintendo themselves DMCA'd it because they felt like being petty.
+
+## Making Of
+
+The first thing that was done was obtaining the Super Mario 256 font. This was then used to type the words onto an SVG using Inkscape. A second SVG was used to make the borders for the letters.
+
+<Figure frame="light">
+    <Image src={imgLetters} />
+    <Image src={imgBorder} />
+</Figure>
+
+These were then imported into Blender and extruded to make them 3D. Although the letters seem shallow in the final render, they are actually quite long. The letters were then given materials with appropriate colors.
+
+<Figure>
+    <Image src={imgImport} />
+    <Image src={imgTop} />
+</Figure>
+
+The raw render out of Blender is as follows:
+
+<Figure>
+    <Image src={imgRaw} />
+</Figure>
+
+It's lacking a lot of little details though. The letters have no gradients or sparkles, and the foreground graphic of Cappy is straight up missing. The final details were added in GIMP:
+
+<Figure>
+    <Image src={imgFinal} />
+</Figure>
+
+For comparison, here's the original logo:
+
+<Figure>
+    <Image src={imgOdyssey} />
+</Figure>
+
+## Thoughts
+
+There's definitely a lot of things that could be improved here. The planet from the "O" in the original logo is completely missing. A lot of materials don't look metallic enough. The borders don't come down at the right angle and have gaps. Colors are a bit desaturated. The middle letters aren't stretched enough and the top letters are too big. The Cappy graphic appears to be out of date (?). However, for something that was honestly just intended as a joke, I think it came out alright.
+
+## Download
+
+If you'd like to download the original project file, you're in luck! Here it is:
+
+[Blender Project]({fileBlend})
+
+If you want the render itself, you should be able to just right click and "Save As". Same goes for the SVGs.
+
+[This project is licensed under CC BY 4.0.](https://creativecommons.org/licenses/by/4.0/)
+
+<script lang="ts">
+
+import Image from "$lib/Image.svelte";
+import Figure from "$lib/Figure.svelte";
+
+import imgFinal from "./final.png?as=run:0";
+import imgLetters from "./letters.svg";
+import imgBorder from "./border.svg?as=run";
+import imgImport from "./import.png?as=run";
+import imgTop from "./top.png?as=run";
+import imgRaw from "./raw.png?as=run:0";
+import imgOdyssey from "./odyssey.png?as=run:0";
+
+import fileBlend from "./anime.blend";
+
+</script>
