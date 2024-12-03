@@ -8,7 +8,7 @@ export interface GalleryDescriptor {
     thumbs: Record<string, any>;
 }
 
-const GITHUB_ROOT = "https://github.com/heyjoeway/website-svelte/tree/main/";
+const GITHUB_ROOT = "https://github.com/heyjoeway/heyjoeway.github.io/tree/main/";
 
 export function createGitHubLinks(pathRoot: string) {
     if (pathRoot.includes(".svelte-kit")) {
