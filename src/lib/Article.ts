@@ -10,6 +10,7 @@ export interface ArticleFrontmatter {
 	pinned: boolean;
 	bgText: string | undefined;
 	comments: boolean | undefined;
+	last_modified_at: string | undefined;
 }
 
 export interface ArticleLoaded {
