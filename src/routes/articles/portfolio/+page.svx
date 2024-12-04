@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "The Portfolio Post"
 date: 2023-04-10
 last_modified_at: 2023-04-12
@@ -31,7 +30,7 @@ In February of 2021, I began a refresh of Clarkson University's MaxFlight VR2004
 </Figure>
 
 ## Whiteface Tour
-**Link:** <https://whitefacetour.app>
+**Link:** <https://jojudge.com/whitefacetour>
 
 In the summer of 2018, I had the opportunity to work as an intern at the Whiteface Mountain Atmospheric Sciences Research Center (ASRC). During my time there, I worked on several projects related to outreach. The most substantial of these is the Whiteface Tour: a 360-degree virtual tour of the mountain summit. This uses the library three.js for rendering, and a custom JSON-based system for scene management. This does not use a pre-existing game engine. All resources are packaged using webpack, deployed through GitHub Actions, and hosted using GitHub Pages.
 

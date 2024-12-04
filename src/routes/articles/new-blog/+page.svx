@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "New Blog?"
 date:   2022-11-07
 last_modified_at: 2023-02-11

@@ -1,9 +1,7 @@
 ---
-layout: post
 title:  "Retrospective: lcatDB"
 date:   2023-05-18
 categories: programming life software ui
-last_modified_at: 2023-05-19
 ---
 lcatDB (Lake Champlain Anglers' Temperature Database) was an online database and single page application (SPA) meant to provide a centralized means of recording, accessing, and analyzing vertical water temperature profiles to citizens of the Lake Champlain region. It was supported by the SUNY Plattsburgh Center for Earth & Environmental Science and the Lake Champlain Sea Grant. lcatDB was (what I consider to be) my first attempt at full stack software development. While the app never really took off and is no longer around today, I was able to demonstrate many of my strengths and learned several valuable lessons.
 
@@ -47,9 +45,9 @@ First of all, revisiting this codebase after working in Python 3 primarily for a
 
 Firstly, lets address the use of Grunt. At the time of using it, it was relatively well-supported and I got used to it fairly quickly. The ability to mix JS scripting into your build system has a lot of benefits, though maybe a bit encouraging of hacky-ness. Nowadays, Grunt is pretty much dead. No releases in 2 years, and its mainly been surpassed by webpack. I've taken the hint and also begun migrating some of my older projects to webpack.
 
-Some issues, however, arose from my own inexperience. The biggest pill to swallow from this project is: it's time to move on from jQuery and onto a proper framework. Not to push this thing any harder than it already is, but it is infinitely less prone to breaking, with less time spent programming destructor functions and chasing bugs. jQuery's purpose still feels mostly limited to small sites that need some dumb small feature quick and you don't wanna deal with the poor syntax of vanilla JS, which between TS IntelliSense and GitHub Copilot isn't really even a problem anymore.
+Some issues, however, arose from my own inexperience. The biggest pill to swallow from this project is: it's time to move on from jQuery and onto a proper framework. They're infinitely less prone to breaking, with less time spent programming destructor functions and chasing bugs. jQuery's purpose still feels mostly limited to small sites that need some dumb small feature quick and you don't wanna deal with the poor syntax of vanilla JS, which between TS IntelliSense and AI code suggestions isn't really even a problem anymore.
 
-Which leads to the root of that issue: lcatDB did not originally plan to be a SPA. That was added after many of the pages were implemented and the code was written, so the SPA capabilities were hacked on top. jQuery does not suit itself well in this use case, but at the time I couldn't justify the time as a single developer to go back and start from scratch. And with the scale of the project growing further in a small scope-creep, the problems from jQuery scaled up as well. Despite the amount of time I spent considering my options for each choice of a library or platform, the change in scope caused a pile-up of other issues. This was the single-biggest takeaway: nail down the entire set of specifications first, then implement. Be very specific and thorough. I attempted to do this to some degree at the time, but did not yet know the right questions to ask.
+Which leads to the root of that issue: *lcatDB did not originally plan to be a SPA*. That was added after many of the pages were implemented and the code was written, so the SPA capabilities were hacked on top. jQuery does not suit itself well in this use case, but at the time I couldn't justify the time as a single developer to go back and start from scratch. And with the scale of the project growing further in a small scope-creep, the problems from jQuery scaled up as well. Despite the amount of time I spent considering my options for libraries and platforms, the change in scope caused a pile-up of other issues. This was the single-biggest takeaway: nail down the entire set of specifications first, then implement. Be very specific and thorough. Even then, it's still easier said than done; at the time I didn't even know what questions to ask.
 
 <script lang="ts">
     import Image from "$lib/Image.svelte";

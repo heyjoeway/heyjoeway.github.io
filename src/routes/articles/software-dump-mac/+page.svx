@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "The Software Dump Part 1: macOS"
 date:   2022-12-28
 categories: software life macos

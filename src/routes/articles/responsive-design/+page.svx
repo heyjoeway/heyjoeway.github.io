@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Responsive Design Showcase"
 date:   2023-05-18
 categories: programming ui design
@@ -9,7 +8,7 @@ Here's a mainly visual showcase of some of my work in responsive design!
 
 <Figure>
     <Video src={vidWhiteface} />
-    <figcaption slot="caption">The Whiteface Tour is a 360-degree virtual tour of the Whiteface Mountain summit I developed using three.js. <a href="https://whitefacetour.app">Try it for yourself here!</a></figcaption>
+    <figcaption slot="caption">The Whiteface Tour is a 360-degree virtual tour of the Whiteface Mountain summit I developed using three.js. <a href="https://jojudge.com/whitefacetour">Try it for yourself here!</a></figcaption>
 </Figure>
 
 <Figure>

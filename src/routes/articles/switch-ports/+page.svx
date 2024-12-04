@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "My Switch Ports, and the Journey"
 date:   2022-11-13
 categories: games programming life
