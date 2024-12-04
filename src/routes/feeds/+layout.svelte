@@ -9,7 +9,7 @@
 
 	<slot></slot>
 	
-    {#await import(`./main/17171656156/*.png`) then { default: src }}
+    {#await import(`./main/${data.test}.png`) then { default: src }}
         <img {src} alt="Image" />
     {/await}
     
