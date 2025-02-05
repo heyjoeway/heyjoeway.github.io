@@ -6,7 +6,7 @@
 
 <script lang="ts">
     import Center from './Center.svelte';
-    import { Button } from './joeysvelte';
+    import Button from '$joeysvelte/Button.svelte';
     import { persisted } from 'svelte-persisted-store';
     
     export let pageID: string;

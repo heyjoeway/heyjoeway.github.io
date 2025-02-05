@@ -22,7 +22,7 @@
 
 <script lang="ts">
 
-import { Background } from "$lib/joeysvelte";
+import Background from "$joeysvelte/Background.svelte";
 import { listToTagDetails } from "$lib/Tags";
 import Tags from "$lib/Tags.svelte";
 import Center from "$lib/Center.svelte";

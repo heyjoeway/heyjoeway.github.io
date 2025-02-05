@@ -9,5 +9,10 @@ export default defineConfig({
 	],
 	assetsInclude: [
 		"**/*.blend"
-	]
+	],
+	resolve: {
+		alias: [
+			{ find: '$joeysvelte', replacement: '/src/lib/joeysvelte/src/lib/' },
+		]
+	},
 });

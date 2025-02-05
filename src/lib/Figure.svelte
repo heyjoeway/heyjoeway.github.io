@@ -11,10 +11,8 @@ div {
 
 import FigureHelper from "./_FigureHelper.svelte";
 
-import {
-	Frame,
-	bundledThemes
-} from "$lib/joeysvelte";
+import Frame from "$joeysvelte/Frame.svelte";
+import { bundledThemes } from "$joeysvelte/Theming";
 
 export let itemMinWidth = '300px';
 export let align: 'left' | 'right' | undefined = undefined;
