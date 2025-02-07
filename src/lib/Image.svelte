@@ -1,4 +1,6 @@
 <script lang="ts">
+    import clsx from 'clsx';
+    
     import Overlay from "$joeysvelte/Overlay.svelte";
     import Button from "$joeysvelte/Button.svelte";
     
@@ -6,6 +8,7 @@
     export let fullSrc: any = undefined;
     export let maxHeight: string = "450px";
     export let enableLightbox = true;
+    export let square = false;
     import Img from "@zerodevx/svelte-img";
     
     let skipSvelteImg = false;
@@ -23,6 +26,12 @@
     }
     
     let overlayOpen = false;
+    
+    const classes = {
+        img: true,
+        clickable: enableLightbox,
+        square: square
+    }
 </script>
 
 <!-- <a href={fullSrcLink} target="_blank"> -->
@@ -34,14 +43,14 @@
 >
     {#if skipSvelteImg}
         <img
-            class="img {enableLightbox ? "clickable" : ""}"
+            class={clsx(classes)}
             {src}
             alt=" "
             style={nearestScaling ? "image-rendering: pixelated;" : ""}
         />
     {:else}
         <Img
-            class="img {enableLightbox ? "clickable" : ""}"
+            class={clsx(classes)}
             {src}
             alt=" "
         />
@@ -102,6 +111,11 @@
         align-self: center;
     }
     
+    :global(.square) {
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+    
     .clickable {
         cursor: pointer;
     }
@@ -110,6 +124,5 @@
         position: fixed;
         top: 0;
         right: 0;
-
     }
 </style>
