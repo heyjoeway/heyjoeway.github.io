@@ -1,6 +1,6 @@
 <style lang="scss">
 	.layout {
-		max-width: calc(900px - (32px * 2));
+		max-width: 836px;
 		margin-right: auto;
 		margin-left: auto;
 		padding-right: 16px;

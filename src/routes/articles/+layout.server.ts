@@ -1,32 +1,11 @@
 import * as fs from 'fs';
 import { compile } from 'mdsvex';
+
 import {
-	simpleGit,
-	CleanOptions,
-	type LogResult,
-	type DefaultLogFields
-} from 'simple-git';
-
-const git = simpleGit().clean(CleanOptions.FORCE);
-
+	getLatestCommitDate,
+	getFirstCommitDate
+} from '$lib/Git';
 import { type ArticleFrontmatter } from '$lib/Article.js';
-
-async function getGitCommitDate(path: string) {
-	const gitLog: LogResult<DefaultLogFields> = await new Promise(
-		(resolve, reject) => git.log(
-			{
-				"file": path,
-				"max-count": 1
-			},
-			(err, log) => {
-				if (err) return reject(err);
-				resolve(log);
-			}
-		)
-	);
-	if (!gitLog.latest) throw new Error("No git log found");
-	return gitLog.latest.date;
-}
 
 export async function load({ route }) {
 	const postPath = `src/routes/${route.id}/+page.svx`;
@@ -36,7 +15,13 @@ export async function load({ route }) {
 
 	if (!fm.last_modified_at) {
 		try {
-			fm.last_modified_at = await getGitCommitDate(postPath);
+			fm.last_modified_at = await getLatestCommitDate(postPath);
+		} catch (e) {}
+	}
+	
+	if (!fm.date) {
+		try {
+			fm.date = await getFirstCommitDate(postPath);
 		} catch (e) {}
 	}
 	
