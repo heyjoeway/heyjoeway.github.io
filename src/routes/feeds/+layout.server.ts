@@ -5,7 +5,7 @@ import { compile } from 'mdsvex';
 import {
 	getLatestCommitDate,
 	getFirstCommitDate
-} from '$lib/Git.ts';
+} from '$lib/Git';
 
 const GITHUB_ROOT = "https://github.com/heyjoeway/heyjoeway.github.io/tree/master/";
 
@@ -33,13 +33,13 @@ export async function load() {
         .filter((dirent: fs.Dirent) => dirent.isDirectory())
         .map((dirent: fs.Dirent) => dirent.name);
         
-    const feeds = feedIds.map(async (feedId: string) => {
+    const feeds = await Promise.all(feedIds.map(async (feedId: string) => {
         const feedTitle = fs.readFileSync(`${feedsDir}/${feedId}/title.txt`, 'utf8');
         
         const postDirents = fs.readdirSync(`${feedsDir}/${feedId}`, { withFileTypes: true })
             .filter((dirent: fs.Dirent) => dirent.isDirectory())
             
-        const posts = postDirents.map(async (postDirent: fs.Dirent) => {
+        const posts = await Promise.all(postDirents.map(async (postDirent: fs.Dirent) => {
             const postId = postDirent.name;
             
             const mediaFileNames = fs.readdirSync(`${feedsDir}/${feedId}/${postId}`, { withFileTypes: true })
@@ -61,17 +61,21 @@ export async function load() {
             const postContents = fs.readFileSync(postPath, 'utf-8');
             const isEmpty = postContents.trim() === '';
             const compiled = await compile(postContents);
-        	const fm = compiled?.data?.fm as any;
-            
-            if (!fm.last_modified_at) {
-                try {
-                    fm.last_modified_at = await getLatestCommitDate(postPath);
-                } catch (e) {}
-            }
-            
-            if (!fm.date) {
+        	const fm = (compiled?.data?.fm || {}) as Record<string, any>;
+            fm.urlShort = `jojudge.com/feeds/${feedId}/${postId}`;          
+
+            if (!Object.hasOwn(fm, 'date')) {
                 try {
                     fm.date = await getFirstCommitDate(postPath);
+                } catch (e) { }
+            }
+
+            if (!Object.hasOwn(fm, 'last_modified_at')) {
+                try {
+                    fm.last_modified_at = await getLatestCommitDate(postPath);
+                    if (fm.last_modified_at === fm.date) {
+                        delete fm.last_modified_at;
+                    }
                 } catch (e) {}
             }
             
@@ -79,17 +83,18 @@ export async function load() {
                 id: postId,
                 isEmpty,
                 media,
-                fm
+                fm,
+                idFull: `${feedId}/${postId}`,
             }
-        });
-        
+        }));
+                
         return {
             id: feedId,
             title: feedTitle,
             urlShort: `jojudge.com/feeds/${feedId}`,
             posts
         }
-    });
-    
+    }));
+        
     return { feeds };
 }

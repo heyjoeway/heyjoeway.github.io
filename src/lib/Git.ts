@@ -5,7 +5,7 @@ import {
     type DefaultLogFields
 } from 'simple-git';
 
-const git = simpleGit().clean(CleanOptions.FORCE);
+const git = simpleGit();
 
 export async function getLatestCommitDate(path: string) {
 	const gitLog: LogResult<DefaultLogFields> = await new Promise(
@@ -29,7 +29,6 @@ export async function getFirstCommitDate(path: string) {
         (resolve, reject) => git.log(
             {
                 "file": path,
-                "reverse": "true",
                 "max-count": 1
             },
             (err, log) => {
@@ -38,6 +37,9 @@ export async function getFirstCommitDate(path: string) {
             }
         )
     );
-    if (!gitLog.latest) throw new Error("No git log found");
-    return gitLog.latest.date;
+    const gitLogAll = [...gitLog.all];
+    gitLogAll.reverse();
+    const gitLogFirst = gitLogAll[0];
+    if (!gitLogFirst) throw new Error("No git log found");
+    return gitLogFirst.date;
 }
