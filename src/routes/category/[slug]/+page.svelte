@@ -5,7 +5,7 @@
 	export let data;
 </script>
 
-<Layout data={data} bgText={data.slug}>
+<Layout bgText={data.slug}>
 	<h1>Category: {data.slug}</h1>
 	<ArticleFeed articles={data.articles} />
 </Layout>

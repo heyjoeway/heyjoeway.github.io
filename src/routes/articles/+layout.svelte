@@ -38,7 +38,7 @@
 <script lang="ts">
 	import { formatDate } from "$lib/Utils";
 	import Tags from "$lib/Tags.svelte";
-	import Layout from "$lib/Layout.svelte";
+	import ArticleLayout from "$lib/ArticleLayout.svelte";
 	import { strToTagDetails } from "$lib/Tags";
 	import Comments from "$lib/Comments.svelte";
 	
@@ -52,7 +52,7 @@
 	]
 </script>
 
-<Layout data={data} bgText={bgText}>
+<ArticleLayout data={data} bgText={bgText}>
 	<div class="header-container">
 		<div>
 			<h1>{data.fm.title}</h1>
@@ -83,4 +83,4 @@
 		<Comments pageID={data.id} pageTitle={data.fm.title} />
 	{/if}
 
-</Layout>
+</ArticleLayout>
