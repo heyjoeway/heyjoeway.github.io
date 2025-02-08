@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { githubLink } from "./Utils";
 
 export interface GalleryDescriptor {
     name: string;
@@ -7,8 +8,6 @@ export interface GalleryDescriptor {
     images: Record<string, any>;
     thumbs: Record<string, any>;
 }
-
-const GITHUB_ROOT = "https://github.com/heyjoeway/heyjoeway.github.io/tree/master/";
 
 export function createGitHubLinks(pathRoot: string) {
     if (pathRoot.includes(".svelte-kit")) {
@@ -30,14 +29,8 @@ export function createGitHubLinks(pathRoot: string) {
         
         fs.readdirSync(galleryPath).forEach(fileName => {
             const filePath = path.join(galleryPath, fileName);
-            const filePathRelative = path.relative(
-                path.resolve("./"),
-                filePath
-            );
-            
-            const fileGitHubUrl = new URL(filePathRelative, GITHUB_ROOT);
             const key = `./${galleryName}/${fileName}`;
-            galleryImages[key] = fileGitHubUrl.href;
+            galleryImages[key] = githubLink(filePath);
         });
         
         galleries[galleryName] = galleryImages;

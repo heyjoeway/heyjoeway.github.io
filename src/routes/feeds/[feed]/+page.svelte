@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { styleObjToStr } from "$lib/Utils.js";
     import Post from "$lib/Post.svelte";
     import Layout from "$lib/Layout.svelte";
     import Image from "$lib/Image.svelte";
@@ -7,15 +8,10 @@
     import Img from "@zerodevx/svelte-img";
     
     export let data;
-    
-    // https://stackoverflow.com/a/45205645
-    function styleObjToStr(obj: Record<string, any>) {
-        return Object.entries(obj).map(([k, v]) => `${k}:${v}`).join(';')
-    }
 </script>
 
 <Layout data={data}>
-    {#await import(`/src/feeds/${data.id}/banner.webp?as=run`) then { default: bannerSrc }}
+    {#await import(`../../../../src/feeds/${data.id}/banner.webp?as=run`) then { default: bannerSrc }}
     <Img
         style={styleObjToStr({
             width:"100%",
@@ -29,7 +25,7 @@
     {/await}
     <div class="outer-container">
         <div class="inner-container">
-            {#await import(`/src/feeds/${data.id}/pfp.jpg?as=run`) then { default: pfpSrc }}
+            {#await import(`../../../../src/feeds/${data.id}/pfp.jpg?as=run`) then { default: pfpSrc }}
                 <div class="profile">
                     <div class="left">
                         <Image maxHeight="90px" src={pfpSrc} enableLightbox={false} />
@@ -63,8 +59,8 @@
             flex-direction: column;
             align-items: flex-start;
             position: relative;
-            top: -32px;
-            margin-bottom: -32px;
+            top: -45px;
+            margin-bottom: -45px;
             
             .title {
                 font-size: 24.375px;

@@ -69,7 +69,6 @@
         {/if}
     {/each}
 </div>
-<br>
 <div class="footer">
     <div class="timestamps">
         {#each [
@@ -92,6 +91,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
         gap: 1rem;
+        margin-bottom: 8px;
     }
     
     .profile {
