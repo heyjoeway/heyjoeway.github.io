@@ -1,6 +1,5 @@
 import {
     simpleGit,
-    CleanOptions,
     type LogResult,
     type DefaultLogFields
 } from 'simple-git';
@@ -21,7 +20,7 @@ export async function getLatestCommitDate(path: string) {
 		)
 	);
 	if (!gitLog.latest) throw new Error("No git log found");
-	return gitLog.latest.date;
+    return gitLog.latest.date; // ISO8601
 }
 
 export async function getFirstCommitDate(path: string) {
@@ -41,5 +40,5 @@ export async function getFirstCommitDate(path: string) {
     gitLogAll.reverse();
     const gitLogFirst = gitLogAll[0];
     if (!gitLogFirst) throw new Error("No git log found");
-    return gitLogFirst.date;
+    return gitLogFirst.date; // ISO8601
 }
