@@ -20,7 +20,7 @@ function arrMin<T>(arr: Array<T> | undefined) {
     return arr.reduce((a, b) => a < b ? a : b);
 }
 
-function rssObj(feed: Feed, url: string) {
+function rssObj(feed: Feed, originUrl: string) {
     const lastBuildDatePost = arrMax(feed.posts?.map(x => new Date(x.fm.date)));
     const lastBuildDateEdit = arrMax(feed.posts?.map(x => new Date(x.fm.last_modified_at)));
     
@@ -29,6 +29,8 @@ function rssObj(feed: Feed, url: string) {
         ? lastBuildDateEdit
         : lastBuildDatePost
     );
+    
+    const channelLink = new URL(feed.url, originUrl).href;
     
     return {
         rss: {
@@ -41,7 +43,7 @@ function rssObj(feed: Feed, url: string) {
             },
             channel: {
                 title: feed.meta.title,
-                link: feed.url,
+                link: channelLink,
                 description: feed.meta.description,
                 language: "en-us",
                 pubDate: arrMin(
@@ -56,15 +58,15 @@ function rssObj(feed: Feed, url: string) {
                 webMaster: "joe@jojudge.com (Joseph Judge)",
                 "atom:link": {
                     $: {
-                        href: url, // here
+                        href: channelLink + "/rss", // new URL is not working here
                         rel: "self",
                         type: "application/rss+xml"
                     }
                 },
                 item: feed.posts?.map(post => ({
                     title: post.fm.title,
-                    link: post.url,
-                    description: post.html,
+                    link: new URL(post.url, originUrl).href,
+                    description: post.html.trim(),
                     pubDate: new Date(post.fm.date).toUTCString(),
                     guid: post.url
                 }))
@@ -81,7 +83,7 @@ export const GET: RequestHandler = async ({ url }: { url: URL }) => {
     const feed = await getFeed(feedId, true);
     
     const builder = new xml2js.Builder();
-    const xml = builder.buildObject(rssObj(feed, url.toString()));
+    const xml = builder.buildObject(rssObj(feed, url.origin));
     return new Response(xml);
 }
 

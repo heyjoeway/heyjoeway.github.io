@@ -52,7 +52,7 @@ export async function getFeedPost(feedId: string, postId: string): Promise<Post>
             .map((dirent: fs.Dirent) => dirent.name)
             .filter((name: string) => name !== 'post.md')
     );
-        
+    
     const media = mediaFileNames.map((mediaFileName: string) => {
         const [id, extension] = splitext(mediaFileName);
         return {
@@ -68,13 +68,13 @@ export async function getFeedPost(feedId: string, postId: string): Promise<Post>
     const compiled = await compile(postContents);
     const fm = (compiled?.data?.fm || {}) as Record<string, any>;
     fm.urlShort = `jojudge.com/feeds/${feedId}/${postId}`;          
-
+    
     if (!Object.hasOwn(fm, 'date')) {
         try {
             fm.date = await getFirstCommitDate(postPath);
         } catch (e) { }
     }
-
+    
     if (!Object.hasOwn(fm, 'last_modified_at')) {
         try {
             fm.last_modified_at = await getLatestCommitDate(postPath);
@@ -83,7 +83,7 @@ export async function getFeedPost(feedId: string, postId: string): Promise<Post>
             }
         } catch (e) {}
     }
-            
+    
     return {
         id: postId,
         html: compiled?.code || '',
