@@ -29,9 +29,7 @@ function rssObj(feed: Feed, originUrl: string) {
         ? lastBuildDateEdit
         : lastBuildDatePost
     );
-    
-    const channelLink = new URL(feed.url, originUrl).href;
-    
+        
     return {
         rss: {
             $: {
@@ -43,7 +41,7 @@ function rssObj(feed: Feed, originUrl: string) {
             },
             channel: {
                 title: feed.meta.title,
-                link: channelLink,
+                link: new URL(feed.url, originUrl).href,
                 description: feed.meta.description,
                 language: "en-us",
                 pubDate: arrMin(
@@ -58,7 +56,7 @@ function rssObj(feed: Feed, originUrl: string) {
                 webMaster: "joe@jojudge.com (Joseph Judge)",
                 "atom:link": {
                     $: {
-                        href: channelLink + "/rss", // new URL is not working here
+                        href: new URL(feed.rss, originUrl).href, // new URL is not working here
                         rel: "self",
                         type: "application/rss+xml"
                     }
@@ -76,7 +74,7 @@ function rssObj(feed: Feed, originUrl: string) {
 }
 
 export const GET: RequestHandler = async ({ url }: { url: URL }) => {
-    const regex = new RegExp("\/feeds\/(.*?)\/rss");
+    const regex = new RegExp("\/feeds\/(.*?)\/feed.rss");
     const match = url.toString().match(regex);
     if (!match) return new Response();
     const feedId = match[1];

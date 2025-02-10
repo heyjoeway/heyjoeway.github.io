@@ -44,7 +44,7 @@
                 <div>{feed.meta.description}</div>
             </div>
             <div class="buttons">
-                <Button onClick="./rss">📡 RSS</Button>
+                <Button onClick={feed.rss}>📡 RSS</Button>
             </div>
         </div>
     </div>

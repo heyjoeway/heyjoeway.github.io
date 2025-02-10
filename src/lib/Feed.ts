@@ -38,6 +38,7 @@ export interface Feed {
     id: string;
     meta: Record<string, any>;
     url: string;
+    rss: string;
     urlShort: string;
     posts?: Post[]
 }
@@ -58,7 +59,7 @@ export async function getFeedPost(feedId: string, postId: string): Promise<Post>
         return {
             id,
             extension,
-            url: `jojudge.com/feeds/${feedId}/${postId}/${mediaFileName}`,
+            url: `/feeds/${feedId}/${postId}/${mediaFileName}`,
             urlGitHub: githubLink(path.join(feedsDir, feedId, postId, mediaFileName))
         } as Media;
     });
@@ -133,6 +134,7 @@ export async function getFeed(feedId: string, includePosts = false): Promise<Fee
         id: feedId,
         meta: feedMeta,
         url: `/feeds/${feedId}`,
+        rss: `/feeds/${feedId}/feed.rss`,
         urlShort: `jojudge.com/feeds/${feedId}`,
         posts
     } as Feed;

@@ -1,12 +1,13 @@
 <script lang="ts">
     import Image from "$lib/Image.svelte";
     import Video from "$lib/Video.svelte";
-    import Button from "$lib/joeysvelte/dist/Button.svelte";
+    import Button from "$joeysvelte/Button.svelte";
 	import { formatDateTime } from "$lib/Utils";
     
     export let feed;
     export let post;
     export let pfpSrc;
+    export let inFeed = false;
     
     function newDateDetail(type: string, key: string) {
         return { type, key };
@@ -83,7 +84,12 @@
             {/if}
         {/each}
     </div>
-    <Button onClick={post.url}>🔗</Button>
+    <Button onClick={post.url} linkCopyOnClick={!inFeed}>
+        {#if inFeed}
+            💬
+        {/if}
+        🔗
+    </Button>
 </div>
 
 <style lang="scss">

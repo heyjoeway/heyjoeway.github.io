@@ -17,7 +17,7 @@
                 
                 {#if data.posts}
                     {#each data.posts as post}
-                        <Post feed={data} post={post} pfpSrc={pfpSrc} />
+                        <Post feed={data} post={post} pfpSrc={pfpSrc} inFeed={true} />
                     {/each}
                 {/if}
                 <hr>
