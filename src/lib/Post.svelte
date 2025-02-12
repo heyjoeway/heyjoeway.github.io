@@ -4,8 +4,10 @@
     import Button from "$joeysvelte/Button.svelte";
 	import { formatDateTime } from "$lib/Utils";
     import FeedProfilePic from "./FeedProfilePic.svelte";
-    import Masonry from 'svelte-bricks'
     import type { Feed, Post, Media } from "./Feed";
+
+    import Masonry from 'svelte-bricks'
+    import PostEmbed from "./PostEmbed.svelte";
     
     export let feed: Feed;
     export let post: Post;
@@ -89,6 +91,9 @@
         {/if}
     </Masonry>
     <div>
+        {#each post.embeds as embed}
+            <PostEmbed {embed} />
+        {/each}
         {#if inFeed && unknownMedia.length > 1}
             <br>
             <Button onClick={post.url}>

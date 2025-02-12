@@ -24,6 +24,12 @@ export function getFeedIds(): string[] {
     return feedIds;
 }
 
+export interface Embed {
+    platform: "youtube";
+    id: string;
+    originalUrl: string;
+}
+
 export interface Media {
     id: string;
     extension: string;
@@ -38,6 +44,7 @@ export interface Post {
     id: string;
     html: string;
     media: Media[];
+    embeds: Embed[];
     fm: Record<string, any>;
     idFull: string;
     url: string;
@@ -100,6 +107,33 @@ export async function getFeedPostMedia(feedId: string, postId: string): Promise<
     return media;
 }
 
+export function getFeedPostEmbeds(postContents: string) {
+    const regexYoutube = /http(?:s?):\/\/(?:www\.)?youtu(?:be\.com\/watch\?v=|\.be\/)([\w\-\_]*)(&(amp;)?‌​[\w\?‌​=]*)?\S*(?:\s|$)/g;
+    const matches = postContents.matchAll(regexYoutube).toArray();
+    
+    // Remove all embeds from the contents
+    let filteredPostContents = postContents;
+    const embeds = matches.map(match => {
+        const embed = {
+            platform: "youtube",
+            id: match[1],
+            originalUrl: match[0]
+        } as Embed;
+        filteredPostContents = filteredPostContents.replaceAll(
+            embed.originalUrl,
+            ""
+        );
+        return embed
+    });
+    
+    filteredPostContents = filteredPostContents.trim();
+    
+    return {
+        filteredPostContents,
+        embeds
+    };
+}
+
 export async function getFeedPost(feedId: string, postId: string): Promise<Post> {
     const media = await getFeedPostMedia(feedId, postId);
     
@@ -110,7 +144,11 @@ export async function getFeedPost(feedId: string, postId: string): Promise<Post>
         postContents = fs.readFileSync(postPath, 'utf-8');
     } catch { }
     
-    const compiled = await compile(postContents);
+    const {filteredPostContents, embeds} = getFeedPostEmbeds(postContents);
+    
+    const compiled = await compile(filteredPostContents, {
+        smartypants: false,
+    });
     const fm = (compiled?.data?.fm || {}) as Record<string, any>;
     fm.urlShort = `jojudge.com/feeds/${feedId}/${postId}`;
     
@@ -147,6 +185,7 @@ export async function getFeedPost(feedId: string, postId: string): Promise<Post>
     return {
         id: postId,
         html: compiled?.code || '',
+        embeds,
         media,
         fm,
         idFull: `${feedId}/${postId}`,
