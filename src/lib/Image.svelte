@@ -7,10 +7,13 @@
     export let src: any;
     export let fullSrc: any = undefined;
     export let maxHeight: string = "450px";
+    export let width: string | undefined = undefined;
+    export let height: string | undefined = undefined;
     export let enableLightbox = true;
     export let square = false;
     export let exif: ExifReader.Tags | undefined = undefined;
     import Img from "@zerodevx/svelte-img";
+    import { styleObjToStr } from './Utils';
     
     let skipSvelteImg = false;
     let nearestScaling = false;
@@ -60,7 +63,11 @@
 <!-- svelte-ignore a11y_click_events_have_key_events -->
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 <div
-    style="--img-max-height:{maxHeight}"
+    style={styleObjToStr({
+        "--img-max-height": maxHeight,
+        "--img-width": width,
+        "--img-height": height
+    })}
     on:click={() => {overlayOpen = true}}
 >
     {#if skipSvelteImg}
@@ -155,6 +162,8 @@
         width: auto;
         height: auto;
         max-height: var(--img-max-height);
+        height: var(--img-height);
+        width: var(--img-width);
         align-self: center;
     }
     

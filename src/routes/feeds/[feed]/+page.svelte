@@ -18,6 +18,7 @@
             {#if data.posts && data.posts.length > 0}
                 {#each data.posts as post}
                     <Post feed={data} post={post} inFeed={true} />
+                    <hr>
                 {/each}
             {:else}
                 <Center>
@@ -25,7 +26,6 @@
                 </Center>
                 <br>
             {/if}
-            <hr>
         </div>
     </div>
 </Layout>

@@ -10,28 +10,30 @@
     export let feed: Feed;
     const bannerStyleStr = styleObjToStr({
         width:"100%",
-        height:"150px",
+        height:"100%",
         "object-fit":"cover",
         "border-radius":"8px"
     });
 </script>
 
-{#await import(`../../src/feeds/${feed.id}/banner.jpg?as=run`) then { default: bannerSrc }}
-    <Img style={bannerStyleStr} src={bannerSrc} />
-{:catch}
-    {#await import(`../../src/feeds/${feed.id}/banner.jpeg?as=run`) then { default: bannerSrc }}
+<div class="header-container">
+    {#await import(`../../src/feeds/${feed.id}/banner.jpg?as=run`) then { default: bannerSrc }}
         <Img style={bannerStyleStr} src={bannerSrc} />
     {:catch}
-        {#await import(`../../src/feeds/${feed.id}/banner.png?as=run`) then { default: bannerSrc }}
+        {#await import(`../../src/feeds/${feed.id}/banner.jpeg?as=run`) then { default: bannerSrc }}
             <Img style={bannerStyleStr} src={bannerSrc} />
         {:catch}
-            <!-- webp goes at the bottom WHERE IT BELONGS -->
-            {#await import(`../../src/feeds/${feed.id}/banner.webp?as=run`) then { default: bannerSrc }}
+            {#await import(`../../src/feeds/${feed.id}/banner.png?as=run`) then { default: bannerSrc }}
                 <Img style={bannerStyleStr} src={bannerSrc} />
+            {:catch}
+                <!-- webp goes at the bottom WHERE IT BELONGS -->
+                {#await import(`../../src/feeds/${feed.id}/banner.webp?as=run`) then { default: bannerSrc }}
+                    <Img style={bannerStyleStr} src={bannerSrc} />
+                {/await}
             {/await}
         {/await}
     {/await}
-{/await}
+</div>
 
 <div class="outer-container">
     <div class="inner-container">
@@ -39,7 +41,7 @@
             <div class="left">
                 <Clickable onClick={feed.url}>
                     <div class="profile-main">
-                        <FeedProfilePic maxHeight="90px" feed={feed} />
+                        <FeedProfilePic size="90px" feed={feed} />
                         <div class="title">{feed.meta.title}</div>
                         <div class="path">{feed.urlShort}</div>
                     </div>
@@ -99,5 +101,10 @@
         display: flex;
         flex-direction: column;
         align-items: start;
+    }
+    
+    .header-container {
+        width: 100%;
+        height: 150px;
     }
 </style>

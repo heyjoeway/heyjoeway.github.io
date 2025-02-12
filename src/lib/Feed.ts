@@ -149,6 +149,15 @@ export async function getFeedPost(feedId: string, postId: string): Promise<Post>
     const compiled = await compile(filteredPostContents, {
         smartypants: false,
     });
+    
+    // https://github.com/pngwn/MDsveX/issues/392#issuecomment-1013755667
+    const html = (
+        compiled?.code
+            .replace(/>{@html `<code class="language-/g, '><code class="language-')
+            .replace(/<\/code>`}<\/pre>/g, '</code></pre>')
+        || ''
+    );
+    
     const fm = (compiled?.data?.fm || {}) as Record<string, any>;
     fm.urlShort = `jojudge.com/feeds/${feedId}/${postId}`;
     
@@ -158,7 +167,7 @@ export async function getFeedPost(feedId: string, postId: string): Promise<Post>
         const dates = [...mediaDates, postFileDate].filter(x => x); // Remove undefined
         if (dates.length) {
             fm.date = arrMin(
-                [...mediaDates, postFileDate].map(
+                dates.map(
                     x => new Date(x?.toString() || "")
                 )
             )?.toISOString();
@@ -171,7 +180,7 @@ export async function getFeedPost(feedId: string, postId: string): Promise<Post>
         const dates = [...mediaDates, postFileDate].filter(x => x); // Remove undefined
         if (dates.length) {
             fm.last_modified_at = arrMax(
-                [...mediaDates, postFileDate].map(
+                dates.map(
                     x => new Date(x?.toString() || "")
                 )
             )?.toISOString();
@@ -184,7 +193,7 @@ export async function getFeedPost(feedId: string, postId: string): Promise<Post>
     
     return {
         id: postId,
-        html: compiled?.code || '',
+        html,
         embeds,
         media,
         fm,

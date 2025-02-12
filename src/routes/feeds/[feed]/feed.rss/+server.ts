@@ -13,8 +13,6 @@ function isValid(x: any) {
 function rssObj(feed: Feed, originUrl: string) {
     const postDates = feed.posts?.map(x => x.fm.date).filter(x => x) || [];
     const editDates = feed.posts?.map(x => x.fm.last_modified_at).filter(x => x) || [];
-    console.log(postDates);
-    console.log(editDates);
     const lastBuildDatePost = arrMax(postDates.map(x => new Date(x)));
     const lastBuildDateEdit = arrMax(editDates.map(x => new Date(x)));
     
