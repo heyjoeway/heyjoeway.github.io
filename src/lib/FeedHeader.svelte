@@ -1,12 +1,12 @@
 <script lang="ts">
     import type { Feed } from "$lib/Feed";
     
-    import Image from "$lib/Image.svelte";
-    import Button from "$lib/joeysvelte/dist/Button.svelte";
+    import Button from "$joeysvelte/Button.svelte";
     import Img from "@zerodevx/svelte-img";
+    import FeedProfilePic from "./FeedProfilePic.svelte";
     import { styleObjToStr } from "$lib/Utils.js";
+    import Clickable from "$joeysvelte/Clickable.svelte";
     
-    export let pfpSrc;
     export let feed: Feed;
     const bannerStyleStr = styleObjToStr({
         width:"100%",
@@ -15,7 +15,6 @@
         "border-radius":"8px"
     });
 </script>
-
 
 {#await import(`../../src/feeds/${feed.id}/banner.jpg?as=run`) then { default: bannerSrc }}
     <Img style={bannerStyleStr} src={bannerSrc} />
@@ -38,9 +37,13 @@
     <div class="inner-container">
         <div class="profile">
             <div class="left">
-                <Image maxHeight="90px" src={pfpSrc} enableLightbox={false} />
-                <div class="title">{feed.meta.title}</div>
-                <div class="path">{feed.urlShort}</div>
+                <Clickable onClick={feed.url}>
+                    <div class="profile-main">
+                        <FeedProfilePic maxHeight="90px" feed={feed} />
+                        <div class="title">{feed.meta.title}</div>
+                        <div class="path">{feed.urlShort}</div>
+                    </div>
+                </Clickable>
                 <div>{feed.meta.description}</div>
             </div>
             <div class="buttons">
@@ -51,7 +54,7 @@
 </div>
 
 <style lang="scss">
-        .profile {
+    .profile {
         position: relative;
         margin-bottom: 16px;
         
@@ -90,5 +93,11 @@
     .inner-container {
         width: 100%;
         max-width: 600px;
+    }
+    
+    .profile-main {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
     }
 </style>

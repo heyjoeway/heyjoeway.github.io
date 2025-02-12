@@ -1,28 +1,22 @@
 export const prerender = true;
 
 import * as xml2js from 'xml2js';
+import type { RequestHandler } from "@sveltejs/kit";
 
 import { getFeed, getFeedIds, type Feed } from '$lib/Feed.js';
-
-import type { RequestHandler } from "@sveltejs/kit";
+import { arrMax, arrMin } from '$lib/Utils.js';
 
 function isValid(x: any) {
     return !isNaN(x);
 }
 
-function arrMax<T>(arr: Array<T> | undefined) {
-    if (!arr) return undefined;
-    return arr.reduce((a, b) => a > b ? a : b);
-}
-
-function arrMin<T>(arr: Array<T> | undefined) {
-    if (!arr) return undefined;
-    return arr.reduce((a, b) => a < b ? a : b);
-}
-
 function rssObj(feed: Feed, originUrl: string) {
-    const lastBuildDatePost = arrMax(feed.posts?.map(x => new Date(x.fm.date)));
-    const lastBuildDateEdit = arrMax(feed.posts?.map(x => new Date(x.fm.last_modified_at)));
+    const postDates = feed.posts?.map(x => x.fm.date).filter(x => x) || [];
+    const editDates = feed.posts?.map(x => x.fm.last_modified_at).filter(x => x) || [];
+    console.log(postDates);
+    console.log(editDates);
+    const lastBuildDatePost = arrMax(postDates.map(x => new Date(x)));
+    const lastBuildDateEdit = arrMax(editDates.map(x => new Date(x)));
     
     const lastBuildDate = (
         isValid(lastBuildDateEdit)

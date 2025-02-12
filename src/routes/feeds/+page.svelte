@@ -7,11 +7,7 @@
 
 <Layout>
     {#each data.feeds as feed}
+        <FeedHeader feed={feed} />
         <hr>
-        {#await import(`../../../src/feeds/${feed.id}/pfp.jpg?as=run`) then { default: pfpSrc }}
-            <a href="./{feed.id}">
-                <FeedHeader feed={feed} pfpSrc={pfpSrc} />
-            </a>
-        {/await}
     {/each}
 </Layout>

@@ -3,27 +3,31 @@
     import Layout from "$lib/Layout.svelte";
 
     import FeedHeader from "$lib/FeedHeader.svelte";
+    import Center from "$lib/Center.svelte";
     
     export let data;
 </script>
 
 <Layout>
-    {#await import(`../../../../src/feeds/${data.id}/pfp.jpg?as=run`) then { default: pfpSrc }}
-        <FeedHeader pfpSrc={pfpSrc} feed={data} />
-        
-        <div class="outer-container">
-            <div class="inner-container">
-                <hr>
-                
-                {#if data.posts}
-                    {#each data.posts as post}
-                        <Post feed={data} post={post} pfpSrc={pfpSrc} inFeed={true} />
-                    {/each}
-                {/if}
-                <hr>
-            </div>
+    <FeedHeader feed={data} />
+    
+    <div class="outer-container">
+        <div class="inner-container">
+            <hr>
+            
+            {#if data.posts && data.posts.length > 0}
+                {#each data.posts as post}
+                    <Post feed={data} post={post} inFeed={true} />
+                {/each}
+            {:else}
+                <Center>
+                    No posts!
+                </Center>
+                <br>
+            {/if}
+            <hr>
         </div>
-    {/await}
+    </div>
 </Layout>
 
 <style lang="scss">

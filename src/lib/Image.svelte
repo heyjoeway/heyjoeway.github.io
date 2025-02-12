@@ -9,6 +9,7 @@
     export let maxHeight: string = "450px";
     export let enableLightbox = true;
     export let square = false;
+    export let exif: ExifReader.Tags | undefined = undefined;
     import Img from "@zerodevx/svelte-img";
     
     let skipSvelteImg = false;
@@ -31,6 +32,27 @@
         img: true,
         clickable: enableLightbox,
         square: square
+    }
+    
+    const exifSoftware = exif?.Software?.description || "";
+    let showExifSoftware = exifSoftware.length > 0;
+    if (showExifSoftware && !isNaN(parseInt(exifSoftware[0]))) {
+        showExifSoftware = false;
+    }
+    
+    let exifISO = exif?.ISOSpeedRatings?.description;
+    if (exifISO) exifISO = "ISO " + exifISO;
+    const exifSettings = ([
+        exif?.FNumber?.description,
+        exif?.ShutterSpeedValue?.description,
+        exifISO
+    ]).filter(x => x);
+    const exifString = exifSettings.join(", ")
+    
+    let exifOpen = false;
+    
+    $: {
+        if (!overlayOpen) exifOpen = false;
     }
 </script>
 
@@ -67,13 +89,38 @@
         
         {#if skipSvelteImg}
             <img
-                class="img"
+                class="img img-lightbox"
                 {src}
                 alt=" "
                 style={nearestScaling ? "image-rendering: pixelated;" : ""}
             />
         {:else}
-            <Img class="img" {src} alt=" " />
+            <Img class="img img-lightbox" {src} alt=" " />
+        {/if}
+        
+        {#if exif}
+            <div class="overlay-exif">
+                {#if exifOpen}
+                    🖵 (Original: {exif["Image Height"]?.value}x{exif["Image Width"]?.value} {exif["Bits Per Sample"]?.value}bpp)<br>
+                    {#if exif.Make?.description || exif.Model?.description}
+                        📷 {exif.Make?.description} {exif.Model?.description}<br>
+                    {/if}
+                    {#if exif.Lens?.description}
+                        🔎 {exif.Lens?.description}<br>
+                    {/if}
+                    {#if exifString}
+                        ⚙️ {exifString}<br>
+                    {/if}
+                    {#if exif.Flash?.description}
+                        ⚡ {exif.Flash?.description}<br>
+                    {/if}
+                    {#if showExifSoftware}
+                        🖌️ Edited with {exif.Software?.description}
+                    {/if}
+                {:else}
+                    <Button onClick={() => exifOpen = true}>ℹ️</Button>
+                {/if}
+            </div>
         {/if}
     </Overlay>
 {/if}
@@ -124,5 +171,15 @@
         position: fixed;
         top: 0;
         right: 0;
+    }
+    
+    :global(.img-lightbox) {
+        max-height: 100% !important;
+    }
+    
+    :global(.overlay-exif) {
+        position: fixed !important;
+        left: 16px;
+        bottom: 16px;
     }
 </style>

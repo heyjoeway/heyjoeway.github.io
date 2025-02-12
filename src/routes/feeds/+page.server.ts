@@ -1,6 +1,6 @@
-import { getFeed, getFeedIds } from '$lib/Feed.js';
+import { getAllFeeds } from '$lib/Feed.js';
 
 export async function load() {
-    const feeds = await Promise.all(getFeedIds().map((feedId: string) => getFeed(feedId)));
+    const feeds = await getAllFeeds();
     return { feeds };
 }

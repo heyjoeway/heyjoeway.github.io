@@ -3,53 +3,76 @@
     import Video from "$lib/Video.svelte";
     import Button from "$joeysvelte/Button.svelte";
 	import { formatDateTime } from "$lib/Utils";
+    import FeedProfilePic from "./FeedProfilePic.svelte";
+    import Masonry from 'svelte-bricks'
+    import type { Feed, Post, Media } from "./Feed";
     
-    export let feed;
-    export let post;
-    export let pfpSrc;
+    export let feed: Feed;
+    export let post: Post;
     export let inFeed = false;
     
     function newDateDetail(type: string, key: string) {
         return { type, key };
     }
+    
+    const knownExtensions = [
+        ".png",
+        ".jpg",
+        ".jpeg",
+        ".webp",
+        ".gif",
+        ".svg",
+        ".mp4",
+        ".webm"
+    ];
+    
+    const unknownMedia = post.media.filter(
+        x => !knownExtensions.includes(x.extension)
+    );
 </script>
-
 
 <a href={feed.url}>
     <div class="profile">
-        <Image maxHeight="42px" src={pfpSrc} enableLightbox={false} />
+        <FeedProfilePic maxHeight="42px" feed={feed} />
         <div>
             <div class="title">{feed.meta.title}</div>
             <div class="path">{feed.urlShort}</div>
         </div>
     </div>
 </a>
-            
+
 <div class="post">
     {@html post.html}
-</div>                
+</div>
 
 <div class="media">
-    {#each post.media as media}
+    <Masonry
+        items={post.media}
+        getId={(media: Media) => media.id + media.extension}
+        let:item={media}
+        minColWidth={160}
+        maxColWidth={600}
+        animate={false}
+    >
         {#if media.extension == ".png"}
             {#await import(`../../src/feeds/${feed.id}/${post.id}/${media.id}.png?as=post`) then { default: src }}
-                <Image src={src} fullSrc={media.urlGitHub} />
+                <Image src={src} fullSrc={media.urlGitHub} exif={media.exif} />
             {/await}
         {:else if media.extension == ".jpg"}
             {#await import(`../../src/feeds/${feed.id}/${post.id}/${media.id}.jpg?as=post`) then { default: src }}
-                <Image src={src} fullSrc={media.urlGitHub} />
+                <Image src={src} fullSrc={media.urlGitHub} exif={media.exif} />
             {/await}
         {:else if media.extension == ".jpeg"}
             {#await import(`../../src/feeds/${feed.id}/${post.id}/${media.id}.jpg?as=post`) then { default: src }}
-                <Image src={src} fullSrc={media.urlGitHub} />
+                <Image src={src} fullSrc={media.urlGitHub} exif={media.exif} />
             {/await}
         {:else if media.extension == ".webp"}
             {#await import(`../../src/feeds/${feed.id}/${post.id}/${media.id}.webp?as=post`) then { default: src }}
-                <Image src={src} fullSrc={media.urlGitHub} />
+                <Image src={src} fullSrc={media.urlGitHub} exif={media.exif} />
             {/await}
         {:else if media.extension == ".gif"}
             {#await import(`../../src/feeds/${feed.id}/${post.id}/${media.id}.gif`) then { default: src }}
-                <Image src={src} fullSrc={media.urlGitHub} />
+                <Image src={src} fullSrc={media.urlGitHub} exif={media.exif} />
             {/await}
         {:else if media.extension == ".svg"}
             {#await import(`../../src/feeds/${feed.id}/${post.id}/${media.id}.svg`) then { default: src }}
@@ -63,12 +86,23 @@
             {#await import(`../../src/feeds/${feed.id}/${post.id}/${media.id}.webm`) then { default: src }}
                 <Video src={src} gifMode={false} />
             {/await}
-        {:else}
-            <Button onClick={media.urlGitHub}>
-                View {media.id}{media.extension} on GitHub
-            </Button>
         {/if}
-    {/each}
+    </Masonry>
+    <div>
+        {#if inFeed && unknownMedia.length > 1}
+            <br>
+            <Button onClick={post.url}>
+                +{unknownMedia.length} attachments
+            </Button>
+        {:else}
+            {#each unknownMedia as media}
+                <br>
+                <a href={media.urlGitHub}>
+                    {media.id}{media.extension} (on GitHub)
+                </a>
+            {/each}
+        {/if}
+    </div>
 </div>
 <div class="footer">
     <div class="timestamps">
@@ -94,9 +128,6 @@
 
 <style lang="scss">
     .media {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
-        gap: 1rem;
         margin-bottom: 8px;
     }
     

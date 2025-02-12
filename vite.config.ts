@@ -8,8 +8,7 @@ export default defineConfig({
 		imagetools({
 			profiles: {
 				run: new URLSearchParams(""),
-				post: new URLSearchParams("h=1200&withoutEnlargement"),
-				postGif: new URLSearchParams("format=gif"),
+				post: new URLSearchParams("h=1200&withoutEnlargement")
 			}
 		})
 	],

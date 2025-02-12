@@ -1,7 +1,13 @@
 import fs from 'fs';
 import { compile } from 'mdsvex';
 import * as yaml from 'yaml';
-import { githubLink, splitext } from '$lib/Utils.js';
+import {
+    githubLink,
+    splitext,
+    arrMax,
+    arrMin
+} from '$lib/Utils.js';
+import ExifReader from 'exifreader';
 
 import {
 	getLatestCommitDate,
@@ -22,7 +28,10 @@ export interface Media {
     id: string;
     extension: string;
     url: string;
+    date: string;
+    lastModifiedDate: string;
     urlGitHub: string;
+    exif?: ExifReader.Tags;
 }
 
 export interface Post {
@@ -43,46 +52,96 @@ export interface Feed {
     posts?: Post[]
 }
 
-export async function getFeedPost(feedId: string, postId: string): Promise<Post> {
+export async function getFeedPostMedia(feedId: string, postId: string): Promise<Media[]> {
+    const mediaRoot = path.join(feedsDir, feedId, postId);
+    
     const mediaFileNames = (
-        fs.readdirSync(
-            path.join(feedsDir, feedId, postId),
-            { withFileTypes: true }
-        )
+        fs.readdirSync(mediaRoot, { withFileTypes: true })
             .filter((dirent: fs.Dirent) => !dirent.isDirectory())
             .map((dirent: fs.Dirent) => dirent.name)
             .filter((name: string) => name !== 'post.md')
     );
     
-    const media = mediaFileNames.map((mediaFileName: string) => {
-        const [id, extension] = splitext(mediaFileName);
+    const media = await Promise.all(mediaFileNames.map(async (mediaFileName: string) => {
+        const mediaPath = path.join(mediaRoot, mediaFileName);
+        let [id, extension] = splitext(mediaFileName);
+        extension = extension.toLowerCase();
+        
+        const exifExtensions = [
+            ".jpg",
+            ".jpeg",
+            ".png",
+            ".heic",
+            ".heif",
+            ".avif",
+            ".webp",
+            ".gif"
+        ];
+        
+        let exif = undefined;
+        
+        if (exifExtensions.includes(extension)) {
+            try {
+                exif = await ExifReader.load(mediaPath);
+            } catch (e) { }
+        }
+        
         return {
             id,
             extension,
+            date: await getFirstCommitDate(mediaPath),
+            lastModifiedDate: await getLatestCommitDate(mediaPath),
             url: `/feeds/${feedId}/${postId}/${mediaFileName}`,
-            urlGitHub: githubLink(path.join(feedsDir, feedId, postId, mediaFileName))
+            urlGitHub: githubLink(path.join(feedsDir, feedId, postId, mediaFileName)),
+            exif: exif
         } as Media;
-    });
+    }));
+    
+    return media;
+}
+
+export async function getFeedPost(feedId: string, postId: string): Promise<Post> {
+    const media = await getFeedPostMedia(feedId, postId);
+    
+    let postContents = "";
     
     const postPath = path.join(feedsDir, feedId, postId, "post.md");
-    const postContents = fs.readFileSync(postPath, 'utf-8');
+    try {
+        postContents = fs.readFileSync(postPath, 'utf-8');
+    } catch { }
+    
     const compiled = await compile(postContents);
     const fm = (compiled?.data?.fm || {}) as Record<string, any>;
-    fm.urlShort = `jojudge.com/feeds/${feedId}/${postId}`;          
+    fm.urlShort = `jojudge.com/feeds/${feedId}/${postId}`;
     
     if (!Object.hasOwn(fm, 'date')) {
-        try {
-            fm.date = await getFirstCommitDate(postPath);
-        } catch (e) { }
+        const mediaDates = media.map(x => x.date);
+        const postFileDate = await getFirstCommitDate(postPath);
+        const dates = [...mediaDates, postFileDate].filter(x => x); // Remove undefined
+        if (dates.length) {
+            fm.date = arrMin(
+                [...mediaDates, postFileDate].map(
+                    x => new Date(x?.toString() || "")
+                )
+            )?.toISOString();
+        }
     }
     
     if (!Object.hasOwn(fm, 'last_modified_at')) {
-        try {
-            fm.last_modified_at = await getLatestCommitDate(postPath);
-            if (fm.last_modified_at === fm.date) {
-                delete fm.last_modified_at;
-            }
-        } catch (e) {}
+        const mediaDates = media.map(x => x.lastModifiedDate);
+        const postFileDate = await getLatestCommitDate(postPath);
+        const dates = [...mediaDates, postFileDate].filter(x => x); // Remove undefined
+        if (dates.length) {
+            fm.last_modified_at = arrMax(
+                [...mediaDates, postFileDate].map(
+                    x => new Date(x?.toString() || "")
+                )
+            )?.toISOString();
+        }
+        
+        if (fm.last_modified_at === fm.date) {
+            delete fm.last_modified_at;
+        }
     }
     
     return {
@@ -138,4 +197,14 @@ export async function getFeed(feedId: string, includePosts = false): Promise<Fee
         urlShort: `jojudge.com/feeds/${feedId}`,
         posts
     } as Feed;
+}
+
+export async function getAllFeeds(): Promise<Feed[]> {
+    const feeds = await Promise.all(getFeedIds().map((feedId: string) => getFeed(feedId)));
+    feeds.sort((a: Feed, b: Feed) => {
+        const orderA = a.meta.order || 0;
+        const orderB = b.meta.order || 0;
+        return orderB - orderA;
+    });
+    return feeds;
 }

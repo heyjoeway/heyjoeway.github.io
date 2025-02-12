@@ -49,3 +49,15 @@ export function splitext(path: string) {
 		path.slice(lastDot).toLowerCase()
 	];
 }
+
+export function arrMax<T>(arr: Array<T> | undefined) {
+	if (!arr) return undefined;
+	if (arr.length === 0) return undefined;
+	return arr.reduce((a, b) => a > b ? a : b);
+}
+
+export function arrMin<T>(arr: Array<T> | undefined) {
+	if (!arr) return undefined;
+	if (arr.length === 0) return undefined;
+	return arr.reduce((a, b) => a < b ? a : b);
+}

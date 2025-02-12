@@ -9,19 +9,16 @@
 </script>
 
 <Layout>
-    {#await import(`../../../../../src/feeds/${data.feed.id}/pfp.jpg?as=run`) then { default: pfpSrc }}
-        <div class="outer-container">
-            <div class="inner-container">
-                <Post feed={data.feed} post={data.post} pfpSrc={pfpSrc} />
-                <hr>
-                <Comments
-                    pageID={data.post.url}
-                    pageTitle={formatDateTime(data.post.fm.date)}
-                />
-            </div>
+    <div class="outer-container">
+        <div class="inner-container">
+            <Post feed={data.feed} post={data.post} />
+            <hr>
+            <Comments
+                pageID={data.post.url}
+                pageTitle={formatDateTime(data.post.fm.date)}
+            />
         </div>
-    {/await}
-    
+    </div>
 </Layout>
 
 <style lang="scss">
