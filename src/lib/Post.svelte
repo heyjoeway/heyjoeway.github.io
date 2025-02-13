@@ -260,7 +260,7 @@
     }
 
     :global(.token.selector),
-    .token.attr-name,
+    :global(.token.attr-name),
     :global(.token.string),
     :global(.token.char),
     :global(.token.builtin),
@@ -271,14 +271,14 @@
     :global(.token.operator),
     :global(.token.entity),
     :global(.token.url),
-    :global(.language-css) .token.string,
-    :global(.style .token).string,
+    :global(.language-css .token.string),
+    :global(.style .token.string),
     :global(.token.variable) {
         color: white;
     }
 
     :global(.token.atrule),
-    :global(.token.attr)-value,
+    :global(.token.attr),
     :global(.token.function) {
         color: khaki;
     }

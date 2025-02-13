@@ -4,7 +4,7 @@ import { compile } from 'mdsvex';
 import {
 	getLatestCommitDate,
 	getFirstCommitDate
-} from '$lib/Git';
+} from '$lib/Git.server';
 import { type ArticleFrontmatter } from '$lib/Article.js';
 
 export async function load({ route }) {
@@ -21,7 +21,7 @@ export async function load({ route }) {
 	
 	if (!fm.date) {
 		try {
-			fm.date = await getFirstCommitDate(postPath);
+			fm.date = await getFirstCommitDate(postPath) || '';
 		} catch (e) {}
 	}
 	

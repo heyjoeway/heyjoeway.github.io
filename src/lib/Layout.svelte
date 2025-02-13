@@ -18,11 +18,7 @@
 		margin-bottom: 0;
 		vertical-align: top;
 	}
-	
-	.nav {
-		display: flex;
-	}
-	
+		
 	.header {
 		display: flex;
 		justify-content: space-between;

@@ -1,12 +1,4 @@
-<style lang="scss">
-	.post-meta-inline {
-		color: #DDD;
-		margin-top: 8px;
-		margin-bottom: 16px;
-		display:flex;
-		align-items: center;
-	}
-	
+<style lang="scss">	
 	.header-container {
 		display: flex;
 		justify-content: space-between;

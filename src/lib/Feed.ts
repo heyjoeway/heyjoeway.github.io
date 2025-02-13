@@ -2,17 +2,21 @@ import fs from 'fs';
 import { compile } from 'mdsvex';
 import * as yaml from 'yaml';
 import {
-    githubLink,
     splitext,
     arrMax,
     arrMin
-} from '$lib/Utils.js';
+} from '$lib/Utils';
+
+import { githubLink } from '$lib/Utils.server';
+import {
+    getCname
+} from '$lib/Utils.server'
 import ExifReader from 'exifreader';
 
 import {
 	getLatestCommitDate,
 	getFirstCommitDate
-} from '$lib/Git';
+} from '$lib/Git.server';
 import path from 'path';
 
 const feedsDir = 'src/feeds';
@@ -99,7 +103,7 @@ export async function getFeedPostMedia(feedId: string, postId: string): Promise<
             date: await getFirstCommitDate(mediaPath),
             lastModifiedDate: await getLatestCommitDate(mediaPath),
             url: `/feeds/${feedId}/${postId}/${mediaFileName}`,
-            urlGitHub: githubLink(path.join(feedsDir, feedId, postId, mediaFileName)),
+            urlGitHub: await githubLink(path.join(feedsDir, feedId, postId, mediaFileName)),
             exif: exif
         } as Media;
     }));
@@ -159,7 +163,7 @@ export async function getFeedPost(feedId: string, postId: string): Promise<Post>
     );
     
     const fm = (compiled?.data?.fm || {}) as Record<string, any>;
-    fm.urlShort = `jojudge.com/feeds/${feedId}/${postId}`;
+    fm.urlShort = `${getCname()}/feeds/${feedId}/${postId}`;
     
     if (!Object.hasOwn(fm, 'date')) {
         const mediaDates = media.map(x => x.date);
@@ -242,7 +246,7 @@ export async function getFeed(feedId: string, includePosts = false): Promise<Fee
         meta: feedMeta,
         url: `/feeds/${feedId}`,
         rss: `/feeds/${feedId}/feed.rss`,
-        urlShort: `jojudge.com/feeds/${feedId}`,
+        urlShort: `${getCname()}/feeds/${feedId}`,
         posts
     } as Feed;
 }

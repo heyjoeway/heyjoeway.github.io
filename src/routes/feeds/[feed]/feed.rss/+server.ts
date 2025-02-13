@@ -43,12 +43,10 @@ function rssObj(feed: Feed, originUrl: string) {
                 )?.toUTCString(),
                 lastBuildDate: lastBuildDate?.toUTCString(),
                 docs: "https://www.rssboard.org/rss-specification",
-                generator: "me :^)",
-                managingEditor: "joe@jojudge.com (Joseph Judge)",
-                webMaster: "joe@jojudge.com (Joseph Judge)",
+                generator: "Custom",
                 "atom:link": {
                     $: {
-                        href: new URL(feed.rss, originUrl).href, // new URL is not working here
+                        href: new URL(feed.rss, originUrl).href,
                         rel: "self",
                         type: "application/rss+xml"
                     }

@@ -1,6 +1,6 @@
-import { createGitHubLinks } from '$lib/Gallery';
+import { createGitHubLinks } from '$lib/Gallery.server';
 
 export async function load({ route }) {
-    const galleries = createGitHubLinks(import.meta.dirname);
+    const galleries = await createGitHubLinks(import.meta.dirname);
     return { galleries };
 };

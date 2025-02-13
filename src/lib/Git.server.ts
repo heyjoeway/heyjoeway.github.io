@@ -50,3 +50,20 @@ export async function getFirstCommitDate(path: string) {
         return undefined;
     }
 }
+
+let _treeUrl: string | undefined = undefined;
+
+export async function getTreeUrl() {
+    if (_treeUrl) return _treeUrl;
+    const branch = await git.revparse(["--abbrev-ref", "HEAD"]);
+    let url = (await git.getConfig("remote.origin.url")).value;
+    if (!url) throw new Error("Error retrieving git origin URL");
+    if (url?.endsWith(".git")) {
+        url = url.slice(
+            0,
+            url.length - 4
+        );
+    }
+    _treeUrl = `${url}/tree/${branch}/`;
+    return _treeUrl;
+}
