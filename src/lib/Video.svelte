@@ -2,6 +2,7 @@
 
 export let src: string;
 export let maxHeight: string = "450px";
+export let gifMode: boolean = true;
 
 </script>
 
@@ -41,15 +42,27 @@ video {
 </style>
 
 <div>
-    <video
-        muted
-        autoplay
-        loop
-        playsinline
-        style:max-height={maxHeight}
-        oncanplay={() => this.muted=true}
-    >
-        <source src={src} type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    {#if gifMode}
+        <video
+            muted
+            autoplay
+            loop
+            playsinline
+            style:max-height={maxHeight}
+            oncanplay={() => this.muted=true}
+        >
+            <source src={src} type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    {:else}
+        <!-- svelte-ignore a11y_media_has_caption -->
+        <video
+            controls
+            playsinline
+            style:max-height={maxHeight}
+        >
+            <source src={src} type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    {/if}
 </div>

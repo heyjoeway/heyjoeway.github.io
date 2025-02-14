@@ -1,1 +1,0 @@
-declare module 'tua-body-scroll-lock';

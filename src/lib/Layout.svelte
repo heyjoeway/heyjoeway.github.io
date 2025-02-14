@@ -1,6 +1,6 @@
 <style lang="scss">
 	.layout {
-		max-width: calc(900px - (32px * 2));
+		max-width: 836px;
 		margin-right: auto;
 		margin-left: auto;
 		padding-right: 16px;
@@ -18,22 +18,25 @@
 		margin-bottom: 0;
 		vertical-align: top;
 	}
+		
+	.header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 16px;
+	}
 </style>
 
 <script lang="ts">
-
-import { Background } from "$lib/joeysvelte";
-import { listToTagDetails } from "$lib/Tags";
-import Tags from "$lib/Tags.svelte";
-import Center from "$lib/Center.svelte";
-
-export let bgText: string = "heyjoeway";
-export let data: any;
-
-function randomElement(arr: any[]) {
-	return arr[Math.round(Math.random() * (arr.length - 1))];
-}
-let htmlDiceEntities = ["&#x2680;", "&#x2681;", "&#x2682;", "&#x2683;", "&#x2684;", "&#x2685;"];
+	import Background from "$joeysvelte/Background.svelte";
+	import Button from "$joeysvelte/Button.svelte";
+	
+	export let bgText: string = "heyjoeway";
+	
+	function randomElement(arr: any[]) {
+		return arr[Math.round(Math.random() * (arr.length - 1))];
+	}
+	let htmlDiceEntities = ["&#x2680;", "&#x2681;", "&#x2682;", "&#x2683;", "&#x2684;", "&#x2685;"];
 
 </script>
 
@@ -47,16 +50,17 @@ let htmlDiceEntities = ["&#x2680;", "&#x2681;", "&#x2682;", "&#x2683;", "&#x2684
 </Background>
 
 <div class="layout">
-	<a class="site-title" rel="author" href="/">
-		<span style="color:palevioletred">hey</span><span style="color:orange">joe</span><span style="color:skyblue">way</span><span style="color:white">.</span>
-	</a>
-	<br>
+	<div class="header">		
+		<div class="title">
+			<a class="site-title" rel="author" href="/">
+				<span style="color:palevioletred">hey</span><span style="color:orange">joe</span><span style="color:skyblue">way</span><span style="color:white">.</span>
+			</a>
+		</div>
+		<!-- <div class="nav">
+			<Button onClick="/">Articles</Button>
+			<Button onClick="/feeds">Feeds</Button>
+		</div> -->
+	</div>
 	
 	<slot></slot>
-	
-	<hr>
-	<Center>
-		<Tags tags={listToTagDetails(data.categories)} />
-	</Center>
-	<br>
 </div>
