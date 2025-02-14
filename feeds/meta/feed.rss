@@ -5,8 +5,8 @@
     <link>http://sveltekit-prerender/feeds/meta</link>
     <description>a feed about developing a platform to host the feed about developing a platform to host the feed about deve</description>
     <language>en-us</language>
-    <pubDate>Fri, 14 Feb 2025 02:22:56 GMT</pubDate>
-    <lastBuildDate>Fri, 14 Feb 2025 02:22:56 GMT</lastBuildDate>
+    <pubDate>Fri, 14 Feb 2025 02:48:44 GMT</pubDate>
+    <lastBuildDate>Fri, 14 Feb 2025 02:48:44 GMT</lastBuildDate>
     <docs>https://www.rssboard.org/rss-specification</docs>
     <generator>Custom</generator>
     <atom:link href="http://sveltekit-prerender/feeds/meta/feed.rss" rel="self" type="application/rss+xml"/>
@@ -27,14 +27,14 @@
     &lt;span class="token string"&gt;"foo"&lt;/span&gt;
     "bar
 &lt;span class="token punctuation"&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</description>
-      <pubDate>Fri, 14 Feb 2025 02:22:56 GMT</pubDate>
+      <pubDate>Fri, 14 Feb 2025 02:48:44 GMT</pubDate>
       <guid>/feeds/meta/codetest</guid>
     </item>
     <item>
       <title/>
       <link>http://sveltekit-prerender/feeds/meta/meme</link>
       <description/>
-      <pubDate>Fri, 14 Feb 2025 02:22:56 GMT</pubDate>
+      <pubDate>Fri, 14 Feb 2025 02:48:44 GMT</pubDate>
       <guid>/feeds/meta/meme</guid>
     </item>
   </channel>
