@@ -1,0 +1,1 @@
+const A={},s={src:""+new URL("../assets/DSC_0003_BURST20240322135635559.B-8534dZ.jpeg",import.meta.url).href,w:1200,h:1200,lqip:"UklGRkYAAABXRUJQVlA4IDoAAAAQAgCdASoQABAABUB8JbACsADRt02zJSQAAP66SvBWAF+oC5934iXgtCLm3V3XVAKy4hceGWnIgAAA"},e={sources:A,img:s};export{e as default,s as img,A as sources};

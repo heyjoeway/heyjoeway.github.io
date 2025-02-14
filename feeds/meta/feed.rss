@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" ml-update="aware" ml-stage="preload" ml-view="top">
+  <channel>
+    <title>metaway</title>
+    <link>http://sveltekit-prerender/feeds/meta</link>
+    <description>a feed about developing a platform to host the feed about developing a platform to host the feed about deve</description>
+    <language>en-us</language>
+    <pubDate>Fri, 14 Feb 2025 02:22:56 GMT</pubDate>
+    <lastBuildDate>Fri, 14 Feb 2025 02:22:56 GMT</lastBuildDate>
+    <docs>https://www.rssboard.org/rss-specification</docs>
+    <generator>Custom</generator>
+    <atom:link href="http://sveltekit-prerender/feeds/meta/feed.rss" rel="self" type="application/rss+xml"/>
+    <item>
+      <title/>
+      <link>http://sveltekit-prerender/feeds/meta/codetest</link>
+      <description>&lt;h1&gt;Markdown Test&lt;/h1&gt;
+&lt;pre class="language-js"&gt;&lt;code class="language-js"&gt;&lt;span class="token keyword"&gt;function&lt;/span&gt; &lt;span class="token function"&gt;foo&lt;/span&gt;&lt;span class="token punctuation"&gt;(&lt;/span&gt;&lt;span class="token parameter"&gt;bar&lt;/span&gt;&lt;span class="token punctuation"&gt;)&lt;/span&gt; &lt;span class="token punctuation"&gt;&amp;#123;&lt;/span&gt;
+    console&lt;span class="token punctuation"&gt;.&lt;/span&gt;&lt;span class="token function"&gt;log&lt;/span&gt;&lt;span class="token punctuation"&gt;(&lt;/span&gt;bar&lt;span class="token punctuation"&gt;)&lt;/span&gt;&lt;span class="token punctuation"&gt;;&lt;/span&gt;
+&lt;span class="token punctuation"&gt;&amp;#125;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class="language-python"&gt;&lt;code class="language-python"&gt;&lt;span class="token keyword"&gt;from&lt;/span&gt; dataclasses &lt;span class="token keyword"&gt;import&lt;/span&gt; dataclass
+
+&lt;span class="token decorator annotation punctuation"&gt;@dataclass&lt;/span&gt;
+&lt;span class="token keyword"&gt;class&lt;/span&gt; &lt;span class="token class-name"&gt;Foo&lt;/span&gt;&lt;span class="token punctuation"&gt;:&lt;/span&gt;
+    bar&lt;span class="token punctuation"&gt;:&lt;/span&gt; &lt;span class="token builtin"&gt;str&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class="language-powershell"&gt;&lt;code class="language-powershell"&gt;&lt;span class="token function"&gt;Set-ExecutionPolicy&lt;/span&gt; Unrestricted
+&lt;span class="token variable"&gt;$test&lt;/span&gt; = @&lt;span class="token punctuation"&gt;(&lt;/span&gt;
+    &lt;span class="token string"&gt;"foo"&lt;/span&gt;
+    "bar
+&lt;span class="token punctuation"&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</description>
+      <pubDate>Fri, 14 Feb 2025 02:22:56 GMT</pubDate>
+      <guid>/feeds/meta/codetest</guid>
+    </item>
+    <item>
+      <title/>
+      <link>http://sveltekit-prerender/feeds/meta/meme</link>
+      <description/>
+      <pubDate>Fri, 14 Feb 2025 02:22:56 GMT</pubDate>
+      <guid>/feeds/meta/meme</guid>
+    </item>
+  </channel>
+</rss>

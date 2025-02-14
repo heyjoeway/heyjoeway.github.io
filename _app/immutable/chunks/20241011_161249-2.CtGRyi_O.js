@@ -1,0 +1,1 @@
+const A={},s={src:""+new URL("../assets/20241011_161249-2.DrYwNiqo.jpeg",import.meta.url).href,w:1600,h:1200,lqip:"UklGRmYAAABXRUJQVlA4IFoAAADwAQCdASoQAAwABUB8JbACdAChNtssEAAA/nhxBQMuFNs4tDhCnqySD3f0a6l5SNhjpSt/OWi6OKRlUKONZSae1/303xwocbE4zXT0DquNuGO1ta0AgpabAAA="},t={sources:A,img:s};export{t as default,s as img,A as sources};

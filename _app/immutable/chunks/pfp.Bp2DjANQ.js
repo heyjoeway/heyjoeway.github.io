@@ -1,0 +1,1 @@
+const A={},o={src:""+new URL("../assets/pfp.B2G-yoU6.jpeg",import.meta.url).href,w:1636,h:1598,lqip:"UklGRkoAAABXRUJQVlA4ID4AAADQAQCdASoQABAABUB8JagCdADx6X3K4AD+GeIeBcUdNqfMWF1akMXJzSddP4Cqtgk2M3LZz8CiwoPozcIAAA=="},s={sources:A,img:o};export{s as default,o as img,A as sources};

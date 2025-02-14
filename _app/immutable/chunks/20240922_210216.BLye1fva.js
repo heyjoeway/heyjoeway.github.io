@@ -1,0 +1,1 @@
+const A={},s={src:""+new URL("../assets/20240922_210216.BpswFTdv.jpeg",import.meta.url).href,w:1200,h:1200,lqip:"UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoQABAABUB8JbACdAED/34APhBAAP7LoH9jeS6Mdrei3kDrhv31jObWXqxv7XoASH0fRdP9p6GOdYd3rqaIiiLjX9c/y0pYYgAAAA=="},e={sources:A,img:s};export{e as default,s as img,A as sources};

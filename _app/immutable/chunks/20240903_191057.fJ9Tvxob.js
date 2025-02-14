@@ -1,0 +1,1 @@
+const A={},s={src:""+new URL("../assets/20240903_191057.52EMo_dC.jpeg",import.meta.url).href,w:1600,h:1200,lqip:"UklGRlYAAABXRUJQVlA4IEoAAAAwAgCdASoQAAwABUB8JbACdADMCu78OhDUAAD+zzu5axX3bTecWVCmCTdqJis/E3aJ89RLvkkDxzf3hjAATPceSlQphTAifM2QAA=="},e={sources:A,img:s};export{e as default,s as img,A as sources};

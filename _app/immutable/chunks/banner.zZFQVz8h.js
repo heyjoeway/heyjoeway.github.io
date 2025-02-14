@@ -1,0 +1,1 @@
+const A={},s={src:""+new URL("../assets/banner.D0Zk-m-t.png",import.meta.url).href,w:767,h:703,lqip:"UklGRjAAAABXRUJQVlA4ICQAAADQAQCdASoQAA8ABUB8JaQAApykUVO4AAD+6SO0hC6pqLLtoAA="},e={sources:A,img:s};export{e as default,s as img,A as sources};

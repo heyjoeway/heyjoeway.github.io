@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" ml-update="aware" ml-stage="preload" ml-view="top">
+  <channel>
+    <title>photoway</title>
+    <link>http://sveltekit-prerender/feeds/photos</link>
+    <description>*SNAP*</description>
+    <language>en-us</language>
+    <pubDate>Fri, 14 Feb 2025 02:22:56 GMT</pubDate>
+    <lastBuildDate>Fri, 14 Feb 2025 02:22:56 GMT</lastBuildDate>
+    <docs>https://www.rssboard.org/rss-specification</docs>
+    <generator>Custom</generator>
+    <atom:link href="http://sveltekit-prerender/feeds/photos/feed.rss" rel="self" type="application/rss+xml"/>
+    <item>
+      <title/>
+      <link>http://sveltekit-prerender/feeds/photos/2024</link>
+      <description/>
+      <pubDate>Fri, 14 Feb 2025 02:22:56 GMT</pubDate>
+      <guid>/feeds/photos/2024</guid>
+    </item>
+  </channel>
+</rss>

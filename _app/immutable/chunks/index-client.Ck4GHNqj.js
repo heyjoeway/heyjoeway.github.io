@@ -1,1 +1,0 @@
-import{G as o,aa as t,a2 as c,u as a}from"./runtime.Dfx-lVnK.js";function u(e){throw new Error("lifecycle_outside_component")}function r(e){o===null&&u(),t&&o.l!==null?l(o).m.push(e):c(()=>{const n=a(e);if(typeof n=="function")return n})}function l(e){var n=e.l;return n.u??(n.u={a:[],b:[],m:[]})}export{r as o};

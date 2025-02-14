@@ -1,0 +1,1 @@
+const A={},s={src:""+new URL("../assets/banner.D2HKHwBq.png",import.meta.url).href,w:768,h:263,lqip:"UklGRkoAAABXRUJQVlA4ID4AAACwAQCdASoQAAUABUB8JbACdACRo26AAMscHPHYC0i9L/rrKeN1OvUBriln9FL58YI/ZhztsYC+ZoWFiAAAAA=="},r={sources:A,img:s};export{r as default,s as img,A as sources};

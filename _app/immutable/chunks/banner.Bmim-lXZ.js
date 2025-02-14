@@ -1,0 +1,1 @@
+const A={},s={src:""+new URL("../assets/banner.DXZ_aK2X.jpeg",import.meta.url).href,w:3008,h:2e3,lqip:"UklGRloAAABXRUJQVlA4IE4AAAAwAgCdASoQAAsABUB8JbACdADibaZlwlVKAAD+olzqVjDxIsFc97VOEkVXme3yy/S2TksOCR+NhydYqzVzDN6lL7166e7/9tJdLa4AAAA="},e={sources:A,img:s};export{e as default,s as img,A as sources};

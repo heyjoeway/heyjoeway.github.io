@@ -1,0 +1,1 @@
+const A={},s={src:""+new URL("../assets/20240907_145336.C1fwKKLb.jpeg",import.meta.url).href,w:1600,h:1200,lqip:"UklGRloAAABXRUJQVlA4IE4AAACQAQCdASoQAAwABUB8JYwAAZZDzGAA92qr/PjPOWplQAXD/+Ce43xrj38Ggazq8qAkkMegDoTlM7tiVUMlDXivWaf4d9NB9MABYpAAAAA="},e={sources:A,img:s};export{e as default,s as img,A as sources};
