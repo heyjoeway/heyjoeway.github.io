@@ -7,7 +7,11 @@ import {
     arrMin
 } from '$lib/Utils';
 
-import { githubLink } from '$lib/Utils.server';
+import {
+    getFileCreatedDate,
+    getFileModifiedDate,
+    githubLink
+} from '$lib/Utils.server';
 import {
     getCname
 } from '$lib/Utils.server'
@@ -20,6 +24,26 @@ import {
 import path from 'path';
 
 const feedsDir = 'src/feeds';
+
+async function getPostedDate(path: string) {
+    return (
+        await getFirstCommitDate(path)
+        || await getFileCreatedDate(path)
+    );
+}
+
+async function getEditedDate(path: string) {
+    return (
+        await getLatestCommitDate(path)
+        || getFileModifiedDate(path)
+    );
+}
+
+function strToDate(str: string | undefined): Date {
+    let date = new Date(str || "");
+    date.setSeconds(0, 0);
+    return date;
+}
 
 export function getFeedIds(): string[] {
     const feedIds = fs.readdirSync(feedsDir, { withFileTypes: true })
@@ -100,8 +124,8 @@ export async function getFeedPostMedia(feedId: string, postId: string): Promise<
         return {
             id,
             extension,
-            date: await getFirstCommitDate(mediaPath),
-            lastModifiedDate: await getLatestCommitDate(mediaPath),
+            date: await getPostedDate(mediaPath),
+            lastModifiedDate: await getEditedDate(mediaPath),
             url: `/feeds/${feedId}/${postId}/${mediaFileName}`,
             urlGitHub: await githubLink(path.join(feedsDir, feedId, postId, mediaFileName)),
             exif: exif
@@ -167,29 +191,25 @@ export async function getFeedPost(feedId: string, postId: string): Promise<Post>
     
     if (!Object.hasOwn(fm, 'date')) {
         const mediaDates = media.map(x => x.date);
-        const postFileDate = await getFirstCommitDate(postPath);
+        const postFileDate = await getPostedDate(postPath);
         const dates = [...mediaDates, postFileDate].filter(x => x); // Remove undefined
         if (dates.length) {
             fm.date = arrMin(
-                dates.map(
-                    x => new Date(x?.toString() || "")
-                )
+                dates.map(strToDate)
             )?.toISOString();
         }
     }
     
     if (!Object.hasOwn(fm, 'last_modified_at')) {
         const mediaDates = media.map(x => x.lastModifiedDate);
-        const postFileDate = await getLatestCommitDate(postPath);
+        const postFileDate = await getEditedDate(postPath);
         const dates = [...mediaDates, postFileDate].filter(x => x); // Remove undefined
         if (dates.length) {
             fm.last_modified_at = arrMax(
-                dates.map(
-                    x => new Date(x?.toString() || "")
-                )
+                dates.map(strToDate)
             )?.toISOString();
         }
-        
+                
         if (fm.last_modified_at === fm.date) {
             delete fm.last_modified_at;
         }
@@ -225,6 +245,11 @@ export async function getFeedPosts(feedId: string): Promise<Post[]> {
             async (postId: string) => await getFeedPost(feedId, postId)
         )
     );
+    posts.sort((a: Post, b: Post) => {
+        const dateA = new Date(a.fm.date || 0).getTime();
+        const dateB = new Date(b.fm.date || 0).getTime();
+        return dateB - dateA;
+    });
     
     return posts;
 }

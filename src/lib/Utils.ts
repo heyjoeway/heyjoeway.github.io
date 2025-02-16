@@ -48,3 +48,12 @@ export function arrMin<T>(arr: Array<T> | undefined) {
 	if (arr.length === 0) return undefined;
 	return arr.reduce((a, b) => a < b ? a : b);
 }
+
+export function humanReadableSize(bytes: number): string {
+	const units = ["B", "KB", "MB", "GB", "TB", "okay you can stop testing this now"];
+	for (let unit of units) {
+		if (bytes < 1024) return `${bytes.toFixed(1)} ${unit}`;
+		bytes /= 1024;
+	}
+	return `${bytes.toFixed(1)} ${units[units.length - 1]}`;
+}

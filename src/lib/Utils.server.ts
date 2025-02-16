@@ -33,3 +33,19 @@ export async function githubLink(filePath: string) {
 	const fileGitHubUrl = (await getTreeUrl()) + filePathRelative;
 	return fileGitHubUrl;
 }
+
+// Returns ISO8601 date
+export function getFileCreatedDate(path: string): string | undefined {
+	try {
+		const stats = fs.statSync(path);
+		return stats.birthtime.toISOString();
+	} catch { return undefined; }
+}
+
+// Returns ISO8601 date
+export function getFileModifiedDate(path: string): string | undefined {
+	try {
+		const stats = fs.statSync(path);
+		return stats.mtime.toISOString();
+	} catch { return undefined; }
+}
