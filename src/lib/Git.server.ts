@@ -6,7 +6,7 @@ import {
 
 const git = simpleGit();
 
-export async function getLatestCommitDate(path: string) {
+export async function getLatestCommitDate(path: string): Promise<string | undefined> {
     try {
         const gitLog: LogResult<DefaultLogFields> = await new Promise(
             (resolve, reject) => git.log(
@@ -27,7 +27,7 @@ export async function getLatestCommitDate(path: string) {
     }
 }
 
-export async function getFirstCommitDate(path: string) {
+export async function getFirstCommitDate(path: string): Promise<string | undefined> {
     try {
         const gitLog: LogResult<DefaultLogFields> = await new Promise(
             (resolve, reject) => git.log(
