@@ -1,16 +1,22 @@
 <script lang="ts">
+    import { dev } from '$app/environment';
+    
     import Image from "$lib/Image.svelte";
     import Video from "$lib/Video.svelte";
     import Button from "$joeysvelte/Button.svelte";
+    import ContextMenu from "$joeysvelte/ContextMenu.svelte";
+    import ContextMenuItem from "$joeysvelte/ContextMenuItem.svelte";
 	import { formatDateTime } from "$lib/Utils";
     import FeedProfilePic from "./FeedProfilePic.svelte";
     import type { Feed, Post, Media } from "./Feed";
+    import ModalPostDelete from './ModalPostDelete.svelte';
 
     import Masonry from 'svelte-bricks'
     import PostEmbed from "./PostEmbed.svelte";
     
     export let feed: Feed;
     export let post: Post;
+    export let inModal = false;
     export let inFeed = false;
     
     function newDateDetail(type: string, key: string) {
@@ -31,84 +37,121 @@
     const unknownMedia = post.media.filter(
         x => !knownExtensions.includes(x.extension)
     );
+    
+    let editModalOpen = false;
+    let deleteModalOpen = false;
+    let menu: ContextMenu;
+    
+    $: {
+        if (editModalOpen || deleteModalOpen) menu?.close();
+    }
 </script>
 
-<a href={feed.url}>
-    <div class="profile">
-        <FeedProfilePic size="42px" feed={feed} />
-        <div>
-            <div class="title">{feed.meta.title}</div>
-            <div class="path">{feed.urlShort}</div>
+<ModalPostDelete post={post} feed={feed} bind:open={deleteModalOpen} />
+
+{#if dev}
+    <ContextMenu bind:this={menu}>
+        <ContextMenuItem onClick={() => deleteModalOpen = true}>Delete</ContextMenuItem>
+    </ContextMenu>
+{/if}
+
+<div class="header">
+    {#if inModal}
+        <div class="profile">
+            <FeedProfilePic size="42px" feed={feed} />
+            <div>
+                <div class="title">{feed.meta.title}</div>
+                <div class="path">{feed.urlShort}</div>
+            </div>
         </div>
-    </div>
-</a>
+    {:else}    
+        <a href={feed.url}>
+            <div class="profile">
+                <FeedProfilePic size="42px" feed={feed} />
+                <div>
+                    <div class="title">{feed.meta.title}</div>
+                    <div class="path">{feed.urlShort}</div>
+                </div>
+            </div>
+        </a>
+        
+        {#if dev}
+            <Button onClick={menu?.open}>
+                ✏️
+            </Button>
+        {/if}
+    {/if}
+</div>
 
 <div class="post">
     {@html post.html}
 </div>
 
-<div class="media">
-    <Masonry
-        items={post.media}
-        getId={(media: Media) => media.id + media.extension}
-        let:item={media}
-        minColWidth={160}
-        maxColWidth={600}
-        animate={false}
-    >
-        {#if media.extension == ".png"}
-            {#await import(`../../src/feeds/${feed.id}/${post.id}/${media.id}.png?as=post`) then { default: src }}
-                <Image src={src} fullSrc={media.urlGitHub} exif={media.exif} />
-            {/await}
-        {:else if media.extension == ".jpg"}
-            {#await import(`../../src/feeds/${feed.id}/${post.id}/${media.id}.jpg?as=post`) then { default: src }}
-                <Image src={src} fullSrc={media.urlGitHub} exif={media.exif} />
-            {/await}
-        {:else if media.extension == ".jpeg"}
-            {#await import(`../../src/feeds/${feed.id}/${post.id}/${media.id}.jpg?as=post`) then { default: src }}
-                <Image src={src} fullSrc={media.urlGitHub} exif={media.exif} />
-            {/await}
-        {:else if media.extension == ".webp"}
-            {#await import(`../../src/feeds/${feed.id}/${post.id}/${media.id}.webp?as=post`) then { default: src }}
-                <Image src={src} fullSrc={media.urlGitHub} exif={media.exif} />
-            {/await}
-        {:else if media.extension == ".gif"}
-            {#await import(`../../src/feeds/${feed.id}/${post.id}/${media.id}.gif`) then { default: src }}
-                <Image src={src} fullSrc={media.urlGitHub} exif={media.exif} />
-            {/await}
-        {:else if media.extension == ".svg"}
-            {#await import(`../../src/feeds/${feed.id}/${post.id}/${media.id}.svg`) then { default: src }}
-                <Image src={src} fullSrc={media.urlGitHub} />
-            {/await}
-        {:else if media.extension == ".mp4"}
-            {#await import(`../../src/feeds/${feed.id}/${post.id}/${media.id}.mp4`) then { default: src }}
-                <Video src={src} gifMode={false} />
-            {/await}
-        {:else if media.extension == ".webm"}
-            {#await import(`../../src/feeds/${feed.id}/${post.id}/${media.id}.webm`) then { default: src }}
-                <Video src={src} gifMode={false} />
-            {/await}
-        {/if}
-    </Masonry>
-    <div>
-        {#each post.embeds as embed}
-            <PostEmbed {embed} />
-        {/each}
-        {#if inFeed && unknownMedia.length > 1}
-            <br>
-            <Button onClick={post.url}>
-                +{unknownMedia.length} attachments
-            </Button>
-        {:else}
-            {#each unknownMedia as media}
-                <br>
-                <a href={media.urlGitHub}>
-                    {media.id}{media.extension} (on GitHub)
-                </a>
+{#if !inModal}
+    <div class="media">
+        <Masonry
+            items={post.media}
+            getId={(media: Media) => media.id + media.extension}
+            let:item={media}
+            minColWidth={160}
+            maxColWidth={600}
+            animate={false}
+        >
+            {#if media.extension == ".png"}
+                {#await import(`../../src/feeds/${feed.id}/${post.id}/${media.id}.png?as=post`) then { default: src }}
+                    <Image src={src} fullSrc={media.urlGitHub} exif={media.exif} />
+                {/await}
+            {:else if media.extension == ".jpg"}
+                {#await import(`../../src/feeds/${feed.id}/${post.id}/${media.id}.jpg?as=post`) then { default: src }}
+                    <Image src={src} fullSrc={media.urlGitHub} exif={media.exif} />
+                {/await}
+            {:else if media.extension == ".jpeg"}
+                {#await import(`../../src/feeds/${feed.id}/${post.id}/${media.id}.jpg?as=post`) then { default: src }}
+                    <Image src={src} fullSrc={media.urlGitHub} exif={media.exif} />
+                {/await}
+            {:else if media.extension == ".webp"}
+                {#await import(`../../src/feeds/${feed.id}/${post.id}/${media.id}.webp?as=post`) then { default: src }}
+                    <Image src={src} fullSrc={media.urlGitHub} exif={media.exif} />
+                {/await}
+            {:else if media.extension == ".gif"}
+                {#await import(`../../src/feeds/${feed.id}/${post.id}/${media.id}.gif`) then { default: src }}
+                    <Image src={src} fullSrc={media.urlGitHub} exif={media.exif} />
+                {/await}
+            {:else if media.extension == ".svg"}
+                {#await import(`../../src/feeds/${feed.id}/${post.id}/${media.id}.svg`) then { default: src }}
+                    <Image src={src} fullSrc={media.urlGitHub} />
+                {/await}
+            {:else if media.extension == ".mp4"}
+                {#await import(`../../src/feeds/${feed.id}/${post.id}/${media.id}.mp4`) then { default: src }}
+                    <Video src={src} gifMode={false} />
+                {/await}
+            {:else if media.extension == ".webm"}
+                {#await import(`../../src/feeds/${feed.id}/${post.id}/${media.id}.webm`) then { default: src }}
+                    <Video src={src} gifMode={false} />
+                {/await}
+            {/if}
+        </Masonry>
+        <div>
+            {#each post.embeds as embed}
+                <PostEmbed {embed} />
             {/each}
-        {/if}
+            {#if inFeed && unknownMedia.length > 1}
+                <br>
+                <Button onClick={post.url}>
+                    +{unknownMedia.length} attachments
+                </Button>
+            {:else}
+                {#each unknownMedia as media}
+                    <br>
+                    <a href={media.urlGitHub}>
+                        {media.id}{media.extension} (on GitHub)
+                    </a>
+                {/each}
+            {/if}
+        </div>
     </div>
-</div>
+{/if}
+
 <div class="footer">
     <div class="timestamps">
         {#each [
@@ -123,15 +166,24 @@
             {/if}
         {/each}
     </div>
-    <Button onClick={post.url} linkCopyOnClick={!inFeed}>
-        {#if inFeed}
-            💬
-        {/if}
-        🔗
-    </Button>
+    {#if !inModal}
+        <Button onClick={post.url} linkCopyOnClick={!inFeed}>
+            {#if inFeed}
+                💬
+            {/if}
+            🔗
+        </Button>
+    {/if}
 </div>
 
 <style lang="scss">
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
     .media {
         margin-bottom: 8px;
     }
