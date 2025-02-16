@@ -78,6 +78,7 @@
         justify-content: space-between;
         margin-top: 8px;
         margin-bottom: 8px;
+        flex-wrap: wrap;
         
         &.open {
             flex-direction: column;
