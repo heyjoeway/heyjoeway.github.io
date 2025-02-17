@@ -65,7 +65,7 @@
 			</a>
 		</div>
 		<div class="nav">
-			<Button onClick="/">Articles</Button>
+			<Button onClick="/articles">Articles</Button>
 			<Button onClick="/feeds">Feeds</Button>
 		</div>
 	</div>
