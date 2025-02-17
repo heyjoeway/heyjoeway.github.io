@@ -25,6 +25,14 @@
 		align-items: center;
 		margin-bottom: 16px;
 	}
+	
+	.nav {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: right;
+		gap: 8px;
+	}
 </style>
 
 <script lang="ts">
@@ -56,10 +64,10 @@
 				<span style="color:palevioletred">hey</span><span style="color:orange">joe</span><span style="color:skyblue">way</span><span style="color:white">.</span>
 			</a>
 		</div>
-		<!-- <div class="nav">
+		<div class="nav">
 			<Button onClick="/">Articles</Button>
 			<Button onClick="/feeds">Feeds</Button>
-		</div> -->
+		</div>
 	</div>
 	
 	<slot></slot>
