@@ -32,8 +32,7 @@ export async function getFirstCommitDate(path: string): Promise<string | undefin
         const gitLog: LogResult<DefaultLogFields> = await new Promise(
             (resolve, reject) => git.log(
                 {
-                    "file": path,
-                    "max-count": 1
+                    "file": path
                 },
                 (err, log) => {
                     if (err) return reject(err);
@@ -48,6 +47,41 @@ export async function getFirstCommitDate(path: string): Promise<string | undefin
         return gitLogFirst.date; // ISO8601
     } catch (e) {
         return undefined;
+    }
+}
+
+interface FirstAndLatestCommitDates {
+    first: string | undefined; // ISO8601
+    latest: string | undefined; // ISO8601
+}
+
+export async function getFirstAndLatestCommitDates(path: string): Promise<FirstAndLatestCommitDates> {
+    try {
+        const gitLog: LogResult<DefaultLogFields> = await new Promise(
+            (resolve, reject) => git.log(
+                {
+                    "file": path
+                },
+                (err, log) => {
+                    if (err) return reject(err);
+                    resolve(log);
+                }
+            )
+        );
+        const gitLogAll = [...gitLog.all];
+        const gitLogLatest = gitLogAll[0];
+        gitLogAll.reverse();
+        const gitLogFirst = gitLogAll[0];
+        if (!gitLogFirst) throw new Error("No git log found");
+        return {
+            first: gitLogFirst.date,
+            latest: gitLogLatest.date
+        } as FirstAndLatestCommitDates;
+    } catch (e) {
+        return {
+            first: undefined,
+            latest: undefined
+        };
     }
 }
 

@@ -19,7 +19,8 @@ import ExifReader from 'exifreader';
 
 import {
 	getLatestCommitDate,
-	getFirstCommitDate
+	getFirstCommitDate,
+    getFirstAndLatestCommitDates
 } from '$lib/Git.server';
 import path from 'path';
 
@@ -28,7 +29,7 @@ const feedsDir = 'src/feeds';
 async function getPostedDate(path: string) {
     return (
         await getFirstCommitDate(path)
-        || await getFileCreatedDate(path)
+        || getFileCreatedDate(path)
     );
 }
 
@@ -37,6 +38,21 @@ async function getEditedDate(path: string) {
         await getLatestCommitDate(path)
         || getFileModifiedDate(path)
     );
+}
+
+interface PostedAndEditedDate {
+    posted: string | undefined;
+    edited: string | undefined;
+}
+
+async function getPostedAndEditedDate(path: string) {
+    let { first, latest } = await getFirstAndLatestCommitDates(path);
+    first = first || await getFileCreatedDate(path);
+    latest = latest || getFileModifiedDate(path);
+    return {
+        posted: first,
+        edited: latest
+    } as PostedAndEditedDate;
 }
 
 function strToDate(str: string | undefined): Date {
@@ -122,11 +138,13 @@ export async function getFeedPostMedia(feedId: string, postId: string): Promise<
             } catch (e) { }
         }
         
+        const { posted, edited } = await getPostedAndEditedDate(mediaPath);
+        
         return {
             id,
             extension,
-            date: await getPostedDate(mediaPath),
-            lastModifiedDate: await getEditedDate(mediaPath),
+            date: posted,
+            lastModifiedDate: edited,
             url: `/feeds/${feedId}/${postId}/${mediaFileName}`,
             urlGitHub: await githubLink(path.join(feedsDir, feedId, postId, mediaFileName)),
             exif: exif
@@ -190,10 +208,19 @@ export async function getFeedPost(feed: Feed, postId: string): Promise<Post> {
     const fm = (compiled?.data?.fm || {}) as Record<string, any>;
     fm.urlShort = `${getCname()}/feeds/${feed.id}/${postId}`;
     
-    if (!Object.hasOwn(fm, 'date')) {
+    const fmHasDate = Object.hasOwn(fm, 'date');
+    const fmHasLastModifiedAt = Object.hasOwn(fm, 'last_modified_at');
+    
+    let posted: string | undefined = undefined;
+    let edited: string | undefined = undefined;
+    
+    if (!fmHasDate || !fmHasLastModifiedAt) {
+        ({ posted, edited } = await getPostedAndEditedDate(postPath));
+    }
+    
+    if (!fmHasDate) {
         const mediaDates = media.map(x => x.date);
-        const postFileDate = await getPostedDate(postPath);
-        const dates = [...mediaDates, postFileDate].filter(x => x); // Remove undefined
+        const dates = [...mediaDates, posted].filter(x => x); // Remove undefined
         if (dates.length) {
             fm.date = arrMin(
                 dates.map(strToDate)
@@ -201,10 +228,9 @@ export async function getFeedPost(feed: Feed, postId: string): Promise<Post> {
         }
     }
     
-    if (!Object.hasOwn(fm, 'last_modified_at')) {
+    if (!fmHasLastModifiedAt) {
         const mediaDates = media.map(x => x.lastModifiedDate);
-        const postFileDate = await getEditedDate(postPath);
-        const dates = [...mediaDates, postFileDate].filter(x => x); // Remove undefined
+        const dates = [...mediaDates, edited].filter(x => x); // Remove undefined
         if (dates.length) {
             fm.last_modified_at = arrMax(
                 dates.map(strToDate)
