@@ -239,6 +239,14 @@ export function getFeedPostIds(feedId: string): string[] {
     return postDirents.map((postDirent: fs.Dirent) => postDirent.name);
 }
 
+export function sortPosts(posts: Post[]) {
+    posts.sort((a: Post, b: Post) => {
+        const dateA = new Date(a.fm.date || 0).getTime();
+        const dateB = new Date(b.fm.date || 0).getTime();
+        return dateB - dateA;
+    });
+}
+
 export async function getFeedPosts(feed: Feed): Promise<Post[]> {
     const postIds = getFeedPostIds(feed.id);
     
@@ -247,11 +255,8 @@ export async function getFeedPosts(feed: Feed): Promise<Post[]> {
             async (postId: string) => await getFeedPost(feed, postId)
         )
     );
-    posts.sort((a: Post, b: Post) => {
-        const dateA = new Date(a.fm.date || 0).getTime();
-        const dateB = new Date(b.fm.date || 0).getTime();
-        return dateB - dateA;
-    });
+    
+    sortPosts(posts);
     
     return posts;
 }
@@ -263,7 +268,7 @@ export async function getFeed(feedId: string, includePosts = false): Promise<Fee
             'utf8'
         )
     );
-        
+    
     let feed = {
         id: feedId,
         meta: feedMeta,
@@ -278,8 +283,10 @@ export async function getFeed(feedId: string, includePosts = false): Promise<Fee
     return feed;
 }
 
-export async function getAllFeeds(): Promise<Feed[]> {
-    const feeds = await Promise.all(getFeedIds().map((feedId: string) => getFeed(feedId)));
+export async function getAllFeeds(includePosts = false): Promise<Feed[]> {
+    const feeds = await Promise.all(getFeedIds().map(
+        (feedId: string) => getFeed(feedId, includePosts))
+    );
     feeds.sort((a: Feed, b: Feed) => {
         const orderA = a.meta.order || 0;
         const orderB = b.meta.order || 0;
