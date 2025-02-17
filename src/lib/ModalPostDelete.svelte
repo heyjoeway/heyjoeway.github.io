@@ -1,10 +1,9 @@
 <script lang="ts">
     import Modal from "$joeysvelte/Modal.svelte";
     import { default as SV$Post } from "$lib/Post.svelte";
-    import type { Feed, Post } from "$lib/Feed";
+    import type { Post } from "$lib/Feed";
     import Button from "$joeysvelte/Button.svelte";
     
-    export let feed: Feed;
     export let post: Post;
     export let open: boolean = false;
     
@@ -28,7 +27,7 @@
                     `${response.status}: ${await response.text()}`
                 );
             }
-            location.replace(`/feeds/${feed.id}`);
+            location.replace(`/feeds/${post.feed.id}`);
         })
         .catch(e => {
             deleteRunning = false;
@@ -47,7 +46,7 @@
         <code>
             {getPostUrl()}
         </code>
-        <SV$Post feed={feed} post={post} inModal={true} />
+        <SV$Post post={post} inModal={true} />
         {#if error}
             <code style="color:red">
                 {error}

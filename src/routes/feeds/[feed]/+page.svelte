@@ -49,7 +49,7 @@
             
             {#if data.posts && data.posts.length > 0}
                 {#each data.posts as post}
-                    <Post feed={data} post={post} inFeed={true} />
+                    <Post post={post} inFeed={true} />
                     <hr>
                 {/each}
             {:else}

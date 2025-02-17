@@ -14,7 +14,6 @@
     import Masonry from 'svelte-bricks'
     import PostEmbed from "./PostEmbed.svelte";
     
-    export let feed: Feed;
     export let post: Post;
     export let inModal = false;
     export let inFeed = false;
@@ -47,7 +46,7 @@
     }
 </script>
 
-<ModalPostDelete post={post} feed={feed} bind:open={deleteModalOpen} />
+<ModalPostDelete post={post} bind:open={deleteModalOpen} />
 
 {#if dev}
     <ContextMenu bind:this={menu}>
@@ -58,19 +57,19 @@
 <div class="header">
     {#if inModal}
         <div class="profile">
-            <FeedProfilePic size="42px" feed={feed} />
+            <FeedProfilePic size="42px" feed={post.feed} />
             <div>
-                <div class="title">{feed.meta.title}</div>
-                <div class="path">{feed.urlShort}</div>
+                <div class="title">{post.feed.meta.title}</div>
+                <div class="path">{post.feed.urlShort}</div>
             </div>
         </div>
     {:else}    
-        <a href={feed.url}>
+        <a href={post.feed.url}>
             <div class="profile">
-                <FeedProfilePic size="42px" feed={feed} />
+                <FeedProfilePic size="42px" feed={post.feed} />
                 <div>
-                    <div class="title">{feed.meta.title}</div>
-                    <div class="path">{feed.urlShort}</div>
+                    <div class="title">{post.feed.meta.title}</div>
+                    <div class="path">{post.feed.urlShort}</div>
                 </div>
             </div>
         </a>
@@ -98,35 +97,35 @@
             animate={false}
         >
             {#if media.extension == ".png"}
-                {#await import(`../../src/feeds/${feed.id}/${post.id}/${media.id}.png?as=post`) then { default: src }}
+                {#await import(`../../src/feeds/${post.feed.id}/${post.id}/${media.id}.png?as=post`) then { default: src }}
                     <Image src={src} fullSrc={media.urlGitHub} exif={media.exif} />
                 {/await}
             {:else if media.extension == ".jpg"}
-                {#await import(`../../src/feeds/${feed.id}/${post.id}/${media.id}.jpg?as=post`) then { default: src }}
+                {#await import(`../../src/feeds/${post.feed.id}/${post.id}/${media.id}.jpg?as=post`) then { default: src }}
                     <Image src={src} fullSrc={media.urlGitHub} exif={media.exif} />
                 {/await}
             {:else if media.extension == ".jpeg"}
-                {#await import(`../../src/feeds/${feed.id}/${post.id}/${media.id}.jpg?as=post`) then { default: src }}
+                {#await import(`../../src/feeds/${post.feed.id}/${post.id}/${media.id}.jpg?as=post`) then { default: src }}
                     <Image src={src} fullSrc={media.urlGitHub} exif={media.exif} />
                 {/await}
             {:else if media.extension == ".webp"}
-                {#await import(`../../src/feeds/${feed.id}/${post.id}/${media.id}.webp?as=post`) then { default: src }}
+                {#await import(`../../src/feeds/${post.feed.id}/${post.id}/${media.id}.webp?as=post`) then { default: src }}
                     <Image src={src} fullSrc={media.urlGitHub} exif={media.exif} />
                 {/await}
             {:else if media.extension == ".gif"}
-                {#await import(`../../src/feeds/${feed.id}/${post.id}/${media.id}.gif`) then { default: src }}
+                {#await import(`../../src/feeds/${post.feed.id}/${post.id}/${media.id}.gif`) then { default: src }}
                     <Image src={src} fullSrc={media.urlGitHub} exif={media.exif} />
                 {/await}
             {:else if media.extension == ".svg"}
-                {#await import(`../../src/feeds/${feed.id}/${post.id}/${media.id}.svg`) then { default: src }}
+                {#await import(`../../src/feeds/${post.feed.id}/${post.id}/${media.id}.svg`) then { default: src }}
                     <Image src={src} fullSrc={media.urlGitHub} />
                 {/await}
             {:else if media.extension == ".mp4"}
-                {#await import(`../../src/feeds/${feed.id}/${post.id}/${media.id}.mp4`) then { default: src }}
+                {#await import(`../../src/feeds/${post.feed.id}/${post.id}/${media.id}.mp4`) then { default: src }}
                     <Video src={src} gifMode={false} />
                 {/await}
             {:else if media.extension == ".webm"}
-                {#await import(`../../src/feeds/${feed.id}/${post.id}/${media.id}.webm`) then { default: src }}
+                {#await import(`../../src/feeds/${post.feed.id}/${post.id}/${media.id}.webm`) then { default: src }}
                     <Video src={src} gifMode={false} />
                 {/await}
             {/if}

@@ -76,6 +76,7 @@ export interface Post {
     fm: Record<string, any>;
     idFull: string;
     url: string;
+    feed: Feed;
 }
 
 export interface Feed {
@@ -162,12 +163,12 @@ export function getFeedPostEmbeds(postContents: string) {
     };
 }
 
-export async function getFeedPost(feedId: string, postId: string): Promise<Post> {
-    const media = await getFeedPostMedia(feedId, postId);
+export async function getFeedPost(feed: Feed, postId: string): Promise<Post> {
+    const media = await getFeedPostMedia(feed.id, postId);
     
     let postContents = "";
     
-    const postPath = path.join(feedsDir, feedId, postId, "post.md");
+    const postPath = path.join(feedsDir, feed.id, postId, "post.md");
     try {
         postContents = fs.readFileSync(postPath, 'utf-8');
     } catch { }
@@ -187,7 +188,7 @@ export async function getFeedPost(feedId: string, postId: string): Promise<Post>
     );
     
     const fm = (compiled?.data?.fm || {}) as Record<string, any>;
-    fm.urlShort = `${getCname()}/feeds/${feedId}/${postId}`;
+    fm.urlShort = `${getCname()}/feeds/${feed.id}/${postId}`;
     
     if (!Object.hasOwn(fm, 'date')) {
         const mediaDates = media.map(x => x.date);
@@ -221,8 +222,9 @@ export async function getFeedPost(feedId: string, postId: string): Promise<Post>
         embeds,
         media,
         fm,
-        idFull: `${feedId}/${postId}`,
-        url: `/feeds/${feedId}/${postId}`
+        idFull: `${feed.id}/${postId}`,
+        url: `/feeds/${feed.id}/${postId}`,
+        feed
     } as Post
 }
 
@@ -237,12 +239,12 @@ export function getFeedPostIds(feedId: string): string[] {
     return postDirents.map((postDirent: fs.Dirent) => postDirent.name);
 }
 
-export async function getFeedPosts(feedId: string): Promise<Post[]> {
-    const postIds = getFeedPostIds(feedId);
+export async function getFeedPosts(feed: Feed): Promise<Post[]> {
+    const postIds = getFeedPostIds(feed.id);
     
     const posts = await Promise.all(
         postIds.map(
-            async (postId: string) => await getFeedPost(feedId, postId)
+            async (postId: string) => await getFeedPost(feed, postId)
         )
     );
     posts.sort((a: Post, b: Post) => {
@@ -261,19 +263,19 @@ export async function getFeed(feedId: string, includePosts = false): Promise<Fee
             'utf8'
         )
     );
-    
-    let posts: Post[] | undefined = undefined;
-    
-    if (includePosts) posts = await getFeedPosts(feedId);
-    
-    return {
+        
+    let feed = {
         id: feedId,
         meta: feedMeta,
         url: `/feeds/${feedId}`,
         rss: `/feeds/${feedId}/feed.rss`,
         urlShort: `${getCname()}/feeds/${feedId}`,
-        posts
+        posts: undefined
     } as Feed;
+    
+    if (includePosts) feed.posts = await getFeedPosts(feed);
+    
+    return feed;
 }
 
 export async function getAllFeeds(): Promise<Feed[]> {
