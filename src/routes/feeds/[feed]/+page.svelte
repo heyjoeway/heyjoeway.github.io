@@ -20,7 +20,7 @@
     let postForm: HTMLFormElement;
 </script>
 
-<Layout>    
+<Layout bgText={data.id}>
     <FeedHeader feed={data} />
     
     <div class="outer-container">

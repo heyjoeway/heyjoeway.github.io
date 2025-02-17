@@ -8,7 +8,7 @@
     export let data;
 </script>
 
-<Layout>
+<Layout bgText={data.feed.id}>
     <div class="outer-container">
         <div class="inner-container">
             <Post feed={data.feed} post={data.post} />
