@@ -6,10 +6,9 @@ import {
 } from '$lib/Feed.js';
 
 export async function load({ params }) {
-    return {
-        feed: await getFeed(params.feed),
-        post: await getFeedPost(params.feed, params.post)
-    }
+    const feed = await getFeed(params.feed);
+    const post = await getFeedPost(feed, params.post);
+    return { feed, post }
 }
 
 export async function entries() {
