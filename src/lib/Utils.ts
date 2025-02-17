@@ -57,3 +57,44 @@ export function humanReadableSize(bytes: number): string {
 	}
 	return `${bytes.toFixed(1)} ${units[units.length - 1]}`;
 }
+
+// Thanks to:
+// - https://codegolf.stackexchange.com/questions/32964/reduce-html-to-n-characters-while-keeping-the-formatting
+// - ChatGPT
+export function splitHtmlAt(str: string, n: number): string {
+	let result = '';
+	let count = 0;
+	let inTag = false;
+	let tagBuffer = '';
+	let prevChar = '';
+  
+	for (let i = 0; i < str.length; i++) {
+	  const char = str[i];
+	  if (char === '<') {
+		inTag = true;
+		tagBuffer = '';
+	  } else if (char === '>') {
+		inTag = false;
+		tagBuffer += '>';
+		result += tagBuffer;
+		continue;
+	  }
+  
+	  if (inTag) {
+		tagBuffer += char;
+	  } else {
+		if (count < n) {
+		  if (prevChar === '\n' && char === '<') {
+			result = result.trimEnd();
+		  }
+		  result += char;
+		  count++;
+		} else {
+		  break;
+		}
+	  }
+	  prevChar = char;
+	}
+  
+	return result;
+}

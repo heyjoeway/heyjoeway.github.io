@@ -6,7 +6,7 @@
     import Button from "$joeysvelte/Button.svelte";
     import ContextMenu from "$joeysvelte/ContextMenu.svelte";
     import ContextMenuItem from "$joeysvelte/ContextMenuItem.svelte";
-	import { formatDateTime } from "$lib/Utils";
+	import { formatDateTime, splitHtmlAt } from "$lib/Utils";
     import FeedProfilePic from "./FeedProfilePic.svelte";
     import type { Feed, Post, Media } from "./Feed";
     import ModalPostDelete from './ModalPostDelete.svelte';
@@ -17,6 +17,23 @@
     export let post: Post;
     export let inModal = false;
     export let inFeed = false;
+        
+    let postHtmlNeedsShortening = (
+        (inModal || inFeed)
+        && (post.html.length > 350)
+    );
+    let postHtml = post.html;
+    if (postHtmlNeedsShortening) {
+        const postHtmlBefore = postHtml;
+        console.log(postHtmlBefore.length);
+        postHtml = splitHtmlAt(postHtml, 300);
+        console.log(postHtml.length);
+        if (postHtmlBefore.length <= postHtml.length) {
+            postHtmlNeedsShortening = false;
+            postHtml = postHtmlBefore;
+        }
+    }
+    
     
     function newDateDetail(type: string, key: string) {
         return { type, key };
@@ -83,7 +100,12 @@
 </div>
 
 <div class="post">
-    {@html post.html}
+    {@html postHtml}
+    {#if postHtmlNeedsShortening}
+        <a href={post.url}><p>
+            ... (Read More)
+        </p></a>
+    {/if}
 </div>
 
 {#if !inModal}
