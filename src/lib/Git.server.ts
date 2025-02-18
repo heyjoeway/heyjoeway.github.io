@@ -100,6 +100,15 @@ export async function getTreeUrl() {
             url.length - 4
         );
     }
+    
+    // Also need to handle SSH remotes
+    // And make sure to support domains other than github.com
+    if (url.startsWith("git@")) {
+        const sshUrlSplit = url.split(":");
+        const domain = sshUrlSplit[0].split("@")[1];
+        url = `https://${domain}/${sshUrlSplit[1]}`;
+    }
+    
     _treeUrl = `${url}/tree/${branch}/`;
     return _treeUrl;
 }
