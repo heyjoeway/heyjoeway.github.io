@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # Define the command to run
-COMMAND="your_command_here"
-WATCH_DIR="path_to_your_git_repo"
+COMMAND="npm run host"
 
 # Function to run the command in the background
 run_command() {
