@@ -5,8 +5,8 @@
     <link>http://sveltekit-prerender/feeds/main</link>
     <description>Cult of Dinonicest</description>
     <language>en-us</language>
-    <pubDate>Sun, 16 Feb 2025 20:41:00 GMT</pubDate>
-    <lastBuildDate>Sun, 16 Feb 2025 20:41:00 GMT</lastBuildDate>
+    <pubDate>Tue, 18 Feb 2025 04:02:00 GMT</pubDate>
+    <lastBuildDate>Tue, 18 Feb 2025 04:02:00 GMT</lastBuildDate>
     <docs>https://www.rssboard.org/rss-specification</docs>
     <generator>Custom</generator>
     <atom:link href="http://sveltekit-prerender/feeds/main/feed.rss" rel="self" type="application/rss+xml"/>
@@ -14,14 +14,14 @@
       <title/>
       <link>http://sveltekit-prerender/feeds/main/021425_0228PM</link>
       <description>&lt;p&gt;dsfsdfdsadf&lt;/p&gt;</description>
-      <pubDate>Sun, 16 Feb 2025 20:41:00 GMT</pubDate>
+      <pubDate>Tue, 18 Feb 2025 04:02:00 GMT</pubDate>
       <guid>/feeds/main/021425_0228PM</guid>
     </item>
     <item>
       <title/>
       <link>http://sveltekit-prerender/feeds/main/021625_0327PM</link>
       <description>&lt;p&gt;testin again&lt;/p&gt;</description>
-      <pubDate>Sun, 16 Feb 2025 20:41:00 GMT</pubDate>
+      <pubDate>Tue, 18 Feb 2025 04:02:00 GMT</pubDate>
       <guid>/feeds/main/021625_0327PM</guid>
     </item>
   </channel>
