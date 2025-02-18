@@ -48,6 +48,8 @@ export const POST: RequestHandler = async ({ request, params }) => {
     }
     
     for (const file of files) {
+        if (!file.name) continue;
+        if (!file.size) continue;
         const arrayBuffer = await file.arrayBuffer();
         const buffer = Buffer.from(arrayBuffer);
         const filePath = path.join(pathNewPostDir, file.name)
