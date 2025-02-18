@@ -52,7 +52,7 @@ watch_directory() {
             # Kill the previous command
             kill $COMMAND_PID -9
             
-            sleep 1
+            npm install
             
             # Run the command again
             run_command
