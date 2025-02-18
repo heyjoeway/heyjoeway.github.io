@@ -25,18 +25,11 @@
     let postHtml = post.html;
     if (postHtmlNeedsShortening) {
         const postHtmlBefore = postHtml;
-        console.log(postHtmlBefore.length);
         postHtml = splitHtmlAt(postHtml, 300);
-        console.log(postHtml.length);
         if (postHtmlBefore.length <= postHtml.length) {
             postHtmlNeedsShortening = false;
             postHtml = postHtmlBefore;
         }
-    }
-    
-    
-    function newDateDetail(type: string, key: string) {
-        return { type, key };
     }
     
     const knownExtensions = [
@@ -50,13 +43,53 @@
         ".webm"
     ];
     
-    const unknownMedia = post.media.filter(
+    let media = post.media;
+    const unknownMedia = media.filter(
         x => !knownExtensions.includes(x.extension)
     );
+    media = media.filter(
+        x => knownExtensions.includes(x.extension)
+    );
+    
+    let mediaNeedsShortening = (
+        (inModal || inFeed)
+        && (media.length > 4)
+    );
+    const mediaCountOverMax = media.length - 4;
+    if (mediaNeedsShortening) {
+        media = media.slice(0, 4);
+    }
+    
+    let embedsNeedsShortening = (
+        (inModal || inFeed)
+        && (post.embeds.length > 1)
+    );
+    let embeds = post.embeds;
+    const embedsCountOverMax = post.embeds.length - 1;
+    if (embedsNeedsShortening) {
+        embeds = post.embeds.slice(0, 1);
+    }
+    
+    function newDateDetail(type: string, key: string) {
+        return { type, key };
+    }
     
     let editModalOpen = false;
     let deleteModalOpen = false;
     let menu: ContextMenu;
+    
+    let expandTextItems = [];
+    if (mediaNeedsShortening) {
+        expandTextItems.push(`${mediaCountOverMax} media items`);
+    }
+    if (embedsNeedsShortening) {
+        expandTextItems.push(`${embedsCountOverMax} embeds`);
+    }
+    if (unknownMedia.length > 0) {
+        expandTextItems.push(`${unknownMedia.length} downloads`);
+    }
+    let expandText = expandTextItems.join(", ");
+    
     
     $: {
         if (editModalOpen || deleteModalOpen) menu?.close();
@@ -111,63 +144,65 @@
 {#if !inModal}
     <div class="media">
         <Masonry
-            items={post.media}
-            getId={(media: Media) => media.id + media.extension}
-            let:item={media}
+            items={media}
+            getId={(item: Media) => item.id + item.extension}
+            let:item={item}
             minColWidth={160}
             maxColWidth={600}
             animate={false}
         >
-            {#if media.extension == ".png"}
-                {#await import(`../../src/feeds/${post.feed.id}/${post.id}/${media.id}.png?as=post`) then { default: src }}
-                    <Image src={src} fullSrc={media.urlGitHub} exif={media.exif} />
+            {#if item.extension == ".png"}
+                {#await import(`../../src/feeds/${post.feed.id}/${post.id}/${item.id}.png?as=post`) then { default: src }}
+                    <Image src={src} fullSrc={item.urlGitHub} exif={item.exif} />
                 {/await}
-            {:else if media.extension == ".jpg"}
-                {#await import(`../../src/feeds/${post.feed.id}/${post.id}/${media.id}.jpg?as=post`) then { default: src }}
-                    <Image src={src} fullSrc={media.urlGitHub} exif={media.exif} />
+            {:else if item.extension == ".jpg"}
+                {#await import(`../../src/feeds/${post.feed.id}/${post.id}/${item.id}.jpg?as=post`) then { default: src }}
+                    <Image src={src} fullSrc={item.urlGitHub} exif={item.exif} />
                 {/await}
-            {:else if media.extension == ".jpeg"}
-                {#await import(`../../src/feeds/${post.feed.id}/${post.id}/${media.id}.jpg?as=post`) then { default: src }}
-                    <Image src={src} fullSrc={media.urlGitHub} exif={media.exif} />
+            {:else if item.extension == ".jpeg"}
+                {#await import(`../../src/feeds/${post.feed.id}/${post.id}/${item.id}.jpg?as=post`) then { default: src }}
+                    <Image src={src} fullSrc={item.urlGitHub} exif={item.exif} />
                 {/await}
-            {:else if media.extension == ".webp"}
-                {#await import(`../../src/feeds/${post.feed.id}/${post.id}/${media.id}.webp?as=post`) then { default: src }}
-                    <Image src={src} fullSrc={media.urlGitHub} exif={media.exif} />
+            {:else if item.extension == ".webp"}
+                {#await import(`../../src/feeds/${post.feed.id}/${post.id}/${item.id}.webp?as=post`) then { default: src }}
+                    <Image src={src} fullSrc={item.urlGitHub} exif={item.exif} />
                 {/await}
-            {:else if media.extension == ".gif"}
-                {#await import(`../../src/feeds/${post.feed.id}/${post.id}/${media.id}.gif`) then { default: src }}
-                    <Image src={src} fullSrc={media.urlGitHub} exif={media.exif} />
+            {:else if item.extension == ".gif"}
+                {#await import(`../../src/feeds/${post.feed.id}/${post.id}/${item.id}.gif`) then { default: src }}
+                    <Image src={src} fullSrc={item.urlGitHub} exif={item.exif} />
                 {/await}
-            {:else if media.extension == ".svg"}
-                {#await import(`../../src/feeds/${post.feed.id}/${post.id}/${media.id}.svg`) then { default: src }}
-                    <Image src={src} fullSrc={media.urlGitHub} />
+            {:else if item.extension == ".svg"}
+                {#await import(`../../src/feeds/${post.feed.id}/${post.id}/${item.id}.svg`) then { default: src }}
+                    <Image src={src} fullSrc={item.urlGitHub} />
                 {/await}
-            {:else if media.extension == ".mp4"}
-                {#await import(`../../src/feeds/${post.feed.id}/${post.id}/${media.id}.mp4`) then { default: src }}
+            {:else if item.extension == ".mp4"}
+                {#await import(`../../src/feeds/${post.feed.id}/${post.id}/${item.id}.mp4`) then { default: src }}
                     <Video src={src} gifMode={false} />
                 {/await}
-            {:else if media.extension == ".webm"}
-                {#await import(`../../src/feeds/${post.feed.id}/${post.id}/${media.id}.webm`) then { default: src }}
+            {:else if item.extension == ".webm"}
+                {#await import(`../../src/feeds/${post.feed.id}/${post.id}/${item.id}.webm`) then { default: src }}
                     <Video src={src} gifMode={false} />
                 {/await}
             {/if}
         </Masonry>
         <div>
-            {#each post.embeds as embed}
+            {#each embeds as embed}
                 <PostEmbed {embed} />
             {/each}
-            {#if inFeed && unknownMedia.length > 1}
-                <br>
-                <Button onClick={post.url}>
-                    +{unknownMedia.length} attachments
-                </Button>
-            {:else}
+            {#if !inFeed}
                 {#each unknownMedia as media}
                     <br>
                     <a href={media.urlGitHub}>
                         {media.id}{media.extension} (on GitHub)
                     </a>
                 {/each}
+            {:else}
+                {#if expandText}
+                    <br>
+                    <Button onClick={post.url}>
+                        +{expandText}
+                    </Button>
+                {/if}
             {/if}
         </div>
     </div>
