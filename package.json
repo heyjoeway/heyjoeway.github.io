@@ -4,6 +4,7 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
+		"host": "vite dev --host",
 		"build": "vite build",
 		"watch": "vite build --watch",
 		"preview": "vite preview",
