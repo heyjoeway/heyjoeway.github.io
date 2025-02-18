@@ -50,7 +50,8 @@ watch_directory() {
             echo "Changes detected from remote. Restarting command..."
             
             # Kill the previous command
-            kill $COMMAND_PID -9
+            kill $COMMAND_PID
+            wait $COMMAND_PID
             
             npm install
             
