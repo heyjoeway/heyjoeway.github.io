@@ -19,16 +19,15 @@ check_and_push_local_changes() {
             current_time=$(date +%s)
             elapsed_time=$((current_time - last_change_time))
             
+            echo "${elapsed_time}"
+
             if [[ $elapsed_time -ge 300 ]]; then
                 echo "No local changes for 5 minutes. Pushing changes..."
-                git add .
+                git add -A
                 git commit -m "Auto-commit"
                 git push
                 break
             fi
-            
-            # Update the last change time if there are still local changes
-            last_change_time=$(date +%s)
             
             # Wait before checking again
             sleep 10
