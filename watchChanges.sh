@@ -50,7 +50,9 @@ watch_directory() {
             echo "Changes detected from remote. Restarting command..."
             
             # Kill the previous command
-            kill $COMMAND_PID
+            kill $COMMAND_PID -9
+            
+            sleep 1
             
             # Run the command again
             run_command
