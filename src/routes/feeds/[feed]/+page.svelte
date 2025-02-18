@@ -6,18 +6,12 @@
 
     import FeedHeader from "$lib/FeedHeader.svelte";
     import Center from "$lib/Center.svelte";
-    import Button from '$joeysvelte/Button.svelte';
-    import Textarea from '$joeysvelte/Textarea.svelte';
-    import FileUploadMultiple from '$lib/FileUploadMultiple.svelte';
+
+    import PostEditor from '$lib/PostEditor.svelte';
     
     export let data;
-    let filePickerFiles: FileList;
+
     
-    function gotAnyFiles() {
-        return filePickerFiles && filePickerFiles.length;
-    }
-    
-    let postForm: HTMLFormElement;
 </script>
 
 <Layout bgText={data.id}>
@@ -28,22 +22,7 @@
             <hr>
             
             {#if dev}
-                <form
-                    bind:this={postForm}
-                    method="POST"
-                    enctype="multipart/form-data"
-                    action="./new"
-                >
-                    <Textarea
-                        name="text"
-                        rows={5}
-                        width="100%"
-                    />
-                    <div class="posting-footer {gotAnyFiles() ? 'open' : ''}">
-                        <FileUploadMultiple name="files" bind:files={filePickerFiles} />
-                        <Button onClick={() => postForm.submit()}>📝 Post</Button>
-                    </div>
-                </form>
+                <PostEditor feed={data} />
                 <hr>
             {/if}
             
@@ -73,15 +52,4 @@
         max-width: 600px;
     }
     
-    .posting-footer {
-        display:flex;
-        justify-content: space-between;
-        margin-top: 8px;
-        margin-bottom: 8px;
-        flex-wrap: wrap;
-        
-        &.open {
-            flex-direction: column;
-        }
-    }
 </style>
