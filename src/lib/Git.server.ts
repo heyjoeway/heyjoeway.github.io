@@ -4,7 +4,9 @@ import {
     type DefaultLogFields
 } from 'simple-git';
 
-const git = simpleGit();
+const git = simpleGit({
+    maxConcurrentProcesses: 64 // big number go brrr
+});
 
 export async function getLatestCommitDate(path: string): Promise<string | undefined> {
     try {
