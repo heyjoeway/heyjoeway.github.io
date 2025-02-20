@@ -108,6 +108,10 @@
     </ContextMenu>
 {/if}
 
+{#if post.fm.pinned}
+    <div class="pinned">📌 Pinned</div>
+{/if}
+
 <div class="header">
     {#if inModal}
         <div class="profile">
@@ -237,6 +241,11 @@
 </div>
 
 <style lang="scss">
+    .pinned {
+        font-size: 12px;
+        opacity: 0.6;
+    }
+    
     .header {
         display: flex;
         flex-direction: row;

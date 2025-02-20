@@ -268,10 +268,17 @@ export function getFeedPostIds(feedId: string): string[] {
 }
 
 export function sortPosts(posts: Post[]) {
+    // First sort by date
     posts.sort((a: Post, b: Post) => {
         const dateA = new Date(a.fm.date || 0).getTime();
         const dateB = new Date(b.fm.date || 0).getTime();
         return dateB - dateA;
+    });
+    // Then sort by whether they're pinned
+    posts.sort((a: Post, b: Post) => {
+        const pinnedA = a.fm.pinned || false;
+        const pinnedB = b.fm.pinned || false;
+        return pinnedB - pinnedA;
     });
 }
 

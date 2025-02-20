@@ -8,7 +8,8 @@ export async function load() {
 		.filter(x => x) // Remove undefined
 		.flat() // Put all into a single list
 	) as Post[];
-	sortPosts(posts);
+	posts = posts.filter(post => !post.fm.hideHome); // Remove hidden posts
+	sortPosts(posts); // Since we combined them all, we need to sort them again
 	posts = posts.slice(0, 5);
 	
 	return { posts };

@@ -1,4 +1,4 @@
 ---
-hideHome: true
+pinned: true
 ---
 Okay so if this works I'm very close to actually starting to post. Testing edits
