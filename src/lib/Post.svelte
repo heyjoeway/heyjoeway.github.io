@@ -8,11 +8,12 @@
     import ContextMenuItem from "$joeysvelte/ContextMenuItem.svelte";
 	import { formatDateTime, splitHtmlAt } from "$lib/Utils";
     import FeedProfilePic from "./FeedProfilePic.svelte";
-    import type { Feed, Post, Media } from "./Feed";
+    import type { Post, Media } from "./Feed";
     import ModalPostDelete from './ModalPostDelete.svelte';
 
     import Masonry from 'svelte-bricks'
     import PostEmbed from "./PostEmbed.svelte";
+    import ModalPostEdit from './ModalPostEdit.svelte';
     
     export let post: Post;
     export let inModal = false;
@@ -96,10 +97,13 @@
     }
 </script>
 
-<ModalPostDelete post={post} bind:open={deleteModalOpen} />
 
 {#if dev}
+    <ModalPostDelete post={post} bind:open={deleteModalOpen} />
+    <ModalPostEdit post={post} bind:open={editModalOpen} />
+    
     <ContextMenu bind:this={menu}>
+        <ContextMenuItem onClick={() => editModalOpen = true}>Edit</ContextMenuItem>
         <ContextMenuItem onClick={() => deleteModalOpen = true}>Delete</ContextMenuItem>
     </ContextMenu>
 {/if}

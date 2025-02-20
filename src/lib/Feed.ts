@@ -93,6 +93,7 @@ export interface Post {
     idFull: string;
     url: string;
     feed: Feed;
+    raw: string;
 }
 
 export interface Feed {
@@ -245,6 +246,7 @@ export async function getFeedPost(feed: Feed, postId: string): Promise<Post> {
     return {
         id: postId,
         html,
+        raw: postContents,
         embeds,
         media,
         fm,

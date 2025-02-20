@@ -1,3 +1,5 @@
+import YAML from 'yaml';
+
 export function formatDate(rawDateStr: string | undefined) {
 	if (!rawDateStr) return "";
 	
@@ -97,4 +99,28 @@ export function splitHtmlAt(str: string, n: number): string {
 	}
   
 	return result;
+}
+
+export function extractFrontmatter(mdStr: string): [Record<string, any>, string] {
+	// regex: ^(?:---\n)?.*\n---\n
+	const frontmatterRegex = /^(?:---\n)?([\s\S]*?)\n---\n/;
+	const match = frontmatterRegex.exec(mdStr);
+	if (!match) return [{}, mdStr];
+	
+	const frontmatterStr = match[1];
+	const content = mdStr.slice(match[0].length);
+	
+	const frontmatter = YAML.parse(frontmatterStr);
+	return [frontmatter, content];
+}
+
+export function addFrontmatter(mdStr: string, fm: Record<string, any>): string {
+	const frontmatterStr = YAML.stringify(fm);
+	return `---\n${frontmatterStr}---\n${mdStr}`;
+}
+
+export function editFrontmatter(mdStr: string, fm: Record<string, any>): string {
+	const [oldFm, content] = extractFrontmatter(mdStr);
+	const newFm = { ...oldFm, ...fm };
+	return addFrontmatter(content, newFm);
 }
