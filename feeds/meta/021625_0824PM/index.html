@@ -1,0 +1,1518 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="../../../reset.css" />
+		<style>
+			@font-face {
+				font-family: 'Microsoft Sans Serif';
+				font-style: normal;
+				font-weight: 400;
+				src: local("Microsoft Sans Serif"),url("/fonts/micross.woff") format("woff")
+			}
+			
+			@font-face {
+				font-family: 'franklin_gothicregular';
+				src: url("/fonts/franklin_gothic_regular-webfont.woff2") format("woff2"),url("/fonts/franklin_gothic_regular-webfont.woff") format("woff");
+				font-weight: normal;
+				font-style: normal
+			}
+			
+			body {
+				background-color: black;
+				color: white;
+				font: 400 16px/1.5 "Microsoft Sans Serif",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+			}
+			
+			a {
+				transition: color 0.1s;
+				scale: 100%;
+				color: orange;
+				text-decoration: none;
+			}
+			
+			a:hover {
+				color: #fff;
+			}
+			
+			h1 {
+				font-size: 42px;
+				letter-spacing: -1px;
+				line-height: 1;
+			}
+			
+			h2 {
+				font-size: 26px;
+			}
+			
+			h1, h2, h3, h4, h5, h6 {
+				font-family: "franklin_gothicregular", sans-serif;
+				font-weight: 400;
+				margin-top: 16px;
+				margin-bottom: 8px;
+				line-height: 1em;
+			}
+			
+			@media screen and (max-width: 800px) {
+				h1 {
+					font-size: 36px;
+				}
+				
+				h2 {
+					font-size: 22px;
+				}
+			}
+			
+			p, blockquote, pre, ul, ol, dl, figure, hr {
+				margin-bottom: 16px;
+			}
+			
+			* {
+				scrollbar-color: #111 #000;
+			}
+			
+			hr {
+				border: none;
+				border-bottom: rgba(128, 128, 128, 0.5) dashed 1px;
+			}
+		</style>
+		<meta charset="utf-8" />
+		<meta name="color-scheme" content="dark">
+		<link rel="icon" href="../../../favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link href="../../../_app/immutable/assets/19.DxUaQezE.css" rel="stylesheet">
+		<link href="../../../_app/immutable/assets/Post.BFm0giVq.css" rel="stylesheet">
+		<link href="../../../_app/immutable/assets/Image.B3CSsg9B.css" rel="stylesheet">
+		<link href="../../../_app/immutable/assets/Button.CO_IFsgN.css" rel="stylesheet">
+		<link href="../../../_app/immutable/assets/Video.C2BkDKz5.css" rel="stylesheet">
+		<link href="../../../_app/immutable/assets/Center.SiIiNQdp.css" rel="stylesheet">
+		<link href="../../../_app/immutable/assets/Layout.BC5Y1jTu.css" rel="stylesheet">
+		<link href="../../../_app/immutable/assets/Comments.CwG70sSM.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.YTlSaPV9.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/entry.CocHozch.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/runtime.BVU0rH9e.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.DYBIQy5k.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.DnuYd5O3.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/preload-helper.C1FmrZbK.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/render.Dvy1DFxg.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/store.DTxDMkQX.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/disclose-version.B-guDTDr.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/if.Bh2qqDqw.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/props.CeP6NP-u.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/index-client.CmT-8Txn.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.CDq3ao7j.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/snippet.DfYd8gpi.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/20.DvK6uQ8T.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/legacy.DkBb36tQ.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/lifecycle.rojnwVcb.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/Post.9DYmgiqW.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/FeedProfilePic.DnpW9GMn.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/attributes.CejQxzr7.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/Image.D7oB979A.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/Image.svelte_svelte_type_style_lang.ttCNHFre.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/Button.svelte_svelte_type_style_lang.Dbrsh-a2.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/Button.CERnwxiV.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/html.BOQzYzLL.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/Video.Cluoj7_J.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/Consent.s9p8SP2z.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/Center.Sg3G0Tq2.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/Layout.CBLA7rTo.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/Comments.D0xRaTk0.js">
+	</head>
+	<body>
+		<div style="display: contents"><!--[--><!--[--><!----><!--[!--><!----><div style="background-color: black; background-image: url();" class="bg svelte-rfb14"><!--[!--><!--]--></div><!----> <div class="layout svelte-1kupl3e"><div class="header svelte-1kupl3e"><div class="title"><a class="site-title svelte-1kupl3e" rel="author" href="/"><span style="color:palevioletred">hey</span><span style="color:orange">joe</span><span style="color:skyblue">way</span><span style="color:white">.</span></a></div> <div class="nav svelte-1kupl3e"><div style="width: default; height: 32px;" class="clickable svelte-1f9eqjh"><!--[--><a href="/articles" data-sveltekit-reload="false" data-sveltekit-preload-data="hover" class="svelte-1f9eqjh"><!--[!--><!----><div style="color: white;" class="svelte-1kdig2t"><!--[!--><!--]--> <!----><!---->Articles<!----></div><!----><!--]--></a><!--]--></div><!----> <div style="width: default; height: 32px;" class="clickable svelte-1f9eqjh"><!--[--><a href="/feeds" data-sveltekit-reload="false" data-sveltekit-preload-data="hover" class="svelte-1f9eqjh"><!--[!--><!----><div style="color: white;" class="svelte-1kdig2t"><!--[!--><!--]--> <!----><!---->Feeds<!----></div><!----><!--]--></a><!--]--></div><!----></div></div> <!----><div class="outer-container svelte-2zskfb"><div class="inner-container svelte-2zskfb"><!--[!--><!--]--> <!--[!--><!--]--> <div class="header svelte-1cxt4z0"><!--[!--><a href="/feeds/meta" class="svelte-1cxt4z0"><div class="profile svelte-1cxt4z0"><div style="width:42px;height:42px"><!----><!----></div><!----> <div class="svelte-1cxt4z0"><div class="title svelte-1cxt4z0">metaway</div> <div class="path svelte-1cxt4z0">jojudge.com/feeds/meta</div></div></div></a> <!--[!--><!--]--><!--]--></div> <div class="post svelte-1cxt4z0"><!----><script context="module">
+	export const metadata = {"hideHome":true};
+	const { hideHome } = metadata;
+</script>
+
+<p>According to all known laws of aviation, there is no way a bee should be able to fly.
+Its wings are too small to get its fat little body off the ground.
+The bee, of course, flies anyway because bees don't care what humans think is impossible.
+Yellow, black. Yellow, black. Yellow, black. Yellow, black.
+Ooh, black and yellow!
+Let's shake it up a little.
+Barry! Breakfast is ready!
+Coming!
+Hang on a second.
+Hello?
+Barry?
+Adam?
+Can you believe this is happening?
+I can't.
+I'll pick you up.
+Looking sharp.
+Use the stairs, Your father paid good money for those.
+Sorry. I'm excited.
+Here's the graduate.
+We're very proud of you, son.
+A perfect report card, all B's.
+Very proud.
+Ma! I got a thing going here.
+You got lint on your fuzz.
+Ow! That's me!
+Wave to us! We'll be in row 118,000.
+Bye!
+Barry, I told you, stop flying in the house!
+Hey, Adam.
+Hey, Barry.
+Is that fuzz gel?
+A little. Special day, graduation.
+Never thought I'd make it.
+Three days grade school, three days high school.
+Those were awkward.
+Three days college. I'm glad I took a day and hitchhiked around The Hive.
+You did come back different.
+Hi, Barry. Artie, growing a mustache? Looks good.
+Hear about Frankie?
+Yeah.
+You going to the funeral?
+No, I'm not going.
+Everybody knows, sting someone, you die.
+Don't waste it on a squirrel.
+Such a hothead.
+I guess he could have just gotten out of the way.
+I love this incorporating an amusement park into our day.
+That's why we don't need vacations.
+Boy, quite a bit of pomp under the circumstances.
+Well, Adam, today we are men.
+We are!
+Bee-men.
+Amen!
+Hallelujah!
+Students, faculty, distinguished bees,
+please welcome Dean Buzzwell.
+Welcome, New Hive City graduating class of 9:15.
+That concludes our ceremonies And begins your career at Honex Industries!
+Will we pick our job today?
+I heard it's just orientation.
+Heads up! Here we go.
+Keep your hands and antennas inside the tram at all times.
+Wonder what it'll be like?
+A little scary.
+Welcome to Honex, a division of Honesco and a part of the Hexagon Group.
+This is it!
+Wow.
+Wow.
+We know that you, as a bee, have worked your whole life to get to the point where you can work for your whole life.
+Honey begins when our valiant Pollen Jocks bring the nectar to The Hive.
+Our top-secret formula is automatically color-corrected, scent-adjusted and bubble-contoured into this soothing sweet syrup with its distinctive golden glow you know as... Honey!
+That girl was hot.
+She's my cousin!
+She is?
+Yes, we're all cousins.
+Right. You're right.
+At Honex, we constantly strive to improve every aspect of bee existence.
+These bees are stress-testing a new helmet technology.
+What do you think he makes?
+Not enough.
+Here we have our latest advancement, the Krelman.
+What does that do?
+Catches that little strand of honey that hangs after you pour it.
+Saves us millions.
+Can anyone work on the Krelman?
+Of course. Most bee jobs are small ones.
+But bees know that every small job, if it's done well, means a lot.
+But choose carefully because you'll stay in the job you pick for the rest of your life.
+The same job the rest of your life? I didn't know that.
+What's the difference?
+You'll be happy to know that bees, as a species, haven't had one day off in 27 million years.
+So you'll just work us to death?
+We'll sure try.
+Wow! That blew my mind!
+"What's the difference?"
+How can you say that?
+One job forever?
+That's an insane choice to have to make.
+I'm relieved. Now we only have to make one decision in life.
+But, Adam, how could they never have told us that?
+Why would you question anything? We're bees.
+We're the most perfectly functioning society on Earth.
+You ever think maybe things work a little too well here?
+Like what? Give me one example.
+I don't know. But you know what I'm talking about.
+Please clear the gate. Royal Nectar Force on approach.
+Wait a second. Check it out.
+Hey, those are Pollen Jocks!
+Wow.
+I've never seen them this close.
+They know what it's like outside The Hive.
+Yeah, but some don't come back.
+Hey, Jocks!
+Hi, Jocks!
+You guys did great!
+You're monsters!
+You're sky freaks! I love it! I love it!
+I wonder where they were.
+I don't know.
+Their day's not planned.
+Outside The Hive, flying who knows where, doing who knows what.
+You can't just decide to be a Pollen Jock. You have to be bred for that.
+Right.
+Look. That's more pollen than you and I will see in a lifetime.
+It's just a status symbol.
+Bees make too much of it.
+Perhaps. Unless you're wearing it and the ladies see you wearing it.
+Those ladies?
+Aren't they our cousins too?
+Distant. Distant.
+Look at these two.
+Couple of Hive Harrys.
+Let's have fun with them.
+It must be dangerous being a Pollen Jock.
+Yeah. Once a bear pinned me against a mushroom!
+He had a paw on my throat, and with the other, he was slapping me!
+Oh, my!
+I never thought I'd knock him out.
+What were you doing during this?
+Trying to alert the authorities.
+I can autograph that.
+A little gusty out there today, wasn't it, comrades?
+Yeah. Gusty.
+We're hitting a sunflower patch six miles from here tomorrow.
+Six miles, huh?
+Barry!
+A puddle jump for us, but maybe you're not up for it.
+Maybe I am.
+You are not!
+We're going 0900 at J-Gate.
+What do you think, buzzy-boy?
+Are you bee enough?
+I might be. It all depends on what 0900 means.
+Hey, Honex!
+Dad, you surprised me.
+You decide what you're interested in?
+Well, there's a lot of choices.
+But you only get one.
+Do you ever get bored doing the same job every day?
+Son, let me tell you about stirring.
+You grab that stick, and you just move it around, and you stir it around.
+You get yourself into a rhythm.
+It's a beautiful thing.
+You know, Dad, the more I think about it,
+maybe the honey field just isn't right for me.
+You were thinking of what, making balloon animals?
+That's a bad job for a guy with a stinger.
+Janet, your son's not sure he wants to go into honey!
+Barry, you are so funny sometimes.
+I'm not trying to be funny.
+You're not funny! You're going into honey. Our son, the stirrer!
+You're gonna be a stirrer?
+No one's listening to me!
+Wait till you see the sticks I have.
+I could say anything right now.
+I'm gonna get an ant tattoo!
+Let's open some honey and celebrate!
+Maybe I'll pierce my thorax. Shave my antennae. Shack up with a grasshopper. Get a gold tooth and call everybody "dawg"!
+I'm so proud.
+We're starting work today!
+Today's the day.
+Come on! All the good jobs will be gone.
+Yeah, right.
+Pollen counting, stunt bee, pouring, stirrer, front desk, hair removal...
+Is it still available?
+Hang on. Two left!
+One of them's yours! Congratulations!
+Step to the side.
+What'd you get?
+Picking crud out. Stellar!
+Wow!
+Couple of newbies?
+Yes, sir! Our first day! We are ready!
+Make your choice.
+You want to go first?
+No, you go.
+Oh, my. What's available?
+Restroom attendant's open, not for the reason you think.
+Any chance of getting the Krelman?
+Sure, you're on.
+I'm sorry, the Krelman just closed out.
+Wax monkey's always open.
+The Krelman opened up again.
+What happened?
+A bee died. Makes an opening. See? He's dead. Another dead one.
+Deady. Deadified. Two more dead.
+Dead from the neck up. Dead from the neck down. That's life!
+Oh, this is so hard!
+Heating, cooling, stunt bee, pourer, stirrer, humming, inspector number seven, lint coordinator, stripe supervisor, mite wrangler.
+Barry, what do you think I should... Barry?
+Barry!
+All right, we've got the sunflower patch in quadrant nine...
+What happened to you?
+Where are you?
+I'm going out.
+Out? Out where?
+Out there.
+Oh, no!
+I have to, before I go to work for the rest of my life.
+You're gonna die! You're crazy! Hello?
+Another call coming in.
+If anyone's feeling brave, there's a Korean deli on 83rd that gets their roses today.
+Hey, guys.
+Look at that.
+Isn't that the kid we saw yesterday?
+Hold it, son, flight deck's restricted.
+It's OK, Lou. We're gonna take him up.
+Really? Feeling lucky, are you?
+Sign here, here. Just initial that.
+Thank you.
+OK.
+You got a rain advisory today, and as you all know, bees cannot fly in rain.
+So be careful. As always, watch your brooms, hockey sticks, dogs, birds, bears and bats.
+Also, I got a couple of reports of root beer being poured on us.
+Murphy's in a home because of it, babbling like a cicada!
+That's awful.
+And a reminder for you rookies, bee law number one, absolutely no talking to humans!
+All right, launch positions!
+Buzz, buzz, buzz, buzz! Buzz, buzz, buzz, buzz! Buzz, buzz, buzz, buzz!
+Black and yellow!
+Hello!
+You ready for this, hot shot?
+Yeah. Yeah, bring it on.
+Wind, check.
+Antennae, check.
+Nectar pack, check.
+Wings, check.
+Stinger, check.
+Scared out of my shorts, check.
+OK, ladies,
+let's move it out!
+Pound those petunias, you striped stem-suckers!
+All of you, drain those flowers!
+Wow! I'm out!
+I can't believe I'm out!
+So blue.
+I feel so fast and free!
+Box kite!
+Wow!
+Flowers!
+This is Blue Leader, We have roses visual.
+Bring it around 30 degrees and hold.
+Roses!
+30 degrees, roger. Bringing it around.
+Stand to the side, kid.
+It's got a bit of a kick.
+That is one nectar collector!
+Ever see pollination up close?
+No, sir.
+I pick up some pollen here, sprinkle it over here. Maybe a dash over there, a pinch on that one.
+See that? It's a little bit of magic.
+That's amazing. Why do we do that?
+That's pollen power. More pollen, more flowers, more nectar, more honey for us.
+Cool.
+I'm picking up a lot of bright yellow, Could be daisies, Don't we need those?
+Copy that visual.
+Wait. One of these flowers seems to be on the move.
+Say again? You're reporting a moving flower?
+Affirmative.
+That was on the line!
+This is the coolest. What is it?
+I don't know, but I'm loving this color.
+It smells good.
+Not like a flower, but I like it.
+Yeah, fuzzy.
+Chemical-y.
+Careful, guys. It's a little grabby.
+My sweet lord of bees!
+Candy-brain, get off there!
+Problem!
+Guys!
+This could be bad.
+Affirmative.
+Very close.
+Gonna hurt.
+Mama's little boy.
+You are way out of position, rookie!
+Coming in at you like a missile!
+Help me!
+I don't think these are flowers.
+Should we tell him?
+I think he knows.
+What is this?!
+Match point!
+You can start packing up, honey, because you're about to eat it!
+Yowser!
+Gross.
+There's a bee in the car!
+Do something!
+I'm driving!
+Hi, bee.
+He's back here!
+He's going to sting me!
+Nobody move. If you don't move, he won't sting you. Freeze!
+He blinked!
+Spray him, Granny!
+What are you doing?!
+Wow... the tension level out here is unbelievable.
+I gotta get home.
+Can't fly in rain. Can't fly in rain. Can't fly in rain.
+Mayday! Mayday! Bee going down!
+Ken, could you close the window please?
+Ken, could you close the window please?
+Check out my new resume. I made it into a fold-out brochure. You see? Folds out.
+Oh, no. More humans. I don't need this.
+What was that?
+Maybe this time. This time. This time. This time! This time! This... Drapes!
+That is diabolical.
+It's fantastic. It's got all my special skills, even my top-ten favorite movies.
+What's number one? Star Wars?
+Nah, I don't go for that... kind of stuff.
+No wonder we shouldn't talk to them. They're out of their minds.
+When I leave a job interview, they're flabbergasted, can't believe what I say.
+There's the sun. Maybe that's a way out.
+I don't remember the sun having a big 75 on it.
+I predicted global warming. I could feel it getting hotter. At first I thought it was just me.
+Wait! Stop! Bee!
+Stand back. These are winter boots.
+Wait!
+Don't kill him!
+You know I'm allergic to them! This thing could kill me!
+Why does his life have less value than yours?
+Why does his life have any less value than mine? Is that your statement?
+I'm just saying all life has value. You don't know what he's capable of feeling.
+My brochure!
+There you go, little guy.
+I'm not scared of him.It's an allergic thing.
+Put that on your resume brochure.
+My whole face could puff up.
+Make it one of your special skills.
+Knocking someone out is also a special skill.
+Right. Bye, Vanessa. Thanks.
+Vanessa, next week? Yogurt night?
+Sure, Ken. You know, whatever.
+You could put carob chips on there.
+Bye.
+Supposed to be less calories.
+Bye.
+I gotta say something. She saved my life. I gotta say something.
+All right, here it goes.
+Nah.
+What would I say?
+I could really get in trouble. It's a bee law. You're not supposed to talk to a human.
+I can't believe I'm doing this. I've got to.
+Oh, I can't do it. Come on!
+No. Yes. No. Do it. I can't.
+How should I start it? "You like jazz?" No, that's no good.
+Here she comes! Speak, you fool!
+Hi!
+I'm sorry. You're talking.
+Yes, I know.
+You're talking!
+I'm so sorry.
+No, it's OK. It's fine.
+I know I'm dreaming. But I don't recall going to bed.
+Well, I'm sure this is very disconcerting.
+This is a bit of a surprise to me. I mean, you're a bee!
+I am. And I'm not supposed to be doing this, but they were all trying to kill me.
+And if it wasn't for you... I had to thank you. It's just how I was raised.
+That was a little weird. I'm talking with a bee.
+Yeah.
+I'm talking to a bee. And the bee is talking to me!
+I just want to say I'm grateful.
+I'll leave now.
+Wait! How did you learn to do that?
+What?
+The talking thing.
+Same way you did, I guess. "Mama, Dada, honey." You pick it up.
+That's very funny.
+Yeah.
+Bees are funny. If we didn't laugh, we'd cry with what we have to deal with.
+Anyway... Can I... get you something?
+Like what?
+I don't know. I mean... I don't know. Coffee?
+I don't want to put you out.
+It's no trouble. It takes two minutes.
+It's just coffee.
+I hate to impose.
+Don't be ridiculous!
+Actually, I would love a cup.
+Hey, you want rum cake?
+I shouldn't.
+Have some.
+No, I can't.
+Come on!
+I'm trying to lose a couple micrograms.
+Where?
+These stripes don't help.
+You look great!
+I don't know if you know anything about fashion.
+Are you all right?
+No.
+He's making the tie in the cab as they're flying up Madison.
+He finally gets there.
+He runs up the steps into the church.
+The wedding is on.
+And he says, "Watermelon?
+I thought you said Guatemalan.
+Why would I marry a watermelon?"
+Is that a bee joke?
+That's the kind of stuff we do.
+Yeah, different.
+So, what are you gonna do, Barry?
+About work? I don't know.
+I want to do my part for The Hive, but I can't do it the way they want.
+I know how you feel.
+You do?
+Sure.
+My parents wanted me to be a lawyer or a doctor, but I wanted to be a florist.
+Really?
+My only interest is flowers.
+Our new queen was just elected with that same campaign slogan.
+Anyway, if you look... There's my hive right there. See it?
+You're in Sheep Meadow!
+Yes! I'm right off the Turtle Pond!
+No way! I know that area. I lost a toe ring there once.
+Why do girls put rings on their toes?
+Why not?
+It's like putting a hat on your knee.
+Maybe I'll try that.
+You all right, ma'am?
+Oh, yeah. Fine.
+Just having two cups of coffee!
+Anyway, this has been great.
+Thanks for the coffee.
+Yeah, it's no trouble.
+Sorry I couldn't finish it. If I did, I'd be up the rest of my life.
+Are you...?
+Can I take a piece of this with me?
+Sure! Here, have a crumb.
+Thanks!
+Yeah.
+All right. Well, then... I guess I'll see you around. Or not.
+OK, Barry.
+And thank you so much again... for before.
+Oh, that? That was nothing.
+Well, not nothing, but... Anyway...
+This can't possibly work.
+He's all set to go.
+We may as well try it.
+OK, Dave, pull the chute.
+Sounds amazing.
+It was amazing!
+It was the scariest, happiest moment of my life.
+Humans! I can't believe you were with humans!
+Giant, scary humans!
+What were they like?
+Huge and crazy. They talk crazy.
+They eat crazy giant things.
+They drive crazy.
+Do they try and kill you, like on TV?
+Some of them. But some of them don't.
+How'd you get back?
+Poodle.
+You did it, and I'm glad. You saw whatever you wanted to see.
+You had your "experience." Now you can pick out yourjob and be normal.
+Well...
+Well?
+Well, I met someone.
+You did? Was she Bee-ish?
+A wasp?! Your parents will kill you!
+No, no, no, not a wasp.
+Spider?
+I'm not attracted to spiders.
+I know it's the hottest thing, with the eight legs and all. I can't get by that face.
+So who is she?
+She's... human.
+No, no. That's a bee law. You wouldn't break a bee law.
+Her name's Vanessa.
+Oh, boy.
+She's so nice. And she's a florist!
+Oh, no! You're dating a human florist!
+We're not dating.
+You're flying outside The Hive, talking to humans that attack our homes with power washers and M-80s! One-eighth a stick of dynamite!
+She saved my life! And she understands me.
+This is over!
+Eat this.
+This is not over! What was that?
+They call it a crumb.
+It was so stingin' stripey!
+And that's not what they eat.
+That's what falls off what they eat!
+You know what a Cinnabon is?
+No.
+It's bread and cinnamon and frosting. They heat it up...
+Sit down!
+...really hot!
+Listen to me!
+We are not them! We're us.
+There's us and there's them!
+Yes, but who can deny the heart that is yearning?
+There's no yearning. Stop yearning. Listen to me!
+You have got to start thinking bee, my friend. Thinking bee!
+Thinking bee.
+Thinking bee.
+Thinking bee! Thinking bee! Thinking bee! Thinking bee!
+There he is. He's in the pool.
+You know what your problem is, Barry?
+I gotta start thinking bee?
+How much longer will this go on?
+It's been three days! Why aren't you working?
+I've got a lot of big life decisions to think about.
+What life? You have no life!
+You have no job. You're barely a bee!
+Would it kill you to make a little honey?
+Barry, come out. Your father's talking to you.
+Martin, would you talk to him?
+Barry, I'm talking to you!
+You coming?
+Got everything?
+All set!
+Go ahead. I'll catch up.
+Don't be too long.
+Watch this!
+Vanessa!
+We're still here.
+I told you not to yell at him.
+He doesn't respond to yelling!
+Then why yell at me?
+Because you don't listen!
+I'm not listening to this.
+Sorry, I've gotta go.
+Where are you going?
+I'm meeting a friend.
+A girl? Is this why you can't decide?
+Bye.
+I just hope she's Bee-ish.
+They have a huge parade of flowers every year in Pasadena?
+To be in the Tournament of Roses, that's every florist's dream!
+Up on a float, surrounded by flowers, crowds cheering.
+A tournament. Do the roses compete in athletic events?
+No. All right, I've got one.
+How come you don't fly everywhere?
+It's exhausting. Why don't you run everywhere? It's faster.
+Yeah, OK, I see, I see.
+All right, your turn.
+TiVo. You can just freeze live TV? That's insane!
+You don't have that?
+We have Hivo, but it's a disease. It's a horrible, horrible disease.
+Oh, my.
+Dumb bees!
+You must want to sting all those jerks.
+We try not to sting. It's usually fatal for us.
+So you have to watch your temper.
+Very carefully.
+You kick a wall, take a walk, write an angry letter and throw it out. Work through it like any emotion: Anger, jealousy, lust.
+Oh, my goodness! Are you OK?
+Yeah.
+What is wrong with you?!
+It's a bug.
+He's not bothering anybody.
+Get out of here, you creep!
+What was that? A Pic 'N' Save circular?
+Yeah, it was. How did you know?
+It felt like about 10 pages. Seventy-five is pretty much our limit.
+You've really got that down to a science.
+I lost a cousin to Italian Vogue.
+I'll bet.
+What in the name of Mighty Hercules is this?
+How did this get here? cute Bee, Golden Blossom, Ray Liotta Private Select?
+Is he that actor?
+I never heard of him.
+Why is this here?
+For people. We eat it.
+You don't have enough food of your own?
+Well, yes.
+How do you get it?
+Bees make it.
+I know who makes it! And it's hard to make it!
+There's heating, cooling, stirring. You need a whole Krelman thing!
+It's organic.
+It's our-ganic!
+It's just honey, Barry.
+Just what?!
+Bees don't know about this! This is stealing! A lot of stealing!
+You've taken our homes, schools,hospitals! This is all we have!
+And it's on sale?! I'm getting to the bottom of this.
+I'm getting to the bottom of all of this!
+Hey, Hector. You almost done?
+Almost.
+He is here. I sense it.
+Well, I guess I'll go home now and just leave this nice honey out, with no one around.
+You're busted, box boy!
+I knew I heard something.
+So you can talk!
+I can talk. And now you'll start talking!
+Where you getting the sweet stuff? Who's your supplier?
+I don't understand.
+I thought we were friends.
+The last thing we want to do is upset bees!
+You're too late! It's ours now!
+You, sir, have crossed the wrong sword!
+You, sir, will be lunch for my iguana, Ignacio!
+Where is the honey coming from? Tell me where!
+Honey Farms! It comes from Honey Farms!
+Crazy person!
+What horrible thing has happened here?
+These faces, they never knew what hit them. And now
+they're on the road to nowhere!
+Just keep still.
+What? You're not dead?
+Do I look dead? They will wipe anything that moves. Where you headed?
+To Honey Farms. I am onto something huge here.
+I'm going to Alaska. Moose blood, crazy stuff. Blows your head off!
+I'm going to Tacoma.
+And you?
+He really is dead.
+All right.
+Uh-oh!
+What is that?!
+Oh, no!
+A wiper! Triple blade!
+Triple blade?
+Jump on! It's your only chance, bee!
+Why does everything have
+to be so doggone clean?!
+How much do you people need to see?!
+Open your eyes!
+Stick your head out the window!
+From NPR News in Washington,
+I'm Carl Kasell.
+But don't kill no more bugs!
+Bee!
+Moose blood guy!!
+You hear something?
+Like what?
+Like tiny screaming.
+Turn off the radio.
+Whassup, bee boy?
+Hey, Blood.
+Just a row of honey jars, as far as the eye could see.
+Wow!
+I assume wherever this truck goes is where they're getting it. I mean, that honey's ours.
+Bees hang tight. We're all jammed in.
+It's a close community.
+Not us, man. We on our own. Every mosquito on his own.
+What if you get in trouble?
+You a mosquito, you in trouble. Nobody likes us. They just smack. See a mosquito, smack, smack!
+At least you're out in the world. You must meet girls.
+Mosquito girls try to trade up, get with a moth, dragonfly. Mosquito girl don't want no mosquito.
+You got to be kidding me!
+Mooseblood's about to leave the building! So long, bee!
+Hey, guys!
+Mooseblood!
+I knew I'd catch y'all down here.
+Did you bring your crazy straw?
+We throw it in jars, slap a label on it, and it's pretty much pure profit.
+What is this place?
+A bee's got a brain the size of a pinhead.
+They are pinheads!
+Pinhead.
+Check out the new smoker.
+Oh, sweet. That's the one you want. The Thomas 3000!
+Smoker?
+Ninety puffs a minute, semi-automatic. Twice the nicotine, all the tar. A couple breaths of this knocks them right out.
+They make the honey, and we make the money.
+"They make the honey, and we make the money"?
+Oh, my!
+What's going on? Are you OK?
+Yeah. It doesn't last too long.
+Do you know you're in a fake hive with fake walls?
+Our queen was moved here. We had no choice.
+This is your queen? That's a man in women's clothes! That's a drag queen!
+What is this?
+Oh, no!
+There's hundreds of them!
+Bee honey.
+Our honey is being brazenly stolen on a massive scale!
+This is worse than anything bears have done! I intend to do something.
+Oh, Barry, stop.
+Who told you humans are taking our honey? That's a rumor.
+Do these look like rumors?
+That's a conspiracy theory. These are obviously doctored photos. How did you get mixed up in this?
+He's been talking to humans.
+What? Talking to humans?!
+He has a human girlfriend. And they make out!
+Make out? Barry!
+We do not.
+You wish you could.
+Whose side are you on?
+The bees!
+I dated a cricket once in San Antonio. Those crazy legs kept me up all night.
+Barry, this is what you want to do with your life?
+I want to do it for all our lives. Nobody works harder than bees!
+Dad, I remember you coming home so overworked
+your hands were still stirring. You couldn't stop.
+I remember that.
+What right do they have to our honey?
+We live on two cups a year. They put it in lip balm for no reason whatsoever!
+Even if it's true, what can one bee do?
+Sting them where it really hurts.
+In the face! The eye!
+That would hurt.
+No.
+Up the nose? That's a killer.
+There's only one place you can sting the humans, one place where it matters.
+Hive at Five, The Hive's only full-hour action news source.
+No more bee beards!
+With Bob Bumble at the anchor desk. Weather with Storm Stinger. Sports with Buzz Larvi. And Jeanette Chung.
+Good evening. I'm Bob Bumble.
+And I'm Jeanette Ohung.
+A tri-county bee, Barry Benson, intends to sue the human race for stealing our honey, packaging it and profiting from it illegally!
+Tomorrow night on Bee Larry King, we'll have three former queens here in our studio, discussing their new book, classy Ladies, out this week on Hexagon.
+Tonight we're talking to Barry Benson.
+Did you ever think, "I'm a kid from The Hive. I can't do this"?
+Bees have never been afraid to change the world.
+What about Bee Oolumbus? Bee Gandhi? Bejesus?
+Where I'm from, we'd never sue humans.
+We were thinking of stickball or candy stores.
+How old are you?
+The bee community is supporting you in this case, which will be the trial of the bee century.
+You know, they have a Larry King in the human world too.
+It's a common name. Next week...
+He looks like you and has a show and suspenders and colored dots...
+Next week...
+Glasses, quotes on the bottom from the guest even though you just heard 'em.
+Bear Week next week! They're scary, hairy and here live.
+Always leans forward, pointy shoulders, squinty eyes, very Jewish.
+In tennis, you attack at the point of weakness!
+It was my grandmother, Ken. She's 81.
+Honey, her backhand's a joke!
+I'm not gonna take advantage of that?
+Quiet, please.
+Actual work going on here.
+Is that that same bee?
+Yes, it is!
+I'm helping him sue the human race.
+Hello.
+Hello, bee.
+This is Ken.
+Yeah, I remember you. Timberland, size ten and a half. Vibram sole, I believe.
+Why does he talk again?
+Listen, you better go 'cause we're really busy working.
+But it's our yogurt night!
+Bye-bye.
+Why is yogurt night so difficult?!
+You poor thing. You two have been at this for hours!
+Yes, and Adam here has been a huge help.
+Frosting...
+How many sugars?
+Just one. I try not to use the competition.
+So why are you helping me?
+Bees have good qualities. And it takes my mind off the shop. Instead of flowers, people are giving balloon bouquets now.
+Those are great, if you're three.
+And artificial flowers.
+Oh, those just get me psychotic!
+Yeah, me too.
+Bent stingers, pointless pollination.
+Bees must hate those fake things!
+Nothing worse than a daffodil that's had work done.
+Maybe this could make up for it a little bit.
+This lawsuit's a pretty big deal.
+I guess.
+You sure you want to go through with it?
+Am I sure? When I'm done with the humans, they won't be able to say, "Honey, I'm home," without paying a royalty!
+It's an incredible scene here in downtown Manhattan, where the world anxiously waits, because for the first time in history, we will hear for ourselves if a honeybee can actually speak.
+What have we gotten into here, Barry?
+It's pretty big, isn't it?
+I can't believe how many humans don't work during the day.
+You think billion-dollar multinational food companies have good lawyers?
+Everybody needs to stay behind the barricade.
+What's the matter?
+I don't know, I just got a chill.
+Well, if it isn't the bee team.
+You boys work on this?
+All rise! The Honorable Judge Bumbleton presiding.
+All right. Case number 4475,
+Superior Court of New York,
+Barry Bee Benson v. the Honey Industry is now in session.
+Mr. Montgomery, you're representing the five food companies collectively?
+A privilege.
+Mr. Benson... you're representing all the bees of the world?
+I'm kidding. Yes, Your Honor, we're ready to proceed.
+Mr. Montgomery, your opening statement, please.
+Ladies and gentlemen of the jury, my grandmother was a simple woman. Born on a farm, she believed it was man's divine right to benefit from the bounty of nature God put before us.
+If we lived in the topsy-turvy world Mr. Benson imagines, just think of what would it mean.
+I would have to negotiate with the silkworm for the elastic in my britches!
+Talking bee!
+How do we know this isn't some sort of holographic motion-picture-capture Hollywood wizardry?
+They could be using laser beams! Robotics! Ventriloquism! Cloning! For all we know, he could be on steroids!
+Mr. Benson?
+Ladies and gentlemen, there's no trickery here. I'm just an ordinary bee. Honey's pretty important to me. It's important to all bees. We invented it! We make it. And we protect it with our lives.
+Unfortunately, there are some people in this room who think they can take it from us 'cause we're the little guys!
+I'm hoping that, after this is all over, you'll see how, by taking our honey, you not only take everything we have but everything we are!
+I wish he'd dress like that all the time. So nice!
+Call your first witness.
+So, Mr. Klauss Vanderhayden of Honey Farms, big company you have.
+I suppose so.
+I see you also own Honeyburton and Honron!
+Yes, they provide beekeepers for our farms.
+Beekeeper. I find that to be a very disturbing term.
+I don't imagine you employ any bee-free-ers, do you?
+No.
+I couldn't hear you.
+No.
+No. Because you don't free bees. You keep bees. Not only that, it seems you thought a bear would be an appropriate image for a jar of honey.
+They're very lovable creatures. Yogi Bear, Fozzie Bear, Build-A-Bear.
+You mean like this?
+Bears kill bees!
+How'd you like his head crashing through your living room?! Biting into your couch! Spitting out your throw pillows! OK, that's enough. Take him away.
+So, Mr. Sting, thank you for being here. Your name intrigues me. Where have I heard it before?
+I was with a band called The Police.
+But you've never been a police officer, have you?
+No, I haven't.
+No, you haven't. And so here we have yet another example of bee culture casually stolen by a human for nothing more than a prance-about stage name.
+Oh, please.
+Have you ever been stung, Mr. Sting? Because I'm feeling a little stung, Sting. Or should I say... Mr. Gordon M. Sumner!
+That's not his real name?! You idiots!
+Mr. Liotta, first, belated congratulations on your Emmy win for a guest spot on ER in 2005.
+Thank you. Thank you.
+I see from your resume that you're devilishly handsome with a churning inner turmoil that's ready to blow.
+I enjoy what I do. Is that a crime?
+Not yet it isn't. But is this what it's come to for you? Exploiting tiny, helpless bees so you don't have to rehearse your part and learn your lines, sir?
+Watch it, Benson! I could blow right now!
+This isn't a goodfella.
+This is a badfella!
+Why doesn't someone just step on this creep, and we can all go home?!
+Order in this court!
+You're all thinking it!
+Order! Order, I say!
+Say it!
+Mr. Liotta, please sit down!
+I think it was awfully nice of that bear to pitch in like that. I think the jury's on our side.
+Are we doing everything right, legally?
+I'm a florist.
+Right. Well, here's to a great team.
+To a great team!
+Well, hello.
+Ken!
+Hello.
+I didn't think you were coming.
+No, I was just late I tried to call, but... the battery.
+I didn't want all this to go to waste,
+so I called Barry. Luckily, he was free.
+Oh, that was lucky.
+There's a little left. I could heat it up.
+Yeah, heat it up, sure, whatever.
+So I hear you're quite a tennis player. I'm not much for the game myself. The ball's a little grabby.
+That's where I usually sit. Right... there.
+Ken, Barry was looking at your resume, and he agreed with me that eating with chopsticks isn't really a special skill.
+You think I don't see what you're doing?
+I know how hard it is to find the right job. We have that in common.
+Do we?
+Bees have 100 percent employment, but we do jobs like taking the crud out.
+That's just what I was thinking about doing.
+Ken, I let Barry borrow your razor for his fuzz. I hope that was all right.
+I'm going to drain the old stinger.
+Yeah, you do that.
+Look at that.
+You know, I've just about had it with your little Mind Games.
+What's that?
+Italian Vogue.
+Mamma mia, that's a lot of pages.
+A lot of ads.
+Remember what Van said, why is your life more valuable than mine?
+Funny, I just can't seem to recall that! I think something stinks in here!
+I love the smell of flowers.
+How do you like the smell of flames?!
+Not as much.
+Water bug! Not taking sides!
+Ken, I'm wearing a Chapstick hat!
+This is pathetic!
+I've got issues!
+Well, well, well, a royal flush!
+You're bluffing.
+Am I?
+Surf's up, dude!
+Poo water!
+That bowl is gnarly. Except for those dirty yellow rings!
+Kenneth! What are you doing?!
+You know, I don't even like honey! I don't eat it!
+We need to talk! He's just a little bee!
+And he happens to be the nicest bee I've met in a long time!
+Long time? What are you talking about?! Are there other bugs in your life?
+No, but there are other things bugging me in life. And you're one of them!
+Fine! Talking bees, no yogurt night...
+My nerves are fried from riding on this emotional roller coaster!
+Goodbye, Ken.
+And for your information, I prefer sugar-free, artificial sweeteners made by man!
+I'm sorry about all that.
+I know it's got an aftertaste! I like it!
+I always felt there was some kind of barrier between Ken and me. I couldn't overcome it.
+Oh, well.
+Are you OK for the trial?
+I believe Mr. Montgomery is about out of ideas.
+We would like to call Mr. Barry Benson Bee to the stand.
+Good idea! You can really see why he's considered one of the best lawyers...
+Yeah.
+Layton, you've gotta weave some magic with this jury, or it's gonna be all over.
+Don't worry. The only thing I have to do to turn this jury around is to remind them of what they don't like about bees.
+You got the tweezers?
+Are you allergic?
+Only to losing, son. Only to losing.
+Mr. Benson Bee, I'll ask you what I think we'd all like to know.
+What exactly is your relationship to that woman?
+We're friends.
+Good friends?
+Yes.
+How good? Do you live together?
+Wait a minute... Are you her little... bedbug?
+I've seen a bee documentary or two. From what I understand, doesn't your queen give birth to all the bee children?
+Yeah, but...
+So those aren't your real parents!
+Oh, Barry...
+Yes, they are!
+Hold me back!
+You're an illegitimate bee, aren't you, Benson?
+He's denouncing bees!
+Don't y'all date your cousins?
+Objection!
+I'm going to pincushion this guy!
+Adam, don't! It's what he wants!
+Oh, I'm hit!! Oh, lordy, I am hit!
+Order! Order!
+The venom! The venom is coursing through my veins! I have been felled by a winged beast of destruction! You see? You can't treat them like equals! They're striped savages! Stinging's the only thing they know! It's their way!
+Adam, stay with me.
+I can't feel my legs.
+What Angel of Mercy will come forward to suck the poison from my heaving buttocks?
+I will have order in this court. Order! Order, please!
+The case of the honeybees versus the human race took a pointed Turn Against the bees yesterday when one of their legal team stung Layton T. Montgomery.
+Hey, buddy.
+Hey.
+Is there much pain?
+Yeah.
+I... I blew the whole case, didn't I?
+It doesn't matter. What matters is
+you're alive. You could have died.
+I'd be better off dead. Look at me.
+They got it from the cafeteria downstairs, in a tuna sandwich. Look, there's a little celery still on it.
+What was it like to sting someone?
+I can't explain it. It was all... All adrenaline and then...and then ecstasy!
+All right.
+You think it was all a trap?
+Of course. I'm sorry. I flew us right into this.
+What were we thinking? Look at us. We're just a couple of bugs in this world.
+What will the humans do to us if they win?
+I don't know.
+I hear they put the roaches in motels. That doesn't sound so bad.
+Adam, they check in, but they don't check out!
+Oh, my.
+Could you get a nurse to close that window?
+Why?
+The smoke.
+Bees don't smoke.
+Right. Bees don't smoke.
+Bees don't smoke!
+But some bees are smoking.
+That's it! That's our case!
+It is? It's not over?
+Get dressed. I've gotta go somewhere.
+Get back to the court and stall. Stall any way you can.
+And assuming you've done step correctly, you're ready for the tub.
+Mr. Flayman.
+Yes? Yes, Your Honor!
+Where is the rest of your team?
+Well, Your Honor, it's interesting. Bees are trained to fly haphazardly, and as a result, we don't make very good time.
+I actually heard a funny story about...
+Your Honor, haven't these ridiculous bugs taken up enough of this court's valuable time? How much longer will we allow these absurd shenanigans to go on?
+They have presented no compelling evidence to support their charges against my clients, who run legitimate businesses.
+I move for a complete dismissal of this entire case!
+Mr. Flayman, I'm afraid I'm going to have to consider Mr. Montgomery's motion.
+But you can't! We have a terrific case.
+Where is your proof?
+Where is the evidence?
+Show me the smoking gun!
+Hold it, Your Honor!
+You want a smoking gun? Here is your smoking gun.
+What is that?
+It's a bee smoker!
+What, this? This harmless little contraption? This couldn't hurt a fly, let alone a bee.
+Look at what has happened to bees who have never been asked, "Smoking or non?" Is this what nature intended for us? To be forcibly addicted to smoke machines and man-made wooden slat work camps?
+Living out our lives as honey slaves to the white man?
+What are we gonna do?
+He's playing the species card.
+Ladies and gentlemen, please, free these bees!
+Free the bees! Free the bees! Free the bees! Free the bees! Free the bees!
+The court finds in favor of the bees!
+Vanessa, we won!
+I knew you could do it! High-five!
+Sorry.
+I'm OK! You know what this means?
+All the honey will finally belong to the bees.
+Now we won't have to work so hard all the time.
+This is an unholy perversion of the balance of nature, Benson.
+You'll regret this.
+Barry, how much honey is out there?
+All right. One at a time.
+Barry, who are you wearing?
+My sweater is Ralph Lauren, and I have no pants.
+What if Montgomery's right?
+What do you mean?
+We've been living the bee way a long time, 27 million years.
+Congratulations on your victory. What will you demand as a settlement?
+First, we'll demand a complete shutdown of all bee work camps.
+Then we want back the honey that was ours to begin with, every last drop.
+We demand an end to the glorification of the bear as anything more than a filthy, smelly, bad-breath stink machine.
+We're all aware of what they do in the woods.
+Wait for my signal. Take him out.
+He'll have nauseous for a few hours, then he'll be fine.
+And we will no longer tolerate bee-negative nicknames...
+But it's just a prance-about stage name!
+...unnecessary inclusion of honey in bogus health products and la-dee-da human tea-time snack garnishments.
+Can't breathe.
+Bring it in, boys!
+Hold it right there! Good.
+Tap it.
+Mr. Buzzwell, we just passed three cups and there's gallons more coming!
+I think we need to shut down!
+Shut down? We've never shut down.
+Shut down honey production!
+Stop making honey!
+Turn your key, sir!
+What do we do now?
+Cannonball!
+We're shutting honey production!
+Mission abort.
+Aborting pollination and nectar detail.
+Returning to base.
+Adam, you wouldn't believe how much honey was out there.
+Oh, yeah?
+What's going on? Where is everybody?
+Are they out celebrating?
+They're home.
+They don't know what to do. Laying out, sleeping in.
+I heard your Uncle Carl was on his way to San Antonio with a cricket.
+At least we got our honey back.
+Sometimes I think, so what if humans liked our honey? Who wouldn't?
+It's the greatest thing in the world! I was excited to be part of making it.
+This was my new desk. This was my new job. I wanted to do it really well. And now...
+Now I can't.
+I don't understand why they're not happy.
+I thought their lives would be better!
+They're doing nothing. It's amazing.
+Honey really changes people.
+You don't have any idea what's going on, do you?
+What did you want to show me?
+This.
+What happened here?
+That is not the half of it.
+Oh, no. Oh, my.
+They're all wilting.
+Doesn't look very good, does it?
+No.
+And whose fault do you think that is?
+You know, I'm gonna guess bees.
+Bees?
+Specifically, me.
+I didn't think bees not needing to make honey would affect all these things.
+It's not just flowers. Fruits, vegetables, they all need bees.
+That's our whole SAT test right there.
+Take away produce, that affects the entire animal kingdom.
+And then, of course...
+The human species?
+So if there's no more pollination, it could all just go south here, couldn't it?
+I know this is also partly my fault.
+How about a suicide pact?
+How do we do it?
+I'll sting you, you step on me.
+That just kills you twice.
+Right, right.
+Listen, Barry... sorry, but I gotta get going.
+I had to open my mouth and talk.
+Vanessa?
+Vanessa? Why are you leaving?
+Where are you going?
+To the final Tournament of Roses parade in Pasadena.
+They've moved it to this weekend because all the flowers are dying.
+It's the Last Chance I'll ever have to see it.
+Vanessa, I just wanna say I'm sorry.
+I never meant it to turn out like this.
+I know. Me neither.
+Tournament of Roses.
+Roses can't do sports.
+Wait a minute. Roses. Roses?
+Roses!
+Vanessa!
+Roses?!
+Barry?
+Roses are flowers!
+Yes, they are.
+Flowers, bees, pollen!
+I know.
+That's why this is the last parade.
+Maybe not.
+Could you ask him to slow down?
+Could you slow down?
+Barry!
+OK, I made a huge mistake.
+This is a total disaster, all my fault.
+Yes, it kind of is.
+I've ruined the planet. I wanted to help you with the flower shop. I've made it worse.
+Actually, it's completely closed down.
+I thought maybe you were remodeling.
+But I have another idea, and it's greater than my previous ideas combined.
+I don't want to hear it!
+All right, they have the roses, the roses have the pollen.
+I know every bee, plant and flower bud in this park.
+All we gotta do is get what they've got back here with what we've got.
+Bees.
+Park.
+Pollen!
+Flowers.
+Repollination!
+Across the nation!
+Tournament of Roses, Pasadena, California.
+They've got nothing but flowers, floats and cotton candy.
+Security will be tight.
+I have an idea.
+Vanessa Bloome, FTD.
+Official floral business. It's real.
+Sorry, ma'am. Nice brooch.
+Thank you. It was a gift.
+Once inside, we just pick the right float.
+How about The Princess and the Pea?
+I could be the princess, and you could be the pea!
+Yes, I got it.
+Where should I sit?
+What are you?
+I believe I'm the pea.
+The pea?
+It goes under the mattresses.
+Not in this fairy tale, sweetheart.
+I'm getting the marshal.
+You do that! This whole parade is a fiasco!
+Let's see what this baby'll do.
+Hey, what are you doing?!
+Then all we do is blend in with traffic... without arousing suspicion.
+Once at the airport, there's no stopping us.
+Stop! Security.
+You and your insect pack your float?
+Yes.
+Has it been in your possession the entire time?
+Would you remove your shoes?
+Remove your stinger.
+It's part of me.
+I know. Just having some fun.
+Enjoy your flight.
+Then if we're lucky, we'll have just enough pollen to do the job.
+Can you believe how lucky we are? We have just enough pollen to do the job!
+I think this is gonna work.
+It's got to work.
+Attention, passengers, this is Captain Scott. We have a bit of bad weather in New York. It looks like we'll experience a couple hours delay.
+Barry, these are cut flowers with no water. They'll never make it.
+I gotta get up there and talk to them.
+Be careful.
+Can I get help with the Sky Mall magazine? I'd like to order the talking inflatable nose and ear hair trimmer.
+Captain, I'm in a real situation.
+What'd you say, Hal?
+Nothing.
+Bee!
+Don't freak out! My entire species...
+What are you doing?
+Wait a minute! I'm an attorney!
+Who's an attorney?
+Don't move.
+Oh, Barry.
+Good afternoon, passengers. This is your captain. Would a Miss Vanessa Bloome in 24B please report to the cockpit? And please hurry!
+What happened here?
+There was a DustBuster, a toupee, a life raft exploded.
+One's bald, one's in a boat, they're both unconscious!
+Is that another bee joke?
+No!
+No one's flying the plane!
+This is JFK control tower, Flight 356. What's your status?
+This is Vanessa Bloome. I'm a florist from New York.
+Where's the pilot?
+He's unconscious, and so is the copilot.
+Not good. Does anyone onboard have flight experience?
+As a matter of fact, there is.
+Who's that?
+Barry Benson.
+From the honey trial?! Oh, great.
+Vanessa, this is nothing more than a big metal bee.
+It's got giant wings, huge engines.
+I can't fly a plane.
+Why not? Isn't John Travolta a pilot?
+Yes.
+How hard could it be?
+Wait, Barry!
+We're headed into some lightning.
+This is Bob Bumble. We have some late-breaking news from JFK Airport, where a suspenseful scene is developing.
+Barry Benson, fresh from his legal victory...
+That's Barry!
+...is attempting to land a plane, loaded with people, flowers and an incapacitated flight crew.
+Flowers?!
+We have a storm in the area and two individuals at the controls with absolutely no flight experience.
+Just a minute. There's a bee on that plane.
+I'm quite familiar with Mr. Benson and his no-account compadres.
+They've done enough damage.
+But isn't he your only hope?
+Technically, a bee shouldn't be able to fly at all.
+Their wings are too small... Haven't we heard this a million times?
+"The surface area of the wings and body mass make no sense."
+Get this on the air!
+Got it.
+Stand by.
+We're going live.
+The way we work may be a mystery to you. Making honey takes a lot of bees doing a lot of small jobs.
+But let me tell you about a small job. If you do it well, it makes a big difference.
+More than we realized. To us, to everyone.
+That's why I want to get bees back to working together. That's the bee way! We're not made of Jell-O.
+We get behind a fellow.
+Black and yellow!
+Hello!
+Left, right, down, hover.
+Hover?
+Forget hover.
+This isn't so hard.
+Beep-beep! Beep-beep!
+Barry, what happened?!
+Wait, I think we were on autopilot the whole time.
+That may have been helping me.
+And now we're not!
+So it turns out I cannot fly a plane.
+All of you, let's get behind this fellow! Move it out!
+Move out!
+Our only chance is if I do what I'd do, you copy me with the wings of the plane!
+Don't have to yell.
+I'm not yelling! We're in a lot of trouble.
+It's very hard to concentrate with that panicky tone in your voice!
+It's not a tone. I'm panicking!
+I can't do this!
+Vanessa, pull yourself together. You have to snap out of it!
+You snap out of it.
+You snap out of it.
+You snap out of it!
+You snap out of it!
+You snap out of it!
+You snap out of it!
+You snap out of it!
+You snap out of it!
+Hold it!
+Why? Come on, it's my turn.
+How is the plane flying?
+I don't know.
+Hello?
+Benson, got any flowers for a happy occasion in there?
+The Pollen Jocks!
+They do get behind a fellow.
+Black and yellow.
+Hello.
+All right, let's drop this tin can on the blacktop.
+Where? I can't see anything. Can you?
+No, nothing. It's all cloudy.
+Come on. You got to think bee, Barry.
+Thinking bee.
+Thinking bee.
+Thinking bee!
+Thinking bee! Thinking bee!
+Wait a minute. I think I'm feeling something.
+What?
+I don't know. It's strong, pulling me.
+Like a 27-million-year-old instinct.
+Bring the nose down.
+Thinking bee!
+Thinking bee! Thinking bee!
+What in the world is on the tarmac?
+Get some lights on that!
+Thinking bee!
+Thinking bee! Thinking bee!
+Vanessa, aim for the flower.
+OK.
+Cut the engines. We're going in on bee power. Ready, boys?
+Affirmative!
+Good. Good. Easy, now. That's it.
+Land on that flower!
+Ready? Full reverse!
+Spin it around!
+Not that flower! The other one!
+Which one?
+That flower.
+I'm aiming at the flower!
+That's a fat guy in a flowered shirt.
+I mean the giant pulsating flower made of millions of bees!
+Pull forward. Nose down. Tail up.
+Rotate around it.
+This is insane, Barry!
+This's the only way I know how to fly.
+Am I koo-koo-kachoo, or is this plane flying in an insect-like pattern?
+Get your nose in there. Don't be afraid. Smell it. Full reverse!
+Just drop it. Be a part of it.
+Aim for the center!
+Now drop it in! Drop it in, woman!
+Come on, already.
+Barry, we did it! You taught me how to fly!
+Yes. No high-five!
+Right.
+Barry, it worked!
+Did you see the giant flower?
+What giant flower? Where? Of course
+I saw the flower! That was genius!
+Thank you.
+But we're not done yet.
+Listen, everyone!
+This runway is covered with the last pollen from the last flowers available anywhere on Earth.
+That means this is our Last Chance. We're the only ones who make honey, pollinate flowers and dress like this.
+If we're gonna survive as a species, this is our moment! What do you say?
+Are we going to be bees, or just Museum of Natural History keychains?
+We're bees!
+Keychain!
+Then follow me! Except Keychain.
+Hold on, Barry. Here. You've earned this.
+Yeah!
+I'm a Pollen Jock! And it's a perfect fit. All I gotta do are the sleeves.
+Oh, yeah.
+That's our Barry.
+Mom! The bees are back!
+If anybody needs to make a call, now's the time. I got a feeling we'll be working late tonight!
+Here's your change. Have a great afternoon! Can I help who's next?
+Would you like some honey with that?
+It is bee-approved. Don't forget these.
+Milk, cream, cheese, it's all me.  And I don't see a nickel!
+Sometimes I just feel like a piece of meat!
+I had no idea.
+Barry, I'm sorry.
+Have you got a moment?
+Would you excuse me?
+My mosquito associate will help you.
+Sorry I'm late.
+He's a lawyer too?
+I was already a blood-sucking parasite. All I needed was a briefcase.
+Have a great afternoon!
+Barry, I just got this huge tulip order, and I can't get them anywhere.
+No problem, Vannie. Just leave it to me.
+You're a lifesaver, Barry. Can I help who's next?
+All right, scramble, jocks! It's time to fly.
+Thank you, Barry!
+That bee is living my life!
+Let it go, Kenny.
+When will this nightmare end?!
+Let it all go.
+Beautiful day to fly.
+Sure is.
+Between you and me,
+I was dying to get out of that office.
+You have got to start thinking bee, my friend.
+Thinking bee!
+Me?
+Hold it. Let's just stop for a second. Hold it.
+I'm sorry. I'm sorry, everyone. Can we stop here?
+I'm not making a major life decision during a production number!
+All right. Take ten, everybody. Wrap it up, guys.
+I had virtually no rehearsal for that.</p>
+<!----> <!--[!--><!--]--></div> <!--[--><div class="media svelte-1cxt4z0"><div class="masonry  svelte-b2jtby" style="gap: 20px; "><!--[--><div class="col  svelte-b2jtby" style="gap: 20px; max-width: 600px;"><!--[!--><!--[--><!----><!--[!--><!--[!--><!--[!--><!--[--><!----><!----><!--]--><!--]--><!--]--><!--]--><!----><!--]--><!--]--></div><!--]--></div><!----> <div class="svelte-1cxt4z0"><!--[--><!--]--> <!--[--><!--[--><!--]--><!--]--></div></div><!--]--> <div class="footer svelte-1cxt4z0"><div class="timestamps svelte-1cxt4z0"><!--[--><!--[--><time class="dt svelte-1cxt4z0" datetime="2025-02-22T23:28:00.000Z" itemprop="datePublished">Posted Feb 22, 2025 at 11:28 PM</time> <br class="svelte-1cxt4z0"><!--]--><!--[!--><!--]--><!--]--></div> <!--[--><div style="width: default; height: 32px;" class="clickable svelte-1f9eqjh"><!--[--><a href="/feeds/meta/021625_0824PM" data-sveltekit-reload="false" data-sveltekit-preload-data="hover" class="svelte-1f9eqjh"><!--[!--><!----><div style="color: white;" class="svelte-1kdig2t"><!--[!--><!--]--> <!----><!--[!--><!--]--> 🔗<!----></div><!----><!--]--></a><!--]--></div><!--]--></div><!----> <hr> <!--[!--><div class="svelte-zdtn5w"><!----><p><!---->Comments are currently disabled.<!----></p> <br> <div style="width: default; height: 32px;" class="clickable svelte-1f9eqjh"><!--[!--><!----><div style="color: white;" class="svelte-1kdig2t"><!--[!--><!--]--> <!----><!---->Enable Comments<!----></div><!----><!--]--></div><!----><br> <p style="text-align: center;"><!---->By enabling comments, you agree to allow this website to connect to Cusdis and to the <a href="https://cusdis.com/privacy-policy" target="_blank">Cusdis Privacy Policy</a>.<!----></p><!----></div><!--]--><!----></div></div><!----></div><!----><!--]--><!----><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_1yb2i5z = {
+						base: new URL("../../..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [{"type":"data","data":{categories:["design","ui","programming","life","software","meta","photography","work","portfolio","macos","multiplatform","games"]},"uses":{},"slash":"always"},{"type":"data","data":(function(a){a.id="meta";a.meta={title:"metaway",description:"a feed about developing a platform to host the feed about developing a platform to host the feed about deve",order:-1};a.url="/feeds/meta";a.rss="/feeds/meta/feed.rss";a.urlShort="jojudge.com/feeds/meta";a.posts=void 0;return {feed:a,post:{id:"021625_0824PM",html:"\u003Cscript context=\"module\">\n\texport const metadata = {\"hideHome\":true};\n\tconst { hideHome } = metadata;\n\u003C/script>\n\n\u003Cp>According to all known laws of aviation, there is no way a bee should be able to fly.\nIts wings are too small to get its fat little body off the ground.\nThe bee, of course, flies anyway because bees don't care what humans think is impossible.\nYellow, black. Yellow, black. Yellow, black. Yellow, black.\nOoh, black and yellow!\nLet's shake it up a little.\nBarry! Breakfast is ready!\nComing!\nHang on a second.\nHello?\nBarry?\nAdam?\nCan you believe this is happening?\nI can't.\nI'll pick you up.\nLooking sharp.\nUse the stairs, Your father paid good money for those.\nSorry. I'm excited.\nHere's the graduate.\nWe're very proud of you, son.\nA perfect report card, all B's.\nVery proud.\nMa! I got a thing going here.\nYou got lint on your fuzz.\nOw! That's me!\nWave to us! We'll be in row 118,000.\nBye!\nBarry, I told you, stop flying in the house!\nHey, Adam.\nHey, Barry.\nIs that fuzz gel?\nA little. Special day, graduation.\nNever thought I'd make it.\nThree days grade school, three days high school.\nThose were awkward.\nThree days college. I'm glad I took a day and hitchhiked around The Hive.\nYou did come back different.\nHi, Barry. Artie, growing a mustache? Looks good.\nHear about Frankie?\nYeah.\nYou going to the funeral?\nNo, I'm not going.\nEverybody knows, sting someone, you die.\nDon't waste it on a squirrel.\nSuch a hothead.\nI guess he could have just gotten out of the way.\nI love this incorporating an amusement park into our day.\nThat's why we don't need vacations.\nBoy, quite a bit of pomp under the circumstances.\nWell, Adam, today we are men.\nWe are!\nBee-men.\nAmen!\nHallelujah!\nStudents, faculty, distinguished bees,\nplease welcome Dean Buzzwell.\nWelcome, New Hive City graduating class of 9:15.\nThat concludes our ceremonies And begins your career at Honex Industries!\nWill we pick our job today?\nI heard it's just orientation.\nHeads up! Here we go.\nKeep your hands and antennas inside the tram at all times.\nWonder what it'll be like?\nA little scary.\nWelcome to Honex, a division of Honesco and a part of the Hexagon Group.\nThis is it!\nWow.\nWow.\nWe know that you, as a bee, have worked your whole life to get to the point where you can work for your whole life.\nHoney begins when our valiant Pollen Jocks bring the nectar to The Hive.\nOur top-secret formula is automatically color-corrected, scent-adjusted and bubble-contoured into this soothing sweet syrup with its distinctive golden glow you know as... Honey!\nThat girl was hot.\nShe's my cousin!\nShe is?\nYes, we're all cousins.\nRight. You're right.\nAt Honex, we constantly strive to improve every aspect of bee existence.\nThese bees are stress-testing a new helmet technology.\nWhat do you think he makes?\nNot enough.\nHere we have our latest advancement, the Krelman.\nWhat does that do?\nCatches that little strand of honey that hangs after you pour it.\nSaves us millions.\nCan anyone work on the Krelman?\nOf course. Most bee jobs are small ones.\nBut bees know that every small job, if it's done well, means a lot.\nBut choose carefully because you'll stay in the job you pick for the rest of your life.\nThe same job the rest of your life? I didn't know that.\nWhat's the difference?\nYou'll be happy to know that bees, as a species, haven't had one day off in 27 million years.\nSo you'll just work us to death?\nWe'll sure try.\nWow! That blew my mind!\n\"What's the difference?\"\nHow can you say that?\nOne job forever?\nThat's an insane choice to have to make.\nI'm relieved. Now we only have to make one decision in life.\nBut, Adam, how could they never have told us that?\nWhy would you question anything? We're bees.\nWe're the most perfectly functioning society on Earth.\nYou ever think maybe things work a little too well here?\nLike what? Give me one example.\nI don't know. But you know what I'm talking about.\nPlease clear the gate. Royal Nectar Force on approach.\nWait a second. Check it out.\nHey, those are Pollen Jocks!\nWow.\nI've never seen them this close.\nThey know what it's like outside The Hive.\nYeah, but some don't come back.\nHey, Jocks!\nHi, Jocks!\nYou guys did great!\nYou're monsters!\nYou're sky freaks! I love it! I love it!\nI wonder where they were.\nI don't know.\nTheir day's not planned.\nOutside The Hive, flying who knows where, doing who knows what.\nYou can't just decide to be a Pollen Jock. You have to be bred for that.\nRight.\nLook. That's more pollen than you and I will see in a lifetime.\nIt's just a status symbol.\nBees make too much of it.\nPerhaps. Unless you're wearing it and the ladies see you wearing it.\nThose ladies?\nAren't they our cousins too?\nDistant. Distant.\nLook at these two.\nCouple of Hive Harrys.\nLet's have fun with them.\nIt must be dangerous being a Pollen Jock.\nYeah. Once a bear pinned me against a mushroom!\nHe had a paw on my throat, and with the other, he was slapping me!\nOh, my!\nI never thought I'd knock him out.\nWhat were you doing during this?\nTrying to alert the authorities.\nI can autograph that.\nA little gusty out there today, wasn't it, comrades?\nYeah. Gusty.\nWe're hitting a sunflower patch six miles from here tomorrow.\nSix miles, huh?\nBarry!\nA puddle jump for us, but maybe you're not up for it.\nMaybe I am.\nYou are not!\nWe're going 0900 at J-Gate.\nWhat do you think, buzzy-boy?\nAre you bee enough?\nI might be. It all depends on what 0900 means.\nHey, Honex!\nDad, you surprised me.\nYou decide what you're interested in?\nWell, there's a lot of choices.\nBut you only get one.\nDo you ever get bored doing the same job every day?\nSon, let me tell you about stirring.\nYou grab that stick, and you just move it around, and you stir it around.\nYou get yourself into a rhythm.\nIt's a beautiful thing.\nYou know, Dad, the more I think about it,\nmaybe the honey field just isn't right for me.\nYou were thinking of what, making balloon animals?\nThat's a bad job for a guy with a stinger.\nJanet, your son's not sure he wants to go into honey!\nBarry, you are so funny sometimes.\nI'm not trying to be funny.\nYou're not funny! You're going into honey. Our son, the stirrer!\nYou're gonna be a stirrer?\nNo one's listening to me!\nWait till you see the sticks I have.\nI could say anything right now.\nI'm gonna get an ant tattoo!\nLet's open some honey and celebrate!\nMaybe I'll pierce my thorax. Shave my antennae. Shack up with a grasshopper. Get a gold tooth and call everybody \"dawg\"!\nI'm so proud.\nWe're starting work today!\nToday's the day.\nCome on! All the good jobs will be gone.\nYeah, right.\nPollen counting, stunt bee, pouring, stirrer, front desk, hair removal...\nIs it still available?\nHang on. Two left!\nOne of them's yours! Congratulations!\nStep to the side.\nWhat'd you get?\nPicking crud out. Stellar!\nWow!\nCouple of newbies?\nYes, sir! Our first day! We are ready!\nMake your choice.\nYou want to go first?\nNo, you go.\nOh, my. What's available?\nRestroom attendant's open, not for the reason you think.\nAny chance of getting the Krelman?\nSure, you're on.\nI'm sorry, the Krelman just closed out.\nWax monkey's always open.\nThe Krelman opened up again.\nWhat happened?\nA bee died. Makes an opening. See? He's dead. Another dead one.\nDeady. Deadified. Two more dead.\nDead from the neck up. Dead from the neck down. That's life!\nOh, this is so hard!\nHeating, cooling, stunt bee, pourer, stirrer, humming, inspector number seven, lint coordinator, stripe supervisor, mite wrangler.\nBarry, what do you think I should... Barry?\nBarry!\nAll right, we've got the sunflower patch in quadrant nine...\nWhat happened to you?\nWhere are you?\nI'm going out.\nOut? Out where?\nOut there.\nOh, no!\nI have to, before I go to work for the rest of my life.\nYou're gonna die! You're crazy! Hello?\nAnother call coming in.\nIf anyone's feeling brave, there's a Korean deli on 83rd that gets their roses today.\nHey, guys.\nLook at that.\nIsn't that the kid we saw yesterday?\nHold it, son, flight deck's restricted.\nIt's OK, Lou. We're gonna take him up.\nReally? Feeling lucky, are you?\nSign here, here. Just initial that.\nThank you.\nOK.\nYou got a rain advisory today, and as you all know, bees cannot fly in rain.\nSo be careful. As always, watch your brooms, hockey sticks, dogs, birds, bears and bats.\nAlso, I got a couple of reports of root beer being poured on us.\nMurphy's in a home because of it, babbling like a cicada!\nThat's awful.\nAnd a reminder for you rookies, bee law number one, absolutely no talking to humans!\nAll right, launch positions!\nBuzz, buzz, buzz, buzz! Buzz, buzz, buzz, buzz! Buzz, buzz, buzz, buzz!\nBlack and yellow!\nHello!\nYou ready for this, hot shot?\nYeah. Yeah, bring it on.\nWind, check.\nAntennae, check.\nNectar pack, check.\nWings, check.\nStinger, check.\nScared out of my shorts, check.\nOK, ladies,\nlet's move it out!\nPound those petunias, you striped stem-suckers!\nAll of you, drain those flowers!\nWow! I'm out!\nI can't believe I'm out!\nSo blue.\nI feel so fast and free!\nBox kite!\nWow!\nFlowers!\nThis is Blue Leader, We have roses visual.\nBring it around 30 degrees and hold.\nRoses!\n30 degrees, roger. Bringing it around.\nStand to the side, kid.\nIt's got a bit of a kick.\nThat is one nectar collector!\nEver see pollination up close?\nNo, sir.\nI pick up some pollen here, sprinkle it over here. Maybe a dash over there, a pinch on that one.\nSee that? It's a little bit of magic.\nThat's amazing. Why do we do that?\nThat's pollen power. More pollen, more flowers, more nectar, more honey for us.\nCool.\nI'm picking up a lot of bright yellow, Could be daisies, Don't we need those?\nCopy that visual.\nWait. One of these flowers seems to be on the move.\nSay again? You're reporting a moving flower?\nAffirmative.\nThat was on the line!\nThis is the coolest. What is it?\nI don't know, but I'm loving this color.\nIt smells good.\nNot like a flower, but I like it.\nYeah, fuzzy.\nChemical-y.\nCareful, guys. It's a little grabby.\nMy sweet lord of bees!\nCandy-brain, get off there!\nProblem!\nGuys!\nThis could be bad.\nAffirmative.\nVery close.\nGonna hurt.\nMama's little boy.\nYou are way out of position, rookie!\nComing in at you like a missile!\nHelp me!\nI don't think these are flowers.\nShould we tell him?\nI think he knows.\nWhat is this?!\nMatch point!\nYou can start packing up, honey, because you're about to eat it!\nYowser!\nGross.\nThere's a bee in the car!\nDo something!\nI'm driving!\nHi, bee.\nHe's back here!\nHe's going to sting me!\nNobody move. If you don't move, he won't sting you. Freeze!\nHe blinked!\nSpray him, Granny!\nWhat are you doing?!\nWow... the tension level out here is unbelievable.\nI gotta get home.\nCan't fly in rain. Can't fly in rain. Can't fly in rain.\nMayday! Mayday! Bee going down!\nKen, could you close the window please?\nKen, could you close the window please?\nCheck out my new resume. I made it into a fold-out brochure. You see? Folds out.\nOh, no. More humans. I don't need this.\nWhat was that?\nMaybe this time. This time. This time. This time! This time! This... Drapes!\nThat is diabolical.\nIt's fantastic. It's got all my special skills, even my top-ten favorite movies.\nWhat's number one? Star Wars?\nNah, I don't go for that... kind of stuff.\nNo wonder we shouldn't talk to them. They're out of their minds.\nWhen I leave a job interview, they're flabbergasted, can't believe what I say.\nThere's the sun. Maybe that's a way out.\nI don't remember the sun having a big 75 on it.\nI predicted global warming. I could feel it getting hotter. At first I thought it was just me.\nWait! Stop! Bee!\nStand back. These are winter boots.\nWait!\nDon't kill him!\nYou know I'm allergic to them! This thing could kill me!\nWhy does his life have less value than yours?\nWhy does his life have any less value than mine? Is that your statement?\nI'm just saying all life has value. You don't know what he's capable of feeling.\nMy brochure!\nThere you go, little guy.\nI'm not scared of him.It's an allergic thing.\nPut that on your resume brochure.\nMy whole face could puff up.\nMake it one of your special skills.\nKnocking someone out is also a special skill.\nRight. Bye, Vanessa. Thanks.\nVanessa, next week? Yogurt night?\nSure, Ken. You know, whatever.\nYou could put carob chips on there.\nBye.\nSupposed to be less calories.\nBye.\nI gotta say something. She saved my life. I gotta say something.\nAll right, here it goes.\nNah.\nWhat would I say?\nI could really get in trouble. It's a bee law. You're not supposed to talk to a human.\nI can't believe I'm doing this. I've got to.\nOh, I can't do it. Come on!\nNo. Yes. No. Do it. I can't.\nHow should I start it? \"You like jazz?\" No, that's no good.\nHere she comes! Speak, you fool!\nHi!\nI'm sorry. You're talking.\nYes, I know.\nYou're talking!\nI'm so sorry.\nNo, it's OK. It's fine.\nI know I'm dreaming. But I don't recall going to bed.\nWell, I'm sure this is very disconcerting.\nThis is a bit of a surprise to me. I mean, you're a bee!\nI am. And I'm not supposed to be doing this, but they were all trying to kill me.\nAnd if it wasn't for you... I had to thank you. It's just how I was raised.\nThat was a little weird. I'm talking with a bee.\nYeah.\nI'm talking to a bee. And the bee is talking to me!\nI just want to say I'm grateful.\nI'll leave now.\nWait! How did you learn to do that?\nWhat?\nThe talking thing.\nSame way you did, I guess. \"Mama, Dada, honey.\" You pick it up.\nThat's very funny.\nYeah.\nBees are funny. If we didn't laugh, we'd cry with what we have to deal with.\nAnyway... Can I... get you something?\nLike what?\nI don't know. I mean... I don't know. Coffee?\nI don't want to put you out.\nIt's no trouble. It takes two minutes.\nIt's just coffee.\nI hate to impose.\nDon't be ridiculous!\nActually, I would love a cup.\nHey, you want rum cake?\nI shouldn't.\nHave some.\nNo, I can't.\nCome on!\nI'm trying to lose a couple micrograms.\nWhere?\nThese stripes don't help.\nYou look great!\nI don't know if you know anything about fashion.\nAre you all right?\nNo.\nHe's making the tie in the cab as they're flying up Madison.\nHe finally gets there.\nHe runs up the steps into the church.\nThe wedding is on.\nAnd he says, \"Watermelon?\nI thought you said Guatemalan.\nWhy would I marry a watermelon?\"\nIs that a bee joke?\nThat's the kind of stuff we do.\nYeah, different.\nSo, what are you gonna do, Barry?\nAbout work? I don't know.\nI want to do my part for The Hive, but I can't do it the way they want.\nI know how you feel.\nYou do?\nSure.\nMy parents wanted me to be a lawyer or a doctor, but I wanted to be a florist.\nReally?\nMy only interest is flowers.\nOur new queen was just elected with that same campaign slogan.\nAnyway, if you look... There's my hive right there. See it?\nYou're in Sheep Meadow!\nYes! I'm right off the Turtle Pond!\nNo way! I know that area. I lost a toe ring there once.\nWhy do girls put rings on their toes?\nWhy not?\nIt's like putting a hat on your knee.\nMaybe I'll try that.\nYou all right, ma'am?\nOh, yeah. Fine.\nJust having two cups of coffee!\nAnyway, this has been great.\nThanks for the coffee.\nYeah, it's no trouble.\nSorry I couldn't finish it. If I did, I'd be up the rest of my life.\nAre you...?\nCan I take a piece of this with me?\nSure! Here, have a crumb.\nThanks!\nYeah.\nAll right. Well, then... I guess I'll see you around. Or not.\nOK, Barry.\nAnd thank you so much again... for before.\nOh, that? That was nothing.\nWell, not nothing, but... Anyway...\nThis can't possibly work.\nHe's all set to go.\nWe may as well try it.\nOK, Dave, pull the chute.\nSounds amazing.\nIt was amazing!\nIt was the scariest, happiest moment of my life.\nHumans! I can't believe you were with humans!\nGiant, scary humans!\nWhat were they like?\nHuge and crazy. They talk crazy.\nThey eat crazy giant things.\nThey drive crazy.\nDo they try and kill you, like on TV?\nSome of them. But some of them don't.\nHow'd you get back?\nPoodle.\nYou did it, and I'm glad. You saw whatever you wanted to see.\nYou had your \"experience.\" Now you can pick out yourjob and be normal.\nWell...\nWell?\nWell, I met someone.\nYou did? Was she Bee-ish?\nA wasp?! Your parents will kill you!\nNo, no, no, not a wasp.\nSpider?\nI'm not attracted to spiders.\nI know it's the hottest thing, with the eight legs and all. I can't get by that face.\nSo who is she?\nShe's... human.\nNo, no. That's a bee law. You wouldn't break a bee law.\nHer name's Vanessa.\nOh, boy.\nShe's so nice. And she's a florist!\nOh, no! You're dating a human florist!\nWe're not dating.\nYou're flying outside The Hive, talking to humans that attack our homes with power washers and M-80s! One-eighth a stick of dynamite!\nShe saved my life! And she understands me.\nThis is over!\nEat this.\nThis is not over! What was that?\nThey call it a crumb.\nIt was so stingin' stripey!\nAnd that's not what they eat.\nThat's what falls off what they eat!\nYou know what a Cinnabon is?\nNo.\nIt's bread and cinnamon and frosting. They heat it up...\nSit down!\n...really hot!\nListen to me!\nWe are not them! We're us.\nThere's us and there's them!\nYes, but who can deny the heart that is yearning?\nThere's no yearning. Stop yearning. Listen to me!\nYou have got to start thinking bee, my friend. Thinking bee!\nThinking bee.\nThinking bee.\nThinking bee! Thinking bee! Thinking bee! Thinking bee!\nThere he is. He's in the pool.\nYou know what your problem is, Barry?\nI gotta start thinking bee?\nHow much longer will this go on?\nIt's been three days! Why aren't you working?\nI've got a lot of big life decisions to think about.\nWhat life? You have no life!\nYou have no job. You're barely a bee!\nWould it kill you to make a little honey?\nBarry, come out. Your father's talking to you.\nMartin, would you talk to him?\nBarry, I'm talking to you!\nYou coming?\nGot everything?\nAll set!\nGo ahead. I'll catch up.\nDon't be too long.\nWatch this!\nVanessa!\nWe're still here.\nI told you not to yell at him.\nHe doesn't respond to yelling!\nThen why yell at me?\nBecause you don't listen!\nI'm not listening to this.\nSorry, I've gotta go.\nWhere are you going?\nI'm meeting a friend.\nA girl? Is this why you can't decide?\nBye.\nI just hope she's Bee-ish.\nThey have a huge parade of flowers every year in Pasadena?\nTo be in the Tournament of Roses, that's every florist's dream!\nUp on a float, surrounded by flowers, crowds cheering.\nA tournament. Do the roses compete in athletic events?\nNo. All right, I've got one.\nHow come you don't fly everywhere?\nIt's exhausting. Why don't you run everywhere? It's faster.\nYeah, OK, I see, I see.\nAll right, your turn.\nTiVo. You can just freeze live TV? That's insane!\nYou don't have that?\nWe have Hivo, but it's a disease. It's a horrible, horrible disease.\nOh, my.\nDumb bees!\nYou must want to sting all those jerks.\nWe try not to sting. It's usually fatal for us.\nSo you have to watch your temper.\nVery carefully.\nYou kick a wall, take a walk, write an angry letter and throw it out. Work through it like any emotion: Anger, jealousy, lust.\nOh, my goodness! Are you OK?\nYeah.\nWhat is wrong with you?!\nIt's a bug.\nHe's not bothering anybody.\nGet out of here, you creep!\nWhat was that? A Pic 'N' Save circular?\nYeah, it was. How did you know?\nIt felt like about 10 pages. Seventy-five is pretty much our limit.\nYou've really got that down to a science.\nI lost a cousin to Italian Vogue.\nI'll bet.\nWhat in the name of Mighty Hercules is this?\nHow did this get here? cute Bee, Golden Blossom, Ray Liotta Private Select?\nIs he that actor?\nI never heard of him.\nWhy is this here?\nFor people. We eat it.\nYou don't have enough food of your own?\nWell, yes.\nHow do you get it?\nBees make it.\nI know who makes it! And it's hard to make it!\nThere's heating, cooling, stirring. You need a whole Krelman thing!\nIt's organic.\nIt's our-ganic!\nIt's just honey, Barry.\nJust what?!\nBees don't know about this! This is stealing! A lot of stealing!\nYou've taken our homes, schools,hospitals! This is all we have!\nAnd it's on sale?! I'm getting to the bottom of this.\nI'm getting to the bottom of all of this!\nHey, Hector. You almost done?\nAlmost.\nHe is here. I sense it.\nWell, I guess I'll go home now and just leave this nice honey out, with no one around.\nYou're busted, box boy!\nI knew I heard something.\nSo you can talk!\nI can talk. And now you'll start talking!\nWhere you getting the sweet stuff? Who's your supplier?\nI don't understand.\nI thought we were friends.\nThe last thing we want to do is upset bees!\nYou're too late! It's ours now!\nYou, sir, have crossed the wrong sword!\nYou, sir, will be lunch for my iguana, Ignacio!\nWhere is the honey coming from? Tell me where!\nHoney Farms! It comes from Honey Farms!\nCrazy person!\nWhat horrible thing has happened here?\nThese faces, they never knew what hit them. And now\nthey're on the road to nowhere!\nJust keep still.\nWhat? You're not dead?\nDo I look dead? They will wipe anything that moves. Where you headed?\nTo Honey Farms. I am onto something huge here.\nI'm going to Alaska. Moose blood, crazy stuff. Blows your head off!\nI'm going to Tacoma.\nAnd you?\nHe really is dead.\nAll right.\nUh-oh!\nWhat is that?!\nOh, no!\nA wiper! Triple blade!\nTriple blade?\nJump on! It's your only chance, bee!\nWhy does everything have\nto be so doggone clean?!\nHow much do you people need to see?!\nOpen your eyes!\nStick your head out the window!\nFrom NPR News in Washington,\nI'm Carl Kasell.\nBut don't kill no more bugs!\nBee!\nMoose blood guy!!\nYou hear something?\nLike what?\nLike tiny screaming.\nTurn off the radio.\nWhassup, bee boy?\nHey, Blood.\nJust a row of honey jars, as far as the eye could see.\nWow!\nI assume wherever this truck goes is where they're getting it. I mean, that honey's ours.\nBees hang tight. We're all jammed in.\nIt's a close community.\nNot us, man. We on our own. Every mosquito on his own.\nWhat if you get in trouble?\nYou a mosquito, you in trouble. Nobody likes us. They just smack. See a mosquito, smack, smack!\nAt least you're out in the world. You must meet girls.\nMosquito girls try to trade up, get with a moth, dragonfly. Mosquito girl don't want no mosquito.\nYou got to be kidding me!\nMooseblood's about to leave the building! So long, bee!\nHey, guys!\nMooseblood!\nI knew I'd catch y'all down here.\nDid you bring your crazy straw?\nWe throw it in jars, slap a label on it, and it's pretty much pure profit.\nWhat is this place?\nA bee's got a brain the size of a pinhead.\nThey are pinheads!\nPinhead.\nCheck out the new smoker.\nOh, sweet. That's the one you want. The Thomas 3000!\nSmoker?\nNinety puffs a minute, semi-automatic. Twice the nicotine, all the tar. A couple breaths of this knocks them right out.\nThey make the honey, and we make the money.\n\"They make the honey, and we make the money\"?\nOh, my!\nWhat's going on? Are you OK?\nYeah. It doesn't last too long.\nDo you know you're in a fake hive with fake walls?\nOur queen was moved here. We had no choice.\nThis is your queen? That's a man in women's clothes! That's a drag queen!\nWhat is this?\nOh, no!\nThere's hundreds of them!\nBee honey.\nOur honey is being brazenly stolen on a massive scale!\nThis is worse than anything bears have done! I intend to do something.\nOh, Barry, stop.\nWho told you humans are taking our honey? That's a rumor.\nDo these look like rumors?\nThat's a conspiracy theory. These are obviously doctored photos. How did you get mixed up in this?\nHe's been talking to humans.\nWhat? Talking to humans?!\nHe has a human girlfriend. And they make out!\nMake out? Barry!\nWe do not.\nYou wish you could.\nWhose side are you on?\nThe bees!\nI dated a cricket once in San Antonio. Those crazy legs kept me up all night.\nBarry, this is what you want to do with your life?\nI want to do it for all our lives. Nobody works harder than bees!\nDad, I remember you coming home so overworked\nyour hands were still stirring. You couldn't stop.\nI remember that.\nWhat right do they have to our honey?\nWe live on two cups a year. They put it in lip balm for no reason whatsoever!\nEven if it's true, what can one bee do?\nSting them where it really hurts.\nIn the face! The eye!\nThat would hurt.\nNo.\nUp the nose? That's a killer.\nThere's only one place you can sting the humans, one place where it matters.\nHive at Five, The Hive's only full-hour action news source.\nNo more bee beards!\nWith Bob Bumble at the anchor desk. Weather with Storm Stinger. Sports with Buzz Larvi. And Jeanette Chung.\nGood evening. I'm Bob Bumble.\nAnd I'm Jeanette Ohung.\nA tri-county bee, Barry Benson, intends to sue the human race for stealing our honey, packaging it and profiting from it illegally!\nTomorrow night on Bee Larry King, we'll have three former queens here in our studio, discussing their new book, classy Ladies, out this week on Hexagon.\nTonight we're talking to Barry Benson.\nDid you ever think, \"I'm a kid from The Hive. I can't do this\"?\nBees have never been afraid to change the world.\nWhat about Bee Oolumbus? Bee Gandhi? Bejesus?\nWhere I'm from, we'd never sue humans.\nWe were thinking of stickball or candy stores.\nHow old are you?\nThe bee community is supporting you in this case, which will be the trial of the bee century.\nYou know, they have a Larry King in the human world too.\nIt's a common name. Next week...\nHe looks like you and has a show and suspenders and colored dots...\nNext week...\nGlasses, quotes on the bottom from the guest even though you just heard 'em.\nBear Week next week! They're scary, hairy and here live.\nAlways leans forward, pointy shoulders, squinty eyes, very Jewish.\nIn tennis, you attack at the point of weakness!\nIt was my grandmother, Ken. She's 81.\nHoney, her backhand's a joke!\nI'm not gonna take advantage of that?\nQuiet, please.\nActual work going on here.\nIs that that same bee?\nYes, it is!\nI'm helping him sue the human race.\nHello.\nHello, bee.\nThis is Ken.\nYeah, I remember you. Timberland, size ten and a half. Vibram sole, I believe.\nWhy does he talk again?\nListen, you better go 'cause we're really busy working.\nBut it's our yogurt night!\nBye-bye.\nWhy is yogurt night so difficult?!\nYou poor thing. You two have been at this for hours!\nYes, and Adam here has been a huge help.\nFrosting...\nHow many sugars?\nJust one. I try not to use the competition.\nSo why are you helping me?\nBees have good qualities. And it takes my mind off the shop. Instead of flowers, people are giving balloon bouquets now.\nThose are great, if you're three.\nAnd artificial flowers.\nOh, those just get me psychotic!\nYeah, me too.\nBent stingers, pointless pollination.\nBees must hate those fake things!\nNothing worse than a daffodil that's had work done.\nMaybe this could make up for it a little bit.\nThis lawsuit's a pretty big deal.\nI guess.\nYou sure you want to go through with it?\nAm I sure? When I'm done with the humans, they won't be able to say, \"Honey, I'm home,\" without paying a royalty!\nIt's an incredible scene here in downtown Manhattan, where the world anxiously waits, because for the first time in history, we will hear for ourselves if a honeybee can actually speak.\nWhat have we gotten into here, Barry?\nIt's pretty big, isn't it?\nI can't believe how many humans don't work during the day.\nYou think billion-dollar multinational food companies have good lawyers?\nEverybody needs to stay behind the barricade.\nWhat's the matter?\nI don't know, I just got a chill.\nWell, if it isn't the bee team.\nYou boys work on this?\nAll rise! The Honorable Judge Bumbleton presiding.\nAll right. Case number 4475,\nSuperior Court of New York,\nBarry Bee Benson v. the Honey Industry is now in session.\nMr. Montgomery, you're representing the five food companies collectively?\nA privilege.\nMr. Benson... you're representing all the bees of the world?\nI'm kidding. Yes, Your Honor, we're ready to proceed.\nMr. Montgomery, your opening statement, please.\nLadies and gentlemen of the jury, my grandmother was a simple woman. Born on a farm, she believed it was man's divine right to benefit from the bounty of nature God put before us.\nIf we lived in the topsy-turvy world Mr. Benson imagines, just think of what would it mean.\nI would have to negotiate with the silkworm for the elastic in my britches!\nTalking bee!\nHow do we know this isn't some sort of holographic motion-picture-capture Hollywood wizardry?\nThey could be using laser beams! Robotics! Ventriloquism! Cloning! For all we know, he could be on steroids!\nMr. Benson?\nLadies and gentlemen, there's no trickery here. I'm just an ordinary bee. Honey's pretty important to me. It's important to all bees. We invented it! We make it. And we protect it with our lives.\nUnfortunately, there are some people in this room who think they can take it from us 'cause we're the little guys!\nI'm hoping that, after this is all over, you'll see how, by taking our honey, you not only take everything we have but everything we are!\nI wish he'd dress like that all the time. So nice!\nCall your first witness.\nSo, Mr. Klauss Vanderhayden of Honey Farms, big company you have.\nI suppose so.\nI see you also own Honeyburton and Honron!\nYes, they provide beekeepers for our farms.\nBeekeeper. I find that to be a very disturbing term.\nI don't imagine you employ any bee-free-ers, do you?\nNo.\nI couldn't hear you.\nNo.\nNo. Because you don't free bees. You keep bees. Not only that, it seems you thought a bear would be an appropriate image for a jar of honey.\nThey're very lovable creatures. Yogi Bear, Fozzie Bear, Build-A-Bear.\nYou mean like this?\nBears kill bees!\nHow'd you like his head crashing through your living room?! Biting into your couch! Spitting out your throw pillows! OK, that's enough. Take him away.\nSo, Mr. Sting, thank you for being here. Your name intrigues me. Where have I heard it before?\nI was with a band called The Police.\nBut you've never been a police officer, have you?\nNo, I haven't.\nNo, you haven't. And so here we have yet another example of bee culture casually stolen by a human for nothing more than a prance-about stage name.\nOh, please.\nHave you ever been stung, Mr. Sting? Because I'm feeling a little stung, Sting. Or should I say... Mr. Gordon M. Sumner!\nThat's not his real name?! You idiots!\nMr. Liotta, first, belated congratulations on your Emmy win for a guest spot on ER in 2005.\nThank you. Thank you.\nI see from your resume that you're devilishly handsome with a churning inner turmoil that's ready to blow.\nI enjoy what I do. Is that a crime?\nNot yet it isn't. But is this what it's come to for you? Exploiting tiny, helpless bees so you don't have to rehearse your part and learn your lines, sir?\nWatch it, Benson! I could blow right now!\nThis isn't a goodfella.\nThis is a badfella!\nWhy doesn't someone just step on this creep, and we can all go home?!\nOrder in this court!\nYou're all thinking it!\nOrder! Order, I say!\nSay it!\nMr. Liotta, please sit down!\nI think it was awfully nice of that bear to pitch in like that. I think the jury's on our side.\nAre we doing everything right, legally?\nI'm a florist.\nRight. Well, here's to a great team.\nTo a great team!\nWell, hello.\nKen!\nHello.\nI didn't think you were coming.\nNo, I was just late I tried to call, but... the battery.\nI didn't want all this to go to waste,\nso I called Barry. Luckily, he was free.\nOh, that was lucky.\nThere's a little left. I could heat it up.\nYeah, heat it up, sure, whatever.\nSo I hear you're quite a tennis player. I'm not much for the game myself. The ball's a little grabby.\nThat's where I usually sit. Right... there.\nKen, Barry was looking at your resume, and he agreed with me that eating with chopsticks isn't really a special skill.\nYou think I don't see what you're doing?\nI know how hard it is to find the right job. We have that in common.\nDo we?\nBees have 100 percent employment, but we do jobs like taking the crud out.\nThat's just what I was thinking about doing.\nKen, I let Barry borrow your razor for his fuzz. I hope that was all right.\nI'm going to drain the old stinger.\nYeah, you do that.\nLook at that.\nYou know, I've just about had it with your little Mind Games.\nWhat's that?\nItalian Vogue.\nMamma mia, that's a lot of pages.\nA lot of ads.\nRemember what Van said, why is your life more valuable than mine?\nFunny, I just can't seem to recall that! I think something stinks in here!\nI love the smell of flowers.\nHow do you like the smell of flames?!\nNot as much.\nWater bug! Not taking sides!\nKen, I'm wearing a Chapstick hat!\nThis is pathetic!\nI've got issues!\nWell, well, well, a royal flush!\nYou're bluffing.\nAm I?\nSurf's up, dude!\nPoo water!\nThat bowl is gnarly. Except for those dirty yellow rings!\nKenneth! What are you doing?!\nYou know, I don't even like honey! I don't eat it!\nWe need to talk! He's just a little bee!\nAnd he happens to be the nicest bee I've met in a long time!\nLong time? What are you talking about?! Are there other bugs in your life?\nNo, but there are other things bugging me in life. And you're one of them!\nFine! Talking bees, no yogurt night...\nMy nerves are fried from riding on this emotional roller coaster!\nGoodbye, Ken.\nAnd for your information, I prefer sugar-free, artificial sweeteners made by man!\nI'm sorry about all that.\nI know it's got an aftertaste! I like it!\nI always felt there was some kind of barrier between Ken and me. I couldn't overcome it.\nOh, well.\nAre you OK for the trial?\nI believe Mr. Montgomery is about out of ideas.\nWe would like to call Mr. Barry Benson Bee to the stand.\nGood idea! You can really see why he's considered one of the best lawyers...\nYeah.\nLayton, you've gotta weave some magic with this jury, or it's gonna be all over.\nDon't worry. The only thing I have to do to turn this jury around is to remind them of what they don't like about bees.\nYou got the tweezers?\nAre you allergic?\nOnly to losing, son. Only to losing.\nMr. Benson Bee, I'll ask you what I think we'd all like to know.\nWhat exactly is your relationship to that woman?\nWe're friends.\nGood friends?\nYes.\nHow good? Do you live together?\nWait a minute... Are you her little... bedbug?\nI've seen a bee documentary or two. From what I understand, doesn't your queen give birth to all the bee children?\nYeah, but...\nSo those aren't your real parents!\nOh, Barry...\nYes, they are!\nHold me back!\nYou're an illegitimate bee, aren't you, Benson?\nHe's denouncing bees!\nDon't y'all date your cousins?\nObjection!\nI'm going to pincushion this guy!\nAdam, don't! It's what he wants!\nOh, I'm hit!! Oh, lordy, I am hit!\nOrder! Order!\nThe venom! The venom is coursing through my veins! I have been felled by a winged beast of destruction! You see? You can't treat them like equals! They're striped savages! Stinging's the only thing they know! It's their way!\nAdam, stay with me.\nI can't feel my legs.\nWhat Angel of Mercy will come forward to suck the poison from my heaving buttocks?\nI will have order in this court. Order! Order, please!\nThe case of the honeybees versus the human race took a pointed Turn Against the bees yesterday when one of their legal team stung Layton T. Montgomery.\nHey, buddy.\nHey.\nIs there much pain?\nYeah.\nI... I blew the whole case, didn't I?\nIt doesn't matter. What matters is\nyou're alive. You could have died.\nI'd be better off dead. Look at me.\nThey got it from the cafeteria downstairs, in a tuna sandwich. Look, there's a little celery still on it.\nWhat was it like to sting someone?\nI can't explain it. It was all... All adrenaline and then...and then ecstasy!\nAll right.\nYou think it was all a trap?\nOf course. I'm sorry. I flew us right into this.\nWhat were we thinking? Look at us. We're just a couple of bugs in this world.\nWhat will the humans do to us if they win?\nI don't know.\nI hear they put the roaches in motels. That doesn't sound so bad.\nAdam, they check in, but they don't check out!\nOh, my.\nCould you get a nurse to close that window?\nWhy?\nThe smoke.\nBees don't smoke.\nRight. Bees don't smoke.\nBees don't smoke!\nBut some bees are smoking.\nThat's it! That's our case!\nIt is? It's not over?\nGet dressed. I've gotta go somewhere.\nGet back to the court and stall. Stall any way you can.\nAnd assuming you've done step correctly, you're ready for the tub.\nMr. Flayman.\nYes? Yes, Your Honor!\nWhere is the rest of your team?\nWell, Your Honor, it's interesting. Bees are trained to fly haphazardly, and as a result, we don't make very good time.\nI actually heard a funny story about...\nYour Honor, haven't these ridiculous bugs taken up enough of this court's valuable time? How much longer will we allow these absurd shenanigans to go on?\nThey have presented no compelling evidence to support their charges against my clients, who run legitimate businesses.\nI move for a complete dismissal of this entire case!\nMr. Flayman, I'm afraid I'm going to have to consider Mr. Montgomery's motion.\nBut you can't! We have a terrific case.\nWhere is your proof?\nWhere is the evidence?\nShow me the smoking gun!\nHold it, Your Honor!\nYou want a smoking gun? Here is your smoking gun.\nWhat is that?\nIt's a bee smoker!\nWhat, this? This harmless little contraption? This couldn't hurt a fly, let alone a bee.\nLook at what has happened to bees who have never been asked, \"Smoking or non?\" Is this what nature intended for us? To be forcibly addicted to smoke machines and man-made wooden slat work camps?\nLiving out our lives as honey slaves to the white man?\nWhat are we gonna do?\nHe's playing the species card.\nLadies and gentlemen, please, free these bees!\nFree the bees! Free the bees! Free the bees! Free the bees! Free the bees!\nThe court finds in favor of the bees!\nVanessa, we won!\nI knew you could do it! High-five!\nSorry.\nI'm OK! You know what this means?\nAll the honey will finally belong to the bees.\nNow we won't have to work so hard all the time.\nThis is an unholy perversion of the balance of nature, Benson.\nYou'll regret this.\nBarry, how much honey is out there?\nAll right. One at a time.\nBarry, who are you wearing?\nMy sweater is Ralph Lauren, and I have no pants.\nWhat if Montgomery's right?\nWhat do you mean?\nWe've been living the bee way a long time, 27 million years.\nCongratulations on your victory. What will you demand as a settlement?\nFirst, we'll demand a complete shutdown of all bee work camps.\nThen we want back the honey that was ours to begin with, every last drop.\nWe demand an end to the glorification of the bear as anything more than a filthy, smelly, bad-breath stink machine.\nWe're all aware of what they do in the woods.\nWait for my signal. Take him out.\nHe'll have nauseous for a few hours, then he'll be fine.\nAnd we will no longer tolerate bee-negative nicknames...\nBut it's just a prance-about stage name!\n...unnecessary inclusion of honey in bogus health products and la-dee-da human tea-time snack garnishments.\nCan't breathe.\nBring it in, boys!\nHold it right there! Good.\nTap it.\nMr. Buzzwell, we just passed three cups and there's gallons more coming!\nI think we need to shut down!\nShut down? We've never shut down.\nShut down honey production!\nStop making honey!\nTurn your key, sir!\nWhat do we do now?\nCannonball!\nWe're shutting honey production!\nMission abort.\nAborting pollination and nectar detail.\nReturning to base.\nAdam, you wouldn't believe how much honey was out there.\nOh, yeah?\nWhat's going on? Where is everybody?\nAre they out celebrating?\nThey're home.\nThey don't know what to do. Laying out, sleeping in.\nI heard your Uncle Carl was on his way to San Antonio with a cricket.\nAt least we got our honey back.\nSometimes I think, so what if humans liked our honey? Who wouldn't?\nIt's the greatest thing in the world! I was excited to be part of making it.\nThis was my new desk. This was my new job. I wanted to do it really well. And now...\nNow I can't.\nI don't understand why they're not happy.\nI thought their lives would be better!\nThey're doing nothing. It's amazing.\nHoney really changes people.\nYou don't have any idea what's going on, do you?\nWhat did you want to show me?\nThis.\nWhat happened here?\nThat is not the half of it.\nOh, no. Oh, my.\nThey're all wilting.\nDoesn't look very good, does it?\nNo.\nAnd whose fault do you think that is?\nYou know, I'm gonna guess bees.\nBees?\nSpecifically, me.\nI didn't think bees not needing to make honey would affect all these things.\nIt's not just flowers. Fruits, vegetables, they all need bees.\nThat's our whole SAT test right there.\nTake away produce, that affects the entire animal kingdom.\nAnd then, of course...\nThe human species?\nSo if there's no more pollination, it could all just go south here, couldn't it?\nI know this is also partly my fault.\nHow about a suicide pact?\nHow do we do it?\nI'll sting you, you step on me.\nThat just kills you twice.\nRight, right.\nListen, Barry... sorry, but I gotta get going.\nI had to open my mouth and talk.\nVanessa?\nVanessa? Why are you leaving?\nWhere are you going?\nTo the final Tournament of Roses parade in Pasadena.\nThey've moved it to this weekend because all the flowers are dying.\nIt's the Last Chance I'll ever have to see it.\nVanessa, I just wanna say I'm sorry.\nI never meant it to turn out like this.\nI know. Me neither.\nTournament of Roses.\nRoses can't do sports.\nWait a minute. Roses. Roses?\nRoses!\nVanessa!\nRoses?!\nBarry?\nRoses are flowers!\nYes, they are.\nFlowers, bees, pollen!\nI know.\nThat's why this is the last parade.\nMaybe not.\nCould you ask him to slow down?\nCould you slow down?\nBarry!\nOK, I made a huge mistake.\nThis is a total disaster, all my fault.\nYes, it kind of is.\nI've ruined the planet. I wanted to help you with the flower shop. I've made it worse.\nActually, it's completely closed down.\nI thought maybe you were remodeling.\nBut I have another idea, and it's greater than my previous ideas combined.\nI don't want to hear it!\nAll right, they have the roses, the roses have the pollen.\nI know every bee, plant and flower bud in this park.\nAll we gotta do is get what they've got back here with what we've got.\nBees.\nPark.\nPollen!\nFlowers.\nRepollination!\nAcross the nation!\nTournament of Roses, Pasadena, California.\nThey've got nothing but flowers, floats and cotton candy.\nSecurity will be tight.\nI have an idea.\nVanessa Bloome, FTD.\nOfficial floral business. It's real.\nSorry, ma'am. Nice brooch.\nThank you. It was a gift.\nOnce inside, we just pick the right float.\nHow about The Princess and the Pea?\nI could be the princess, and you could be the pea!\nYes, I got it.\nWhere should I sit?\nWhat are you?\nI believe I'm the pea.\nThe pea?\nIt goes under the mattresses.\nNot in this fairy tale, sweetheart.\nI'm getting the marshal.\nYou do that! This whole parade is a fiasco!\nLet's see what this baby'll do.\nHey, what are you doing?!\nThen all we do is blend in with traffic... without arousing suspicion.\nOnce at the airport, there's no stopping us.\nStop! Security.\nYou and your insect pack your float?\nYes.\nHas it been in your possession the entire time?\nWould you remove your shoes?\nRemove your stinger.\nIt's part of me.\nI know. Just having some fun.\nEnjoy your flight.\nThen if we're lucky, we'll have just enough pollen to do the job.\nCan you believe how lucky we are? We have just enough pollen to do the job!\nI think this is gonna work.\nIt's got to work.\nAttention, passengers, this is Captain Scott. We have a bit of bad weather in New York. It looks like we'll experience a couple hours delay.\nBarry, these are cut flowers with no water. They'll never make it.\nI gotta get up there and talk to them.\nBe careful.\nCan I get help with the Sky Mall magazine? I'd like to order the talking inflatable nose and ear hair trimmer.\nCaptain, I'm in a real situation.\nWhat'd you say, Hal?\nNothing.\nBee!\nDon't freak out! My entire species...\nWhat are you doing?\nWait a minute! I'm an attorney!\nWho's an attorney?\nDon't move.\nOh, Barry.\nGood afternoon, passengers. This is your captain. Would a Miss Vanessa Bloome in 24B please report to the cockpit? And please hurry!\nWhat happened here?\nThere was a DustBuster, a toupee, a life raft exploded.\nOne's bald, one's in a boat, they're both unconscious!\nIs that another bee joke?\nNo!\nNo one's flying the plane!\nThis is JFK control tower, Flight 356. What's your status?\nThis is Vanessa Bloome. I'm a florist from New York.\nWhere's the pilot?\nHe's unconscious, and so is the copilot.\nNot good. Does anyone onboard have flight experience?\nAs a matter of fact, there is.\nWho's that?\nBarry Benson.\nFrom the honey trial?! Oh, great.\nVanessa, this is nothing more than a big metal bee.\nIt's got giant wings, huge engines.\nI can't fly a plane.\nWhy not? Isn't John Travolta a pilot?\nYes.\nHow hard could it be?\nWait, Barry!\nWe're headed into some lightning.\nThis is Bob Bumble. We have some late-breaking news from JFK Airport, where a suspenseful scene is developing.\nBarry Benson, fresh from his legal victory...\nThat's Barry!\n...is attempting to land a plane, loaded with people, flowers and an incapacitated flight crew.\nFlowers?!\nWe have a storm in the area and two individuals at the controls with absolutely no flight experience.\nJust a minute. There's a bee on that plane.\nI'm quite familiar with Mr. Benson and his no-account compadres.\nThey've done enough damage.\nBut isn't he your only hope?\nTechnically, a bee shouldn't be able to fly at all.\nTheir wings are too small... Haven't we heard this a million times?\n\"The surface area of the wings and body mass make no sense.\"\nGet this on the air!\nGot it.\nStand by.\nWe're going live.\nThe way we work may be a mystery to you. Making honey takes a lot of bees doing a lot of small jobs.\nBut let me tell you about a small job. If you do it well, it makes a big difference.\nMore than we realized. To us, to everyone.\nThat's why I want to get bees back to working together. That's the bee way! We're not made of Jell-O.\nWe get behind a fellow.\nBlack and yellow!\nHello!\nLeft, right, down, hover.\nHover?\nForget hover.\nThis isn't so hard.\nBeep-beep! Beep-beep!\nBarry, what happened?!\nWait, I think we were on autopilot the whole time.\nThat may have been helping me.\nAnd now we're not!\nSo it turns out I cannot fly a plane.\nAll of you, let's get behind this fellow! Move it out!\nMove out!\nOur only chance is if I do what I'd do, you copy me with the wings of the plane!\nDon't have to yell.\nI'm not yelling! We're in a lot of trouble.\nIt's very hard to concentrate with that panicky tone in your voice!\nIt's not a tone. I'm panicking!\nI can't do this!\nVanessa, pull yourself together. You have to snap out of it!\nYou snap out of it.\nYou snap out of it.\nYou snap out of it!\nYou snap out of it!\nYou snap out of it!\nYou snap out of it!\nYou snap out of it!\nYou snap out of it!\nHold it!\nWhy? Come on, it's my turn.\nHow is the plane flying?\nI don't know.\nHello?\nBenson, got any flowers for a happy occasion in there?\nThe Pollen Jocks!\nThey do get behind a fellow.\nBlack and yellow.\nHello.\nAll right, let's drop this tin can on the blacktop.\nWhere? I can't see anything. Can you?\nNo, nothing. It's all cloudy.\nCome on. You got to think bee, Barry.\nThinking bee.\nThinking bee.\nThinking bee!\nThinking bee! Thinking bee!\nWait a minute. I think I'm feeling something.\nWhat?\nI don't know. It's strong, pulling me.\nLike a 27-million-year-old instinct.\nBring the nose down.\nThinking bee!\nThinking bee! Thinking bee!\nWhat in the world is on the tarmac?\nGet some lights on that!\nThinking bee!\nThinking bee! Thinking bee!\nVanessa, aim for the flower.\nOK.\nCut the engines. We're going in on bee power. Ready, boys?\nAffirmative!\nGood. Good. Easy, now. That's it.\nLand on that flower!\nReady? Full reverse!\nSpin it around!\nNot that flower! The other one!\nWhich one?\nThat flower.\nI'm aiming at the flower!\nThat's a fat guy in a flowered shirt.\nI mean the giant pulsating flower made of millions of bees!\nPull forward. Nose down. Tail up.\nRotate around it.\nThis is insane, Barry!\nThis's the only way I know how to fly.\nAm I koo-koo-kachoo, or is this plane flying in an insect-like pattern?\nGet your nose in there. Don't be afraid. Smell it. Full reverse!\nJust drop it. Be a part of it.\nAim for the center!\nNow drop it in! Drop it in, woman!\nCome on, already.\nBarry, we did it! You taught me how to fly!\nYes. No high-five!\nRight.\nBarry, it worked!\nDid you see the giant flower?\nWhat giant flower? Where? Of course\nI saw the flower! That was genius!\nThank you.\nBut we're not done yet.\nListen, everyone!\nThis runway is covered with the last pollen from the last flowers available anywhere on Earth.\nThat means this is our Last Chance. We're the only ones who make honey, pollinate flowers and dress like this.\nIf we're gonna survive as a species, this is our moment! What do you say?\nAre we going to be bees, or just Museum of Natural History keychains?\nWe're bees!\nKeychain!\nThen follow me! Except Keychain.\nHold on, Barry. Here. You've earned this.\nYeah!\nI'm a Pollen Jock! And it's a perfect fit. All I gotta do are the sleeves.\nOh, yeah.\nThat's our Barry.\nMom! The bees are back!\nIf anybody needs to make a call, now's the time. I got a feeling we'll be working late tonight!\nHere's your change. Have a great afternoon! Can I help who's next?\nWould you like some honey with that?\nIt is bee-approved. Don't forget these.\nMilk, cream, cheese, it's all me.  And I don't see a nickel!\nSometimes I just feel like a piece of meat!\nI had no idea.\nBarry, I'm sorry.\nHave you got a moment?\nWould you excuse me?\nMy mosquito associate will help you.\nSorry I'm late.\nHe's a lawyer too?\nI was already a blood-sucking parasite. All I needed was a briefcase.\nHave a great afternoon!\nBarry, I just got this huge tulip order, and I can't get them anywhere.\nNo problem, Vannie. Just leave it to me.\nYou're a lifesaver, Barry. Can I help who's next?\nAll right, scramble, jocks! It's time to fly.\nThank you, Barry!\nThat bee is living my life!\nLet it go, Kenny.\nWhen will this nightmare end?!\nLet it all go.\nBeautiful day to fly.\nSure is.\nBetween you and me,\nI was dying to get out of that office.\nYou have got to start thinking bee, my friend.\nThinking bee!\nMe?\nHold it. Let's just stop for a second. Hold it.\nI'm sorry. I'm sorry, everyone. Can we stop here?\nI'm not making a major life decision during a production number!\nAll right. Take ten, everybody. Wrap it up, guys.\nI had virtually no rehearsal for that.\u003C/p>\n",raw:"---\nhideHome: true\n---\nAccording to all known laws of aviation, there is no way a bee should be able to fly.\nIts wings are too small to get its fat little body off the ground.\nThe bee, of course, flies anyway because bees don't care what humans think is impossible.\nYellow, black. Yellow, black. Yellow, black. Yellow, black.\nOoh, black and yellow!\nLet's shake it up a little.\nBarry! Breakfast is ready!\nComing!\nHang on a second.\nHello?\nBarry?\nAdam?\nCan you believe this is happening?\nI can't.\nI'll pick you up.\nLooking sharp.\nUse the stairs, Your father paid good money for those.\nSorry. I'm excited.\nHere's the graduate.\nWe're very proud of you, son.\nA perfect report card, all B's.\nVery proud.\nMa! I got a thing going here.\nYou got lint on your fuzz.\nOw! That's me!\nWave to us! We'll be in row 118,000.\nBye!\nBarry, I told you, stop flying in the house!\nHey, Adam.\nHey, Barry.\nIs that fuzz gel?\nA little. Special day, graduation.\nNever thought I'd make it.\nThree days grade school, three days high school.\nThose were awkward.\nThree days college. I'm glad I took a day and hitchhiked around The Hive.\nYou did come back different.\nHi, Barry. Artie, growing a mustache? Looks good.\nHear about Frankie?\nYeah.\nYou going to the funeral?\nNo, I'm not going.\nEverybody knows, sting someone, you die.\nDon't waste it on a squirrel.\nSuch a hothead.\nI guess he could have just gotten out of the way.\nI love this incorporating an amusement park into our day.\nThat's why we don't need vacations.\nBoy, quite a bit of pomp under the circumstances.\nWell, Adam, today we are men.\nWe are!\nBee-men.\nAmen!\nHallelujah!\nStudents, faculty, distinguished bees,\nplease welcome Dean Buzzwell.\nWelcome, New Hive City graduating class of 9:15.\nThat concludes our ceremonies And begins your career at Honex Industries!\nWill we pick our job today?\nI heard it's just orientation.\nHeads up! Here we go.\nKeep your hands and antennas inside the tram at all times.\nWonder what it'll be like?\nA little scary.\nWelcome to Honex, a division of Honesco and a part of the Hexagon Group.\nThis is it!\nWow.\nWow.\nWe know that you, as a bee, have worked your whole life to get to the point where you can work for your whole life.\nHoney begins when our valiant Pollen Jocks bring the nectar to The Hive.\nOur top-secret formula is automatically color-corrected, scent-adjusted and bubble-contoured into this soothing sweet syrup with its distinctive golden glow you know as... Honey!\nThat girl was hot.\nShe's my cousin!\nShe is?\nYes, we're all cousins.\nRight. You're right.\nAt Honex, we constantly strive to improve every aspect of bee existence.\nThese bees are stress-testing a new helmet technology.\nWhat do you think he makes?\nNot enough.\nHere we have our latest advancement, the Krelman.\nWhat does that do?\nCatches that little strand of honey that hangs after you pour it.\nSaves us millions.\nCan anyone work on the Krelman?\nOf course. Most bee jobs are small ones.\nBut bees know that every small job, if it's done well, means a lot.\nBut choose carefully because you'll stay in the job you pick for the rest of your life.\nThe same job the rest of your life? I didn't know that.\nWhat's the difference?\nYou'll be happy to know that bees, as a species, haven't had one day off in 27 million years.\nSo you'll just work us to death?\nWe'll sure try.\nWow! That blew my mind!\n\"What's the difference?\"\nHow can you say that?\nOne job forever?\nThat's an insane choice to have to make.\nI'm relieved. Now we only have to make one decision in life.\nBut, Adam, how could they never have told us that?\nWhy would you question anything? We're bees.\nWe're the most perfectly functioning society on Earth.\nYou ever think maybe things work a little too well here?\nLike what? Give me one example.\nI don't know. But you know what I'm talking about.\nPlease clear the gate. Royal Nectar Force on approach.\nWait a second. Check it out.\nHey, those are Pollen Jocks!\nWow.\nI've never seen them this close.\nThey know what it's like outside The Hive.\nYeah, but some don't come back.\nHey, Jocks!\nHi, Jocks!\nYou guys did great!\nYou're monsters!\nYou're sky freaks! I love it! I love it!\nI wonder where they were.\nI don't know.\nTheir day's not planned.\nOutside The Hive, flying who knows where, doing who knows what.\nYou can't just decide to be a Pollen Jock. You have to be bred for that.\nRight.\nLook. That's more pollen than you and I will see in a lifetime.\nIt's just a status symbol.\nBees make too much of it.\nPerhaps. Unless you're wearing it and the ladies see you wearing it.\nThose ladies?\nAren't they our cousins too?\nDistant. Distant.\nLook at these two.\nCouple of Hive Harrys.\nLet's have fun with them.\nIt must be dangerous being a Pollen Jock.\nYeah. Once a bear pinned me against a mushroom!\nHe had a paw on my throat, and with the other, he was slapping me!\nOh, my!\nI never thought I'd knock him out.\nWhat were you doing during this?\nTrying to alert the authorities.\nI can autograph that.\nA little gusty out there today, wasn't it, comrades?\nYeah. Gusty.\nWe're hitting a sunflower patch six miles from here tomorrow.\nSix miles, huh?\nBarry!\nA puddle jump for us, but maybe you're not up for it.\nMaybe I am.\nYou are not!\nWe're going 0900 at J-Gate.\nWhat do you think, buzzy-boy?\nAre you bee enough?\nI might be. It all depends on what 0900 means.\nHey, Honex!\nDad, you surprised me.\nYou decide what you're interested in?\nWell, there's a lot of choices.\nBut you only get one.\nDo you ever get bored doing the same job every day?\nSon, let me tell you about stirring.\nYou grab that stick, and you just move it around, and you stir it around.\nYou get yourself into a rhythm.\nIt's a beautiful thing.\nYou know, Dad, the more I think about it,\nmaybe the honey field just isn't right for me.\nYou were thinking of what, making balloon animals?\nThat's a bad job for a guy with a stinger.\nJanet, your son's not sure he wants to go into honey!\nBarry, you are so funny sometimes.\nI'm not trying to be funny.\nYou're not funny! You're going into honey. Our son, the stirrer!\nYou're gonna be a stirrer?\nNo one's listening to me!\nWait till you see the sticks I have.\nI could say anything right now.\nI'm gonna get an ant tattoo!\nLet's open some honey and celebrate!\nMaybe I'll pierce my thorax. Shave my antennae. Shack up with a grasshopper. Get a gold tooth and call everybody \"dawg\"!\nI'm so proud.\nWe're starting work today!\nToday's the day.\nCome on! All the good jobs will be gone.\nYeah, right.\nPollen counting, stunt bee, pouring, stirrer, front desk, hair removal...\nIs it still available?\nHang on. Two left!\nOne of them's yours! Congratulations!\nStep to the side.\nWhat'd you get?\nPicking crud out. Stellar!\nWow!\nCouple of newbies?\nYes, sir! Our first day! We are ready!\nMake your choice.\nYou want to go first?\nNo, you go.\nOh, my. What's available?\nRestroom attendant's open, not for the reason you think.\nAny chance of getting the Krelman?\nSure, you're on.\nI'm sorry, the Krelman just closed out.\nWax monkey's always open.\nThe Krelman opened up again.\nWhat happened?\nA bee died. Makes an opening. See? He's dead. Another dead one.\nDeady. Deadified. Two more dead.\nDead from the neck up. Dead from the neck down. That's life!\nOh, this is so hard!\nHeating, cooling, stunt bee, pourer, stirrer, humming, inspector number seven, lint coordinator, stripe supervisor, mite wrangler.\nBarry, what do you think I should... Barry?\nBarry!\nAll right, we've got the sunflower patch in quadrant nine...\nWhat happened to you?\nWhere are you?\nI'm going out.\nOut? Out where?\nOut there.\nOh, no!\nI have to, before I go to work for the rest of my life.\nYou're gonna die! You're crazy! Hello?\nAnother call coming in.\nIf anyone's feeling brave, there's a Korean deli on 83rd that gets their roses today.\nHey, guys.\nLook at that.\nIsn't that the kid we saw yesterday?\nHold it, son, flight deck's restricted.\nIt's OK, Lou. We're gonna take him up.\nReally? Feeling lucky, are you?\nSign here, here. Just initial that.\nThank you.\nOK.\nYou got a rain advisory today, and as you all know, bees cannot fly in rain.\nSo be careful. As always, watch your brooms, hockey sticks, dogs, birds, bears and bats.\nAlso, I got a couple of reports of root beer being poured on us.\nMurphy's in a home because of it, babbling like a cicada!\nThat's awful.\nAnd a reminder for you rookies, bee law number one, absolutely no talking to humans!\n All right, launch positions!\nBuzz, buzz, buzz, buzz! Buzz, buzz, buzz, buzz! Buzz, buzz, buzz, buzz!\nBlack and yellow!\nHello!\nYou ready for this, hot shot?\nYeah. Yeah, bring it on.\nWind, check.\nAntennae, check.\nNectar pack, check.\nWings, check.\nStinger, check.\nScared out of my shorts, check.\nOK, ladies,\nlet's move it out!\nPound those petunias, you striped stem-suckers!\nAll of you, drain those flowers!\nWow! I'm out!\nI can't believe I'm out!\nSo blue.\nI feel so fast and free!\nBox kite!\nWow!\nFlowers!\nThis is Blue Leader, We have roses visual.\nBring it around 30 degrees and hold.\nRoses!\n30 degrees, roger. Bringing it around.\nStand to the side, kid.\nIt's got a bit of a kick.\nThat is one nectar collector!\nEver see pollination up close?\nNo, sir.\nI pick up some pollen here, sprinkle it over here. Maybe a dash over there, a pinch on that one.\nSee that? It's a little bit of magic.\nThat's amazing. Why do we do that?\nThat's pollen power. More pollen, more flowers, more nectar, more honey for us.\nCool.\nI'm picking up a lot of bright yellow, Could be daisies, Don't we need those?\nCopy that visual.\nWait. One of these flowers seems to be on the move.\nSay again? You're reporting a moving flower?\nAffirmative.\nThat was on the line!\nThis is the coolest. What is it?\nI don't know, but I'm loving this color.\nIt smells good.\nNot like a flower, but I like it.\nYeah, fuzzy.\nChemical-y.\nCareful, guys. It's a little grabby.\nMy sweet lord of bees!\nCandy-brain, get off there!\nProblem!\nGuys!\nThis could be bad.\nAffirmative.\nVery close.\nGonna hurt.\nMama's little boy.\nYou are way out of position, rookie!\nComing in at you like a missile!\nHelp me!\nI don't think these are flowers.\nShould we tell him?\nI think he knows.\nWhat is this?!\nMatch point!\nYou can start packing up, honey, because you're about to eat it!\nYowser!\nGross.\nThere's a bee in the car!\nDo something!\nI'm driving!\nHi, bee.\nHe's back here!\nHe's going to sting me!\nNobody move. If you don't move, he won't sting you. Freeze!\nHe blinked!\nSpray him, Granny!\nWhat are you doing?!\nWow... the tension level out here is unbelievable.\nI gotta get home.\nCan't fly in rain. Can't fly in rain. Can't fly in rain.\nMayday! Mayday! Bee going down!\nKen, could you close the window please?\nKen, could you close the window please?\nCheck out my new resume. I made it into a fold-out brochure. You see? Folds out.\nOh, no. More humans. I don't need this.\nWhat was that?\nMaybe this time. This time. This time. This time! This time! This... Drapes!\nThat is diabolical.\nIt's fantastic. It's got all my special skills, even my top-ten favorite movies.\nWhat's number one? Star Wars?\nNah, I don't go for that... kind of stuff.\nNo wonder we shouldn't talk to them. They're out of their minds.\nWhen I leave a job interview, they're flabbergasted, can't believe what I say.\nThere's the sun. Maybe that's a way out.\nI don't remember the sun having a big 75 on it.\nI predicted global warming. I could feel it getting hotter. At first I thought it was just me.\nWait! Stop! Bee!\nStand back. These are winter boots.\nWait!\nDon't kill him!\nYou know I'm allergic to them! This thing could kill me!\nWhy does his life have less value than yours?\nWhy does his life have any less value than mine? Is that your statement?\nI'm just saying all life has value. You don't know what he's capable of feeling.\nMy brochure!\nThere you go, little guy.\nI'm not scared of him.It's an allergic thing.\n Put that on your resume brochure.\nMy whole face could puff up.\nMake it one of your special skills.\nKnocking someone out is also a special skill.\nRight. Bye, Vanessa. Thanks.\nVanessa, next week? Yogurt night?\nSure, Ken. You know, whatever.\nYou could put carob chips on there.\nBye.\nSupposed to be less calories.\nBye.\nI gotta say something. She saved my life. I gotta say something.\nAll right, here it goes.\nNah.\nWhat would I say?\nI could really get in trouble. It's a bee law. You're not supposed to talk to a human.\nI can't believe I'm doing this. I've got to.\nOh, I can't do it. Come on!\nNo. Yes. No. Do it. I can't.\nHow should I start it? \"You like jazz?\" No, that's no good.\nHere she comes! Speak, you fool!\nHi!\nI'm sorry. You're talking.\nYes, I know.\nYou're talking!\nI'm so sorry.\nNo, it's OK. It's fine.\nI know I'm dreaming. But I don't recall going to bed.\nWell, I'm sure this is very disconcerting.\nThis is a bit of a surprise to me. I mean, you're a bee!\nI am. And I'm not supposed to be doing this, but they were all trying to kill me.\nAnd if it wasn't for you... I had to thank you. It's just how I was raised.\nThat was a little weird. I'm talking with a bee.\nYeah.\nI'm talking to a bee. And the bee is talking to me!\nI just want to say I'm grateful.\nI'll leave now.\nWait! How did you learn to do that?\nWhat?\nThe talking thing.\nSame way you did, I guess. \"Mama, Dada, honey.\" You pick it up.\nThat's very funny.\nYeah.\nBees are funny. If we didn't laugh, we'd cry with what we have to deal with.\nAnyway... Can I... get you something?\nLike what?\nI don't know. I mean... I don't know. Coffee?\nI don't want to put you out.\nIt's no trouble. It takes two minutes.\nIt's just coffee.\nI hate to impose.\nDon't be ridiculous!\nActually, I would love a cup.\nHey, you want rum cake?\nI shouldn't.\nHave some.\nNo, I can't.\nCome on!\nI'm trying to lose a couple micrograms.\nWhere?\nThese stripes don't help.\nYou look great!\nI don't know if you know anything about fashion.\nAre you all right?\nNo.\nHe's making the tie in the cab as they're flying up Madison.\nHe finally gets there.\nHe runs up the steps into the church.\nThe wedding is on.\nAnd he says, \"Watermelon?\nI thought you said Guatemalan.\nWhy would I marry a watermelon?\"\nIs that a bee joke?\nThat's the kind of stuff we do.\nYeah, different.\nSo, what are you gonna do, Barry?\nAbout work? I don't know.\nI want to do my part for The Hive, but I can't do it the way they want.\nI know how you feel.\nYou do?\nSure.\nMy parents wanted me to be a lawyer or a doctor, but I wanted to be a florist.\nReally?\nMy only interest is flowers.\nOur new queen was just elected with that same campaign slogan.\nAnyway, if you look... There's my hive right there. See it?\nYou're in Sheep Meadow!\nYes! I'm right off the Turtle Pond!\nNo way! I know that area. I lost a toe ring there once.\nWhy do girls put rings on their toes?\nWhy not?\nIt's like putting a hat on your knee.\nMaybe I'll try that.\nYou all right, ma'am?\nOh, yeah. Fine.\nJust having two cups of coffee!\nAnyway, this has been great.\nThanks for the coffee.\nYeah, it's no trouble.\nSorry I couldn't finish it. If I did, I'd be up the rest of my life.\nAre you...?\nCan I take a piece of this with me?\nSure! Here, have a crumb.\nThanks!\nYeah.\nAll right. Well, then... I guess I'll see you around. Or not.\nOK, Barry.\nAnd thank you so much again... for before.\nOh, that? That was nothing.\nWell, not nothing, but... Anyway...\nThis can't possibly work.\nHe's all set to go.\nWe may as well try it.\nOK, Dave, pull the chute.\nSounds amazing.\nIt was amazing!\nIt was the scariest, happiest moment of my life.\nHumans! I can't believe you were with humans!\nGiant, scary humans!\nWhat were they like?\nHuge and crazy. They talk crazy.\nThey eat crazy giant things.\nThey drive crazy.\nDo they try and kill you, like on TV?\nSome of them. But some of them don't.\nHow'd you get back?\nPoodle.\nYou did it, and I'm glad. You saw whatever you wanted to see.\nYou had your \"experience.\" Now you can pick out yourjob and be normal.\nWell...\nWell?\nWell, I met someone.\nYou did? Was she Bee-ish?\nA wasp?! Your parents will kill you!\nNo, no, no, not a wasp.\nSpider?\nI'm not attracted to spiders.\nI know it's the hottest thing, with the eight legs and all. I can't get by that face.\nSo who is she?\nShe's... human.\nNo, no. That's a bee law. You wouldn't break a bee law.\nHer name's Vanessa.\nOh, boy.\nShe's so nice. And she's a florist!\nOh, no! You're dating a human florist!\nWe're not dating.\nYou're flying outside The Hive, talking to humans that attack our homes with power washers and M-80s! One-eighth a stick of dynamite!\nShe saved my life! And she understands me.\nThis is over!\nEat this.\nThis is not over! What was that?\nThey call it a crumb.\nIt was so stingin' stripey!\nAnd that's not what they eat.\nThat's what falls off what they eat!\nYou know what a Cinnabon is?\nNo.\nIt's bread and cinnamon and frosting. They heat it up...\nSit down!\n...really hot!\nListen to me!\nWe are not them! We're us.\nThere's us and there's them!\nYes, but who can deny the heart that is yearning?\nThere's no yearning. Stop yearning. Listen to me!\nYou have got to start thinking bee, my friend. Thinking bee!\nThinking bee.\nThinking bee.\nThinking bee! Thinking bee! Thinking bee! Thinking bee!\nThere he is. He's in the pool.\nYou know what your problem is, Barry?\nI gotta start thinking bee?\nHow much longer will this go on?\nIt's been three days! Why aren't you working?\nI've got a lot of big life decisions to think about.\nWhat life? You have no life!\nYou have no job. You're barely a bee!\nWould it kill you to make a little honey?\nBarry, come out. Your father's talking to you.\nMartin, would you talk to him?\nBarry, I'm talking to you!\nYou coming?\nGot everything?\nAll set!\nGo ahead. I'll catch up.\nDon't be too long.\nWatch this!\nVanessa!\nWe're still here.\nI told you not to yell at him.\nHe doesn't respond to yelling!\nThen why yell at me?\nBecause you don't listen!\nI'm not listening to this.\nSorry, I've gotta go.\nWhere are you going?\nI'm meeting a friend.\nA girl? Is this why you can't decide?\nBye.\nI just hope she's Bee-ish.\nThey have a huge parade of flowers every year in Pasadena?\nTo be in the Tournament of Roses, that's every florist's dream!\nUp on a float, surrounded by flowers, crowds cheering.\nA tournament. Do the roses compete in athletic events?\nNo. All right, I've got one.\nHow come you don't fly everywhere?\nIt's exhausting. Why don't you run everywhere? It's faster.\nYeah, OK, I see, I see.\nAll right, your turn.\nTiVo. You can just freeze live TV? That's insane!\nYou don't have that?\nWe have Hivo, but it's a disease. It's a horrible, horrible disease.\nOh, my.\nDumb bees!\nYou must want to sting all those jerks.\nWe try not to sting. It's usually fatal for us.\nSo you have to watch your temper.\nVery carefully.\nYou kick a wall, take a walk, write an angry letter and throw it out. Work through it like any emotion: Anger, jealousy, lust.\nOh, my goodness! Are you OK?\nYeah.\nWhat is wrong with you?!\nIt's a bug.\nHe's not bothering anybody.\nGet out of here, you creep!\nWhat was that? A Pic 'N' Save circular?\nYeah, it was. How did you know?\nIt felt like about 10 pages. Seventy-five is pretty much our limit.\nYou've really got that down to a science.\nI lost a cousin to Italian Vogue.\nI'll bet.\nWhat in the name of Mighty Hercules is this?\nHow did this get here? cute Bee, Golden Blossom, Ray Liotta Private Select?\nIs he that actor?\nI never heard of him.\nWhy is this here?\nFor people. We eat it.\nYou don't have enough food of your own?\nWell, yes.\nHow do you get it?\nBees make it.\nI know who makes it! And it's hard to make it!\nThere's heating, cooling, stirring. You need a whole Krelman thing!\nIt's organic.\nIt's our-ganic!\nIt's just honey, Barry.\nJust what?!\nBees don't know about this! This is stealing! A lot of stealing!\nYou've taken our homes, schools,hospitals! This is all we have!\nAnd it's on sale?! I'm getting to the bottom of this.\nI'm getting to the bottom of all of this!\nHey, Hector. You almost done?\nAlmost.\nHe is here. I sense it.\nWell, I guess I'll go home now and just leave this nice honey out, with no one around.\nYou're busted, box boy!\nI knew I heard something.\nSo you can talk!\nI can talk. And now you'll start talking!\nWhere you getting the sweet stuff? Who's your supplier?\nI don't understand.\nI thought we were friends.\nThe last thing we want to do is upset bees!\nYou're too late! It's ours now!\nYou, sir, have crossed the wrong sword!\nYou, sir, will be lunch for my iguana, Ignacio!\nWhere is the honey coming from? Tell me where!\nHoney Farms! It comes from Honey Farms!\nCrazy person!\nWhat horrible thing has happened here?\nThese faces, they never knew what hit them. And now\nthey're on the road to nowhere!\nJust keep still.\nWhat? You're not dead?\nDo I look dead? They will wipe anything that moves. Where you headed?\nTo Honey Farms. I am onto something huge here.\nI'm going to Alaska. Moose blood, crazy stuff. Blows your head off!\nI'm going to Tacoma.\nAnd you?\nHe really is dead.\nAll right.\nUh-oh!\nWhat is that?!\nOh, no!\nA wiper! Triple blade!\nTriple blade?\nJump on! It's your only chance, bee!\nWhy does everything have\nto be so doggone clean?!\nHow much do you people need to see?!\nOpen your eyes!\nStick your head out the window!\nFrom NPR News in Washington,\nI'm Carl Kasell.\nBut don't kill no more bugs!\nBee!\nMoose blood guy!!\nYou hear something?\nLike what?\nLike tiny screaming.\nTurn off the radio.\nWhassup, bee boy?\nHey, Blood.\nJust a row of honey jars, as far as the eye could see.\nWow!\nI assume wherever this truck goes is where they're getting it. I mean, that honey's ours.\nBees hang tight. We're all jammed in.\nIt's a close community.\nNot us, man. We on our own. Every mosquito on his own.\nWhat if you get in trouble?\nYou a mosquito, you in trouble. Nobody likes us. They just smack. See a mosquito, smack, smack!\nAt least you're out in the world. You must meet girls.\nMosquito girls try to trade up, get with a moth, dragonfly. Mosquito girl don't want no mosquito.\nYou got to be kidding me!\nMooseblood's about to leave the building! So long, bee!\nHey, guys!\nMooseblood!\nI knew I'd catch y'all down here.\nDid you bring your crazy straw?\nWe throw it in jars, slap a label on it, and it's pretty much pure profit.\nWhat is this place?\nA bee's got a brain the size of a pinhead.\nThey are pinheads!\nPinhead.\nCheck out the new smoker.\nOh, sweet. That's the one you want. The Thomas 3000!\nSmoker?\nNinety puffs a minute, semi-automatic. Twice the nicotine, all the tar. A couple breaths of this knocks them right out.\nThey make the honey, and we make the money.\n\"They make the honey, and we make the money\"?\nOh, my!\nWhat's going on? Are you OK?\nYeah. It doesn't last too long.\nDo you know you're in a fake hive with fake walls?\nOur queen was moved here. We had no choice.\nThis is your queen? That's a man in women's clothes! That's a drag queen!\nWhat is this?\nOh, no!\nThere's hundreds of them!\nBee honey.\nOur honey is being brazenly stolen on a massive scale!\nThis is worse than anything bears have done! I intend to do something.\nOh, Barry, stop.\nWho told you humans are taking our honey? That's a rumor.\nDo these look like rumors?\nThat's a conspiracy theory. These are obviously doctored photos. How did you get mixed up in this?\nHe's been talking to humans.\nWhat? Talking to humans?!\nHe has a human girlfriend. And they make out!\nMake out? Barry!\nWe do not.\nYou wish you could.\nWhose side are you on?\nThe bees!\nI dated a cricket once in San Antonio. Those crazy legs kept me up all night.\nBarry, this is what you want to do with your life?\nI want to do it for all our lives. Nobody works harder than bees!\nDad, I remember you coming home so overworked\nyour hands were still stirring. You couldn't stop.\nI remember that.\nWhat right do they have to our honey?\nWe live on two cups a year. They put it in lip balm for no reason whatsoever!\nEven if it's true, what can one bee do?\nSting them where it really hurts.\nIn the face! The eye!\nThat would hurt.\nNo.\nUp the nose? That's a killer.\nThere's only one place you can sting the humans, one place where it matters.\nHive at Five, The Hive's only full-hour action news source.\nNo more bee beards!\nWith Bob Bumble at the anchor desk. Weather with Storm Stinger. Sports with Buzz Larvi. And Jeanette Chung.\nGood evening. I'm Bob Bumble.\nAnd I'm Jeanette Ohung.\nA tri-county bee, Barry Benson, intends to sue the human race for stealing our honey, packaging it and profiting from it illegally!\nTomorrow night on Bee Larry King, we'll have three former queens here in our studio, discussing their new book, classy Ladies, out this week on Hexagon.\nTonight we're talking to Barry Benson.\nDid you ever think, \"I'm a kid from The Hive. I can't do this\"?\nBees have never been afraid to change the world.\nWhat about Bee Oolumbus? Bee Gandhi? Bejesus?\nWhere I'm from, we'd never sue humans.\nWe were thinking of stickball or candy stores.\nHow old are you?\nThe bee community is supporting you in this case, which will be the trial of the bee century.\nYou know, they have a Larry King in the human world too.\nIt's a common name. Next week...\nHe looks like you and has a show and suspenders and colored dots...\nNext week...\nGlasses, quotes on the bottom from the guest even though you just heard 'em.\nBear Week next week! They're scary, hairy and here live.\nAlways leans forward, pointy shoulders, squinty eyes, very Jewish.\nIn tennis, you attack at the point of weakness!\nIt was my grandmother, Ken. She's 81.\nHoney, her backhand's a joke!\nI'm not gonna take advantage of that?\nQuiet, please.\nActual work going on here.\nIs that that same bee?\nYes, it is!\nI'm helping him sue the human race.\nHello.\nHello, bee.\nThis is Ken.\nYeah, I remember you. Timberland, size ten and a half. Vibram sole, I believe.\nWhy does he talk again?\nListen, you better go 'cause we're really busy working.\nBut it's our yogurt night!\nBye-bye.\nWhy is yogurt night so difficult?!\nYou poor thing. You two have been at this for hours!\nYes, and Adam here has been a huge help.\nFrosting...\nHow many sugars?\nJust one. I try not to use the competition.\nSo why are you helping me?\nBees have good qualities. And it takes my mind off the shop. Instead of flowers, people are giving balloon bouquets now.\nThose are great, if you're three.\nAnd artificial flowers.\nOh, those just get me psychotic!\nYeah, me too.\nBent stingers, pointless pollination.\nBees must hate those fake things!\nNothing worse than a daffodil that's had work done.\nMaybe this could make up for it a little bit.\nThis lawsuit's a pretty big deal.\nI guess.\nYou sure you want to go through with it?\nAm I sure? When I'm done with the humans, they won't be able to say, \"Honey, I'm home,\" without paying a royalty!\nIt's an incredible scene here in downtown Manhattan, where the world anxiously waits, because for the first time in history, we will hear for ourselves if a honeybee can actually speak.\nWhat have we gotten into here, Barry?\nIt's pretty big, isn't it?\nI can't believe how many humans don't work during the day.\nYou think billion-dollar multinational food companies have good lawyers?\nEverybody needs to stay behind the barricade.\nWhat's the matter?\nI don't know, I just got a chill.\nWell, if it isn't the bee team.\nYou boys work on this?\nAll rise! The Honorable Judge Bumbleton presiding.\nAll right. Case number 4475,\nSuperior Court of New York,\nBarry Bee Benson v. the Honey Industry is now in session.\nMr. Montgomery, you're representing the five food companies collectively?\nA privilege.\nMr. Benson... you're representing all the bees of the world?\nI'm kidding. Yes, Your Honor, we're ready to proceed.\nMr. Montgomery, your opening statement, please.\nLadies and gentlemen of the jury, my grandmother was a simple woman. Born on a farm, she believed it was man's divine right to benefit from the bounty of nature God put before us.\nIf we lived in the topsy-turvy world Mr. Benson imagines, just think of what would it mean.\nI would have to negotiate with the silkworm for the elastic in my britches!\nTalking bee!\nHow do we know this isn't some sort of holographic motion-picture-capture Hollywood wizardry?\nThey could be using laser beams! Robotics! Ventriloquism! Cloning! For all we know, he could be on steroids!\nMr. Benson?\nLadies and gentlemen, there's no trickery here. I'm just an ordinary bee. Honey's pretty important to me. It's important to all bees. We invented it! We make it. And we protect it with our lives.\nUnfortunately, there are some people in this room who think they can take it from us 'cause we're the little guys!\nI'm hoping that, after this is all over, you'll see how, by taking our honey, you not only take everything we have but everything we are!\nI wish he'd dress like that all the time. So nice!\nCall your first witness.\nSo, Mr. Klauss Vanderhayden of Honey Farms, big company you have.\nI suppose so.\nI see you also own Honeyburton and Honron!\nYes, they provide beekeepers for our farms.\nBeekeeper. I find that to be a very disturbing term.\nI don't imagine you employ any bee-free-ers, do you?\nNo.\nI couldn't hear you.\nNo.\nNo. Because you don't free bees. You keep bees. Not only that, it seems you thought a bear would be an appropriate image for a jar of honey.\nThey're very lovable creatures. Yogi Bear, Fozzie Bear, Build-A-Bear.\nYou mean like this?\nBears kill bees!\nHow'd you like his head crashing through your living room?! Biting into your couch! Spitting out your throw pillows! OK, that's enough. Take him away.\nSo, Mr. Sting, thank you for being here. Your name intrigues me. Where have I heard it before?\nI was with a band called The Police.\nBut you've never been a police officer, have you?\nNo, I haven't.\nNo, you haven't. And so here we have yet another example of bee culture casually stolen by a human for nothing more than a prance-about stage name.\nOh, please.\nHave you ever been stung, Mr. Sting? Because I'm feeling a little stung, Sting. Or should I say... Mr. Gordon M. Sumner!\nThat's not his real name?! You idiots!\nMr. Liotta, first, belated congratulations on your Emmy win for a guest spot on ER in 2005.\nThank you. Thank you.\nI see from your resume that you're devilishly handsome with a churning inner turmoil that's ready to blow.\nI enjoy what I do. Is that a crime?\nNot yet it isn't. But is this what it's come to for you? Exploiting tiny, helpless bees so you don't have to rehearse your part and learn your lines, sir?\nWatch it, Benson! I could blow right now!\nThis isn't a goodfella.\nThis is a badfella!\nWhy doesn't someone just step on this creep, and we can all go home?!\nOrder in this court!\nYou're all thinking it!\nOrder! Order, I say!\nSay it!\nMr. Liotta, please sit down!\nI think it was awfully nice of that bear to pitch in like that. I think the jury's on our side.\nAre we doing everything right, legally?\nI'm a florist.\nRight. Well, here's to a great team.\nTo a great team!\nWell, hello.\nKen!\nHello.\nI didn't think you were coming.\nNo, I was just late I tried to call, but... the battery.\nI didn't want all this to go to waste,\nso I called Barry. Luckily, he was free.\nOh, that was lucky.\nThere's a little left. I could heat it up.\nYeah, heat it up, sure, whatever.\nSo I hear you're quite a tennis player. I'm not much for the game myself. The ball's a little grabby.\nThat's where I usually sit. Right... there.\nKen, Barry was looking at your resume, and he agreed with me that eating with chopsticks isn't really a special skill.\nYou think I don't see what you're doing?\nI know how hard it is to find the right job. We have that in common.\nDo we?\nBees have 100 percent employment, but we do jobs like taking the crud out.\nThat's just what I was thinking about doing.\nKen, I let Barry borrow your razor for his fuzz. I hope that was all right.\nI'm going to drain the old stinger.\nYeah, you do that.\nLook at that.\nYou know, I've just about had it with your little Mind Games.\nWhat's that?\nItalian Vogue.\nMamma mia, that's a lot of pages.\nA lot of ads.\nRemember what Van said, why is your life more valuable than mine?\nFunny, I just can't seem to recall that! I think something stinks in here!\nI love the smell of flowers.\nHow do you like the smell of flames?!\nNot as much.\nWater bug! Not taking sides!\nKen, I'm wearing a Chapstick hat!\nThis is pathetic!\nI've got issues!\nWell, well, well, a royal flush!\nYou're bluffing.\nAm I?\nSurf's up, dude!\nPoo water!\nThat bowl is gnarly. Except for those dirty yellow rings!\nKenneth! What are you doing?!\nYou know, I don't even like honey! I don't eat it!\nWe need to talk! He's just a little bee!\nAnd he happens to be the nicest bee I've met in a long time!\nLong time? What are you talking about?! Are there other bugs in your life?\n No, but there are other things bugging me in life. And you're one of them!\nFine! Talking bees, no yogurt night...\nMy nerves are fried from riding on this emotional roller coaster!\nGoodbye, Ken.\nAnd for your information, I prefer sugar-free, artificial sweeteners made by man!\nI'm sorry about all that.\nI know it's got an aftertaste! I like it!\nI always felt there was some kind of barrier between Ken and me. I couldn't overcome it.\nOh, well.\nAre you OK for the trial?\nI believe Mr. Montgomery is about out of ideas.\nWe would like to call Mr. Barry Benson Bee to the stand.\nGood idea! You can really see why he's considered one of the best lawyers...\nYeah.\nLayton, you've gotta weave some magic with this jury, or it's gonna be all over.\nDon't worry. The only thing I have to do to turn this jury around is to remind them of what they don't like about bees.\nYou got the tweezers?\nAre you allergic?\nOnly to losing, son. Only to losing.\nMr. Benson Bee, I'll ask you what I think we'd all like to know.\nWhat exactly is your relationship to that woman?\nWe're friends.\nGood friends?\nYes.\nHow good? Do you live together?\nWait a minute... Are you her little... bedbug?\nI've seen a bee documentary or two. From what I understand, doesn't your queen give birth to all the bee children?\nYeah, but...\nSo those aren't your real parents!\nOh, Barry...\nYes, they are!\nHold me back!\nYou're an illegitimate bee, aren't you, Benson?\nHe's denouncing bees!\nDon't y'all date your cousins?\nObjection!\nI'm going to pincushion this guy!\nAdam, don't! It's what he wants!\nOh, I'm hit!! Oh, lordy, I am hit!\nOrder! Order!\nThe venom! The venom is coursing through my veins! I have been felled by a winged beast of destruction! You see? You can't treat them like equals! They're striped savages! Stinging's the only thing they know! It's their way!\nAdam, stay with me.\nI can't feel my legs.\nWhat Angel of Mercy will come forward to suck the poison from my heaving buttocks?\nI will have order in this court. Order! Order, please!\nThe case of the honeybees versus the human race took a pointed Turn Against the bees yesterday when one of their legal team stung Layton T. Montgomery.\nHey, buddy.\nHey.\nIs there much pain?\nYeah.\nI... I blew the whole case, didn't I?\nIt doesn't matter. What matters is\nyou're alive. You could have died.\nI'd be better off dead. Look at me.\nThey got it from the cafeteria downstairs, in a tuna sandwich. Look, there's a little celery still on it.\nWhat was it like to sting someone?\nI can't explain it. It was all... All adrenaline and then...and then ecstasy!\nAll right.\nYou think it was all a trap?\nOf course. I'm sorry. I flew us right into this.\nWhat were we thinking? Look at us. We're just a couple of bugs in this world.\nWhat will the humans do to us if they win?\nI don't know.\nI hear they put the roaches in motels. That doesn't sound so bad.\nAdam, they check in, but they don't check out!\nOh, my.\nCould you get a nurse to close that window?\nWhy?\nThe smoke.\nBees don't smoke.\nRight. Bees don't smoke.\nBees don't smoke!\nBut some bees are smoking.\nThat's it! That's our case!\nIt is? It's not over?\nGet dressed. I've gotta go somewhere.\nGet back to the court and stall. Stall any way you can.\nAnd assuming you've done step correctly, you're ready for the tub.\nMr. Flayman.\nYes? Yes, Your Honor!\nWhere is the rest of your team?\nWell, Your Honor, it's interesting. Bees are trained to fly haphazardly, and as a result, we don't make very good time.\nI actually heard a funny story about...\nYour Honor, haven't these ridiculous bugs taken up enough of this court's valuable time? How much longer will we allow these absurd shenanigans to go on?\nThey have presented no compelling evidence to support their charges against my clients, who run legitimate businesses.\nI move for a complete dismissal of this entire case!\nMr. Flayman, I'm afraid I'm going to have to consider Mr. Montgomery's motion.\nBut you can't! We have a terrific case.\nWhere is your proof?\nWhere is the evidence?\nShow me the smoking gun!\nHold it, Your Honor!\nYou want a smoking gun? Here is your smoking gun.\nWhat is that?\nIt's a bee smoker!\nWhat, this? This harmless little contraption? This couldn't hurt a fly, let alone a bee.\nLook at what has happened to bees who have never been asked, \"Smoking or non?\" Is this what nature intended for us? To be forcibly addicted to smoke machines and man-made wooden slat work camps?\nLiving out our lives as honey slaves to the white man?\nWhat are we gonna do?\nHe's playing the species card.\nLadies and gentlemen, please, free these bees!\nFree the bees! Free the bees! Free the bees! Free the bees! Free the bees!\nThe court finds in favor of the bees!\nVanessa, we won!\nI knew you could do it! High-five!\nSorry.\nI'm OK! You know what this means?\nAll the honey will finally belong to the bees.\nNow we won't have to work so hard all the time.\nThis is an unholy perversion of the balance of nature, Benson.\nYou'll regret this.\nBarry, how much honey is out there?\nAll right. One at a time.\nBarry, who are you wearing?\nMy sweater is Ralph Lauren, and I have no pants.\nWhat if Montgomery's right?\nWhat do you mean?\nWe've been living the bee way a long time, 27 million years.\nCongratulations on your victory. What will you demand as a settlement?\nFirst, we'll demand a complete shutdown of all bee work camps.\nThen we want back the honey that was ours to begin with, every last drop.\nWe demand an end to the glorification of the bear as anything more than a filthy, smelly, bad-breath stink machine.\nWe're all aware of what they do in the woods.\nWait for my signal. Take him out.\nHe'll have nauseous for a few hours, then he'll be fine.\nAnd we will no longer tolerate bee-negative nicknames...\nBut it's just a prance-about stage name!\n...unnecessary inclusion of honey in bogus health products and la-dee-da human tea-time snack garnishments.\nCan't breathe.\nBring it in, boys!\nHold it right there! Good.\nTap it.\nMr. Buzzwell, we just passed three cups and there's gallons more coming!\nI think we need to shut down!\nShut down? We've never shut down.\nShut down honey production!\nStop making honey!\nTurn your key, sir!\nWhat do we do now?\nCannonball!\nWe're shutting honey production!\nMission abort.\nAborting pollination and nectar detail.\nReturning to base.\nAdam, you wouldn't believe how much honey was out there.\nOh, yeah?\nWhat's going on? Where is everybody?\nAre they out celebrating?\nThey're home.\nThey don't know what to do. Laying out, sleeping in.\nI heard your Uncle Carl was on his way to San Antonio with a cricket.\nAt least we got our honey back.\nSometimes I think, so what if humans liked our honey? Who wouldn't?\nIt's the greatest thing in the world! I was excited to be part of making it.\nThis was my new desk. This was my new job. I wanted to do it really well. And now...\nNow I can't.\nI don't understand why they're not happy.\nI thought their lives would be better!\nThey're doing nothing. It's amazing.\nHoney really changes people.\nYou don't have any idea what's going on, do you?\nWhat did you want to show me?\nThis.\nWhat happened here?\nThat is not the half of it.\nOh, no. Oh, my.\nThey're all wilting.\nDoesn't look very good, does it?\nNo.\nAnd whose fault do you think that is?\nYou know, I'm gonna guess bees.\nBees?\nSpecifically, me.\nI didn't think bees not needing to make honey would affect all these things.\nIt's not just flowers. Fruits, vegetables, they all need bees.\nThat's our whole SAT test right there.\nTake away produce, that affects the entire animal kingdom.\nAnd then, of course...\nThe human species?\nSo if there's no more pollination, it could all just go south here, couldn't it?\nI know this is also partly my fault.\nHow about a suicide pact?\nHow do we do it?\nI'll sting you, you step on me.\nThat just kills you twice.\nRight, right.\nListen, Barry... sorry, but I gotta get going.\nI had to open my mouth and talk.\nVanessa?\nVanessa? Why are you leaving?\nWhere are you going?\nTo the final Tournament of Roses parade in Pasadena.\nThey've moved it to this weekend because all the flowers are dying.\nIt's the Last Chance I'll ever have to see it.\nVanessa, I just wanna say I'm sorry.\nI never meant it to turn out like this.\nI know. Me neither.\nTournament of Roses.\nRoses can't do sports.\nWait a minute. Roses. Roses?\nRoses!\nVanessa!\nRoses?!\nBarry?\nRoses are flowers!\nYes, they are.\nFlowers, bees, pollen!\nI know.\nThat's why this is the last parade.\nMaybe not.\nCould you ask him to slow down?\nCould you slow down?\nBarry!\nOK, I made a huge mistake.\nThis is a total disaster, all my fault.\nYes, it kind of is.\nI've ruined the planet. I wanted to help you with the flower shop. I've made it worse.\nActually, it's completely closed down.\nI thought maybe you were remodeling.\nBut I have another idea, and it's greater than my previous ideas combined.\nI don't want to hear it!\nAll right, they have the roses, the roses have the pollen.\nI know every bee, plant and flower bud in this park.\nAll we gotta do is get what they've got back here with what we've got.\nBees.\nPark.\nPollen!\nFlowers.\nRepollination!\nAcross the nation!\nTournament of Roses, Pasadena, California.\nThey've got nothing but flowers, floats and cotton candy.\nSecurity will be tight.\nI have an idea.\nVanessa Bloome, FTD.\nOfficial floral business. It's real.\nSorry, ma'am. Nice brooch.\nThank you. It was a gift.\nOnce inside, we just pick the right float.\nHow about The Princess and the Pea?\nI could be the princess, and you could be the pea!\nYes, I got it.\nWhere should I sit?\nWhat are you?\nI believe I'm the pea.\nThe pea?\nIt goes under the mattresses.\nNot in this fairy tale, sweetheart.\nI'm getting the marshal.\nYou do that! This whole parade is a fiasco!\nLet's see what this baby'll do.\nHey, what are you doing?!\nThen all we do is blend in with traffic... without arousing suspicion.\nOnce at the airport, there's no stopping us.\nStop! Security.\nYou and your insect pack your float?\nYes.\nHas it been in your possession the entire time?\nWould you remove your shoes?\nRemove your stinger.\nIt's part of me.\nI know. Just having some fun.\nEnjoy your flight.\nThen if we're lucky, we'll have just enough pollen to do the job.\nCan you believe how lucky we are? We have just enough pollen to do the job!\nI think this is gonna work.\nIt's got to work.\nAttention, passengers, this is Captain Scott. We have a bit of bad weather in New York. It looks like we'll experience a couple hours delay.\nBarry, these are cut flowers with no water. They'll never make it.\nI gotta get up there and talk to them.\nBe careful.\nCan I get help with the Sky Mall magazine? I'd like to order the talking inflatable nose and ear hair trimmer.\nCaptain, I'm in a real situation.\nWhat'd you say, Hal?\nNothing.\nBee!\nDon't freak out! My entire species...\nWhat are you doing?\nWait a minute! I'm an attorney!\nWho's an attorney?\nDon't move.\nOh, Barry.\nGood afternoon, passengers. This is your captain. Would a Miss Vanessa Bloome in 24B please report to the cockpit? And please hurry!\nWhat happened here?\nThere was a DustBuster, a toupee, a life raft exploded.\nOne's bald, one's in a boat, they're both unconscious!\nIs that another bee joke?\nNo!\nNo one's flying the plane!\nThis is JFK control tower, Flight 356. What's your status?\nThis is Vanessa Bloome. I'm a florist from New York.\nWhere's the pilot?\nHe's unconscious, and so is the copilot.\nNot good. Does anyone onboard have flight experience?\nAs a matter of fact, there is.\nWho's that?\nBarry Benson.\nFrom the honey trial?! Oh, great.\nVanessa, this is nothing more than a big metal bee.\nIt's got giant wings, huge engines.\nI can't fly a plane.\nWhy not? Isn't John Travolta a pilot?\nYes.\nHow hard could it be?\nWait, Barry!\nWe're headed into some lightning.\nThis is Bob Bumble. We have some late-breaking news from JFK Airport, where a suspenseful scene is developing.\nBarry Benson, fresh from his legal victory...\nThat's Barry!\n...is attempting to land a plane, loaded with people, flowers and an incapacitated flight crew.\nFlowers?!\nWe have a storm in the area and two individuals at the controls with absolutely no flight experience.\nJust a minute. There's a bee on that plane.\nI'm quite familiar with Mr. Benson and his no-account compadres.\nThey've done enough damage.\nBut isn't he your only hope?\nTechnically, a bee shouldn't be able to fly at all.\nTheir wings are too small... Haven't we heard this a million times?\n\"The surface area of the wings and body mass make no sense.\"\nGet this on the air!\nGot it.\nStand by.\nWe're going live.\nThe way we work may be a mystery to you. Making honey takes a lot of bees doing a lot of small jobs.\nBut let me tell you about a small job. If you do it well, it makes a big difference.\nMore than we realized. To us, to everyone.\nThat's why I want to get bees back to working together. That's the bee way! We're not made of Jell-O.\nWe get behind a fellow.\nBlack and yellow!\nHello!\nLeft, right, down, hover.\nHover?\nForget hover.\nThis isn't so hard.\nBeep-beep! Beep-beep!\nBarry, what happened?!\nWait, I think we were on autopilot the whole time.\nThat may have been helping me.\nAnd now we're not!\nSo it turns out I cannot fly a plane.\nAll of you, let's get behind this fellow! Move it out!\nMove out!\nOur only chance is if I do what I'd do, you copy me with the wings of the plane!\nDon't have to yell.\nI'm not yelling! We're in a lot of trouble.\nIt's very hard to concentrate with that panicky tone in your voice!\nIt's not a tone. I'm panicking!\nI can't do this!\nVanessa, pull yourself together. You have to snap out of it!\nYou snap out of it.\nYou snap out of it.\nYou snap out of it!\nYou snap out of it!\nYou snap out of it!\nYou snap out of it!\nYou snap out of it!\nYou snap out of it!\nHold it!\nWhy? Come on, it's my turn.\nHow is the plane flying?\nI don't know.\nHello?\nBenson, got any flowers for a happy occasion in there?\nThe Pollen Jocks!\nThey do get behind a fellow.\nBlack and yellow.\nHello.\nAll right, let's drop this tin can on the blacktop.\nWhere? I can't see anything. Can you?\nNo, nothing. It's all cloudy.\nCome on. You got to think bee, Barry.\nThinking bee.\nThinking bee.\nThinking bee!\nThinking bee! Thinking bee!\nWait a minute. I think I'm feeling something.\nWhat?\nI don't know. It's strong, pulling me.\nLike a 27-million-year-old instinct.\nBring the nose down.\nThinking bee!\nThinking bee! Thinking bee!\nWhat in the world is on the tarmac?\nGet some lights on that!\nThinking bee!\nThinking bee! Thinking bee!\nVanessa, aim for the flower.\nOK.\nCut the engines. We're going in on bee power. Ready, boys?\nAffirmative!\nGood. Good. Easy, now. That's it.\nLand on that flower!\nReady? Full reverse!\nSpin it around!\nNot that flower! The other one!\nWhich one?\nThat flower.\nI'm aiming at the flower!\nThat's a fat guy in a flowered shirt.\nI mean the giant pulsating flower made of millions of bees!\nPull forward. Nose down. Tail up.\nRotate around it.\nThis is insane, Barry!\nThis's the only way I know how to fly.\nAm I koo-koo-kachoo, or is this plane flying in an insect-like pattern?\nGet your nose in there. Don't be afraid. Smell it. Full reverse!\nJust drop it. Be a part of it.\nAim for the center!\nNow drop it in! Drop it in, woman!\nCome on, already.\nBarry, we did it! You taught me how to fly!\nYes. No high-five!\nRight.\nBarry, it worked!\nDid you see the giant flower?\nWhat giant flower? Where? Of course\nI saw the flower! That was genius!\nThank you.\nBut we're not done yet.\nListen, everyone!\nThis runway is covered with the last pollen from the last flowers available anywhere on Earth.\nThat means this is our Last Chance. We're the only ones who make honey, pollinate flowers and dress like this.\nIf we're gonna survive as a species, this is our moment! What do you say?\nAre we going to be bees, or just Museum of Natural History keychains?\nWe're bees!\nKeychain!\nThen follow me! Except Keychain.\nHold on, Barry. Here. You've earned this.\nYeah!\nI'm a Pollen Jock! And it's a perfect fit. All I gotta do are the sleeves.\nOh, yeah.\nThat's our Barry.\nMom! The bees are back!\nIf anybody needs to make a call, now's the time. I got a feeling we'll be working late tonight!\nHere's your change. Have a great afternoon! Can I help who's next?\nWould you like some honey with that?\nIt is bee-approved. Don't forget these.\nMilk, cream, cheese, it's all me.  And I don't see a nickel!\nSometimes I just feel like a piece of meat!\nI had no idea.\nBarry, I'm sorry.\nHave you got a moment?\nWould you excuse me?\nMy mosquito associate will help you.\nSorry I'm late.\nHe's a lawyer too?\nI was already a blood-sucking parasite. All I needed was a briefcase.\nHave a great afternoon!\nBarry, I just got this huge tulip order, and I can't get them anywhere.\nNo problem, Vannie. Just leave it to me.\nYou're a lifesaver, Barry. Can I help who's next?\nAll right, scramble, jocks! It's time to fly.\nThank you, Barry!\nThat bee is living my life!\nLet it go, Kenny.\nWhen will this nightmare end?!\nLet it all go.\nBeautiful day to fly.\nSure is.\nBetween you and me,\nI was dying to get out of that office.\nYou have got to start thinking bee, my friend.\nThinking bee!\nMe?\nHold it. Let's just stop for a second. Hold it.\nI'm sorry. I'm sorry, everyone. Can we stop here?\nI'm not making a major life decision during a production number!\nAll right. Take ten, everybody. Wrap it up, guys.\nI had virtually no rehearsal for that.",embeds:[],media:[{id:"Barry-B-Benson",extension:".webp",date:"2025-02-22T18:28:35-05:00",lastModifiedDate:"2025-02-22T18:28:35-05:00",url:"/feeds/meta/021625_0824PM/Barry-B-Benson.webp",urlGitHub:"https://github.com/heyjoeway/heyjoeway.github.io/tree/master/src/feeds/meta/021625_0824PM/Barry-B-Benson.webp",exif:{Alpha:{value:1,description:"Yes"},Animation:{value:0,description:"No"},ImageWidth:{value:400,description:"400px"},ImageHeight:{value:303,description:"303px"},FileType:{value:"webp",description:"WebP"}}}],fm:{hideHome:true,urlShort:"jojudge.com/feeds/meta/021625_0824PM",date:"2025-02-22T23:28:00.000Z"},idFull:"meta/021625_0824PM",url:"/feeds/meta/021625_0824PM",feed:a}}}({})),"uses":{"params":["feed","post"]}}];
+
+					Promise.all([
+						import("../../../_app/immutable/entry/start.YTlSaPV9.js"),
+						import("../../../_app/immutable/entry/app.DnuYd5O3.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 20],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
