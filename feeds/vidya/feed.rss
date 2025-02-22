@@ -5,8 +5,8 @@
     <link>http://sveltekit-prerender/feeds/vidya</link>
     <description>Video James</description>
     <language>en-us</language>
-    <pubDate>Sat, 22 Feb 2025 23:28:00 GMT</pubDate>
-    <lastBuildDate>Sat, 22 Feb 2025 23:28:00 GMT</lastBuildDate>
+    <pubDate>Wed, 12 Feb 2025 17:22:00 GMT</pubDate>
+    <lastBuildDate>Wed, 12 Feb 2025 17:22:00 GMT</lastBuildDate>
     <docs>https://www.rssboard.org/rss-specification</docs>
     <generator>Custom</generator>
     <atom:link href="http://sveltekit-prerender/feeds/vidya/feed.rss" rel="self" type="application/rss+xml"/>
@@ -14,7 +14,7 @@
       <title/>
       <link>http://sveltekit-prerender/feeds/vidya/021525_1045AM</link>
       <description/>
-      <pubDate>Sat, 22 Feb 2025 23:28:00 GMT</pubDate>
+      <pubDate>Wed, 12 Feb 2025 17:22:00 GMT</pubDate>
       <guid>/feeds/vidya/021525_1045AM</guid>
     </item>
   </channel>

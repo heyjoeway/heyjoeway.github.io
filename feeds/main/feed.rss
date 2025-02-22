@@ -5,18 +5,11 @@
     <link>http://sveltekit-prerender/feeds/main</link>
     <description>Cult of Dinonicest</description>
     <language>en-us</language>
-    <pubDate>Sat, 22 Feb 2025 23:28:00 GMT</pubDate>
-    <lastBuildDate>Sat, 22 Feb 2025 23:28:00 GMT</lastBuildDate>
+    <pubDate>Tue, 18 Feb 2025 14:12:00 GMT</pubDate>
+    <lastBuildDate>Fri, 21 Feb 2025 00:02:00 GMT</lastBuildDate>
     <docs>https://www.rssboard.org/rss-specification</docs>
     <generator>Custom</generator>
     <atom:link href="http://sveltekit-prerender/feeds/main/feed.rss" rel="self" type="application/rss+xml"/>
-    <item>
-      <title/>
-      <link>http://sveltekit-prerender/feeds/main/021725_1131PM</link>
-      <description>&lt;p&gt;Okay so if this works I'm very close to actually starting to post. Testing edits&lt;/p&gt;</description>
-      <pubDate>Sat, 22 Feb 2025 23:28:00 GMT</pubDate>
-      <guid>/feeds/main/021725_1131PM</guid>
-    </item>
     <item>
       <title/>
       <link>http://sveltekit-prerender/feeds/main/022225_0448PM</link>
@@ -36,8 +29,15 @@
 &lt;p&gt;We also brought to our new place my parents' cat that had really bonded with us. And about a month later, we adopted him a sister so he could have company. You &lt;strong&gt;will&lt;/strong&gt; be seeing them soon.&lt;/p&gt;
 &lt;p&gt;Uhhh okay what else. I've been doing a lot of homelab stuff. Still getting comfortable in our space, putting together rooms and desks and workbenches and stuff. I don't even know man. So much has happened that it is genuinely difficult to remember anything before last year. I'm hoping to break that mental barrier down and rediscover stuff that I used to enjoy. I've got so much other random shit to talk about but I think I'm running out of steam here.&lt;/p&gt;
 &lt;p&gt;If anyone actually reads this PLEASE comment I need Internet Validation&lt;/p&gt;</description>
-      <pubDate>Sat, 22 Feb 2025 23:28:00 GMT</pubDate>
+      <pubDate>Sat, 22 Feb 2025 21:53:00 GMT</pubDate>
       <guid>/feeds/main/022225_0448PM</guid>
+    </item>
+    <item>
+      <title/>
+      <link>http://sveltekit-prerender/feeds/main/021725_1131PM</link>
+      <description>&lt;p&gt;Okay so if this works I'm very close to actually starting to post. Testing edits&lt;/p&gt;</description>
+      <pubDate>Tue, 18 Feb 2025 14:12:00 GMT</pubDate>
+      <guid>/feeds/main/021725_1131PM</guid>
     </item>
   </channel>
 </rss>

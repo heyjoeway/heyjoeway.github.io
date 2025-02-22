@@ -5,8 +5,8 @@
     <link>http://sveltekit-prerender/feeds/meta</link>
     <description>a feed about developing a platform to host the feed about developing a platform to host the feed about deve</description>
     <language>en-us</language>
-    <pubDate>Sat, 22 Feb 2025 23:28:00 GMT</pubDate>
-    <lastBuildDate>Sat, 22 Feb 2025 23:28:00 GMT</lastBuildDate>
+    <pubDate>Wed, 12 Feb 2025 15:02:00 GMT</pubDate>
+    <lastBuildDate>Thu, 20 Feb 2025 19:47:00 GMT</lastBuildDate>
     <docs>https://www.rssboard.org/rss-specification</docs>
     <generator>Custom</generator>
     <atom:link href="http://sveltekit-prerender/feeds/meta/feed.rss" rel="self" type="application/rss+xml"/>
@@ -1381,7 +1381,7 @@ I'm sorry. I'm sorry, everyone. Can we stop here?
 I'm not making a major life decision during a production number!
 All right. Take ten, everybody. Wrap it up, guys.
 I had virtually no rehearsal for that.&lt;/p&gt;</description>
-      <pubDate>Sat, 22 Feb 2025 23:28:00 GMT</pubDate>
+      <pubDate>Mon, 17 Feb 2025 02:00:00 GMT</pubDate>
       <guid>/feeds/meta/021625_0824PM</guid>
     </item>
     <item>
@@ -1401,14 +1401,14 @@ I had virtually no rehearsal for that.&lt;/p&gt;</description>
     &lt;span class="token string"&gt;"foo"&lt;/span&gt;
     "bar
 &lt;span class="token punctuation"&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</description>
-      <pubDate>Sat, 22 Feb 2025 23:28:00 GMT</pubDate>
+      <pubDate>Wed, 12 Feb 2025 20:20:00 GMT</pubDate>
       <guid>/feeds/meta/codetest</guid>
     </item>
     <item>
       <title/>
       <link>http://sveltekit-prerender/feeds/meta/meme</link>
       <description/>
-      <pubDate>Sat, 22 Feb 2025 23:28:00 GMT</pubDate>
+      <pubDate>Wed, 12 Feb 2025 15:02:00 GMT</pubDate>
       <guid>/feeds/meta/meme</guid>
     </item>
   </channel>
