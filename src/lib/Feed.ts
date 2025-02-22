@@ -19,7 +19,8 @@ import ExifReader from 'exifreader';
 
 import {
 	getLatestCommitDate,
-	getFirstCommitDate
+	getFirstCommitDate,
+    getFirstAndLatestCommitDates
 } from '$lib/Git.server';
 import path from 'path';
 
@@ -28,7 +29,7 @@ const feedsDir = 'src/feeds';
 async function getPostedDate(path: string) {
     return (
         await getFirstCommitDate(path)
-        || await getFileCreatedDate(path)
+        || getFileCreatedDate(path)
     );
 }
 
@@ -37,6 +38,21 @@ async function getEditedDate(path: string) {
         await getLatestCommitDate(path)
         || getFileModifiedDate(path)
     );
+}
+
+interface PostedAndEditedDate {
+    posted: string | undefined;
+    edited: string | undefined;
+}
+
+async function getPostedAndEditedDate(path: string) {
+    let { first, latest } = await getFirstAndLatestCommitDates(path);
+    first = first || await getFileCreatedDate(path);
+    latest = latest || getFileModifiedDate(path);
+    return {
+        posted: first,
+        edited: latest
+    } as PostedAndEditedDate;
 }
 
 function strToDate(str: string | undefined): Date {
@@ -76,6 +92,8 @@ export interface Post {
     fm: Record<string, any>;
     idFull: string;
     url: string;
+    feed: Feed;
+    raw: string;
 }
 
 export interface Feed {
@@ -121,11 +139,13 @@ export async function getFeedPostMedia(feedId: string, postId: string): Promise<
             } catch (e) { }
         }
         
+        const { posted, edited } = await getPostedAndEditedDate(mediaPath);
+        
         return {
             id,
             extension,
-            date: await getPostedDate(mediaPath),
-            lastModifiedDate: await getEditedDate(mediaPath),
+            date: posted,
+            lastModifiedDate: edited,
             url: `/feeds/${feedId}/${postId}/${mediaFileName}`,
             urlGitHub: await githubLink(path.join(feedsDir, feedId, postId, mediaFileName)),
             exif: exif
@@ -162,12 +182,12 @@ export function getFeedPostEmbeds(postContents: string) {
     };
 }
 
-export async function getFeedPost(feedId: string, postId: string): Promise<Post> {
-    const media = await getFeedPostMedia(feedId, postId);
+export async function getFeedPost(feed: Feed, postId: string): Promise<Post> {
+    const media = await getFeedPostMedia(feed.id, postId);
     
     let postContents = "";
     
-    const postPath = path.join(feedsDir, feedId, postId, "post.md");
+    const postPath = path.join(feedsDir, feed.id, postId, "post.md");
     try {
         postContents = fs.readFileSync(postPath, 'utf-8');
     } catch { }
@@ -187,12 +207,21 @@ export async function getFeedPost(feedId: string, postId: string): Promise<Post>
     );
     
     const fm = (compiled?.data?.fm || {}) as Record<string, any>;
-    fm.urlShort = `${getCname()}/feeds/${feedId}/${postId}`;
+    fm.urlShort = `${getCname()}/feeds/${feed.id}/${postId}`;
     
-    if (!Object.hasOwn(fm, 'date')) {
+    const fmHasDate = Object.hasOwn(fm, 'date');
+    const fmHasLastModifiedAt = Object.hasOwn(fm, 'last_modified_at');
+    
+    let posted: string | undefined = undefined;
+    let edited: string | undefined = undefined;
+    
+    if (!fmHasDate || !fmHasLastModifiedAt) {
+        ({ posted, edited } = await getPostedAndEditedDate(postPath));
+    }
+    
+    if (!fmHasDate) {
         const mediaDates = media.map(x => x.date);
-        const postFileDate = await getPostedDate(postPath);
-        const dates = [...mediaDates, postFileDate].filter(x => x); // Remove undefined
+        const dates = [...mediaDates, posted].filter(x => x); // Remove undefined
         if (dates.length) {
             fm.date = arrMin(
                 dates.map(strToDate)
@@ -200,10 +229,9 @@ export async function getFeedPost(feedId: string, postId: string): Promise<Post>
         }
     }
     
-    if (!Object.hasOwn(fm, 'last_modified_at')) {
+    if (!fmHasLastModifiedAt) {
         const mediaDates = media.map(x => x.lastModifiedDate);
-        const postFileDate = await getEditedDate(postPath);
-        const dates = [...mediaDates, postFileDate].filter(x => x); // Remove undefined
+        const dates = [...mediaDates, edited].filter(x => x); // Remove undefined
         if (dates.length) {
             fm.last_modified_at = arrMax(
                 dates.map(strToDate)
@@ -218,11 +246,13 @@ export async function getFeedPost(feedId: string, postId: string): Promise<Post>
     return {
         id: postId,
         html,
+        raw: postContents,
         embeds,
         media,
         fm,
-        idFull: `${feedId}/${postId}`,
-        url: `/feeds/${feedId}/${postId}`
+        idFull: `${feed.id}/${postId}`,
+        url: `/feeds/${feed.id}/${postId}`,
+        feed
     } as Post
 }
 
@@ -237,19 +267,31 @@ export function getFeedPostIds(feedId: string): string[] {
     return postDirents.map((postDirent: fs.Dirent) => postDirent.name);
 }
 
-export async function getFeedPosts(feedId: string): Promise<Post[]> {
-    const postIds = getFeedPostIds(feedId);
-    
-    const posts = await Promise.all(
-        postIds.map(
-            async (postId: string) => await getFeedPost(feedId, postId)
-        )
-    );
+export function sortPosts(posts: Post[]) {
+    // First sort by date
     posts.sort((a: Post, b: Post) => {
         const dateA = new Date(a.fm.date || 0).getTime();
         const dateB = new Date(b.fm.date || 0).getTime();
         return dateB - dateA;
     });
+    // Then sort by whether they're pinned
+    posts.sort((a: Post, b: Post) => {
+        const pinnedA = a.fm.pinned || false;
+        const pinnedB = b.fm.pinned || false;
+        return pinnedB - pinnedA;
+    });
+}
+
+export async function getFeedPosts(feed: Feed): Promise<Post[]> {
+    const postIds = getFeedPostIds(feed.id);
+    
+    const posts = await Promise.all(
+        postIds.map(
+            async (postId: string) => await getFeedPost(feed, postId)
+        )
+    );
+    
+    sortPosts(posts);
     
     return posts;
 }
@@ -262,22 +304,24 @@ export async function getFeed(feedId: string, includePosts = false): Promise<Fee
         )
     );
     
-    let posts: Post[] | undefined = undefined;
-    
-    if (includePosts) posts = await getFeedPosts(feedId);
-    
-    return {
+    let feed = {
         id: feedId,
         meta: feedMeta,
         url: `/feeds/${feedId}`,
         rss: `/feeds/${feedId}/feed.rss`,
         urlShort: `${getCname()}/feeds/${feedId}`,
-        posts
+        posts: undefined
     } as Feed;
+    
+    if (includePosts) feed.posts = await getFeedPosts(feed);
+    
+    return feed;
 }
 
-export async function getAllFeeds(): Promise<Feed[]> {
-    const feeds = await Promise.all(getFeedIds().map((feedId: string) => getFeed(feedId)));
+export async function getAllFeeds(includePosts = false): Promise<Feed[]> {
+    const feeds = await Promise.all(getFeedIds().map(
+        (feedId: string) => getFeed(feedId, includePosts))
+    );
     feeds.sort((a: Feed, b: Feed) => {
         const orderA = a.meta.order || 0;
         const orderB = b.meta.order || 0;

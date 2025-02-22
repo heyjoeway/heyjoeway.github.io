@@ -4,7 +4,9 @@ import {
     type DefaultLogFields
 } from 'simple-git';
 
-const git = simpleGit();
+const git = simpleGit({
+    maxConcurrentProcesses: 64 // big number go brrr
+});
 
 export async function getLatestCommitDate(path: string): Promise<string | undefined> {
     try {
@@ -32,8 +34,7 @@ export async function getFirstCommitDate(path: string): Promise<string | undefin
         const gitLog: LogResult<DefaultLogFields> = await new Promise(
             (resolve, reject) => git.log(
                 {
-                    "file": path,
-                    "max-count": 1
+                    "file": path
                 },
                 (err, log) => {
                     if (err) return reject(err);
@@ -51,6 +52,41 @@ export async function getFirstCommitDate(path: string): Promise<string | undefin
     }
 }
 
+interface FirstAndLatestCommitDates {
+    first: string | undefined; // ISO8601
+    latest: string | undefined; // ISO8601
+}
+
+export async function getFirstAndLatestCommitDates(path: string): Promise<FirstAndLatestCommitDates> {
+    try {
+        const gitLog: LogResult<DefaultLogFields> = await new Promise(
+            (resolve, reject) => git.log(
+                {
+                    "file": path
+                },
+                (err, log) => {
+                    if (err) return reject(err);
+                    resolve(log);
+                }
+            )
+        );
+        const gitLogAll = [...gitLog.all];
+        const gitLogLatest = gitLogAll[0];
+        gitLogAll.reverse();
+        const gitLogFirst = gitLogAll[0];
+        if (!gitLogFirst) throw new Error("No git log found");
+        return {
+            first: gitLogFirst.date,
+            latest: gitLogLatest.date
+        } as FirstAndLatestCommitDates;
+    } catch (e) {
+        return {
+            first: undefined,
+            latest: undefined
+        };
+    }
+}
+
 let _treeUrl: string | undefined = undefined;
 
 export async function getTreeUrl() {
@@ -64,6 +100,15 @@ export async function getTreeUrl() {
             url.length - 4
         );
     }
+    
+    // Also need to handle SSH remotes
+    // And make sure to support domains other than github.com
+    if (url.startsWith("git@")) {
+        const sshUrlSplit = url.split(":");
+        const domain = sshUrlSplit[0].split("@")[1];
+        url = `https://${domain}/${sshUrlSplit[1]}`;
+    }
+    
     _treeUrl = `${url}/tree/${branch}/`;
     return _treeUrl;
 }
