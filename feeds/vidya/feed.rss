@@ -6,10 +6,22 @@
     <description>Video James</description>
     <language>en-us</language>
     <pubDate>Wed, 12 Feb 2025 17:22:00 GMT</pubDate>
-    <lastBuildDate>Wed, 12 Feb 2025 17:22:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 23 Feb 2025 02:35:00 GMT</lastBuildDate>
     <docs>https://www.rssboard.org/rss-specification</docs>
     <generator>Custom</generator>
     <atom:link href="http://sveltekit-prerender/feeds/vidya/feed.rss" rel="self" type="application/rss+xml"/>
+    <item>
+      <title/>
+      <link>http://sveltekit-prerender/feeds/vidya/022225_0929PM</link>
+      <description>&lt;script context="module"&gt;
+	export const metadata = {"hideHome":true};
+	const { hideHome } = metadata;
+&lt;/script&gt;
+
+&lt;p&gt;installing sims 3 while listening to huey lewis and the news, if you know you know&lt;/p&gt;</description>
+      <pubDate>Sun, 23 Feb 2025 02:35:00 GMT</pubDate>
+      <guid>/feeds/vidya/022225_0929PM</guid>
+    </item>
     <item>
       <title/>
       <link>http://sveltekit-prerender/feeds/vidya/021525_1045AM</link>
