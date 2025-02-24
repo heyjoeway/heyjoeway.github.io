@@ -4,15 +4,14 @@ import * as yaml from 'yaml';
 import {
     splitext,
     arrMax,
-    arrMin
+    arrMin,
+    splitHtmlAt
 } from '$lib/Utils';
 
 import {
     getFileCreatedDate,
     getFileModifiedDate,
-    githubLink
-} from '$lib/Utils.server';
-import {
+    githubLink,
     getCname
 } from '$lib/Utils.server'
 import ExifReader from 'exifreader';
@@ -87,6 +86,7 @@ export interface Media {
 export interface Post {
     id: string;
     html: string;
+    htmlShort: string;
     media: Media[];
     embeds: Embed[];
     fm: Record<string, any>;
@@ -243,9 +243,20 @@ export async function getFeedPost(feed: Feed, postId: string): Promise<Post> {
         }
     }
     
+    let htmlShort = html;
+    let htmlNeedsShortening = htmlShort.length > 350;
+    if (htmlNeedsShortening) {
+        htmlShort = splitHtmlAt(htmlShort, 300);
+        if (html.length <= htmlShort.length) {
+            htmlNeedsShortening = false;
+            htmlShort = html;
+        }
+    }
+    
     return {
         id: postId,
         html,
+        htmlShort,
         raw: postContents,
         embeds,
         media,

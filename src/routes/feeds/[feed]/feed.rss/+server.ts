@@ -5,6 +5,9 @@ import type { RequestHandler } from "@sveltejs/kit";
 
 import { getFeed, getFeedIds, type Feed } from '$lib/Feed.js';
 import { arrMax, arrMin } from '$lib/Utils.js';
+import {
+    getCname
+} from '$lib/Utils.server'
 
 function isValid(x: any) {
     return !isNaN(x);
@@ -64,6 +67,8 @@ function rssObj(feed: Feed, originUrl: string) {
 }
 
 export const GET: RequestHandler = async ({ url }: { url: URL }) => {
+    if (url.host == "sveltekit-prerender") url.host = getCname();
+    
     const regex = new RegExp("\/feeds\/(.*?)\/feed.rss");
     const match = url.toString().match(regex);
     if (!match) return new Response();

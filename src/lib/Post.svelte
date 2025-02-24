@@ -23,15 +23,6 @@
         (inModal || inFeed)
         && (post.html.length > 350)
     );
-    let postHtml = post.html;
-    if (postHtmlNeedsShortening) {
-        const postHtmlBefore = postHtml;
-        postHtml = splitHtmlAt(postHtml, 300);
-        if (postHtmlBefore.length <= postHtml.length) {
-            postHtmlNeedsShortening = false;
-            postHtml = postHtmlBefore;
-        }
-    }
     
     const knownExtensions = [
         ".png",
@@ -141,7 +132,7 @@
 </div>
 
 <div class="post">
-    {@html postHtml}
+    {@html post.htmlShort}
     {#if postHtmlNeedsShortening}
         <a href={post.url}><p>
             ... (Read More)
