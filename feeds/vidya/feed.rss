@@ -2,17 +2,17 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" ml-update="aware" ml-stage="preload" ml-view="top">
   <channel>
     <title>vidyaway</title>
-    <link>http://sveltekit-prerender/feeds/vidya</link>
+    <link>http://jojudge.com/feeds/vidya</link>
     <description>Video James</description>
     <language>en-us</language>
     <pubDate>Wed, 12 Feb 2025 17:22:00 GMT</pubDate>
     <lastBuildDate>Sun, 23 Feb 2025 02:35:00 GMT</lastBuildDate>
     <docs>https://www.rssboard.org/rss-specification</docs>
     <generator>Custom</generator>
-    <atom:link href="http://sveltekit-prerender/feeds/vidya/feed.rss" rel="self" type="application/rss+xml"/>
+    <atom:link href="http://jojudge.com/feeds/vidya/feed.rss" rel="self" type="application/rss+xml"/>
     <item>
       <title/>
-      <link>http://sveltekit-prerender/feeds/vidya/022225_0929PM</link>
+      <link>http://jojudge.com/feeds/vidya/022225_0929PM</link>
       <description>&lt;script context="module"&gt;
 	export const metadata = {"hideHome":true};
 	const { hideHome } = metadata;
@@ -24,7 +24,7 @@
     </item>
     <item>
       <title/>
-      <link>http://sveltekit-prerender/feeds/vidya/021525_1045AM</link>
+      <link>http://jojudge.com/feeds/vidya/021525_1045AM</link>
       <description/>
       <pubDate>Wed, 12 Feb 2025 17:22:00 GMT</pubDate>
       <guid>/feeds/vidya/021525_1045AM</guid>
