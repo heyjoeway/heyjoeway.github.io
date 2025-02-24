@@ -243,13 +243,19 @@ export async function getFeedPost(feed: Feed, postId: string): Promise<Post> {
         }
     }
     
-    let htmlShort = html;
-    let htmlNeedsShortening = htmlShort.length > 350;
-    if (htmlNeedsShortening) {
+    let htmlShort = html.trim();
+    
+    // If htmlShort begins with a script tag, remove it
+    if (htmlShort.startsWith('<script')) {
+        const endTagIndex = htmlShort.indexOf('</script>') + 9;
+        htmlShort = htmlShort.substring(endTagIndex).trim();
+    }
+    
+    if (htmlShort.length > 350) {
+        const htmlShortOriginal = htmlShort;
         htmlShort = splitHtmlAt(htmlShort, 300);
-        if (html.length <= htmlShort.length) {
-            htmlNeedsShortening = false;
-            htmlShort = html;
+        if (htmlShortOriginal.length <= htmlShort.length) {
+            htmlShort = htmlShortOriginal;
         }
     }
     

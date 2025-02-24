@@ -57,7 +57,7 @@ function rssObj(feed: Feed, originUrl: string) {
                 item: feed.posts?.map(post => ({
                     title: post.fm.title,
                     link: new URL(post.url, originUrl).href,
-                    description: post.htmlShort.trim(),
+                    description: post.htmlShort,
                     pubDate: new Date(post.fm.date).toUTCString(),
                     guid: post.url
                 }))
