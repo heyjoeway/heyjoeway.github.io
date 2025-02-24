@@ -20,4 +20,11 @@ export default defineConfig({
 			{ find: '$joeysvelte', replacement: '/src/lib/joeysvelte/src/lib/' },
 		]
 	},
+	css: {
+		preprocessorOptions: {
+			scss: {
+				api: 'modern-compiler'
+			}
+		}
+	}
 });

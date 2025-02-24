@@ -17,7 +17,6 @@
     
     async function onDelete() {
         deleteRunning = true;
-        console.log(getPostUrl());
         fetch(new URL("./delete", getPostUrl()), {
             method: 'DELETE'
         })
