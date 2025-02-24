@@ -13,14 +13,10 @@
     <item>
       <title/>
       <link>http://jojudge.com/feeds/meta/021625_0824PM</link>
-      <description>&lt;script context="module"&gt;
-	export const metadata = {"hideHome":true};
-	const { hideHome } = metadata;
-&lt;/script&gt;
-
-&lt;p&gt;According to all known laws of aviation, there is no way a bee should be able to fly.
+      <description>&lt;p&gt;According to all known laws of aviation, there is no way a bee should be able to fly.
 Its wings are too small to get its fat little body off the ground.
-The bee, of course, flies anyway because bees don't care what humans</description>
+The bee, of course, flies anyway because bees don't care what humans think is impossible.
+Yellow, black. Yellow, black. Yellow, black. Yellow, blac</description>
       <pubDate>Mon, 17 Feb 2025 02:00:00 GMT</pubDate>
       <guid>/feeds/meta/021625_0824PM</guid>
     </item>
