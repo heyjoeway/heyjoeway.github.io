@@ -5,10 +5,17 @@
     <link>http://jojudge.com/feeds/misc</link>
     <description>everything else goes here</description>
     <language>en-us</language>
-    <pubDate/>
-    <lastBuildDate/>
+    <pubDate>Wed, 26 Feb 2025 15:39:00 GMT</pubDate>
+    <lastBuildDate>Wed, 26 Feb 2025 15:39:00 GMT</lastBuildDate>
     <docs>https://www.rssboard.org/rss-specification</docs>
     <generator>Custom</generator>
     <atom:link href="http://jojudge.com/feeds/misc/feed.rss" rel="self" type="application/rss+xml"/>
+    <item>
+      <title/>
+      <link>http://jojudge.com/feeds/misc/022625_1034AM</link>
+      <description>&lt;p&gt;to all the people saying that it's zoomers' fault they are worse with tech: i just tried to copy the recipients from an email in outlook and paste it to the invitees on a new calendar event, and it couldn't even do that without breaking. (it then proceeded to ask for my location) i think "zoom bad a</description>
+      <pubDate>Wed, 26 Feb 2025 15:39:00 GMT</pubDate>
+      <guid>/feeds/misc/022625_1034AM</guid>
+    </item>
   </channel>
 </rss>
