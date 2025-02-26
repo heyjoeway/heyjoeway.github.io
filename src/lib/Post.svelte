@@ -18,9 +18,11 @@
     export let post: Post;
     export let inModal = false;
     export let inFeed = false;
-        
+    
+    let inPost = !inModal && !inFeed;
+    
     let postHtmlNeedsShortening = (
-        (inModal || inFeed)
+        !inPost
         && (post.html.length > 350)
     );
     
@@ -44,7 +46,7 @@
     );
     
     let mediaNeedsShortening = (
-        (inModal || inFeed)
+        !inPost
         && (media.length > 4)
     );
     const mediaCountOverMax = media.length - 4;
@@ -53,7 +55,7 @@
     }
     
     let embedsNeedsShortening = (
-        (inModal || inFeed)
+        !inPost
         && (post.embeds.length > 1)
     );
     let embeds = post.embeds;
@@ -132,11 +134,15 @@
 </div>
 
 <div class="post">
-    {@html post.htmlShort}
-    {#if postHtmlNeedsShortening}
-        <a href={post.url}><p>
-            ... (Read More)
-        </p></a>
+    {#if inPost}
+        {@html post.html}
+    {:else}
+        {@html post.htmlShort}
+        {#if postHtmlNeedsShortening}
+            <a href={post.url}><p>
+                ... (Read More)
+            </p></a>
+        {/if}
     {/if}
 </div>
 
