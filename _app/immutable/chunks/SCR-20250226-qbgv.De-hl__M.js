@@ -1,0 +1,1 @@
+const A={},s={src:""+new URL("../assets/SCR-20250226-qbgv.AhEENYHQ.png",import.meta.url).href,w:1852,h:958,lqip:"UklGRiYAAABXRUJQVlA4IBoAAAAwAQCdASoQAAgABUB8JaQAA3AA/uzM2MAAAA=="},o={sources:A,img:s};export{o as default,s as img,A as sources};
