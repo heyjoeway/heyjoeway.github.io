@@ -61,9 +61,10 @@ export async function getFirstAndLatestCommitDates(path: string): Promise<FirstA
     try {
         const gitLog: LogResult<DefaultLogFields> = await new Promise(
             (resolve, reject) => git.log(
-                {
-                    "file": path
-                },
+                [
+                    "--",
+                    path
+                ],
                 (err, log) => {
                     if (err) return reject(err);
                     resolve(log);

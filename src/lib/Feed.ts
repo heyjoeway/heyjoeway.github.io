@@ -17,27 +17,11 @@ import {
 import ExifReader from 'exifreader';
 
 import {
-	getLatestCommitDate,
-	getFirstCommitDate,
     getFirstAndLatestCommitDates
 } from '$lib/Git.server';
 import path from 'path';
 
 const feedsDir = 'src/feeds';
-
-async function getPostedDate(path: string) {
-    return (
-        await getFirstCommitDate(path)
-        || getFileCreatedDate(path)
-    );
-}
-
-async function getEditedDate(path: string) {
-    return (
-        await getLatestCommitDate(path)
-        || getFileModifiedDate(path)
-    );
-}
 
 interface PostedAndEditedDate {
     posted: string | undefined;
