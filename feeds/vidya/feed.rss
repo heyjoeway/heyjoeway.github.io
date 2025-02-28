@@ -5,8 +5,8 @@
     <link>http://jojudge.com/feeds/vidya</link>
     <description>Video James</description>
     <language>en-us</language>
-    <pubDate>Wed, 12 Feb 2025 17:22:00 GMT</pubDate>
-    <lastBuildDate>Thu, 27 Feb 2025 03:13:00 GMT</lastBuildDate>
+    <pubDate>Sun, 13 Nov 2022 05:01:00 GMT</pubDate>
+    <lastBuildDate>Fri, 28 Feb 2025 02:48:00 GMT</lastBuildDate>
     <docs>https://www.rssboard.org/rss-specification</docs>
     <generator>Custom</generator>
     <atom:link href="http://jojudge.com/feeds/vidya/feed.rss" rel="self" type="application/rss+xml"/>
@@ -48,6 +48,16 @@
       <description/>
       <pubDate>Wed, 12 Feb 2025 17:22:00 GMT</pubDate>
       <guid>/feeds/vidya/021525_1045AM</guid>
+    </item>
+    <item>
+      <title/>
+      <link>http://jojudge.com/feeds/vidya/022725_0943PM</link>
+      <description>&lt;p&gt;&lt;a
+  href="https://gamebanana.com/mods/573087"
+  rel="nofollow"
+&gt;https://gamebanana.com/mods/573087&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Sun, 13 Nov 2022 05:01:00 GMT</pubDate>
+      <guid>/feeds/vidya/022725_0943PM</guid>
     </item>
   </channel>
 </rss>
