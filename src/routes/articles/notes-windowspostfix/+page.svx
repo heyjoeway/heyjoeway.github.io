@@ -1,0 +1,41 @@
+---
+title:  "Notes: Setting Up Postfix on Windows"
+categories: software linux
+comments: true
+---
+(Notes primarily for my own reference.)
+
+I want this so that I don't have to set up a bunch of generic accounts for each machine, seems like it could very quickly spiral into a maintenance nightmare. Keep in mind that most Google Workplace orgs will block these for many reasons. Somehow, Microsoft doesn't seem to care.
+
+I settled on [this docker image](https://github.com/bokysan/docker-postfix) after trying the following:
+- The built in SMTP server on Windows Server 2022: Just flat-out doesn't work to the point where attempting to send crashes the service outright. Seriously, fuck this thing. What a ginormous waste of time.
+- Postfix under WSL(2): WSL(2) is ALSO not supported on Windows Server because Microsoft fucking hates you.
+
+Once you've got Docker set up:
+
+```powershell
+docker run `
+	--name postfix `
+	-e "ALLOWED_SENDER_DOMAINS=localhost" `
+	--restart always `
+	-p 1587:587 `
+	boky/postfix
+```
+
+When sending emails, make sure to set the server to `localhost:1587`.
+
+# Bonus!
+You may be operating this from a network where the MX records aren't working for one reason or another. You can manually specify the IP address to route the emails to using the following:
+
+```powershell
+docker run `
+	--name postfix `
+	-e "ALLOWED_SENDER_DOMAINS=localhost" `
+	--restart always `
+	-p 1587:587 `
+	-e "POSTFIX_disable_dns_lookups=yes" `
+	--add-host [DOMAIN NAME]:[MX RECORD IP] `
+	boky/postfix
+```
+
+You can find the MX record IP using a tool like [MXToolbox](https://mxtoolbox.com/).
