@@ -22,9 +22,10 @@ Make sure [Chromium Web Store](https://github.com/NeverDecaf/chromium-web-store/
 > - Click Add Button near Other search engines
 > - Add Google In Search Engine input box
 > - Add google.com in Keyword input box
-> - Add `https://www.google.com/search?q=%s&{google:RLZ}{google:originalQueryForSuggestion}{google:assistedQueryStats}{google:searchFieldtrialParameter}{google:iOSSearchLanguage}{google:prefetchSource}{google:searchClient}{google:sourceId}{google:contextualSearchVersion}ie={inputEncoding}` in URL with %s in place of query input box
+> - Add this in URL with %s in place of query input box 
+>   - `https://www.google.com/search?q=%s&{google:RLZ}{google:originalQueryForSuggestion}{google:assistedQueryStats}{google:searchFieldtrialParameter}{google:iOSSearchLanguage}{google:prefetchSource}{google:searchClient}{google:sourceId}{google:contextualSearchVersion}ie={inputEncoding}` 
 > - Add `https://www.google.com/complete/search?client=chrome&q=%s` in Suggestions URL with %s in place of query input box
-> - Click The Blue Save Button
+> - Click The Blue Ssave Button
 > - Click the three dot menu near Google and select Make default
 
 ## Extensions

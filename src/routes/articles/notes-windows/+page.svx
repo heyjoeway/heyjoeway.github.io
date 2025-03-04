@@ -1,0 +1,32 @@
+---
+title:  "Notes: Windows"
+categories: software windows
+comments: true
+---
+Random notes for Windows. Primarily for my own reference. At some point I'll talk about [JoeyDebloat](https://github.com/heyjoeway/joeydebloat).
+
+# Commands
+
+- VSCode Remote Tunneling
+    - `code tunnel`
+- WinSxS Cleanup
+  - `Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase`
+  - [Source](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/clean-up-the-winsxs-folder?view=windows-11)
+- System Volume Information Cleanup
+    - `wmic shadowcopy delete /nointeractive`
+
+# Scripting
+
+- Change directory to script location in batch
+  - `cd /D "%~dp0"`
+
+# Software
+
+| Name                       | Description                                       | Link                                              |
+| -------------------------- | ------------------------------------------------- | ------------------------------------------------- |
+| SrvMan                     | Create services, manage hidden services           | https://sysprogs.com/legacy/tools/srvman/         |
+| DriverStoreExplorer (Rapr) | Clean driverstore packages, reclaim space         | https://github.com/lostindark/DriverStoreExplorer |
+| PatchCleaner               | Cleans up old/redundant installers, reclaim space | https://www.homedev.com.au/Free/PatchCleaner      |
+| FurMark                    | GPU stress test                                   | https://geeks3d.com/furmark/                      |
+| Prime95                    | CPU/RAM stress test                               | https://www.mersenne.org/download/                |
+| Rufus                      | Create USB install media                          | https://rufus.ie/en/                              |
