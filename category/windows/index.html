@@ -84,11 +84,11 @@
 		<link href="../../_app/immutable/assets/Button.CO_IFsgN.css" rel="stylesheet">
 		<link href="../../_app/immutable/assets/ArticleFeed.COlA-k9G.css" rel="stylesheet">
 		<link href="../../_app/immutable/assets/Tags.zOjeMBQI.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../_app/immutable/entry/start.C4hh0B4w.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/entry.BYnsguNK.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.DD5MqBip.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/entry.BlBF_5_l.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/runtime.BVU0rH9e.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/index.DYBIQy5k.js">
-		<link rel="modulepreload" href="../../_app/immutable/entry/app.BtpJuqJG.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.BRzyxwig.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/preload-helper.C1FmrZbK.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/render.Dvy1DFxg.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/store.DTxDMkQX.js">
@@ -114,7 +114,7 @@
 			
 			<script>
 				{
-					__sveltekit_3zalo0 = {
+					__sveltekit_1hlkvq5 = {
 						base: new URL("../..", location).pathname.slice(0, -1)
 					};
 
@@ -123,8 +123,8 @@
 					const data = [{"type":"data","data":{categories:["design","ui","programming","life","software","meta","windows","photography","work","portfolio","macos","multiplatform","games","linux"]},"uses":{},"slash":"always"},{"type":"data","data":{articles:[{slug:"notes-windows",path:"/articles/notes-windows",code:"\u003Cscript context=\"module\">\n\texport const metadata = {\"title\":\"Notes: Windows\",\"categories\":\"software windows\",\"comments\":true};\n\tconst { title, categories, comments } = metadata;\n\u003C/script>\n\n\u003Cp>Random notes for Windows. Primarily for my own reference. At some point I’ll talk about \u003Ca\n  href=\"https://github.com/heyjoeway/joeydebloat\"\n  rel=\"nofollow\"\n>JoeyDebloat\u003C/a>.\u003C/p>\n\u003Ch1>Commands\u003C/h1>\n\u003Cul>\n\u003Cli>VSCode Remote Tunneling\n\u003Cul>\n\u003Cli>\u003Ccode>code tunnel\u003C/code>\u003C/li>\n\u003C/ul>\n\u003C/li>\n\u003Cli>WinSxS Cleanup\n\u003Cul>\n\u003Cli>\u003Ccode>Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase\u003C/code>\u003C/li>\n\u003Cli>\u003Ca\n  href=\"https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/clean-up-the-winsxs-folder?view=windows-11\"\n  rel=\"nofollow\"\n>Source\u003C/a>\u003C/li>\n\u003C/ul>\n\u003C/li>\n\u003Cli>System Volume Information Cleanup\n\u003Cul>\n\u003Cli>\u003Ccode>wmic shadowcopy delete /nointeractive\u003C/code>\u003C/li>\n\u003C/ul>\n\u003C/li>\n\u003C/ul>\n\u003Ch1>Scripting\u003C/h1>\n\u003Cul>\n\u003Cli>Change directory to script location in batch\n\u003Cul>\n\u003Cli>\u003Ccode>cd /D \"%~dp0\"\u003C/code>\u003C/li>\n\u003C/ul>\n\u003C/li>\n\u003C/ul>\n\u003Ch1>Software\u003C/h1>\n\u003Ctable>\n\u003Cthead>\n\u003Ctr>\n\u003Cth>Name\u003C/th>\n\u003Cth>Description\u003C/th>\n\u003Cth>Link\u003C/th>\n\u003C/tr>\n\u003C/thead>\n\u003Ctbody>\n\u003Ctr>\n\u003Ctd>SrvMan\u003C/td>\n\u003Ctd>Create services, manage hidden services\u003C/td>\n\u003Ctd>\u003Ca\n  href=\"https://sysprogs.com/legacy/tools/srvman/\"\n  rel=\"nofollow\"\n>https://sysprogs.com/legacy/tools/srvman/\u003C/a>\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>DriverStoreExplorer (Rapr)\u003C/td>\n\u003Ctd>Clean driverstore packages, reclaim space\u003C/td>\n\u003Ctd>\u003Ca\n  href=\"https://github.com/lostindark/DriverStoreExplorer\"\n  rel=\"nofollow\"\n>https://github.com/lostindark/DriverStoreExplorer\u003C/a>\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>PatchCleaner\u003C/td>\n\u003Ctd>Cleans up old/redundant installers, reclaim space\u003C/td>\n\u003Ctd>\u003Ca\n  href=\"https://www.homedev.com.au/Free/PatchCleaner\"\n  rel=\"nofollow\"\n>https://www.homedev.com.au/Free/PatchCleaner\u003C/a>\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>FurMark\u003C/td>\n\u003Ctd>GPU stress test\u003C/td>\n\u003Ctd>\u003Ca\n  href=\"https://geeks3d.com/furmark/\"\n  rel=\"nofollow\"\n>https://geeks3d.com/furmark/\u003C/a>\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>Prime95\u003C/td>\n\u003Ctd>CPU/RAM stress test\u003C/td>\n\u003Ctd>\u003Ca\n  href=\"https://www.mersenne.org/download/\"\n  rel=\"nofollow\"\n>https://www.mersenne.org/download/\u003C/a>\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>Rufus\u003C/td>\n\u003Ctd>Create USB install media\u003C/td>\n\u003Ctd>\u003Ca href=\"https://rufus.ie/en/\" rel=\"nofollow\">https://rufus.ie/en/\u003C/a>\u003C/td>\n\u003C/tr>\n\u003C/tbody>\n\u003C/table>\n",fm:{title:"Notes: Windows",categories:"software windows",comments:true}}],slug:"windows"},"uses":{"params":["slug"]}}];
 
 					Promise.all([
-						import("../../_app/immutable/entry/start.C4hh0B4w.js"),
-						import("../../_app/immutable/entry/app.BtpJuqJG.js")
+						import("../../_app/immutable/entry/start.DD5MqBip.js"),
+						import("../../_app/immutable/entry/app.BRzyxwig.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 22],
