@@ -7,10 +7,10 @@ Had to do this at work and figured I'd share my notes here. Any usefulness these
 1. Download [LibreElec](https://libreelec.tv/downloads/) (including the USB creator) and make yourself a flash drive.
 	- The default download links may be blocked by your network. [You can find active mirrors here.](https://wiki.libreelec.tv/project/mirrors)
 2. Before booting the flash drive, you'll want to go into the BIOS and disable networking.
-	1. On the computer I did this with (Dell Optiplex 3040), the setting to disable the network adapter was located under `System Configuration > Integrated NIC > Disabled`.
-	2. This doesn't prevent people from plugging in a USB ethernet adapter but at least it makes it clear that it's not supposed to be connected to the internet.
-	3. You might also want to set a BIOS password to prevent people from re-enabling it.
-	4. Also would recommend putting an uncrimped RJ45 in as a dummy plug. May need a bit of "percussive maintenance" to get in.
+	- On the computer I did this with (Dell Optiplex 3040), the setting to disable the network adapter was located under `System Configuration > Integrated NIC > Disabled`.
+	- This doesn't prevent people from plugging in a USB ethernet adapter but at least it makes it clear that it's not supposed to be connected to the internet.
+	- You might also want to set a BIOS password to prevent people from re-enabling it.
+	- Also would recommend putting an uncrimped RJ45 in as a dummy plug. May need a bit of "percussive maintenance" to get in.
 3. Let the flash drive boot automatically or type `installer` and press Enter to continue. It might seem like it hung for a second but it is actually loading.
 4. Install it. It will use up the whole disk, no special partitioning or anything.
 5. Remove the USB.
