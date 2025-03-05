@@ -86,11 +86,11 @@
 		<link href="../../_app/immutable/assets/Center.SiIiNQdp.css" rel="stylesheet">
 		<link href="../../_app/immutable/assets/Layout.BC5Y1jTu.css" rel="stylesheet">
 		<link href="../../_app/immutable/assets/Comments.CwG70sSM.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../_app/immutable/entry/start.BEVcVVWK.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/entry.CM_VN3wj.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.DIOZQfDw.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/entry.CRl0g_Ik.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/runtime.BVU0rH9e.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/index.DYBIQy5k.js">
-		<link rel="modulepreload" href="../../_app/immutable/entry/app.C5txiqhn.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.DzrH5u11.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/preload-helper.C1FmrZbK.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/render.Dvy1DFxg.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/store.DTxDMkQX.js">
@@ -113,7 +113,7 @@
 		<link rel="modulepreload" href="../../_app/immutable/chunks/html.BOQzYzLL.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/Comments.CpF75G2S.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/Consent.vBuStNUe.js">
-		<link rel="modulepreload" href="../../_app/immutable/nodes/15.DnEAhBr1.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/16.DnEAhBr1.js">
 	</head>
 	<body>
 		<div style="display: contents"><!--[--><!--[--><!----><!--[--><!----><div style="background-color: black; background-image: url();" class="bg svelte-rfb14"><!--[!--><!--]--></div><!----> <div class="layout svelte-1kupl3e"><div class="header svelte-1kupl3e"><div class="title"><a class="site-title svelte-1kupl3e" rel="author" href="/"><span style="color:palevioletred">hey</span><span style="color:orange">joe</span><span style="color:skyblue">way</span><span style="color:white">.</span></a></div> <div class="nav svelte-1kupl3e"><div style="width: default; height: 32px;" class="clickable svelte-1f9eqjh"><!--[--><a href="/articles" data-sveltekit-reload="false" data-sveltekit-preload-data="hover" class="svelte-1f9eqjh"><!--[!--><!----><div style="color: white;" class="svelte-1kdig2t"><!--[!--><!--]--> <!----><!---->Articles<!----></div><!----><!--]--></a><!--]--></div><!----> <div style="width: default; height: 32px;" class="clickable svelte-1f9eqjh"><!--[--><a href="/feeds" data-sveltekit-reload="false" data-sveltekit-preload-data="hover" class="svelte-1f9eqjh"><!--[!--><!----><div style="color: white;" class="svelte-1kdig2t"><!--[!--><!--]--> <!----><!---->Feeds<!----></div><!----><!--]--></a><!--]--></div><!----></div></div> <!----><!----><div class="header-container svelte-etuvas"><div><h1 class="svelte-etuvas">Notes: Setting Up Postfix on Windows</h1> <div class="svelte-1gxf1qy"><!--[--><a href="/category/software/" class="svelte-1gxf1qy">software</a><a href="/category/linux/" class="svelte-1gxf1qy">linux</a><!--]--></div><!----></div> <div class="times svelte-etuvas"><!--[--><!--[--><time class="dt svelte-etuvas" datetime="2025-03-03T22:13:37-05:00" itemprop="datePublished">Published Mar 4, 2025</time> <br><!--]--><!--[--><time class="dt svelte-etuvas" datetime="2025-03-03T22:13:37-05:00" itemprop="datePublished">Last modified Mar 4, 2025</time> <br><!--]--><!--]--></div></div> <br> <hr> <!----><!----><p>(Notes primarily for my own reference.)</p> <p>I want this so that I don’t have to set up a bunch of generic accounts for each machine, seems like it could very quickly spiral into a maintenance nightmare. Keep in mind that most Google Workplace orgs will block these for many reasons. Somehow, Microsoft doesn’t seem to care.</p> <p>I settled on <a href="https://github.com/bokysan/docker-postfix" rel="nofollow">this docker image</a> after trying the following:</p> <ul><li>The built in SMTP server on Windows Server 2022: Just flat-out doesn’t work to the point where attempting to send crashes the service outright. Seriously, fuck this thing. What a ginormous waste of time.</li> <li>Postfix under WSL(2): WSL(2) is ALSO not supported on Windows Server because Microsoft fucking hates you.</li></ul> <p>Once you’ve got Docker set up:</p> <pre class="language-powershell"><!----><code class="language-powershell">docker run &#96;
@@ -128,24 +128,24 @@
 	<span class="token operator">-</span>p 1587:587 &#96;
 	<span class="token operator">-</span>e <span class="token string">"POSTFIX_disable_dns_lookups=yes"</span> &#96;
 	<span class="token operator">--</span><span class="token function">add-host</span> <span class="token namespace">[DOMAIN NAME]</span>:<span class="token namespace">[MX RECORD IP]</span> &#96;
-	boky/postfix</code><!----></pre> <p>You can find the MX record IP using a tool like <a href="https://mxtoolbox.com/" rel="nofollow">MXToolbox</a>.</p><!----><!----> <br> <!--[--><hr> <!--[!--><div class="svelte-zdtn5w"><!----><p><!---->Comments are currently disabled.<!----></p> <br> <div style="width: default; height: 32px;" class="clickable svelte-1f9eqjh"><!--[!--><!----><div style="color: white;" class="svelte-1kdig2t"><!--[!--><!--]--> <!----><!---->Enable Comments<!----></div><!----><!--]--></div><!----><br> <p style="text-align: center;"><!---->By enabling comments, you agree to allow this website to connect to Cusdis and to the <a href="https://cusdis.com/privacy-policy" target="_blank">Cusdis Privacy Policy</a>.<!----></p><!----></div><!--]--><!----><!--]--><!----> <hr> <div class="svelte-zdtn5w"><!----><div class="svelte-1gxf1qy"><!--[--><a href="/category/design/" class="svelte-1gxf1qy">design</a><a href="/category/ui/" class="svelte-1gxf1qy">ui</a><a href="/category/meta/" class="svelte-1gxf1qy">meta</a><a href="/category/life/" class="svelte-1gxf1qy">life</a><a href="/category/work/" class="svelte-1gxf1qy">work</a><a href="/category/portfolio/" class="svelte-1gxf1qy">portfolio</a><a href="/category/programming/" class="svelte-1gxf1qy">programming</a><a href="/category/software/" class="svelte-1gxf1qy">software</a><a href="/category/macos/" class="svelte-1gxf1qy">macos</a><a href="/category/multiplatform/" class="svelte-1gxf1qy">multiplatform</a><a href="/category/games/" class="svelte-1gxf1qy">games</a><a href="/category/photography/" class="svelte-1gxf1qy">photography</a><a href="/category/windows/" class="svelte-1gxf1qy">windows</a><a href="/category/linux/" class="svelte-1gxf1qy">linux</a><!--]--></div><!----></div><!----> <br><!----></div><!----><!--]--><!----><!----><!--]--> <!--[!--><!--]--><!--]-->
+	boky/postfix</code><!----></pre> <p>You can find the MX record IP using a tool like <a href="https://mxtoolbox.com/" rel="nofollow">MXToolbox</a>.</p><!----><!----> <br> <!--[--><hr> <!--[!--><div class="svelte-zdtn5w"><!----><p><!---->Comments are currently disabled.<!----></p> <br> <div style="width: default; height: 32px;" class="clickable svelte-1f9eqjh"><!--[!--><!----><div style="color: white;" class="svelte-1kdig2t"><!--[!--><!--]--> <!----><!---->Enable Comments<!----></div><!----><!--]--></div><!----><br> <p style="text-align: center;"><!---->By enabling comments, you agree to allow this website to connect to Cusdis and to the <a href="https://cusdis.com/privacy-policy" target="_blank">Cusdis Privacy Policy</a>.<!----></p><!----></div><!--]--><!----><!--]--><!----> <hr> <div class="svelte-zdtn5w"><!----><div class="svelte-1gxf1qy"><!--[--><a href="/category/design/" class="svelte-1gxf1qy">design</a><a href="/category/ui/" class="svelte-1gxf1qy">ui</a><a href="/category/meta/" class="svelte-1gxf1qy">meta</a><a href="/category/life/" class="svelte-1gxf1qy">life</a><a href="/category/work/" class="svelte-1gxf1qy">work</a><a href="/category/portfolio/" class="svelte-1gxf1qy">portfolio</a><a href="/category/programming/" class="svelte-1gxf1qy">programming</a><a href="/category/software/" class="svelte-1gxf1qy">software</a><a href="/category/macos/" class="svelte-1gxf1qy">macos</a><a href="/category/multiplatform/" class="svelte-1gxf1qy">multiplatform</a><a href="/category/games/" class="svelte-1gxf1qy">games</a><a href="/category/photography/" class="svelte-1gxf1qy">photography</a><a href="/category/linux/" class="svelte-1gxf1qy">linux</a><a href="/category/windows/" class="svelte-1gxf1qy">windows</a><!--]--></div><!----></div><!----> <br><!----></div><!----><!--]--><!----><!----><!--]--> <!--[!--><!--]--><!--]-->
 			
 			<script>
 				{
-					__sveltekit_14j7wk8 = {
+					__sveltekit_snsk2d = {
 						base: new URL("../..", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
-					const data = [{"type":"data","data":{categories:["design","ui","meta","life","work","portfolio","programming","software","macos","multiplatform","games","photography","windows","linux"]},"uses":{},"slash":"always"},{"type":"data","data":{fm:{title:"Notes: Setting Up Postfix on Windows",categories:"software linux",comments:true,last_modified_at:"2025-03-03T22:13:37-05:00",date:"2025-03-03T22:13:37-05:00"},id:"/articles/notes-windowspostfix"},"uses":{"route":1}},null];
+					const data = [{"type":"data","data":{categories:["design","ui","meta","life","work","portfolio","programming","software","macos","multiplatform","games","photography","linux","windows"]},"uses":{},"slash":"always"},{"type":"data","data":{fm:{title:"Notes: Setting Up Postfix on Windows",categories:"software linux",comments:true,last_modified_at:"2025-03-03T22:13:37-05:00",date:"2025-03-03T22:13:37-05:00"},id:"/articles/notes-windowspostfix"},"uses":{"route":1}},null];
 
 					Promise.all([
-						import("../../_app/immutable/entry/start.BEVcVVWK.js"),
-						import("../../_app/immutable/entry/app.C5txiqhn.js")
+						import("../../_app/immutable/entry/start.DIOZQfDw.js"),
+						import("../../_app/immutable/entry/app.DzrH5u11.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
-							node_ids: [0, 2, 15],
+							node_ids: [0, 2, 16],
 							data,
 							form: null,
 							error: null
