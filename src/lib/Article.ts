@@ -1,6 +1,10 @@
 import * as fs from 'fs';
 import * as util from 'util';
 import { compile } from 'mdsvex';
+import {
+	getLatestCommitDate,
+	getFirstCommitDate
+} from '$lib/Git.server';
 
 export interface ArticleFrontmatter {
 	title: string;
@@ -77,4 +81,24 @@ export async function getArticles(category?: string): Promise<ArticleLoaded[]> {
 	});
 	
 	return articles;
+}
+
+export async function getArticleFrontmatter(postPath: string): Promise<ArticleFrontmatter> {
+	const postContents = fs.readFileSync(postPath, 'utf-8');
+	const compiled = await compile(postContents);
+	const fm = compiled?.data?.fm as ArticleFrontmatter;
+	
+	if (!fm.last_modified_at) {
+		try {
+			fm.last_modified_at = await getLatestCommitDate(postPath);
+		} catch (e) {}
+	}
+	
+	if (!fm.date) {
+		try {
+			fm.date = await getFirstCommitDate(postPath) || '';
+		} catch (e) {}
+	}
+	
+	return fm
 }
