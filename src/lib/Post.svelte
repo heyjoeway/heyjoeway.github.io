@@ -165,7 +165,7 @@
                     <Image src={src} fullSrc={item.urlGitHub} exif={item.exif} />
                 {/await}
             {:else if item.extension == ".jpeg"}
-                {#await import(`../../src/feeds/${post.feed.id}/${post.id}/${item.id}.jpg?as=post`) then { default: src }}
+                {#await import(`../../src/feeds/${post.feed.id}/${post.id}/${item.id}.jpeg?as=post`) then { default: src }}
                     <Image src={src} fullSrc={item.urlGitHub} exif={item.exif} />
                 {/await}
             {:else if item.extension == ".webp"}

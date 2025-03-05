@@ -35,7 +35,7 @@ export function splitext(path: string) {
 	const lastDot = path.lastIndexOf(".");
 	return [
 		path.slice(0, lastDot),
-		path.slice(lastDot).toLowerCase()
+		path.slice(lastDot)
 	];
 }
 

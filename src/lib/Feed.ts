@@ -100,9 +100,17 @@ export async function getFeedPostMedia(feedId: string, postId: string): Promise<
     );
     
     const media = await Promise.all(mediaFileNames.map(async (mediaFileName: string) => {
-        const mediaPath = path.join(mediaRoot, mediaFileName);
+        let mediaPath = path.join(mediaRoot, mediaFileName);
         let [id, extension] = splitext(mediaFileName);
+        const extensionBeforeLower = extension;
         extension = extension.toLowerCase();
+        
+        // If the extension is uppercase, convert it to lowercase
+        if (extensionBeforeLower !== extension) {
+            fs.renameSync(mediaPath, path.join(mediaRoot, `${id}${extension}`));
+            mediaPath = path.join(mediaRoot, `${id}${extension}`);
+            extension = extensionBeforeLower;
+        }
         
         const exifExtensions = [
             ".jpg",
