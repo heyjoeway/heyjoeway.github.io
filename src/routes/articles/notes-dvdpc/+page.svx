@@ -1,0 +1,38 @@
+---
+title: Convert Old PC into Dedicated DVD Player
+categories: software linux
+---
+Had to do this at work and figured I'd share my notes here. Any usefulness these computers can get after their expected life is less money wasted.
+
+1. Download [LibreElec](https://libreelec.tv/downloads/) (including the USB creator) and make yourself a flash drive.
+	- The default download links may be blocked by your network. [You can find active mirrors here.](https://wiki.libreelec.tv/project/mirrors)
+2. Before booting the flash drive, you'll want to go into the BIOS and disable networking.
+	1. On the computer I did this with (Dell Optiplex 3040), the setting to disable the network adapter was located under `System Configuration > Integrated NIC > Disabled`.
+	2. This doesn't prevent people from plugging in a USB ethernet adapter but at least it makes it clear that it's not supposed to be connected to the internet.
+	3. You might also want to set a BIOS password to prevent people from re-enabling it.
+	4. Also would recommend putting an uncrimped RJ45 in as a dummy plug. May need a bit of "percussive maintenance" to get in.
+3. Let the flash drive boot automatically or type `installer` and press Enter to continue. It might seem like it hung for a second but it is actually loading.
+4. Install it. It will use up the whole disk, no special partitioning or anything.
+5. Remove the USB.
+6. You'll need to manually choose the `reboot` option once it's finished.
+7. Keep hitting `Next` until you're done with the welcome dialog.
+8. Now to configure some options:
+	- `Interface`
+		- `Skin`
+			- `Configure skin...`
+				- `Main menu items`
+					- Turn off EVERYTHING in this section.
+	- `System`
+		- `Audio`
+			- `Audio output device`: Change to whatever it needs to be.
+	- `Player`
+		- `Discs`
+			- `Attempt to skip introduction before DVD menu`: On
+				- If this option doesn't show up, make sure `Advanced` mode or higher is selected in the bottom left corner.
+9. Go back to the main menu.
+10. Insert a DVD.
+11. Click `Play Disc`.
+12. Make sure the audio works. If not, check your audio settings.
+
+## Notes
+The reason we don't enable DVDs playing automatically is because it triggers a pop-up menu. [People have been complaining about this for well over a decade](https://forum.kodi.tv/archive/index.php?thread-128057.html) but it doesn't seem like Kodi cares. Oh well!
