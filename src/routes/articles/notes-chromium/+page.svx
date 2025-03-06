@@ -6,7 +6,7 @@ comments: true
 This is generally how I set up Ungoogled Chromium. These note are primarily for my own reference, but may be useful to others.
 
 ## First Steps
-Follow the first run (<chrome://ungoogled-first-run/>) steps.
+Follow the first run (<chrome://ungoogled-first-run>) steps.
 
 If running from a Flatpak, dictionary goes here:
 ```
@@ -23,27 +23,30 @@ Make sure [Chromium Web Store](https://github.com/NeverDecaf/chromium-web-store/
 > - Add Google In Search Engine input box
 > - Add google.com in Keyword input box
 > - Add this in URL with %s in place of query input box 
->   - `https://www.google.com/search?q=%s&{google:RLZ}{google:originalQueryForSuggestion}{google:assistedQueryStats}{google:searchFieldtrialParameter}{google:iOSSearchLanguage}{google:prefetchSource}{google:searchClient}{google:sourceId}{google:contextualSearchVersion}ie={inputEncoding}` 
+>   ```
+>   https://www.google.com/search?q=%s&{google:RLZ}{google:originalQueryForSuggestion}{google:assistedQueryStats}{google:searchFieldtrialParameter}{google:iOSSearchLanguage}{google:prefetchSource}{google:searchClient}{google:sourceId}{google:contextualSearchVersion}ie={inputEncoding}
+>   ```
 > - Add `https://www.google.com/complete/search?client=chrome&q=%s` in Suggestions URL with %s in place of query input box
-> - Click The Blue Ssave Button
+> - Click The Blue Save Button
 > - Click the three dot menu near Google and select Make default
 
 ## Extensions
-- [uBlock Origin Lite](https://chromewebstore.google.com/detail/ublock-origin-lite/ddkjiahejlhfcafbddmgiahcphecmpfh])
-- [SponsorBlock](https://chromewebstore.google.com/detail/sponsorblock-for-youtube/mnjggcdmjocbbbhaepdhchncahnbgone)
-- [DeArrow](https://chromewebstore.google.com/detail/dearrow-better-titles-and/enamippconapkdmgfgjchkhakpfinmaj)
-- [Midnight Lizard](https://chromewebstore.google.com/detail/midnight-lizard/pbnndmlekkboofhnbonilimejonapojg)
-- [2FAS](https://chromewebstore.google.com/detail/2fas-two-factor-authentic/dbfoemgnkgieejfkaddieamagdfepnff)
-- [AutoplayStopper](https://chromewebstore.google.com/detail/autoplaystopper/ejddcgojdblidajhngkogefpkknnebdh)
-- [Floccus](https://chromewebstore.google.com/detail/floccus-bookmarks-sync/fnaicdffflnofjppbagibeoednhnbjhg?hl=en)
+- [uBlock Origin Lite](https://chromewebstore.google.com/detail/ublock-origin-lite/ddkjiahejlhfcafbddmgiahcphecmpfh]): The classic.
+- [SponsorBlock](https://chromewebstore.google.com/detail/sponsorblock-for-youtube/mnjggcdmjocbbbhaepdhchncahnbgone): Removes sponsor segments from YouTube videos.
+- [DeArrow](https://chromewebstore.google.com/detail/dearrow-better-titles-and/enamippconapkdmgfgjchkhakpfinmaj): De-clickbaits titles and thumbnails on YouTube.
+- [Midnight Lizard](https://chromewebstore.google.com/detail/midnight-lizard/pbnndmlekkboofhnbonilimejonapojg): Dark mode/custom color schemes for all websites.
+- [2FAS](https://chromewebstore.google.com/detail/2fas-two-factor-authentic/dbfoemgnkgieejfkaddieamagdfepnff): Two-factor authentication with autofill.
+- [AutoplayStopper](https://chromewebstore.google.com/detail/autoplaystopper/ejddcgojdblidajhngkogefpkknnebdh): Stops autoplaying videos.
+- [Floccus](https://chromewebstore.google.com/detail/floccus-bookmarks-sync/fnaicdffflnofjppbagibeoednhnbjhg?hl=en): Bookmark sync.
 - [My Start Page](https://github.com/heyjoeway/startpage)
   - Go to <https://github.com/heyjoeway/startpage/actions/workflows/main.yml> and run a workflow.
   - Download `dist`, save at `~/Downloads/dist.zip`
-  - ```
+  - Extract it into a folder. For example:
+    ```bash
     mkdir -p ~/extensions/startpage
     cd ~/extensions/startpage
     mv ~/Downloads/dist.zip .
     unzip dist.zip
     rm dist.zip
     ```
-    Then add in <chrome://extensions> using `Developer mode`.
+  - Add in <chrome://extensions> using `Developer mode`.

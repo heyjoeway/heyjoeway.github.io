@@ -15,7 +15,7 @@ Our Linode image only contains the system partition, that is to say what is norm
 5. Initialize partition table of other disk using MBR format.
 6. Create a partition filling the entire disk and apply the changes.
 7. Time for the terminal!
-```
+```bash
 # Get root shell
 sudo su
 # Copy the data!
@@ -36,7 +36,7 @@ poweroff
 ```
 8. Remove the assigned ISO and original system disk image, then boot. You should be able to get to your normal shell.
 9. More terminal!
-```
+```bash
 # Get root again...
 sudo su
 # Fix the bootloader for real this time

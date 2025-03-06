@@ -71,25 +71,52 @@ hr {
 	border-bottom: rgba(128, 128, 128, 0.5) dashed 1px;
 }
 
+blockquote {
+	opacity: 0.8;
+	padding-left: 16px;
+	border-left: 4px solid rgba(255, 255, 255, 0.25);
+}
+
+ul, ol {
+	padding-left: 24px;
+}
+
 /**
 * Monokai theme for Prism.JS
 *
 * @author Martijn Swaagman
 * @license MIT 2015
 */
-pre[class*="language-"] {
-	margin-bottom: 8px;
-	
+pre[class*="language-"], table {
 	border-width: 1px;
 	border-color: #222;
 	border-style: solid;
 	background: rgba(46, 46, 46, 0.4);
 	backdrop-filter: blur(32px);
 	-webkit-backdrop-filter: blur(32px);
-	
 	box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-	
-	padding: 16px;
+	border-radius: 0.3em;
+	padding: 8px;
+}
+
+table {
+	font-family: monospace;
+	font-size: 14px;
+	width: 100%;
+	overflow: auto;
+}
+
+th {
+	text-align: left;
+	font-size: 16px;
+	font-weight: bold;
+	border-bottom: 1px solid #222;
+	line-height: 1em;
+	padding-bottom: 8px;
+}
+
+tr:nth-child(even) {
+	background: rgba(255, 255, 255, 0.025);
 }
 
 code[class*="language-"],
@@ -117,10 +144,9 @@ pre[class*="language-"] {
 }
 
 pre[class*="language-"] {
-	padding: 1em;
-	margin: .5em 0;
+	/* padding: 1em; */
+	/* margin: .5em 0; */
 	overflow: auto;
-	border-radius: 0.3em;
 }
 
 :not(pre) > code[class*="language-"] {
