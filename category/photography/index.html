@@ -2,79 +2,7 @@
 <html lang="en">
 	<head>
 		<link rel="stylesheet" href="../../reset.css" />
-		<style>
-			@font-face {
-				font-family: 'Microsoft Sans Serif';
-				font-style: normal;
-				font-weight: 400;
-				src: local("Microsoft Sans Serif"),url("/fonts/micross.woff") format("woff")
-			}
-			
-			@font-face {
-				font-family: 'franklin_gothicregular';
-				src: url("/fonts/franklin_gothic_regular-webfont.woff2") format("woff2"),url("/fonts/franklin_gothic_regular-webfont.woff") format("woff");
-				font-weight: normal;
-				font-style: normal
-			}
-			
-			body {
-				background-color: black;
-				color: white;
-				font: 400 16px/1.5 "Microsoft Sans Serif",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-			}
-			
-			a {
-				transition: color 0.1s;
-				scale: 100%;
-				color: orange;
-				text-decoration: none;
-			}
-			
-			a:hover {
-				color: #fff;
-			}
-			
-			h1 {
-				font-size: 42px;
-				letter-spacing: -1px;
-				line-height: 1;
-			}
-			
-			h2 {
-				font-size: 26px;
-			}
-			
-			h1, h2, h3, h4, h5, h6 {
-				font-family: "franklin_gothicregular", sans-serif;
-				font-weight: 400;
-				margin-top: 16px;
-				margin-bottom: 8px;
-				line-height: 1em;
-			}
-			
-			@media screen and (max-width: 800px) {
-				h1 {
-					font-size: 36px;
-				}
-				
-				h2 {
-					font-size: 22px;
-				}
-			}
-			
-			p, blockquote, pre, ul, ol, dl, figure, hr {
-				margin-bottom: 16px;
-			}
-			
-			* {
-				scrollbar-color: #111 #000;
-			}
-			
-			hr {
-				border: none;
-				border-bottom: rgba(128, 128, 128, 0.5) dashed 1px;
-			}
-		</style>
+		<link rel="stylesheet" href="../../base.css" />
 		<meta charset="utf-8" />
 		<meta name="color-scheme" content="dark">
 		<link rel="icon" href="../../favicon.png" />
@@ -84,11 +12,11 @@
 		<link href="../../_app/immutable/assets/Button.CO_IFsgN.css" rel="stylesheet">
 		<link href="../../_app/immutable/assets/ArticleFeed.COlA-k9G.css" rel="stylesheet">
 		<link href="../../_app/immutable/assets/Tags.zOjeMBQI.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../_app/immutable/entry/start.D94qkcEu.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/entry.D5vAdA4k.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.DYyIchMg.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/entry.3b9LXn2D.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/runtime.BVU0rH9e.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/index.DYBIQy5k.js">
-		<link rel="modulepreload" href="../../_app/immutable/entry/app.Didj-1J_.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.BieHYaNZ.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/preload-helper.C1FmrZbK.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/render.Dvy1DFxg.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/store.DTxDMkQX.js">
@@ -114,7 +42,7 @@
 			
 			<script>
 				{
-					__sveltekit_1cghz1s = {
+					__sveltekit_21krpt = {
 						base: new URL("../..", location).pathname.slice(0, -1)
 					};
 
@@ -123,8 +51,8 @@
 					const data = [{"type":"data","data":{categories:["design","ui","meta","life","work","portfolio","programming","software","macos","multiplatform","games","photography","linux","windows"]},"uses":{},"slash":"always"},{"type":"data","data":{articles:[{slug:"photo-megapost",path:"/articles/photo-megapost",code:"\u003Cscript context=\"module\">\n\texport const metadata = {\"title\":\"Photography Megapost\",\"date\":\"2022-11-07T00:00:00.000Z\",\"categories\":\"life photography\",\"comments\":true};\n\tconst { title, date, categories, comments } = metadata;\n\u003C/script>\n\u003Cscript lang=\"ts\">\n\nimport { type GalleryDescriptor } from \"$lib/Gallery\";\nimport Gallery from '$lib/Gallery.svelte';\n\nexport let data;\n\nconst galleries = [\n    {\n        name: \"January 2019\",\n        description: \"Point Au Roche\",\n        images: data.galleries[\"jan-2019-point-au-roche\"],\n        thumbs: import.meta.glob('./jan-2019-point-au-roche/*.jpg', {\n            eager: true,\n            query: { w: 160, h: 160, fit: 'cover', as: 'run' }\n        })\n    },\n    {\n        name: \"Summer 2018\",\n        description: \"Some miscellaneous photos taken during my time working at the Whiteface ASRC in 2018.\",\n        images: data.galleries[\"summer-2018-whiteface\"],\n        thumbs: import.meta.glob('./summer-2018-whiteface/*.jpg', {\n            eager: true,\n            query: { w: 160, h: 160, fit: 'cover', as: 'run' }\n        })\n    },\n    {\n        name: \"Summer 2018 (Night)\",\n        description: \"During the summer of 2018, I was given the opportunity to spend the night on the summit of Whiteface. Here are some of the photos I took in all their post-processed glory.\",\n        images: data.galleries[\"summer-2018-whiteface-night\"],\n        thumbs: import.meta.glob('./summer-2018-whiteface-night/*.jpg', {\n            eager: true,\n            query: { w: 160, h: 160, fit: 'cover', as: 'run' }\n        })\n    },\n    {\n        name: \"Misc\",\n        description: \"Miscellaneous photos from my younger years.\",\n        images: data.galleries[\"misc\"],\n        thumbs: import.meta.glob('./misc/*.jpg', {\n            eager: true,\n            query: { w: 160, h: 160, fit: 'cover', as: 'run' }\n        })\n    }\n] as GalleryDescriptor[];\n\n\u003C/script>\n\n\u003Cp>Various snapshots of my life.\u003C/p>\n\u003Cp>\u003Ca\n  href=\"https://creativecommons.org/licenses/by/4.0/\"\n  rel=\"nofollow\"\n>These photos are licensed under CC BY 4.0.\u003C/a>\u003C/p>\n{#each galleries as gallery}\n\u003CGallery {gallery} />\n{/each}\n\n",fm:{title:"Photography Megapost",date:new Date(1667779200000),categories:"life photography",comments:true,last_modified_at:"2024-12-04T14:57:02-05:00"}}],slug:"photography"},"uses":{"params":["slug"]}}];
 
 					Promise.all([
-						import("../../_app/immutable/entry/start.D94qkcEu.js"),
-						import("../../_app/immutable/entry/app.Didj-1J_.js")
+						import("../../_app/immutable/entry/start.DYyIchMg.js"),
+						import("../../_app/immutable/entry/app.BieHYaNZ.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 23],

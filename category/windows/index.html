@@ -2,79 +2,7 @@
 <html lang="en">
 	<head>
 		<link rel="stylesheet" href="../../reset.css" />
-		<style>
-			@font-face {
-				font-family: 'Microsoft Sans Serif';
-				font-style: normal;
-				font-weight: 400;
-				src: local("Microsoft Sans Serif"),url("/fonts/micross.woff") format("woff")
-			}
-			
-			@font-face {
-				font-family: 'franklin_gothicregular';
-				src: url("/fonts/franklin_gothic_regular-webfont.woff2") format("woff2"),url("/fonts/franklin_gothic_regular-webfont.woff") format("woff");
-				font-weight: normal;
-				font-style: normal
-			}
-			
-			body {
-				background-color: black;
-				color: white;
-				font: 400 16px/1.5 "Microsoft Sans Serif",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-			}
-			
-			a {
-				transition: color 0.1s;
-				scale: 100%;
-				color: orange;
-				text-decoration: none;
-			}
-			
-			a:hover {
-				color: #fff;
-			}
-			
-			h1 {
-				font-size: 42px;
-				letter-spacing: -1px;
-				line-height: 1;
-			}
-			
-			h2 {
-				font-size: 26px;
-			}
-			
-			h1, h2, h3, h4, h5, h6 {
-				font-family: "franklin_gothicregular", sans-serif;
-				font-weight: 400;
-				margin-top: 16px;
-				margin-bottom: 8px;
-				line-height: 1em;
-			}
-			
-			@media screen and (max-width: 800px) {
-				h1 {
-					font-size: 36px;
-				}
-				
-				h2 {
-					font-size: 22px;
-				}
-			}
-			
-			p, blockquote, pre, ul, ol, dl, figure, hr {
-				margin-bottom: 16px;
-			}
-			
-			* {
-				scrollbar-color: #111 #000;
-			}
-			
-			hr {
-				border: none;
-				border-bottom: rgba(128, 128, 128, 0.5) dashed 1px;
-			}
-		</style>
+		<link rel="stylesheet" href="../../base.css" />
 		<meta charset="utf-8" />
 		<meta name="color-scheme" content="dark">
 		<link rel="icon" href="../../favicon.png" />
@@ -84,11 +12,11 @@
 		<link href="../../_app/immutable/assets/Button.CO_IFsgN.css" rel="stylesheet">
 		<link href="../../_app/immutable/assets/ArticleFeed.COlA-k9G.css" rel="stylesheet">
 		<link href="../../_app/immutable/assets/Tags.zOjeMBQI.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../_app/immutable/entry/start.D94qkcEu.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/entry.D5vAdA4k.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.DYyIchMg.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/entry.3b9LXn2D.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/runtime.BVU0rH9e.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/index.DYBIQy5k.js">
-		<link rel="modulepreload" href="../../_app/immutable/entry/app.Didj-1J_.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.BieHYaNZ.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/preload-helper.C1FmrZbK.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/render.Dvy1DFxg.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/store.DTxDMkQX.js">
@@ -114,17 +42,17 @@
 			
 			<script>
 				{
-					__sveltekit_1cghz1s = {
+					__sveltekit_21krpt = {
 						base: new URL("../..", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
-					const data = [{"type":"data","data":{categories:["design","ui","meta","life","work","portfolio","programming","software","macos","multiplatform","games","photography","linux","windows"]},"uses":{},"slash":"always"},{"type":"data","data":{articles:[{slug:"notes-windows",path:"/articles/notes-windows",code:"\u003Cscript context=\"module\">\n\texport const metadata = {\"title\":\"Notes: Windows\",\"categories\":\"software windows\",\"comments\":true};\n\tconst { title, categories, comments } = metadata;\n\u003C/script>\n\n\u003Cp>Random notes for Windows. Primarily for my own reference. At some point I’ll talk about \u003Ca\n  href=\"https://github.com/heyjoeway/joeydebloat\"\n  rel=\"nofollow\"\n>JoeyDebloat\u003C/a>.\u003C/p>\n\u003Ch1>Commands\u003C/h1>\n\u003Cul>\n\u003Cli>VSCode Remote Tunneling\n\u003Cul>\n\u003Cli>\u003Ccode>code tunnel\u003C/code>\u003C/li>\n\u003C/ul>\n\u003C/li>\n\u003Cli>WinSxS Cleanup\n\u003Cul>\n\u003Cli>\u003Ccode>Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase\u003C/code>\u003C/li>\n\u003Cli>\u003Ca\n  href=\"https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/clean-up-the-winsxs-folder?view=windows-11\"\n  rel=\"nofollow\"\n>Source\u003C/a>\u003C/li>\n\u003C/ul>\n\u003C/li>\n\u003Cli>System Volume Information Cleanup\n\u003Cul>\n\u003Cli>\u003Ccode>wmic shadowcopy delete /nointeractive\u003C/code>\u003C/li>\n\u003C/ul>\n\u003C/li>\n\u003C/ul>\n\u003Ch1>Scripting\u003C/h1>\n\u003Cul>\n\u003Cli>Change directory to script location in batch\n\u003Cul>\n\u003Cli>\u003Ccode>cd /D \"%~dp0\"\u003C/code>\u003C/li>\n\u003C/ul>\n\u003C/li>\n\u003C/ul>\n\u003Ch1>Software\u003C/h1>\n\u003Ctable>\n\u003Cthead>\n\u003Ctr>\n\u003Cth>Name\u003C/th>\n\u003Cth>Description\u003C/th>\n\u003Cth>Link\u003C/th>\n\u003C/tr>\n\u003C/thead>\n\u003Ctbody>\n\u003Ctr>\n\u003Ctd>SrvMan\u003C/td>\n\u003Ctd>Create services, manage hidden services\u003C/td>\n\u003Ctd>\u003Ca\n  href=\"https://sysprogs.com/legacy/tools/srvman/\"\n  rel=\"nofollow\"\n>https://sysprogs.com/legacy/tools/srvman/\u003C/a>\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>DriverStoreExplorer (Rapr)\u003C/td>\n\u003Ctd>Clean driverstore packages, reclaim space\u003C/td>\n\u003Ctd>\u003Ca\n  href=\"https://github.com/lostindark/DriverStoreExplorer\"\n  rel=\"nofollow\"\n>https://github.com/lostindark/DriverStoreExplorer\u003C/a>\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>PatchCleaner\u003C/td>\n\u003Ctd>Cleans up old/redundant installers, reclaim space\u003C/td>\n\u003Ctd>\u003Ca\n  href=\"https://www.homedev.com.au/Free/PatchCleaner\"\n  rel=\"nofollow\"\n>https://www.homedev.com.au/Free/PatchCleaner\u003C/a>\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>FurMark\u003C/td>\n\u003Ctd>GPU stress test\u003C/td>\n\u003Ctd>\u003Ca\n  href=\"https://geeks3d.com/furmark/\"\n  rel=\"nofollow\"\n>https://geeks3d.com/furmark/\u003C/a>\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>Prime95\u003C/td>\n\u003Ctd>CPU/RAM stress test\u003C/td>\n\u003Ctd>\u003Ca\n  href=\"https://www.mersenne.org/download/\"\n  rel=\"nofollow\"\n>https://www.mersenne.org/download/\u003C/a>\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>Rufus\u003C/td>\n\u003Ctd>Create USB install media\u003C/td>\n\u003Ctd>\u003Ca href=\"https://rufus.ie/en/\" rel=\"nofollow\">https://rufus.ie/en/\u003C/a>\u003C/td>\n\u003C/tr>\n\u003C/tbody>\n\u003C/table>\n",fm:{title:"Notes: Windows",categories:"software windows",comments:true,last_modified_at:"2025-03-03T22:08:14-05:00",date:"2025-03-03T22:08:14-05:00"}}],slug:"windows"},"uses":{"params":["slug"]}}];
+					const data = [{"type":"data","data":{categories:["design","ui","meta","life","work","portfolio","programming","software","macos","multiplatform","games","photography","linux","windows"]},"uses":{},"slash":"always"},{"type":"data","data":{articles:[{slug:"notes-windows",path:"/articles/notes-windows",code:"\u003Cscript context=\"module\">\n\texport const metadata = {\"title\":\"Notes: Windows\",\"categories\":\"software windows\",\"comments\":true};\n\tconst { title, categories, comments } = metadata;\n\u003C/script>\n\n\u003Cp>Random notes for Windows. Primarily for my own reference. At some point I’ll talk about \u003Ca\n  href=\"https://github.com/heyjoeway/joeydebloat\"\n  rel=\"nofollow\"\n>JoeyDebloat\u003C/a>.\u003C/p>\n\u003Ch1>Commands\u003C/h1>\n\u003Cpre class=\"language-batch\">{@html `\u003Ccode class=\"language-batch\">\u003Cspan class=\"token comment\">:: VSCode Remote Tunneling\u003C/span>\n\u003Cspan class=\"token command\">\u003Cspan class=\"token keyword\">code\u003C/span> tunnel\u003C/span>\n\n\u003Cspan class=\"token comment\">:: WinSxS Cleanup\u003C/span>\n\u003Cspan class=\"token command\">\u003Cspan class=\"token keyword\">Dism\u003C/span>.exe \u003Cspan class=\"token parameter attr-name\">/online\u003C/span> /Cleanup-Image \u003Cspan class=\"token parameter attr-name\">/StartComponentCleanup\u003C/span> \u003Cspan class=\"token parameter attr-name\">/ResetBase\u003C/span>\u003C/span>\n\u003Cspan class=\"token comment\">:: [Source](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/clean-up-the-winsxs-folder?view=windows-11)\u003C/span>\n\n\u003Cspan class=\"token comment\">:: System Volume Information Cleanup\u003C/span>\n\u003Cspan class=\"token command\">\u003Cspan class=\"token keyword\">wmic\u003C/span> shadowcopy delete \u003Cspan class=\"token parameter attr-name\">/nointeractive\u003C/span>\u003C/span>\u003C/code>`}\u003C/pre>\n\u003Ch1>Scripting\u003C/h1>\n\u003Cpre class=\"language-batch\">{@html `\u003Ccode class=\"language-batch\">\u003Cspan class=\"token comment\">:: Change directory to script location in batch\u003C/span>\n\u003Cspan class=\"token command\">\u003Cspan class=\"token keyword\">cd\u003C/span> \u003Cspan class=\"token parameter attr-name\">/D\u003C/span> \u003Cspan class=\"token string\">\"%~dp0\"\u003C/span>\u003C/span>\u003C/code>`}\u003C/pre>\n\u003Ch1>Software\u003C/h1>\n\u003Ctable>\n\u003Cthead>\n\u003Ctr>\n\u003Cth>Name\u003C/th>\n\u003Cth>Description\u003C/th>\n\u003C/tr>\n\u003C/thead>\n\u003Ctbody>\n\u003Ctr>\n\u003Ctd>\u003Ca\n  href=\"https://sysprogs.com/legacy/tools/srvman/\"\n  rel=\"nofollow\"\n>SrvMan                    \u003C/a>\u003C/td>\n\u003Ctd>Create services, manage hidden services\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Ca\n  href=\"https://github.com/lostindark/DriverStoreExplorer\"\n  rel=\"nofollow\"\n>DriverStoreExplorer (Rapr)\u003C/a>\u003C/td>\n\u003Ctd>Clean driverstore packages, reclaim space\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Ca\n  href=\"https://www.homedev.com.au/Free/PatchCleaner\"\n  rel=\"nofollow\"\n>PatchCleaner              \u003C/a>\u003C/td>\n\u003Ctd>Cleans up old/redundant installers, reclaim space\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Ca href=\"https://geeks3d.com/furmark/\" rel=\"nofollow\">FurMark                   \u003C/a>\u003C/td>\n\u003Ctd>GPU stress test\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Ca\n  href=\"https://www.mersenne.org/download/\"\n  rel=\"nofollow\"\n>Prime95                   \u003C/a>\u003C/td>\n\u003Ctd>CPU/RAM stress test\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Ca href=\"https://rufus.ie/en/\" rel=\"nofollow\">Rufus                     \u003C/a>\u003C/td>\n\u003Ctd>Create USB install media\u003C/td>\n\u003C/tr>\n\u003C/tbody>\n\u003C/table>\n",fm:{title:"Notes: Windows",categories:"software windows",comments:true,last_modified_at:"2025-03-06T14:32:30-05:00",date:"2025-03-03T22:08:14-05:00"}}],slug:"windows"},"uses":{"params":["slug"]}}];
 
 					Promise.all([
-						import("../../_app/immutable/entry/start.D94qkcEu.js"),
-						import("../../_app/immutable/entry/app.Didj-1J_.js")
+						import("../../_app/immutable/entry/start.DYyIchMg.js"),
+						import("../../_app/immutable/entry/app.BieHYaNZ.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 23],
