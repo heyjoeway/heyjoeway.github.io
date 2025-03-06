@@ -2,6 +2,7 @@
 	.header-container {
 		display: flex;
 		justify-content: space-between;
+		gap: 8px;
 		
 		h1 {
 			margin-top: 0;
