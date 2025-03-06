@@ -63,6 +63,7 @@
 <!-- svelte-ignore a11y_click_events_have_key_events -->
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 <div
+    class="img-container"
     style={styleObjToStr({
         "--img-max-height": maxHeight,
         "--img-width": width,
@@ -88,47 +89,49 @@
 
 {#if enableLightbox}
     <Overlay bind:open={overlayOpen}>
-        <div class="full-src-link">
-            <Button onClick={fullSrcLink}>
-                🔗 Open Full Image
-            </Button>
-        </div>
-        
-        {#if skipSvelteImg}
-            <img
-                class="img img-lightbox"
-                {src}
-                alt=" "
-                style={nearestScaling ? "image-rendering: pixelated;" : ""}
-            />
-        {:else}
-            <Img class="img img-lightbox" {src} alt=" " />
-        {/if}
-        
-        {#if exif}
-            <div class="overlay-exif">
-                {#if exifOpen}
-                    🖵 (Original: {exif["Image Height"]?.value}x{exif["Image Width"]?.value} {exif["Bits Per Sample"]?.value}bpp)<br>
-                    {#if exif.Make?.description || exif.Model?.description}
-                        📷 {exif.Make?.description} {exif.Model?.description}<br>
-                    {/if}
-                    {#if exif.Lens?.description}
-                        🔎 {exif.Lens?.description}<br>
-                    {/if}
-                    {#if exifString}
-                        ⚙️ {exifString}<br>
-                    {/if}
-                    {#if exif.Flash?.description}
-                        ⚡ {exif.Flash?.description}<br>
-                    {/if}
-                    {#if showExifSoftware}
-                        🖌️ Edited with {exif.Software?.description}
-                    {/if}
-                {:else}
-                    <Button onClick={() => exifOpen = true}>ℹ️</Button>
-                {/if}
+        <div class="img-lightbox-container">
+            <div class="full-src-link">
+                <Button onClick={fullSrcLink}>
+                    🔗 Open Full Image
+                </Button>
             </div>
-        {/if}
+        
+            {#if skipSvelteImg}
+                <img
+                    class="img img-lightbox"
+                    {src}
+                    alt=" "
+                    style={nearestScaling ? "image-rendering: pixelated;" : ""}
+                />
+            {:else}
+                <Img class="img img-lightbox" {src} alt=" " />
+            {/if}
+        
+            {#if exif}
+                <div class="overlay-exif">
+                    {#if exifOpen}
+                        🖵 (Original: {exif["Image Height"]?.value}x{exif["Image Width"]?.value} {exif["Bits Per Sample"]?.value}bpp)<br>
+                        {#if exif.Make?.description || exif.Model?.description}
+                            📷 {exif.Make?.description} {exif.Model?.description}<br>
+                        {/if}
+                        {#if exif.Lens?.description}
+                            🔎 {exif.Lens?.description}<br>
+                        {/if}
+                        {#if exifString}
+                            ⚙️ {exifString}<br>
+                        {/if}
+                        {#if exif.Flash?.description}
+                            ⚡ {exif.Flash?.description}<br>
+                        {/if}
+                        {#if showExifSoftware}
+                            🖌️ Edited with {exif.Software?.description}
+                        {/if}
+                    {:else}
+                        <Button onClick={() => exifOpen = true}>ℹ️</Button>
+                    {/if}
+                </div>
+            {/if}
+        </div>
     </Overlay>
 {/if}
 
@@ -157,7 +160,7 @@
         align-items: center;
     }
 
-    :global(.img) {
+    .img-container :global(.img) {
         border-radius: 8px;
         width: auto;
         height: auto;
@@ -167,7 +170,7 @@
         align-self: center;
     }
     
-    :global(.square) {
+    .img-container :global(.square) {
         aspect-ratio: 1 / 1;
         object-fit: cover;
     }
@@ -182,11 +185,11 @@
         right: 0;
     }
     
-    :global(.img-lightbox) {
+    .img-lightbox-container :global(.img-lightbox) {
         max-height: 100% !important;
     }
     
-    :global(.overlay-exif) {
+    .img-lightbox-container :global(.overlay-exif) {
         position: fixed !important;
         left: 16px;
         bottom: 16px;
