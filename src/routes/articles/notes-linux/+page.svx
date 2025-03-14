@@ -33,7 +33,6 @@ echo "Unattended-Upgrade::Automatic-Reboot-WithUsers \"true\";" > /etc/apt/apt.c
 ### With Docker
 
 ```bash
-apt install -y curl
 curl -fsSL https://get.docker.com | sh
 apt install -y docker-compose
 docker run --detach --name watchtower --restart unless-stopped --volume /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower
@@ -43,6 +42,9 @@ docker run --detach --name watchtower --restart unless-stopped --volume /var/run
 
 ```bash
 #!/bin/bash
+export DEBIAN_FRONTEND=noninteractive
+export NEEDRESTART_MODE=l
+apt install cifs-utils -y
 echo "Linux username: "
 read linux_username
 echo "SMB Username: "
@@ -50,11 +52,10 @@ read smb_username
 echo "SMB Password: "
 read smb_password
 mkdir /media/share
-apt install cifs-utils -y
 printf "username=$smb_username\npassword=$smb_password" > /root/sharecreds.txt
 printf "\n//10.10.10.4/home /media/share cifs credentials=/root/sharecreds.txt,uid=$linux_username,gid=$linux_username,file_mode=0770,dir_mode=0770,noperm 0 0\n" >> /etc/fstab
 systemctl daemon-reload
-adduser linux_username
+adduser $linux_username
 echo "*/1 *  * * *  mount -a" | crontab - # Hack
 mount -a
 ```
