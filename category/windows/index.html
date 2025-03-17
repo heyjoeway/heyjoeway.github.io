@@ -12,11 +12,11 @@
 		<link href="../../_app/immutable/assets/Button.CO_IFsgN.css" rel="stylesheet">
 		<link href="../../_app/immutable/assets/ArticleFeed.COlA-k9G.css" rel="stylesheet">
 		<link href="../../_app/immutable/assets/Tags.zOjeMBQI.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../_app/immutable/entry/start.DdJr3lAU.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/entry.DwA2RiHP.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.Bt12HHJP.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/entry.CLtccNVT.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/runtime.BVU0rH9e.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/index.DYBIQy5k.js">
-		<link rel="modulepreload" href="../../_app/immutable/entry/app.CwcHCqh7.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.DyHvZM4V.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/preload-helper.C1FmrZbK.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/render.Dvy1DFxg.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/store.DTxDMkQX.js">
@@ -42,7 +42,7 @@
 			
 			<script>
 				{
-					__sveltekit_11rven1 = {
+					__sveltekit_1dw9lek = {
 						base: new URL("../..", location).pathname.slice(0, -1)
 					};
 
@@ -51,8 +51,8 @@
 					const data = [{"type":"data","data":{categories:["design","ui","meta","life","work","portfolio","programming","software","macos","multiplatform","games","photography","linux","windows"]},"uses":{},"slash":"always"},{"type":"data","data":{articles:[{slug:"notes-windows",path:"/articles/notes-windows",code:"\u003Cscript context=\"module\">\n\texport const metadata = {\"title\":\"Notes: Windows\",\"categories\":\"software windows\",\"comments\":true};\n\tconst { title, categories, comments } = metadata;\n\u003C/script>\n\n\u003Cp>Random notes for Windows. Primarily for my own reference. At some point I’ll talk about \u003Ca\n  href=\"https://github.com/heyjoeway/joeydebloat\"\n  rel=\"nofollow\"\n>JoeyDebloat\u003C/a>.\u003C/p>\n\u003Ch1>Commands\u003C/h1>\n\u003Cpre class=\"language-batch\">{@html `\u003Ccode class=\"language-batch\">\u003Cspan class=\"token comment\">:: VSCode Remote Tunneling\u003C/span>\n\u003Cspan class=\"token command\">\u003Cspan class=\"token keyword\">code\u003C/span> tunnel\u003C/span>\n\n\u003Cspan class=\"token comment\">:: WinSxS Cleanup\u003C/span>\n\u003Cspan class=\"token command\">\u003Cspan class=\"token keyword\">Dism\u003C/span>.exe \u003Cspan class=\"token parameter attr-name\">/online\u003C/span> /Cleanup-Image \u003Cspan class=\"token parameter attr-name\">/StartComponentCleanup\u003C/span> \u003Cspan class=\"token parameter attr-name\">/ResetBase\u003C/span>\u003C/span>\n\u003Cspan class=\"token comment\">:: [Source](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/clean-up-the-winsxs-folder?view=windows-11)\u003C/span>\n\n\u003Cspan class=\"token comment\">:: System Volume Information Cleanup\u003C/span>\n\u003Cspan class=\"token command\">\u003Cspan class=\"token keyword\">wmic\u003C/span> shadowcopy delete \u003Cspan class=\"token parameter attr-name\">/nointeractive\u003C/span>\u003C/span>\u003C/code>`}\u003C/pre>\n\u003Ch1>Scripting\u003C/h1>\n\u003Cpre class=\"language-batch\">{@html `\u003Ccode class=\"language-batch\">\u003Cspan class=\"token comment\">:: Change directory to script location in batch\u003C/span>\n\u003Cspan class=\"token command\">\u003Cspan class=\"token keyword\">cd\u003C/span> \u003Cspan class=\"token parameter attr-name\">/D\u003C/span> \u003Cspan class=\"token string\">\"%~dp0\"\u003C/span>\u003C/span>\u003C/code>`}\u003C/pre>\n\u003Ch1>Software\u003C/h1>\n\u003Ctable>\n\u003Cthead>\n\u003Ctr>\n\u003Cth>Name\u003C/th>\n\u003Cth>Description\u003C/th>\n\u003C/tr>\n\u003C/thead>\n\u003Ctbody>\n\u003Ctr>\n\u003Ctd>\u003Ca\n  href=\"https://sysprogs.com/legacy/tools/srvman/\"\n  rel=\"nofollow\"\n>SrvMan                    \u003C/a>\u003C/td>\n\u003Ctd>Create services, manage hidden services\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Ca\n  href=\"https://github.com/lostindark/DriverStoreExplorer\"\n  rel=\"nofollow\"\n>DriverStoreExplorer (Rapr)\u003C/a>\u003C/td>\n\u003Ctd>Clean driverstore packages, reclaim space\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Ca\n  href=\"https://www.homedev.com.au/Free/PatchCleaner\"\n  rel=\"nofollow\"\n>PatchCleaner              \u003C/a>\u003C/td>\n\u003Ctd>Cleans up old/redundant installers, reclaim space\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Ca href=\"https://geeks3d.com/furmark/\" rel=\"nofollow\">FurMark                   \u003C/a>\u003C/td>\n\u003Ctd>GPU stress test\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Ca\n  href=\"https://www.mersenne.org/download/\"\n  rel=\"nofollow\"\n>Prime95                   \u003C/a>\u003C/td>\n\u003Ctd>CPU/RAM stress test\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Ca href=\"https://rufus.ie/en/\" rel=\"nofollow\">Rufus                     \u003C/a>\u003C/td>\n\u003Ctd>Create USB install media\u003C/td>\n\u003C/tr>\n\u003C/tbody>\n\u003C/table>\n",fm:{title:"Notes: Windows",categories:"software windows",comments:true,last_modified_at:"2025-03-06T14:32:30-05:00",date:"2025-03-03T22:08:14-05:00"}}],slug:"windows"},"uses":{"params":["slug"]}}];
 
 					Promise.all([
-						import("../../_app/immutable/entry/start.DdJr3lAU.js"),
-						import("../../_app/immutable/entry/app.CwcHCqh7.js")
+						import("../../_app/immutable/entry/start.Bt12HHJP.js"),
+						import("../../_app/immutable/entry/app.DyHvZM4V.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 23],
