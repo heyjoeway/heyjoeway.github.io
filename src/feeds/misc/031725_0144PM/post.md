@@ -1,0 +1,1 @@
+nearly every microsoft product i use brings me genuine anguish. the only ones that don't off the top of my head are xbox controllers, the core office suite, todo, github, and vscode
