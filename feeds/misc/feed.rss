@@ -6,10 +6,17 @@
     <description>everything else goes here</description>
     <language>en-us</language>
     <pubDate>Wed, 26 Feb 2025 15:39:00 GMT</pubDate>
-    <lastBuildDate>Mon, 17 Mar 2025 17:50:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 18 Mar 2025 15:53:00 GMT</lastBuildDate>
     <docs>https://www.rssboard.org/rss-specification</docs>
     <generator>Custom</generator>
     <atom:link href="http://jojudge.com/feeds/misc/feed.rss" rel="self" type="application/rss+xml"/>
+    <item>
+      <title/>
+      <link>http://jojudge.com/feeds/misc/031825_1148AM</link>
+      <description>&lt;p&gt;debit card at the ready&lt;/p&gt;</description>
+      <pubDate>Tue, 18 Mar 2025 15:53:00 GMT</pubDate>
+      <guid>/feeds/misc/031825_1148AM</guid>
+    </item>
     <item>
       <title/>
       <link>http://jojudge.com/feeds/misc/031725_0144PM</link>
