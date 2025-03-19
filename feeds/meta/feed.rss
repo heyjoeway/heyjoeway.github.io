@@ -12,6 +12,13 @@
     <atom:link href="http://jojudge.com/feeds/meta/feed.rss" rel="self" type="application/rss+xml"/>
     <item>
       <title/>
+      <link>http://jojudge.com/feeds/meta/031925_1128AM</link>
+      <description>&lt;p&gt;I think I will have to add self-quoting support very soon, and when I do I also want to add twitter/bluesky/mastodon/reddit/whatever else i can think of embedding as well&lt;/p&gt;</description>
+      <pubDate>Wed, 19 Mar 2025 15:33:00 GMT</pubDate>
+      <guid>/feeds/meta/031925_1128AM</guid>
+    </item>
+    <item>
+      <title/>
       <link>http://jojudge.com/feeds/meta/021625_0824PM</link>
       <description>&lt;p&gt;According to all known laws of aviation, there is no way a bee should be able to fly.
 Its wings are too small to get its fat little body off the ground.
