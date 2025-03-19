@@ -1,0 +1,1 @@
+very happy with [immich](https://immich.app/) so far. haven't had a single problem with it past initial setup. (don't put the postgres db on an smb share) team rossman proves to be based once again
