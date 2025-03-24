@@ -18,8 +18,9 @@
     export let post: Post;
     export let inModal = false;
     export let inFeed = false;
+    export let inEmbed = inModal;
     
-    let inPost = !inModal && !inFeed;
+    let inPost = !inEmbed && !inFeed;
     
     let postHtmlNeedsShortening = (
         !inPost
@@ -101,6 +102,8 @@
     </ContextMenu>
 {/if}
 
+<div class="container" style={inEmbed ? "font-size: 14px" : ""}>
+
 {#if post.fm.pinned}
     <div class="pinned">📌 Pinned</div>
 {/if}
@@ -146,7 +149,7 @@
     {/if}
 </div>
 
-{#if !inModal}
+{#if !inEmbed}
     <div class="media">
         <Masonry
             items={media}
@@ -228,8 +231,8 @@
         {/each}
     </div>
     {#if !inModal}
-        <Button onClick={post.url} linkCopyOnClick={!inFeed}>
-            {#if inFeed}
+        <Button onClick={post.url} linkCopyOnClick={!inFeed && !inEmbed}>
+            {#if inFeed || inEmbed}
                 💬
             {/if}
             🔗
@@ -237,9 +240,11 @@
     {/if}
 </div>
 
+</div>
+
 <style lang="scss">
     .pinned {
-        font-size: 12px;
+        font-size: 0.64em;
         opacity: 0.6;
     }
     
@@ -260,7 +265,7 @@
         gap: 0.75rem;
         margin-top: 0.5rem;
         margin-bottom: 0.75rem;
-        font-size: 16.875px;
+        font-size: 0.9em;
         
         .title {
             color: white;
@@ -268,11 +273,11 @@
         
         .path {
             color: grey;
-            font-size: 15px;
+            font-size: 0.8em;
         }
     }
     
-    .post {
+    .container {
         font-size: 18.75px;
     }
     
@@ -283,7 +288,7 @@
         margin-bottom: 8px;
         
         .timestamps {
-            font-size: 13px;
+            font-size: 0.7em;
             color: rgba(255, 255, 255, 0.5);
         }
     }

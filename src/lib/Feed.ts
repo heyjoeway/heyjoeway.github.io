@@ -52,9 +52,18 @@ export function getFeedIds(): string[] {
 }
 
 export interface Embed {
+    platform: "youtube" | "self";
+    originalUrl: string;
+}
+
+export interface EmbedYoutube extends Embed {
     platform: "youtube";
     id: string;
-    originalUrl: string;
+}
+
+export interface EmbedSelf extends Embed {
+    platform: "self";
+    post: Post;
 }
 
 export interface Media {
@@ -147,7 +156,38 @@ export async function getFeedPostMedia(feedId: string, postId: string): Promise<
     return media;
 }
 
-export function getFeedPostEmbeds(postContents: string) {
+export async function getFeedPostEmbedsSelf(postContents: string) {
+    const regexSelf = new RegExp(`(?:https?:\/\/)?${getCname()}\/feeds\/([^\/]+)\/([^\/]+)\/?`, 'g');
+    const matches = postContents.matchAll(regexSelf).toArray();
+    
+    // Remove all embeds from the contents
+    let filteredPostContents = postContents;
+    const embeds = await Promise.all(matches.map(async match => {
+        const feedId = match[1];
+        const feed = await getFeed(feedId, false);
+        const postId = match[2];
+        const post = await getFeedPost(feed, postId);
+        const embed = {
+            platform: "self",
+            post,
+            originalUrl: match[0]
+        } as EmbedSelf;
+        filteredPostContents = filteredPostContents.replaceAll(
+            embed.originalUrl,
+            ""
+        );
+        return embed as Embed;
+    }));
+    
+    filteredPostContents = filteredPostContents.trim();
+    
+    return {
+        filteredPostContents,
+        embeds
+    };
+}
+
+export async function getFeedPostEmbedsYoutube(postContents: string) {
     const regexYoutube = /http(?:s?):\/\/(?:www\.)?youtu(?:be\.com\/watch\?v=|\.be\/)([\w\-\_]*)(&(amp;)?‌​[\w\?‌​=]*)?\S*(?:\s|$)/g;
     const matches = postContents.matchAll(regexYoutube).toArray();
     
@@ -158,12 +198,12 @@ export function getFeedPostEmbeds(postContents: string) {
             platform: "youtube",
             id: match[1],
             originalUrl: match[0]
-        } as Embed;
+        } as EmbedYoutube;
         filteredPostContents = filteredPostContents.replaceAll(
             embed.originalUrl,
             ""
         );
-        return embed
+        return embed as Embed;
     });
     
     filteredPostContents = filteredPostContents.trim();
@@ -184,7 +224,20 @@ export async function getFeedPost(feed: Feed, postId: string): Promise<Post> {
         postContents = fs.readFileSync(postPath, 'utf-8');
     } catch { }
     
-    const {filteredPostContents, embeds} = getFeedPostEmbeds(postContents);
+    let filteredPostContents = postContents;
+    let embedsYoutube: Embed[];
+    ({
+        filteredPostContents,
+        embeds: embedsYoutube
+    } = await getFeedPostEmbedsYoutube(filteredPostContents));
+    
+    let embedsSelf: Embed[];
+    ({
+        filteredPostContents,
+        embeds: embedsSelf
+    } = await getFeedPostEmbedsSelf(filteredPostContents));
+    
+    let embeds = embedsYoutube.concat(embedsSelf);
     
     const compiled = await compile(filteredPostContents, {
         smartypants: false,

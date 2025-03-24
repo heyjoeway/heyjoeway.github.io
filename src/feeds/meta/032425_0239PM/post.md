@@ -1,0 +1,1 @@
+done the self quoting part. for the others, i think i'm gonna have to add some sort of caching system in the post frontmatter so it doesn't pull the posts on every build https://jojudge.com/feeds/meta/031925_1128AM/
