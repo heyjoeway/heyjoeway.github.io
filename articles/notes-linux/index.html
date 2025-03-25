@@ -14,11 +14,11 @@
 		<link href="../../_app/immutable/assets/Center.SiIiNQdp.css" rel="stylesheet">
 		<link href="../../_app/immutable/assets/Layout.BC5Y1jTu.css" rel="stylesheet">
 		<link href="../../_app/immutable/assets/Comments.CwG70sSM.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../_app/immutable/entry/start.CmtVj2wx.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/entry.DkQHJYXE.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.C4U7U7q_.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/entry.hPCTk7W9.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/runtime.BVU0rH9e.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/index.DYBIQy5k.js">
-		<link rel="modulepreload" href="../../_app/immutable/entry/app.BXm5B3dm.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.Dnxrxcob.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/preload-helper.C1FmrZbK.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/render.Dvy1DFxg.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/store.DTxDMkQX.js">
@@ -41,11 +41,44 @@
 		<link rel="modulepreload" href="../../_app/immutable/chunks/html.BOQzYzLL.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/Comments.CpF75G2S.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/Consent.vBuStNUe.js">
-		<link rel="modulepreload" href="../../_app/immutable/nodes/14.BOWM6G5m.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/14.Bc5-JQB_.js">
 	</head>
 	<body>
-		<div style="display: contents"><!--[--><!--[--><!----><!--[--><!----><div style="background-color: black; background-image: url();" class="bg svelte-rfb14"><!--[!--><!--]--></div><!----> <div class="layout svelte-1kupl3e"><div class="header svelte-1kupl3e"><div class="title"><a class="site-title svelte-1kupl3e" rel="author" href="/"><span style="color:palevioletred">hey</span><span style="color:orange">joe</span><span style="color:skyblue">way</span><span style="color:white">.</span></a></div> <div class="nav svelte-1kupl3e"><div style="width: default; height: 32px;" class="clickable svelte-1f9eqjh"><!--[--><a href="/articles" data-sveltekit-reload="false" data-sveltekit-preload-data="hover" class="svelte-1f9eqjh"><!--[!--><!----><div style="color: white;" class="svelte-1kdig2t"><!--[!--><!--]--> <!----><!---->Articles<!----></div><!----><!--]--></a><!--]--></div><!----> <div style="width: default; height: 32px;" class="clickable svelte-1f9eqjh"><!--[--><a href="/feeds" data-sveltekit-reload="false" data-sveltekit-preload-data="hover" class="svelte-1f9eqjh"><!--[!--><!----><div style="color: white;" class="svelte-1kdig2t"><!--[!--><!--]--> <!----><!---->Feeds<!----></div><!----><!--]--></a><!--]--></div><!----></div></div> <!----><!----><div class="header-container svelte-nevtvt"><div><h1 class="svelte-nevtvt">Notes: Linux</h1> <div class="svelte-1gxf1qy"><!--[--><a href="/category/software/" class="svelte-1gxf1qy">software</a><a href="/category/linux/" class="svelte-1gxf1qy">linux</a><!--]--></div><!----></div> <div class="times svelte-nevtvt"><!--[--><!--[--><time class="dt svelte-nevtvt" datetime="2025-03-03T22:08:14-05:00" itemprop="datePublished">Published Mar 4, 2025</time> <br><!--]--><!--[--><time class="dt svelte-nevtvt" datetime="2025-03-14T14:37:56-04:00" itemprop="datePublished">Last modified Mar 14, 2025</time> <br><!--]--><!--]--></div></div> <br> <hr> <!----><!----><p>Random notes for Linux. Primarily for my own reference.</p> <h1>Scripting</h1> <pre class="language-bash"><!----><code class="language-bash"><span class="token comment"># Change Dir to Script Dir</span>
-<span class="token builtin class-name">cd</span> <span class="token string">"<span class="token variable"><span class="token variable">$(</span><span class="token function">dirname</span> <span class="token string">"<span class="token variable">$0</span>"</span><span class="token variable">)</span></span>"</span></code><!----></pre> <h1>(My) Ideal Debian VM Setup</h1> <h2>Serial Access</h2> <pre class="language-bash"><!----><code class="language-bash"><span class="token comment"># Enable serial console</span>
+		<div style="display: contents"><!--[--><!--[--><!----><!--[--><!----><div style="background-color: black; background-image: url();" class="bg svelte-rfb14"><!--[!--><!--]--></div><!----> <div class="layout svelte-1kupl3e"><div class="header svelte-1kupl3e"><div class="title"><a class="site-title svelte-1kupl3e" rel="author" href="/"><span style="color:palevioletred">hey</span><span style="color:orange">joe</span><span style="color:skyblue">way</span><span style="color:white">.</span></a></div> <div class="nav svelte-1kupl3e"><div style="width: default; height: 32px;" class="clickable svelte-1f9eqjh"><!--[--><a href="/articles" data-sveltekit-reload="false" data-sveltekit-preload-data="hover" class="svelte-1f9eqjh"><!--[!--><!----><div style="color: white;" class="svelte-1kdig2t"><!--[!--><!--]--> <!----><!---->Articles<!----></div><!----><!--]--></a><!--]--></div><!----> <div style="width: default; height: 32px;" class="clickable svelte-1f9eqjh"><!--[--><a href="/feeds" data-sveltekit-reload="false" data-sveltekit-preload-data="hover" class="svelte-1f9eqjh"><!--[!--><!----><div style="color: white;" class="svelte-1kdig2t"><!--[!--><!--]--> <!----><!---->Feeds<!----></div><!----><!--]--></a><!--]--></div><!----></div></div> <!----><!----><div class="header-container svelte-nevtvt"><div><h1 class="svelte-nevtvt">Notes: Linux</h1> <div class="svelte-1gxf1qy"><!--[--><a href="/category/software/" class="svelte-1gxf1qy">software</a><a href="/category/linux/" class="svelte-1gxf1qy">linux</a><!--]--></div><!----></div> <div class="times svelte-nevtvt"><!--[--><!--[--><time class="dt svelte-nevtvt" datetime="2025-03-03T22:08:14-05:00" itemprop="datePublished">Published Mar 4, 2025</time> <br><!--]--><!--[--><time class="dt svelte-nevtvt" datetime="2025-03-25T13:27:55-04:00" itemprop="datePublished">Last modified Mar 25, 2025</time> <br><!--]--><!--]--></div></div> <br> <hr> <!----><!----><p>Random notes for Linux. Primarily for my own reference.</p> <h1>Scripting</h1> <pre class="language-bash"><!----><code class="language-bash"><span class="token comment"># Change Dir to Script Dir</span>
+<span class="token builtin class-name">cd</span> <span class="token string">"<span class="token variable"><span class="token variable">$(</span><span class="token function">dirname</span> <span class="token string">"<span class="token variable">$0</span>"</span><span class="token variable">)</span></span>"</span></code><!----></pre> <h1>Personal Utilities</h1> <pre class="language-bash"><!----><code class="language-bash"><span class="token builtin class-name">echo</span> <span class="token string">"Deepseek API Key:"</span>
+<span class="token builtin class-name">read</span> key_deepseek
+
+<span class="token builtin class-name">cd</span> ~
+<span class="token function">mkdir</span> bin
+<span class="token builtin class-name">cd</span> bin
+
+<span class="token function">curl</span> https://zyedidia.github.io/eget.sh <span class="token operator">|</span> <span class="token function">sh</span>
+<span class="token builtin class-name">echo</span> <span class="token string">"1"</span> <span class="token operator">|</span> ./eget <span class="token parameter variable">-a</span> static.tar.gz zyedidia/micro
+./eget sigoden/aichat
+
+<span class="token builtin class-name">cd</span> ~
+
+<span class="token function">cat</span> <span class="token operator">&lt;&lt;</span> <span class="token string">EOF<span class="token bash punctuation"> <span class="token operator">>></span> .bashrc</span>
+export PATH=<span class="token environment constant">$PATH</span>:~/bin
+export EDITOR=micro
+alias s="aichat -e"
+alias l="ls -la"
+alias e="micro"
+EOF</span>
+
+<span class="token function">mkdir</span> <span class="token parameter variable">-p</span> ~/.config/aichat/
+<span class="token function">cat</span> <span class="token operator">&lt;&lt;</span> <span class="token string">EOF<span class="token bash punctuation"> <span class="token operator">></span> ~/.config/aichat/config.yaml</span>
+# see https://github.com/sigoden/aichat/blob/main/config.example.yaml
+
+model: deepseek:deepseek-chat
+clients:
+- type: openai-compatible
+  name: deepseek
+  api_base: https://api.deepseek.com
+  api_key: <span class="token variable">$key_deepseek</span>
+EOF</span>
+
+<span class="token builtin class-name">exec</span> <span class="token function">bash</span></code><!----></pre> <h1>(My) Ideal Debian VM Setup</h1> <h2>Serial Access</h2> <pre class="language-bash"><!----><code class="language-bash"><span class="token comment"># Enable serial console</span>
 systemctl <span class="token builtin class-name">enable</span> serial-getty@ttyS0.service</code><!----></pre> <h2>General</h2> <pre class="language-bash"><!----><code class="language-bash">timedatectl set-timezone America/New_York
 <span class="token function">apt</span> update
 <span class="token function">apt</span> upgrade <span class="token parameter variable">-y</span>
@@ -73,17 +106,17 @@ adduser <span class="token variable">$linux_username</span>
 			
 			<script>
 				{
-					__sveltekit_1xawaim = {
+					__sveltekit_14z2kwm = {
 						base: new URL("../..", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
-					const data = [{"type":"data","data":{categories:["design","ui","meta","life","work","portfolio","programming","software","macos","multiplatform","games","photography","windows","linux"]},"uses":{},"slash":"always"},{"type":"data","data":{fm:{title:"Notes: Linux",categories:"software linux",comments:true,last_modified_at:"2025-03-14T14:37:56-04:00",date:"2025-03-03T22:08:14-05:00"},id:"/articles/notes-linux"},"uses":{"route":1}},null];
+					const data = [{"type":"data","data":{categories:["design","ui","meta","life","work","portfolio","programming","software","macos","multiplatform","games","photography","windows","linux"]},"uses":{},"slash":"always"},{"type":"data","data":{fm:{title:"Notes: Linux",categories:"software linux",comments:true,last_modified_at:"2025-03-25T13:27:55-04:00",date:"2025-03-03T22:08:14-05:00"},id:"/articles/notes-linux"},"uses":{"route":1}},null];
 
 					Promise.all([
-						import("../../_app/immutable/entry/start.CmtVj2wx.js"),
-						import("../../_app/immutable/entry/app.BXm5B3dm.js")
+						import("../../_app/immutable/entry/start.C4U7U7q_.js"),
+						import("../../_app/immutable/entry/app.Dnxrxcob.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 2, 14],
