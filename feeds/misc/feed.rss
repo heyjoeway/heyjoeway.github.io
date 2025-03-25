@@ -6,10 +6,20 @@
     <description>everything else goes here</description>
     <language>en-us</language>
     <pubDate>Wed, 26 Feb 2025 15:39:00 GMT</pubDate>
-    <lastBuildDate>Wed, 19 Mar 2025 15:24:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 25 Mar 2025 15:17:00 GMT</lastBuildDate>
     <docs>https://www.rssboard.org/rss-specification</docs>
     <generator>Custom</generator>
     <atom:link href="http://jojudge.com/feeds/misc/feed.rss" rel="self" type="application/rss+xml"/>
+    <item>
+      <title/>
+      <link>http://jojudge.com/feeds/misc/032525_1112AM</link>
+      <description>&lt;p&gt;i want to be enthralled by open source stuff as much as everyone else but i gotta be honest, obsidian at its best is still worse than notion at its worst. and the gap is BIG.&lt;/p&gt;
+&lt;p&gt;biggest problems:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;i am not paying $4/month to sync my notes, especially if that number could go up. i would rather waste tim</description>
+      <pubDate>Tue, 25 Mar 2025 15:17:00 GMT</pubDate>
+      <guid>/feeds/misc/032525_1112AM</guid>
+    </item>
     <item>
       <title/>
       <link>http://jojudge.com/feeds/misc/031925_1118AM</link>
