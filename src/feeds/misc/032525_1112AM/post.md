@@ -9,4 +9,4 @@ biggest problems:
 - git syncing is such a pain in the ass, don't even bother.
 - databases? I'm sure you could hack something together with dataview and templater, god knows i tried. prepare to spend hours on something notion has an actual system for.
 
-I'm coming out of this completely disenfranchised with obsidian. i do not understand the hype and i think a lot of people are singing its praises only to justify their own sunk cost
+I'm coming out of this completely disillusioned with obsidian. i do not understand the hype and i think a lot of people are singing its praises only to justify their own sunk cost
