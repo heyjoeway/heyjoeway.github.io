@@ -12,11 +12,11 @@
 		<link href="../../_app/immutable/assets/Button.CO_IFsgN.css" rel="stylesheet">
 		<link href="../../_app/immutable/assets/ArticleFeed.COlA-k9G.css" rel="stylesheet">
 		<link href="../../_app/immutable/assets/Tags.zOjeMBQI.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../_app/immutable/entry/start.D6lFsL1f.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/entry.CtGacZlx.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.CmtVj2wx.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/entry.DkQHJYXE.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/runtime.BVU0rH9e.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/index.DYBIQy5k.js">
-		<link rel="modulepreload" href="../../_app/immutable/entry/app.BAqChL0N.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.BXm5B3dm.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/preload-helper.C1FmrZbK.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/render.Dvy1DFxg.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/store.DTxDMkQX.js">
@@ -42,7 +42,7 @@
 			
 			<script>
 				{
-					__sveltekit_154rvqs = {
+					__sveltekit_1xawaim = {
 						base: new URL("../..", location).pathname.slice(0, -1)
 					};
 
@@ -51,8 +51,8 @@
 					const data = [{"type":"data","data":{categories:["design","ui","meta","life","work","portfolio","programming","software","macos","multiplatform","games","photography","linux","windows"]},"uses":{},"slash":"always"},{"type":"data","data":{articles:[{slug:"photo-megapost",path:"/articles/photo-megapost",code:"\u003Cscript context=\"module\">\n\texport const metadata = {\"title\":\"Photography Megapost\",\"date\":\"2022-11-07T00:00:00.000Z\",\"categories\":\"life photography\",\"comments\":true};\n\tconst { title, date, categories, comments } = metadata;\n\u003C/script>\n\u003Cscript lang=\"ts\">\n\nimport { type GalleryDescriptor } from \"$lib/Gallery\";\nimport Gallery from '$lib/Gallery.svelte';\n\nexport let data;\n\nconst galleries = [\n    {\n        name: \"January 2019\",\n        description: \"Point Au Roche\",\n        images: data.galleries[\"jan-2019-point-au-roche\"],\n        thumbs: import.meta.glob('./jan-2019-point-au-roche/*.jpg', {\n            eager: true,\n            query: { w: 160, h: 160, fit: 'cover', as: 'run' }\n        })\n    },\n    {\n        name: \"Summer 2018\",\n        description: \"Some miscellaneous photos taken during my time working at the Whiteface ASRC in 2018.\",\n        images: data.galleries[\"summer-2018-whiteface\"],\n        thumbs: import.meta.glob('./summer-2018-whiteface/*.jpg', {\n            eager: true,\n            query: { w: 160, h: 160, fit: 'cover', as: 'run' }\n        })\n    },\n    {\n        name: \"Summer 2018 (Night)\",\n        description: \"During the summer of 2018, I was given the opportunity to spend the night on the summit of Whiteface. Here are some of the photos I took in all their post-processed glory.\",\n        images: data.galleries[\"summer-2018-whiteface-night\"],\n        thumbs: import.meta.glob('./summer-2018-whiteface-night/*.jpg', {\n            eager: true,\n            query: { w: 160, h: 160, fit: 'cover', as: 'run' }\n        })\n    },\n    {\n        name: \"Misc\",\n        description: \"Miscellaneous photos from my younger years.\",\n        images: data.galleries[\"misc\"],\n        thumbs: import.meta.glob('./misc/*.jpg', {\n            eager: true,\n            query: { w: 160, h: 160, fit: 'cover', as: 'run' }\n        })\n    }\n] as GalleryDescriptor[];\n\n\u003C/script>\n\n\u003Cp>Various snapshots of my life.\u003C/p>\n\u003Cp>\u003Ca\n  href=\"https://creativecommons.org/licenses/by/4.0/\"\n  rel=\"nofollow\"\n>These photos are licensed under CC BY 4.0.\u003C/a>\u003C/p>\n{#each galleries as gallery}\n\u003CGallery {gallery} />\n{/each}\n\n",fm:{title:"Photography Megapost",date:new Date(1667779200000),categories:"life photography",comments:true,last_modified_at:"2024-12-04T14:57:02-05:00"}}],slug:"photography"},"uses":{"params":["slug"]}}];
 
 					Promise.all([
-						import("../../_app/immutable/entry/start.D6lFsL1f.js"),
-						import("../../_app/immutable/entry/app.BAqChL0N.js")
+						import("../../_app/immutable/entry/start.CmtVj2wx.js"),
+						import("../../_app/immutable/entry/app.BXm5B3dm.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 23],
