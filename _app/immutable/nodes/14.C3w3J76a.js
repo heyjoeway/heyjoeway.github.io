@@ -1,17 +1,13 @@
 import{a as f,t as v}from"../chunks/disclose-version.B-guDTDr.js";import"../chunks/legacy.DkBb36tQ.js";import{s as a,f as _,c as s,r as n}from"../chunks/runtime.BVU0rH9e.js";import{h as e}from"../chunks/html.BOQzYzLL.js";var y=v('<p>Random notes for Linux. Primarily for my own reference.</p> <h1>Scripting</h1> <pre class="language-bash"><!></pre> <h1>Personal Utilities</h1> <pre class="language-bash"><!></pre> <h1>(My) Ideal Debian VM Setup</h1> <h2>Serial Access</h2> <pre class="language-bash"><!></pre> <h2>General</h2> <pre class="language-bash"><!></pre> <h3>With Docker</h3> <pre class="language-bash"><!></pre> <h3>With SMB Share</h3> <pre class="language-bash"><!></pre>',1);function D(k){var r=y(),t=a(_(r),4),u=s(t);e(u,()=>`<code class="language-bash"><span class="token comment"># Change Dir to Script Dir</span>
 <span class="token builtin class-name">cd</span> <span class="token string">"<span class="token variable"><span class="token variable">$(</span><span class="token function">dirname</span> <span class="token string">"<span class="token variable">$0</span>"</span><span class="token variable">)</span></span>"</span></code>`),n(t);var p=a(t,4),m=s(p);e(m,()=>`<code class="language-bash"><span class="token builtin class-name">echo</span> <span class="token string">"Deepseek API Key:"</span>
 <span class="token builtin class-name">read</span> key_deepseek
-
 <span class="token builtin class-name">cd</span> ~
 <span class="token function">mkdir</span> bin
 <span class="token builtin class-name">cd</span> bin
-
 <span class="token function">curl</span> https://zyedidia.github.io/eget.sh <span class="token operator">|</span> <span class="token function">sh</span>
 <span class="token builtin class-name">echo</span> <span class="token string">"1"</span> <span class="token operator">|</span> ./eget <span class="token parameter variable">-a</span> static.tar.gz zyedidia/micro
 ./eget sigoden/aichat
-
 <span class="token builtin class-name">cd</span> ~
-
 <span class="token function">cat</span> <span class="token operator">&lt;&lt;</span> <span class="token string">EOF<span class="token bash punctuation"> <span class="token operator">>></span> .bashrc</span>
 export PATH=<span class="token environment constant">$PATH</span>:~/bin
 export EDITOR=micro
@@ -19,11 +15,9 @@ alias s="aichat -e"
 alias l="ls -la"
 alias e="micro"
 EOF</span>
-
 <span class="token function">mkdir</span> <span class="token parameter variable">-p</span> ~/.config/aichat/
 <span class="token function">cat</span> <span class="token operator">&lt;&lt;</span> <span class="token string">EOF<span class="token bash punctuation"> <span class="token operator">></span> ~/.config/aichat/config.yaml</span>
 # see https://github.com/sigoden/aichat/blob/main/config.example.yaml
-
 model: deepseek:deepseek-chat
 clients:
 - type: openai-compatible
@@ -31,7 +25,6 @@ clients:
   api_base: https://api.deepseek.com
   api_key: <span class="token variable">$key_deepseek</span>
 EOF</span>
-
 <span class="token builtin class-name">exec</span> <span class="token function">bash</span></code>`),n(p);var o=a(p,6),d=s(o);e(d,()=>`<code class="language-bash"><span class="token comment"># Enable serial console</span>
 systemctl <span class="token builtin class-name">enable</span> serial-getty@ttyS0.service</code>`),n(o);var c=a(o,4),b=s(c);e(b,()=>`<code class="language-bash">timedatectl set-timezone America/New_York
 <span class="token function">apt</span> update
