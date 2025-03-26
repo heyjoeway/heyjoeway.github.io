@@ -16,17 +16,13 @@ cd "$(dirname "$0")"
 ```bash
 echo "Deepseek API Key:"
 read key_deepseek
-
 cd ~
 mkdir bin
 cd bin
-
 curl https://zyedidia.github.io/eget.sh | sh
 echo "1" | ./eget -a static.tar.gz zyedidia/micro
 ./eget sigoden/aichat
-
 cd ~
-
 cat << EOF >> .bashrc
 export PATH=$PATH:~/bin
 export EDITOR=micro
@@ -34,11 +30,9 @@ alias s="aichat -e"
 alias l="ls -la"
 alias e="micro"
 EOF
-
 mkdir -p ~/.config/aichat/
 cat << EOF > ~/.config/aichat/config.yaml
 # see https://github.com/sigoden/aichat/blob/main/config.example.yaml
-
 model: deepseek:deepseek-chat
 clients:
 - type: openai-compatible
@@ -46,7 +40,6 @@ clients:
   api_base: https://api.deepseek.com
   api_key: $key_deepseek
 EOF
-
 exec bash
 ```
 
