@@ -1,0 +1,1 @@
+const A={},s={src:""+new URL("../assets/SCR-20250401-rlwy.DwuFupsv.png",import.meta.url).href,w:1192,h:1200,lqip:"UklGRkQAAABXRUJQVlA4IDgAAADQAQCdASoQABAABUB8JZwAAudMVQ/76AD+4Y+iUU4UJoUEUFCyAXOyEUuLFHaBFi/rb+BJh4oAAA=="},o={sources:A,img:s};export{o as default,s as img,A as sources};
