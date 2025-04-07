@@ -1,6 +1,7 @@
 import { mdsvex } from "mdsvex";
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import { escapeBackticks } from "./src/lib/JSUtils.js";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -8,9 +9,20 @@ const config = {
 	// for more information about preprocessors
 	preprocess: [
 		vitePreprocess(),
-		mdsvex()
+		mdsvex({
+			layout: "./src/lib/MdsvexLayout.svelte",
+			highlight: {
+				highlighter: (code, lang) => {
+					return `
+						<Components.pre
+							lang="${lang}"
+							code="{\`${escapeBackticks(code)}\`}"
+						/>
+					`;
+				}
+			},
+		})
 	],
-	
 	kit: {
 		prerender: {
 			handleMissingId: "ignore"

@@ -20,6 +20,7 @@ import {
     getFirstAndLatestCommitDates
 } from '$lib/Git.server';
 import path from 'path';
+import { highlightCode } from "$lib/JSUtils.js";
 
 const feedsDir = 'src/feeds';
 
@@ -239,9 +240,16 @@ export async function getFeedPost(feed: Feed, postId: string): Promise<Post> {
     
     let embeds = embedsYoutube.concat(embedsSelf);
     
-    const compiled = await compile(filteredPostContents, {
-        smartypants: false,
-    });
+    const compiled = await compile(
+        filteredPostContents,
+        {
+            smartypants: false,
+            layout: "./src/lib/MdsvexLayout.svelte",
+			highlight: {
+				highlighter: highlightCode
+			},
+        }
+    );
     
     // https://github.com/pngwn/MDsveX/issues/392#issuecomment-1013755667
     const html = (
