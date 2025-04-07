@@ -1,0 +1,556 @@
+---
+title:  "Tools: Proxmox Memory Info"
+comments: true
+categories: tools proxmox software
+---
+<script lang="ts">
+    import { styleObjToStr } from "$lib/Utils.js";
+    import Textarea from "$joeysvelte/Textarea.svelte";
+    
+    let qmListStr = `\
+      VMID NAME                 STATUS     MEM(MB)    BOOTDISK(GB) PID       
+       100 fdsa                 running    4608              32.00 2826770   
+       101 asdf                 running    8192              24.00 2828068   
+       103 vcxz                 running    6144             170.00 4083340   
+       106 zxcv                 running    512                0.00 2829680   
+       107 rewq                 running    512                8.00 2828256   
+       108 qwer                 running    10240            280.00 2828390   
+       116 poiu                 stopped    1024              16.00 0         
+       119 uiop                 running    2048              16.00 2828601   
+`;
+    let pctListStr = `\
+cpus: 4
+disk: 8607637504
+diskread: 5604175872
+diskwrite: 5664735232
+maxdisk: 16729894912
+maxmem: 1610612736
+maxswap: 268435456
+mem: 103804928
+name: zaq
+netin: 1609895403
+netout: 321521108
+pid: 2819704
+status: running
+swap: 0
+type: lxc
+uptime: 486378
+vmid: 102
+===
+cpus: 2
+disk: 2569617408
+diskread: 2268246016
+diskwrite: 1185574912
+maxdisk: 8350298112
+maxmem: 2147483648
+maxswap: 536870912
+mem: 446955520
+name: qaz
+netin: 203442269
+netout: 103766012
+pid: 2819932
+status: running
+swap: 0
+type: lxc
+uptime: 486377
+vmid: 104
+===
+cpus: 2
+disk: 14933626880
+diskread: 50094080
+diskwrite: 0
+maxdisk: 33501757440
+maxmem: 3221225472
+maxswap: 536870912
+mem: 809078784
+name: xsw
+netin: 1082231849
+netout: 490525835
+pid: 2820482
+status: running
+swap: 0
+type: lxc
+uptime: 486376
+vmid: 105
+===
+cpus: 1
+disk: 1718788096
+diskread: 8668491776
+diskwrite: 4616585216
+maxdisk: 8350298112
+maxmem: 268435456
+maxswap: 134217728
+mem: 125739008
+name: wsx
+netin: 1890712714
+netout: 260634596
+pid: 2820755
+status: running
+swap: 0
+type: lxc
+uptime: 486375
+vmid: 109
+===
+cpus: 4
+disk: 2408054784
+diskread: 597217280
+diskwrite: 0
+maxdisk: 25769803776
+maxmem: 4294967296
+maxswap: 536870912
+mem: 2604072960
+name: cde
+netin: 128455070
+netout: 90778783
+pid: 2817017
+status: running
+swap: 0
+type: lxc
+uptime: 486459
+vmid: 110
+===
+cpus: 1
+disk: 2349285376
+diskread: 15766028288
+diskwrite: 28394274816
+maxdisk: 8350298112
+maxmem: 805306368
+maxswap: 268435456
+mem: 40759296
+name: edc
+netin: 1229295854
+netout: 1045237055
+pid: 2821383
+status: running
+swap: 0
+type: lxc
+uptime: 486373
+vmid: 111
+===
+cpus: 1
+disk: 5181554688
+diskread: 28819456
+diskwrite: 0
+maxdisk: 8350298112
+maxmem: 402653184
+maxswap: 134217728
+mem: 136101888
+name: vfr
+netin: 120298060
+netout: 1821795
+pid: 2821938
+status: running
+swap: 0
+type: lxc
+uptime: 486373
+vmid: 112
+===
+cpus: 1
+disk: 1094844416
+diskread: 3101143040
+diskwrite: 527785984
+maxdisk: 8350298112
+maxmem: 201326592
+maxswap: 134217728
+mem: 33763328
+name: rfv
+netin: 154376120
+netout: 1976845
+pid: 2822212
+status: running
+swap: 0
+type: lxc
+uptime: 486373
+vmid: 113
+===
+cpus: 4
+disk: 6096498688
+diskread: 8319344640
+diskwrite: 6460186624
+maxdisk: 16729894912
+maxmem: 1610612736
+maxswap: 536870912
+mem: 262180864
+name: bgt
+netin: 107645972018
+netout: 7305682389
+pid: 2822414
+status: running
+swap: 0
+type: lxc
+uptime: 486372
+vmid: 114
+===
+cpus: 1
+disk: 1116786688
+diskread: 5317419008
+diskwrite: 969625600
+maxdisk: 8350298112
+maxmem: 134217728
+maxswap: 134217728
+mem: 32182272
+name: tgb
+netin: 27261214
+netout: 3653634
+pid: 2822936
+status: running
+swap: 0
+type: lxc
+uptime: 486372
+vmid: 115
+===
+cpus: 1
+disk: 0
+diskread: 0
+diskwrite: 0
+maxdisk: 8589934592
+maxmem: 268435456
+maxswap: 134217728
+mem: 0
+name: nhy
+netin: 0
+netout: 0
+status: stopped
+swap: 0
+type: lxc
+uptime: 0
+vmid: 117
+===
+cpus: 1
+disk: 1221087232
+diskread: 1466032128
+diskwrite: 630587392
+maxdisk: 16729894912
+maxmem: 536870912
+maxswap: 134217728
+mem: 169148416
+name: yhn
+netin: 156576103
+netout: 5348044
+pid: 2825177
+status: running
+swap: 0
+type: lxc
+uptime: 486353
+vmid: 118
+===
+cpus: 2
+disk: 0
+diskread: 0
+diskwrite: 0
+maxdisk: 17179869184
+maxmem: 2147483648
+maxswap: 536870912
+mem: 0
+name: mju
+netin: 0
+netout: 0
+status: stopped
+swap: 0
+type: lxc
+uptime: 0
+vmid: 121
+===
+`;;
+    let meminfoStr = `\
+MemTotal:       48588200 kB
+MemFree:         2121064 kB
+MemAvailable:    5148580 kB
+Buffers:          165496 kB
+Cached:          3197324 kB
+SwapCached:            0 kB
+Active:         14693372 kB
+Inactive:       26106296 kB
+Active(anon):   13714084 kB
+Inactive(anon): 23904072 kB
+Active(file):     979288 kB
+Inactive(file):  2202224 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:               396 kB
+Writeback:             0 kB
+AnonPages:      37436860 kB
+Mapped:           924520 kB
+Shmem:            183060 kB
+KReclaimable:     435548 kB
+Slab:            1441200 kB
+SReclaimable:     435548 kB
+SUnreclaim:      1005652 kB
+KernelStack:       21552 kB
+PageTables:       124804 kB
+SecPageTables:     11676 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    24294100 kB
+Committed_AS:   46479152 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      823808 kB
+VmallocChunk:          0 kB
+Percpu:            73984 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:  26798080 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+Unaccepted:            0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:      595876 kB
+DirectMap2M:    15441920 kB
+DirectMap1G:    34603008 kB
+`;
+
+function keyColonValueToRecord(str: string) {
+    return str.split('\n').reduce((acc, line) => {
+        const [key, value] = line.split(':').map(s => s.trim());
+        if (!key) return acc;
+        try {
+            acc[key] = parseFloat(value);
+            if (isNaN(acc[key])) throw new Error('Not a number');
+            if (acc[key].toString() != value) {
+                throw new Error('Does not look like a number');
+            }
+        } catch (e) {
+            acc[key] = value;
+        }
+        return acc;
+    }, {} as Record<string, any>);
+}
+
+function spaceDelimitedTableToRecordList(str: string) {
+    const lines = str.split('\n').map(s => s.trim()).filter(s => s.length > 0);
+    const headers = lines[0].split(/\s+/);
+    return lines.slice(1).map(line => {
+        const values = line.split(/\s+/);
+        return headers.reduce((acc, header, i) => {
+            acc[header] = values[i];
+            return acc;
+        }, {} as Record<string, string | number>);
+    });
+}
+
+function parseQmListStr(qmListStr: string) {
+    let data = spaceDelimitedTableToRecordList(qmListStr);
+    
+    let outRecord = {};
+        
+    data.forEach(item => {
+        const key = item['VMID'];
+        delete item['VMID'];
+        item['MEM'] = parseFloat(item['MEM(MB)'] as string) * 1024 * 1024;
+        delete item['MEM(MB)'];
+        item['BOOTDISK'] = parseFloat(item['BOOTDISK(GB)'] as string) * 1024 * 1024 * 1024;
+        delete item['BOOTDISK(GB)'];
+        outRecord[key] = item;
+    });
+    
+    return outRecord;
+}
+
+function parsePctListStr(pctListStr: string) {
+    const splitByContainer = (
+        pctListStr.split('===')
+            .map(s => s.trim())
+            .filter(s => s.length > 0)
+    );
+    
+    let outRecord = {};
+        
+    splitByContainer.forEach(containerStr => {
+        let data = keyColonValueToRecord(containerStr);
+        const key = data['vmid'];
+        delete data['vmid'];
+        outRecord[key] = data;
+    });
+    
+    return outRecord;
+}
+
+function parseMeminfoStr(meminfoStr: string) {
+    let data = keyColonValueToRecord(meminfoStr);
+    for (const key in data) {
+        const value = data[key];
+        if (typeof value == 'string') {
+            if (value.endsWith(' kB')) {
+                data[key] = parseInt(value.slice(0, -3)) * 1024;
+            } else if (value.endsWith(' MB')) {
+                data[key] = parseInt(value.slice(0, -3)) * 1024 * 1024;
+            } else {
+                data[key] = parseInt(value);
+            }
+        } else {
+            data[key] = value;
+        }
+    }
+    return data;
+}
+
+function bytesToGBStr(bytes: number) {
+    let gb = bytes / 1024 / 1024 / 1024;
+    return gb.toFixed(2) + " GB";
+}
+
+let qmRecord: Record<string, Record<string, string | number>>;
+let pctRecord: Record<string, Record<string, string | number>>;
+let meminfoRecord: Record<string, string | number>;
+
+$: qmRecord = parseQmListStr(qmListStr);
+$: pctRecord = parsePctListStr(pctListStr);
+$: meminfoRecord = parseMeminfoStr(meminfoStr);
+
+function sumArr(arr: number[]) {
+    return arr.reduce((acc, val) => acc + val, 0);
+}
+
+let currentItemMemTotal: number;
+$: currentItemMemTotal = (
+    sumArr(Object.values(pctRecord).map(data => data.mem as number))
+    + sumArr(Object.values(qmRecord).map(data => (
+        data.STATUS == 'running'
+        ? data.MEM as number
+        : 0
+    )))
+);
+
+let maxItemMemTotal: number;
+$: maxItemMemTotal = (
+    sumArr(Object.values(pctRecord).map(data => data.maxmem as number))
+    + sumArr(Object.values(qmRecord).map(data => data.MEM as number))
+);
+
+let currentSystemMem: number;
+$: currentSystemMem = (
+    (meminfoRecord.MemTotal as number)
+    - (meminfoRecord.MemAvailable as number)
+);
+
+let hostMemUsed: number;
+$: hostMemUsed = currentSystemMem - currentItemMemTotal;
+
+let maxMemUse: number;
+$: maxMemUse = hostMemUsed + maxItemMemTotal;
+
+let memAvailableForProvisioning: number;
+$: memAvailableForProvisioning = (meminfoRecord.MemTotal as number) - maxMemUse;
+
+</script>
+
+Proxmox doesn't have a built-in way to check if you're overcommitting memory on your host. (That I know of?) This is a simple tool that gives you a summary of your memory usage using some shell commands and copypasta.
+
+## Paste the output of...
+```bash
+qm list
+```
+down here:
+<Textarea bind:value={qmListStr} />
+
+## Paste the output of...
+```bash
+pct list | grep -v VMID | awk '{'{'} print $1 {'}'}' | xargs -I x sh -c 'pct status x -verbose && echo ==='
+```
+down here:
+<Textarea bind:value={pctListStr} />
+
+## Paste the output of...
+```bash
+cat /proc/meminfo
+```
+down here:
+<Textarea bind:value={meminfoStr} />
+
+## Results
+
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>VM ID</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th style="text-align:right">Current Mem.</th>
+            <th style="text-align:right">Max Mem.</th>
+        </tr>
+    </thead>
+    <tbody>
+        {#each Object.entries(pctRecord) as [vmid, data]}
+            <tr>
+                <td></td>
+                <td>{vmid}</td>
+                <td>{data.name}</td>
+                <td>{data.type}</td>
+                <td>{data.status}</td>
+                <td style="text-align:right">{bytesToGBStr(data.mem as number)}</td>
+                <td style="text-align:right">{bytesToGBStr(data.maxmem as number)}</td>
+            </tr>
+        {/each}
+        {#each Object.entries(qmRecord) as [vmid, data]}
+            <tr>
+                <td></td>
+                <td>{vmid}</td>
+                <td>{data.NAME}</td>
+                <td>qemu</td>
+                <td>{data.STATUS}</td>
+                <td style="text-align:right">{data.STATUS == "running" ? bytesToGBStr(data.MEM as number) : 0}</td>
+                <td style="text-align:right">{bytesToGBStr(data.MEM as number)}</td>
+            </tr>
+        {/each}
+        <tr>
+            <td><b>Totals</b></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="text-align:right">
+                <b>{bytesToGBStr(currentItemMemTotal)}</b>
+            </td>
+            <td style="text-align:right">
+                <b>{bytesToGBStr(maxItemMemTotal)}</b>
+            </td>
+        </tr>
+</table>
+
+<table>
+    <tbody>
+        <tr>
+            <th>Current System Memory Usage</th>
+            <td>{bytesToGBStr(currentSystemMem)}</td>
+        </tr>
+        <tr>
+            <th>Memory Used by Host</th>
+            <td>{bytesToGBStr(hostMemUsed)}</td>
+        </tr>
+        <tr>
+            <th>Max Potential Memory Use</th>
+            <td>{bytesToGBStr(maxMemUse)}</td>
+        </tr>
+        <tr>
+            <th>Total Host Memory</th>
+            <td>{bytesToGBStr(meminfoRecord.MemTotal as number)}</td>
+        </tr>
+        <tr>
+            <th>Available for Provisioning</th>
+             <td
+                style={styleObjToStr({
+                    color: (
+                        memAvailableForProvisioning > 0
+                        ? "green"
+                        : "hotpink"
+                    )
+                })}
+            >
+                {bytesToGBStr(memAvailableForProvisioning)}
+        </td>
+        </tr>
+    </tbody>
+</table>
