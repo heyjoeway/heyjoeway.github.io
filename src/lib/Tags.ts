@@ -12,6 +12,10 @@ export function listToTagDetails(list: string[]): TagDetails[] {
 	});
 }
 
-export function strToTagDetails(str: string): TagDetails[] {
-	return listToTagDetails(str.split(" "));
+export function strToTagDetails(str?: string): TagDetails[] {
+	let list = str?.split(" ");
+	if (list) {
+		return listToTagDetails(list);
+	}
+	return [];
 }

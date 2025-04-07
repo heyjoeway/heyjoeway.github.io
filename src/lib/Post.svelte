@@ -6,7 +6,7 @@
     import Button from "$joeysvelte/Button.svelte";
     import ContextMenu from "$joeysvelte/ContextMenu.svelte";
     import ContextMenuItem from "$joeysvelte/ContextMenuItem.svelte";
-	import { formatDateTime, splitHtmlAt } from "$lib/Utils";
+	import { formatDateTime } from "$lib/Utils";
     import FeedProfilePic from "./FeedProfilePic.svelte";
     import type { Post, Media } from "./Feed";
     import ModalPostDelete from './ModalPostDelete.svelte';
