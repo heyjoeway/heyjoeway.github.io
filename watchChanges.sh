@@ -43,9 +43,10 @@ watch_directory() {
         
         # Then, pull the latest changes
         git_output=$(git pull)
+        git_submod_output=$(git submodule update --recursive)
         
         # Check if there were any changes pulled
-        if [[ $git_output != *"Already up to date."* ]]; then
+        if [[ $git_output != *"Already up to date."* ]] || [[ -n $git_submod_output ]]; then
             echo "Changes detected from remote. Restarting command..."
             
             # Kill the previous command
