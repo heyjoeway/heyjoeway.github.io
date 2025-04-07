@@ -1,0 +1,1 @@
+import{j as n,l as u}from"./runtime.CL55K65K.js";function o(i,f,e,r,s){var d;n&&u();var t=(d=f.$$slots)==null?void 0:d[e],l=!1;t===!0&&(t=f[e==="default"?"children":e],l=!0),t===void 0?s!==null&&s(i):t(i,l?()=>r:r)}export{o as s};
