@@ -12,6 +12,19 @@
     <atom:link href="http://jojudge.com/feeds/vidya/feed.rss" rel="self" type="application/rss+xml"/>
     <item>
       <title/>
+      <link>http://jojudge.com/feeds/vidya/040725_0753PM</link>
+      <description>&lt;script&gt;
+	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
+&lt;/script&gt;
+
+&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
+&lt;p&gt;checking sonic retro for the first time in like 2 years is a good reminder of why i don't like going there anymore&lt;/p&gt;
+&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <pubDate>Mon, 07 Apr 2025 23:59:00 GMT</pubDate>
+      <guid>/feeds/vidya/040725_0753PM</guid>
+    </item>
+    <item>
+      <title/>
       <link>http://jojudge.com/feeds/vidya/040225_1006AM</link>
       <description>&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
 &lt;p&gt;damnit&lt;/p&gt;
