@@ -12,6 +12,19 @@
     <atom:link href="http://jojudge.com/feeds/vidya/feed.rss" rel="self" type="application/rss+xml"/>
     <item>
       <title/>
+      <link>http://jojudge.com/feeds/vidya/041125_1205PM</link>
+      <description>&lt;script&gt;
+	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
+&lt;/script&gt;
+
+&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
+&lt;p&gt;god gamer.&lt;/p&gt;
+&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <pubDate>Fri, 11 Apr 2025 16:10:00 GMT</pubDate>
+      <guid>/feeds/vidya/041125_1205PM</guid>
+    </item>
+    <item>
+      <title/>
       <link>http://jojudge.com/feeds/vidya/040725_0753PM</link>
       <description>&lt;script&gt;
 	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';

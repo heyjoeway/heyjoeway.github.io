@@ -1,0 +1,1 @@
+const A={},s={src:""+new URL("../assets/SCR-20250411-kxld.Cz-mnXf-.png",import.meta.url).href,w:1e3,h:1200,lqip:"UklGRloAAABXRUJQVlA4IE4AAADQAwCdASoQABMAPzmGuVOvKSWisAgB4CcJaACdACHN07z5vNJtWaAA/o4NxpcEWHo+3Ovl715w0Y62vjQbvLj6yh7J+S7VmN7cww9IAAA="},o={sources:A,img:s};export{o as default,s as img,A as sources};
