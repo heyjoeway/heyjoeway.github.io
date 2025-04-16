@@ -7,19 +7,77 @@ Random notes for Windows. Primarily for my own reference. At some point I'll tal
 
 # Commands
 
-```batch
-:: VSCode Remote Tunneling
+```powershell
+# VSCode Remote Tunneling
 code tunnel
 
-:: WinSxS Cleanup
+# WinSxS Cleanup
 Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase
-:: [Source](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/clean-up-the-winsxs-folder?view=windows-11)
+# [Source](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/clean-up-the-winsxs-folder?view=windows-11)
 
-:: System Volume Information Cleanup
+# System Volume Information Cleanup
 wmic shadowcopy delete /nointeractive
+
+# Edit Powershell profile (.bashrc equivalent)
+notepad $profile
+```
+
+# Personal Utilities
+
+(This assumes you ran JoeyDebloat first as it relies on some of the tools installed there.)
+
+```powershell
+function Add-PermanentPathUser {
+    param(
+        [string]$Path
+    )
+    [Environment]::SetEnvironmentVariable(
+        "Path",
+        [Environment]::GetEnvironmentVariable(
+            "Path",
+            [EnvironmentVariableTarget]::USER
+        ) + ";$Path",
+        [EnvironmentVariableTarget]::USER
+    )
+}
+$original_dir = Get-Location
+$key_deepseek = Read-Host "Deepseek API Key"
+cd ~
+New-Item -Path .\bin -ItemType Directory -Force
+Add-PermanentPathUser $(Resolve-Path ~\bin)
+cd bin
+eget sigoden/aichat
+cd ~
+if (!(Test-Path $profile)) {
+    New-Item -Path $profile -ItemType File -Force    
+}
+Add-Content $profile @"
+function s { aichat -e $args }
+function l { ls $args }
+function e { micro $args }
+`$ENV:EDITOR = $((Get-Command micro).Source)
+"@
+$aichat_dir = $($env:APPDATA) + "\aichat"
+New-Item -Path $aichat_dir -ItemType Directory -Force
+cd $aichat_dir
+Set-Content config.yaml @"
+# see https://github.com/sigoden/aichat/blob/main/config.example.yaml
+model: deepseek:deepseek-chat
+clients:
+- type: openai-compatible
+  name: deepseek
+  api_base: https://api.deepseek.com
+  api_key: $key_deepseek
+"@
+cd $original_dir
+. $profile
+refreshenv
+echo "You may need to restart your terminal for the changes to take effect."
 ```
 
 # Scripting
+
+## Batch
 
 ```batch
 :: Change directory to script location in batch
