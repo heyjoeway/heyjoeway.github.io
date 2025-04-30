@@ -1,0 +1,1 @@
+const s={},A={src:""+new URL("../assets/Screenshot_20250430-170750.vv0O5KN_.png",import.meta.url).href,w:514,h:1200,lqip:"UklGRlIAAABXRUJQVlA4IEYAAACQAwCdASoQACUAPyV6slOuJ6SitUgBwCSJZ2M+ADb/vym+yZVoAP7nJ6GkYG2L6D4+fDYYnOF3v6EK66j0Oyb6sWcjZoAA"},e={sources:s,img:A};export{e as default,A as img,s as sources};
