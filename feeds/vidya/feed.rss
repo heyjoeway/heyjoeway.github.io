@@ -12,6 +12,16 @@
     <atom:link href="http://jojudge.com/feeds/vidya/feed.rss" rel="self" type="application/rss+xml"/>
     <item>
       <title/>
+      <link>http://jojudge.com/feeds/vidya/051825_0220PM</link>
+      <description>&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
+&lt;p&gt;i reset my quest 1 to sell it, sold it, was told it was mdm locked, and then found out that it doesn't show up under my meta account, making it a brick. i didn't even buy this secondhand, i have the receipt.&lt;/p&gt;
+&lt;p&gt;never give facebook money&lt;/p&gt;
+&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <pubDate>Sun, 18 May 2025 18:25:00 GMT</pubDate>
+      <guid>/feeds/vidya/051825_0220PM</guid>
+    </item>
+    <item>
+      <title/>
       <link>http://jojudge.com/feeds/vidya/041125_1205PM</link>
       <description>&lt;script&gt;
 	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
