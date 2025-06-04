@@ -1,7 +1,8 @@
 ---
 title: "Finally Talking about JoeyDebloat"
 date: 2025-06-04
-categories: programming software
+categories: programming software tools
+comments: true
 ---
 
 I think we all have our laundry list of crap to do when setting up Windows. Install Chrome, some tools, do what you can to make Windows Update and all of the other notifications get out of your face. Some might even go as far as to install [LTSC](https://techcommunity.microsoft.com/blog/windows-itpro-blog/ltsc-what-is-it-and-when-should-it-be-used/293181) (and you probably should, even if M$ doesn't want you to).
