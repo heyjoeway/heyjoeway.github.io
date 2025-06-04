@@ -23,7 +23,7 @@ There are probably hundreds of Windows debloat tools out there at this point. I'
 
 - **GUI Debloaters**: I'm not gonna mince words here: *if you make a GUI for your debloater, I think you are wasting your time.* I'm only ever gonna run this thing once when I install Windows. The development effort of maintaining a GUI should be saved for software people are going to interact with on a regular basis. And the quality of most of these programs reflects this: their tweaks tend to break random stuff that they shouldn't, have insane defaults, and don't get updated as much as they should.
 - **Maintaining tweaks you don't even use**: I can tell a lot of the tweaks in debloaters aren't actually being used by the people maintaining and distributing them. Ironically, this actually ends up bloating the debloaters with yet more shit that doesn't work and wasting even more of peoples' time. I'm not going to claim my debloater is perfect with this but 99% of everything in it I use on a daily basis.
-- **MacroTweaks**: Each tweak should have a very limited scope. A couple registry keys or commands that do one thing and one thing only. I want to disable Defender, not my firewall (I'm looking at you <privacy.sexy>).
+- **MacroTweaks**: Each tweak should have a very limited scope. A couple registry keys or commands that do one thing and one thing only. I want to disable Defender, not my firewall (I'm looking at you [privacy.sexy](https://privacy.sexy/)).
 
 # MiniWinDeploy: A Simple Basis
 
@@ -125,6 +125,6 @@ You'll still need to know how to use Git in order to maintain this, but if that'
 
 # Shoutout to
 
-- <privacy.sexy>: For a crapton of tweaks
-- <elevenforum.com>: For being the only good Windows troubleshooting site (and for more tweaks)
+- [privacy.sexy](https://privacy.sexy/): For a crapton of tweaks
+- [elevenforum.com](https://www.elevenforum.com/): For being the only good Windows troubleshooting site (and for more tweaks)
 - And to all the people making miscellaneous tweaks in random forums
