@@ -11,7 +11,7 @@ cd ~
 cat << EOF >> .bashrc
 export PATH=$PATH:~/bin
 export EDITOR=micro
-alias s="aichat -e"
+alias ai="aichat -e"
 alias l="ls -la"
 alias e="micro"
 EOF

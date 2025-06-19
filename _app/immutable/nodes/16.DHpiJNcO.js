@@ -41,7 +41,7 @@ if (!(Test-Path $profile)) {
     New-Item -Path $profile -ItemType File -Force    
 }
 Add-Content $profile @"
-function ai { aichat -e $args }
+function ai { aichat -e "$args" }
 function l { ls $args }
 function e { micro $args }
 \`$ENV:EDITOR = "$(Resolve-Path ~\\bin\\micro.exe)"
