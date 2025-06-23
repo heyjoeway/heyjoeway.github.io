@@ -12,6 +12,16 @@
     <atom:link href="http://jojudge.com/feeds/misc/feed.rss" rel="self" type="application/rss+xml"/>
     <item>
       <title/>
+      <link>http://jojudge.com/feeds/misc/062325_0232PM</link>
+      <description>&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
+&lt;p&gt;"damn kids dont play outside like they used to"&lt;/p&gt;
+&lt;p&gt;the outside in question:&lt;/p&gt;
+&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <pubDate>Mon, 23 Jun 2025 18:37:00 GMT</pubDate>
+      <guid>/feeds/misc/062325_0232PM</guid>
+    </item>
+    <item>
+      <title/>
       <link>http://jojudge.com/feeds/misc/032525_1112AM</link>
       <description>&lt;script&gt;
 	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';

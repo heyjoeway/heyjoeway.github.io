@@ -1,0 +1,1 @@
+const A={},s={src:""+new URL("../assets/Screenshot_20250623-143015.Dq-YmIq3.png",import.meta.url).href,w:680,h:1200,lqip:"UklGRm4AAABXRUJQVlA4IGIAAAAQBACdASoQABwAPzmGuVOvKSWisAgB4CcJYgCdACHfromggKrvw/G7MAD+UFOIris3GZQJA719yLGL55UwJI9Z1CLPOnEdDYC0v5Ia0X/hEBfHVWIDtbhwgiGChaElaUAAAA=="},e={sources:A,img:s};export{e as default,s as img,A as sources};
