@@ -13,7 +13,12 @@
     <item>
       <title/>
       <link>http://jojudge.com/feeds/meta/032425_0239PM</link>
-      <description>&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
+      <description>
+&lt;script&gt;
+	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
+&lt;/script&gt;
+
+&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
 &lt;p&gt;done the self quoting part. for the others, i think i'm gonna have to add some sort of caching system in the post frontmatter so it doesn't pull the posts on every build&lt;/p&gt;
 &lt;/Layout_MDSVEX_DEFAULT&gt;</description>
       <pubDate>Mon, 24 Mar 2025 19:03:00 GMT</pubDate>
@@ -70,7 +75,12 @@ Th</description>
     <item>
       <title/>
       <link>http://jojudge.com/feeds/meta/meme</link>
-      <description>&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
+      <description>
+&lt;script&gt;
+	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
+&lt;/script&gt;
+
+&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
 
 &lt;/Layout_MDSVEX_DEFAULT&gt;</description>
       <pubDate>Wed, 12 Feb 2025 15:02:00 GMT</pubDate>

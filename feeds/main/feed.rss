@@ -22,7 +22,12 @@
     <item>
       <title/>
       <link>http://jojudge.com/feeds/main/030325_1016PM</link>
-      <description>&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
+      <description>
+&lt;script&gt;
+	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
+&lt;/script&gt;
+
+&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
 &lt;p&gt;Moved a few of my personal notes into Articles. Seems like the ordering is screwed up though so they're at the bottom. Will probably fix it tomorrow.&lt;/p&gt;
 &lt;/Layout_MDSVEX_DEFAULT&gt;</description>
       <pubDate>Tue, 04 Mar 2025 03:21:00 GMT</pubDate>
@@ -39,7 +44,12 @@
     <item>
       <title/>
       <link>http://jojudge.com/feeds/main/021725_1131PM</link>
-      <description>&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
+      <description>
+&lt;script&gt;
+	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
+&lt;/script&gt;
+
+&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
 &lt;p&gt;Okay so if this works I'm very close to actually starting to post. Testing edits&lt;/p&gt;
 &lt;/Layout_MDSVEX_DEFAULT&gt;</description>
       <pubDate>Tue, 18 Feb 2025 14:12:00 GMT</pubDate>

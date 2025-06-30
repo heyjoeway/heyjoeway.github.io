@@ -13,7 +13,12 @@
     <item>
       <title/>
       <link>http://jojudge.com/feeds/vidya/051825_0220PM</link>
-      <description>&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
+      <description>
+&lt;script&gt;
+	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
+&lt;/script&gt;
+
+&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
 &lt;p&gt;i reset my quest 1 to sell it, sold it, was told it was mdm locked, and then found out that it doesn't show up under my meta account, making it a brick. i didn't even buy this secondhand, i have the receipt.&lt;/p&gt;
 &lt;p&gt;never give facebook money&lt;/p&gt;
 &lt;/Layout_MDSVEX_DEFAULT&gt;</description>
@@ -23,7 +28,12 @@
     <item>
       <title/>
       <link>http://jojudge.com/feeds/vidya/041125_1205PM</link>
-      <description>&lt;script&gt;
+      <description>&lt;script context="module"&gt;
+	export const metadata = {"hideHome":true};
+	const { hideHome } = metadata;
+&lt;/script&gt;
+
+&lt;script&gt;
 	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
 &lt;/script&gt;
 
@@ -49,7 +59,12 @@
     <item>
       <title/>
       <link>http://jojudge.com/feeds/vidya/040225_1006AM</link>
-      <description>&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
+      <description>
+&lt;script&gt;
+	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
+&lt;/script&gt;
+
+&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
 &lt;p&gt;damnit&lt;/p&gt;
 &lt;/Layout_MDSVEX_DEFAULT&gt;</description>
       <pubDate>Wed, 02 Apr 2025 14:11:00 GMT</pubDate>
@@ -58,7 +73,12 @@
     <item>
       <title/>
       <link>http://jojudge.com/feeds/vidya/040125_0805PM</link>
-      <description>&lt;script&gt;
+      <description>&lt;script context="module"&gt;
+	export const metadata = {"hideHome":true};
+	const { hideHome } = metadata;
+&lt;/script&gt;
+
+&lt;script&gt;
 	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
 &lt;/script&gt;
 
@@ -83,7 +103,12 @@
     <item>
       <title/>
       <link>http://jojudge.com/feeds/vidya/031425_0936PM</link>
-      <description>&lt;script&gt;
+      <description>&lt;script context="module"&gt;
+	export const metadata = {"hideHome":true};
+	const { hideHome } = metadata;
+&lt;/script&gt;
+
+&lt;script&gt;
 	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
 &lt;/script&gt;
 
@@ -109,7 +134,12 @@
     <item>
       <title/>
       <link>http://jojudge.com/feeds/vidya/030125_0615PM</link>
-      <description>&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
+      <description>
+&lt;script&gt;
+	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
+&lt;/script&gt;
+
+&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
 &lt;p&gt;&lt;a
   href="https://github.com/hedge-dev/UnleashedRecomp"
   rel="nofollow"
@@ -122,7 +152,12 @@ oh my god. oh my god. oh my god. oh my god. oh my god. oh my GOD&lt;/p&gt;
     <item>
       <title/>
       <link>http://jojudge.com/feeds/vidya/022825_0729AM</link>
-      <description>&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
+      <description>
+&lt;script&gt;
+	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
+&lt;/script&gt;
+
+&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
 &lt;p&gt;&lt;a
   href="https://gamebanana.com/mods/573087"
   rel="nofollow"
@@ -134,7 +169,12 @@ oh my god. oh my god. oh my god. oh my god. oh my god. oh my GOD&lt;/p&gt;
     <item>
       <title/>
       <link>http://jojudge.com/feeds/vidya/022725_1010PM</link>
-      <description>&lt;script&gt;
+      <description>&lt;script context="module"&gt;
+	export const metadata = {"hideHome":true};
+	const { hideHome } = metadata;
+&lt;/script&gt;
+
+&lt;script&gt;
 	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
 &lt;/script&gt;
 
@@ -187,7 +227,12 @@ oh my god. oh my god. oh my god. oh my god. oh my god. oh my GOD&lt;/p&gt;
     <item>
       <title/>
       <link>http://jojudge.com/feeds/vidya/022225_0929PM</link>
-      <description>&lt;script&gt;
+      <description>&lt;script context="module"&gt;
+	export const metadata = {"hideHome":true};
+	const { hideHome } = metadata;
+&lt;/script&gt;
+
+&lt;script&gt;
 	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
 &lt;/script&gt;
 
@@ -200,7 +245,12 @@ oh my god. oh my god. oh my god. oh my god. oh my god. oh my GOD&lt;/p&gt;
     <item>
       <title/>
       <link>http://jojudge.com/feeds/vidya/021525_1045AM</link>
-      <description>&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
+      <description>
+&lt;script&gt;
+	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
+&lt;/script&gt;
+
+&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
 
 &lt;/Layout_MDSVEX_DEFAULT&gt;</description>
       <pubDate>Wed, 12 Feb 2025 17:22:00 GMT</pubDate>
