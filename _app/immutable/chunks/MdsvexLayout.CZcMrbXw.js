@@ -1,1 +1,0 @@
-import{c as m,a as s}from"./disclose-version.pcXP8nla.js";import"./legacy.DLBMJjTQ.js";import{f}from"./runtime.CL55K65K.js";import{s as e}from"./slot.p2w1RJjT.js";function l(a,r){var o=m(),t=f(o);e(t,r,"default",{},null),s(a,o)}export{l as M};

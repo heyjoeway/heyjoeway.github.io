@@ -50,19 +50,19 @@ Th</description>
       <link>http://jojudge.com/feeds/meta/codetest</link>
       <description>&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
 &lt;h1&gt;Markdown Test&lt;/h1&gt;
-&lt;pre&gt;&lt;code&gt;&lt;span class="hljs-keyword"&gt;function&lt;/span&gt; &lt;span class="hljs-title function_"&gt;foo&lt;/span&gt;(&lt;span class="hljs-params"&gt;bar&lt;/span&gt;) {
+&lt;span class="hljs-keyword"&gt;function&lt;/span&gt; &lt;span class="hljs-title function_"&gt;foo&lt;/span&gt;(&lt;span class="hljs-params"&gt;bar&lt;/span&gt;) {
     &lt;span class="hljs-variable language_"&gt;console&lt;/span&gt;.&lt;span class="hljs-title function_"&gt;log&lt;/span&gt;(bar);
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&lt;span class="hljs-keyword"&gt;from&lt;/span&gt; dataclasses &lt;span class="hljs-keyword"&gt;import&lt;/span&gt; dataclass
+}
+&lt;span class="hljs-keyword"&gt;from&lt;/span&gt; dataclasses &lt;span class="hljs-keyword"&gt;import&lt;/span&gt; dataclass
 
 &lt;span class="hljs-meta"&gt;@dataclass&lt;/span&gt;
 &lt;span class="hljs-keyword"&gt;class&lt;/span&gt; &lt;span class="hljs-title class_"&gt;Foo&lt;/span&gt;:
-    bar: &lt;span class="hljs-built_in"&gt;str&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&lt;span class="hljs-built_in"&gt;Set-ExecutionPolicy&lt;/span&gt; Unrestricted
+    bar: &lt;span class="hljs-built_in"&gt;str&lt;/span&gt;
+&lt;span class="hljs-built_in"&gt;Set-ExecutionPolicy&lt;/span&gt; Unrestricted
 &lt;span class="hljs-variable"&gt;$test&lt;/span&gt; = &lt;span class="hljs-selector-tag"&gt;@&lt;/span&gt;(
     &lt;span class="hljs-string"&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;
     &lt;span class="hljs-string"&gt;&amp;quot;bar
-)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+)&lt;/span&gt;
 &lt;/Layout_MDSVEX_DEFAULT&gt;</description>
       <pubDate>Wed, 12 Feb 2025 20:20:00 GMT</pubDate>
       <guid>/feeds/meta/codetest</guid>

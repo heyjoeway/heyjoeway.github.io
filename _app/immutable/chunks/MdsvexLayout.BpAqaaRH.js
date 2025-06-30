@@ -1,0 +1,1 @@
+import{c as m,a as s}from"./disclose-version.COfjB1Z8.js";import"./legacy.CO0tqMOo.js";import{f}from"./runtime.CB7vMNxi.js";import{s as e}from"./Button.svelte_svelte_type_style_lang.H45aMkML.js";function l(a,r){var o=m(),t=f(o);e(t,r,"default",{},null),s(a,o)}export{l as M};
