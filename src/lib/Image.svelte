@@ -95,7 +95,13 @@
                     🔗 Open Full Image
                 </Button>
             </div>
-        
+            
+            <div class="close-button">
+                <Button onClick={() => overlayOpen = false}>
+                    ❌
+                </Button>
+            </div>
+            
             {#if skipSvelteImg}
                 <img
                     class="img img-lightbox"
@@ -181,8 +187,14 @@
     
     .full-src-link {
         position: fixed;
-        top: 0;
-        right: 0;
+        bottom: 8px;
+        right: 8px;
+    }
+    
+    .close-button {
+        position: fixed;
+        top: 8px;
+        right: 8px;
     }
     
     .img-lightbox-container :global(.img-lightbox) {
@@ -193,7 +205,11 @@
     
     .img-lightbox-container :global(.overlay-exif) {
         position: fixed !important;
-        left: 16px;
-        bottom: 16px;
+        left: 8px;
+        bottom: 8px;
+    }
+    
+    .img-lightbox-container {
+        padding: 16px;
     }
 </style>
