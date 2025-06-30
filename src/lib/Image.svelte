@@ -187,6 +187,8 @@
     
     .img-lightbox-container :global(.img-lightbox) {
         max-height: 100% !important;
+        height: auto !important;
+        width: auto !important;
     }
     
     .img-lightbox-container :global(.overlay-exif) {
