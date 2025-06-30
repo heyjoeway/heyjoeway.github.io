@@ -231,7 +231,14 @@
         {/each}
     </div>
     {#if !inModal}
-        <Button onClick={post.url} linkCopyOnClick={!inFeed && !inEmbed}>
+        <Button
+            onClick={post.url}
+            copyOnClick={
+                (!inFeed && !inEmbed)
+                ? post.url
+                : undefined
+            }
+        >
             {#if inFeed || inEmbed}
                 💬
             {/if}
