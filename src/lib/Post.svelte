@@ -24,7 +24,7 @@
     
     let postHtmlNeedsShortening = (
         !inPost
-        && (post.html.length > 350)
+        && (post.htmlShort.length < post.html.length)
     );
     
     const knownExtensions = [
@@ -142,9 +142,11 @@
     {:else}
         {@html post.htmlShort}
         {#if postHtmlNeedsShortening}
-            <a href={post.url}><p>
-                ... (Read More)
-            </p></a>
+            <a href={post.url}>
+                <span>
+                    ... (Read More)
+                </span>
+            </a>
         {/if}
     {/if}
 </div>
@@ -195,6 +197,7 @@
         </Masonry>
         <div>
             {#each embeds as embed}
+                <br>
                 <PostEmbed {embed} />
             {/each}
             {#if !inFeed}

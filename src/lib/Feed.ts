@@ -310,6 +310,8 @@ export async function getFeedPost(feed: Feed, postId: string): Promise<Post> {
         if (htmlShortOriginal.length <= htmlShort.length) {
             htmlShort = htmlShortOriginal;
         }
+    } else {
+        htmlShort = html;
     }
     
     return {
