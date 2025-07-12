@@ -1,0 +1,1 @@
+const A={},s={src:""+new URL("../assets/SCR-20250711-rlzu.DOshxJ3P.png",import.meta.url).href,w:685,h:1200,lqip:"UklGRkAAAABXRUJQVlA4IDQAAAAwAwCdASoQABwAPzmGulQvKSWjMAgB4CcJaQAAerZcTeWgAP7sOU++pFttkHuYHFlkPQAA"},e={sources:A,img:s};export{e as default,s as img,A as sources};
