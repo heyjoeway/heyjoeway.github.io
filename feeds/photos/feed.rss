@@ -12,6 +12,20 @@
     <atom:link href="http://jojudge.com/feeds/photos/feed.rss" rel="self" type="application/rss+xml"/>
     <item>
       <title/>
+      <link>http://jojudge.com/feeds/photos/071325_0205PM</link>
+      <description>
+&lt;script&gt;
+	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
+&lt;/script&gt;
+
+&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
+&lt;p&gt;we made friends with a pigeon last night (also topaz ai unblur is no joke damn)&lt;/p&gt;
+&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <pubDate>Sun, 13 Jul 2025 18:10:00 GMT</pubDate>
+      <guid>/feeds/photos/071325_0205PM</guid>
+    </item>
+    <item>
+      <title/>
       <link>http://jojudge.com/feeds/photos/031025_1101AM</link>
       <description>
 &lt;script&gt;
