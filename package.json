@@ -36,6 +36,7 @@
 		"highlight.js": "^11.11.1",
 		"simple-git": "^3.27.0",
 		"svelte-bricks": "^0.2.1",
+		"svelte-inview": "^4.0.4",
 		"svelte-persisted-store": "^0.12.0",
 		"tua-body-scroll-lock": "^1.5.0",
 		"ua-parser-js": "^1.0.38",
