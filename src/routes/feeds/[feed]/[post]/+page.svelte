@@ -11,7 +11,7 @@
 <Layout bgText={data.feed.id}>
     <div class="outer-container">
         <div class="inner-container">
-            <Post feed={data.feed} post={data.post} />
+            <Post post={data.post} />
             <hr>
             <Comments
                 pageID={data.post.url}
