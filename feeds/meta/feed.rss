@@ -6,21 +6,19 @@
     <description>a feed about developing a platform to host the feed about developing a platform to host the feed about deve</description>
     <language>en-us</language>
     <pubDate>Wed, 12 Feb 2025 15:02:00 GMT</pubDate>
-    <lastBuildDate>Mon, 24 Mar 2025 19:03:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 22 Jul 2025 14:49:00 GMT</lastBuildDate>
     <docs>https://www.rssboard.org/rss-specification</docs>
     <generator>Custom</generator>
     <atom:link href="http://jojudge.com/feeds/meta/feed.rss" rel="self" type="application/rss+xml"/>
     <item>
       <title/>
       <link>http://jojudge.com/feeds/meta/072225_1043AM</link>
-      <description>
-&lt;script&gt;
+      <description>&lt;script&gt;
 	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
 &lt;/script&gt;
 
-&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
-&lt;p&gt;i did a BIG style rework the other day while working on light mode support. still have a few things to polish before i release light mode bur pretty happy with how things look. trying to make things as legible as possible&lt;/p&gt;
-&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
+&lt;p&gt;i did a BIG style rework the other day while working on light mode support. still have a few things to polish before i release light mode bur pretty happy </description>
       <pubDate>Tue, 22 Jul 2025 14:44:00 GMT</pubDate>
       <guid>/feeds/meta/072225_1043AM</guid>
     </item>
