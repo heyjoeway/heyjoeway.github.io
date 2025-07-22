@@ -278,11 +278,11 @@
         font-size: 0.9em;
         
         .title {
-            color: white;
+            color: var(--joeysvelte-text-colors-primary);
         }
         
         .path {
-            color: grey;
+            color: var(--joeysvelte-text-colors-secondary);
             font-size: 0.8em;
         }
     }
@@ -299,7 +299,16 @@
         
         .timestamps {
             font-size: 0.7em;
-            color: rgba(255, 255, 255, 0.5);
+            color: var(--joeysvelte-text-colors-secondary);
         }
     }
+    
+    .post {
+		:global(a) {
+			&::before {
+				content: "🔗 ";
+			}
+			
+		}
+	}
 </style>

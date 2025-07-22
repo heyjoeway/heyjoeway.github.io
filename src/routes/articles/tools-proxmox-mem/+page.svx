@@ -452,21 +452,21 @@ Proxmox doesn't have a built-in way to check if you're overcommitting memory on 
 qm list
 ```
 down here:
-<Textarea bind:value={qmListStr} />
+<Textarea wrap={false} bind:value={qmListStr} />
 
 ## Paste the output of...
 ```bash
 pct list | grep -v VMID | awk '{'{'} print $1 {'}'}' | xargs -I x sh -c 'pct status x -verbose && echo ==='
 ```
 down here:
-<Textarea bind:value={pctListStr} />
+<Textarea wrap={false} bind:value={pctListStr} />
 
 ## Paste the output of...
 ```bash
 cat /proc/meminfo
 ```
 down here:
-<Textarea bind:value={meminfoStr} />
+<Textarea wrap={false} bind:value={meminfoStr} />
 
 ## Results
 

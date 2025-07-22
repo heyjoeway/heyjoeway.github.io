@@ -3,7 +3,6 @@
 figure {
     display: inline-block;
     width: 100%;
-    margin-top: 8px;
     margin-bottom: 8px;
     --item-min-width: 195px;
     
@@ -49,8 +48,17 @@ figure {
     }
 }
 
+$figure-padding: var(--joeysvelte-general-gap-lg);
+
+.fig-right {
+    padding-left: $figure-padding;
+}
+
+.fig-left {
+    padding-right: $figure-padding;
+}
+
 .fig-right, .fig-left {
-    padding: 8px;
     text-align: center;
     display: block;
     

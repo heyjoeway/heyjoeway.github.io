@@ -11,7 +11,7 @@
     let postForm: HTMLFormElement | undefined;
 </script>
 
-<Modal bind:this={modal} bind:open={open}>
+<Modal size="md" bind:this={modal} bind:open={open}>
     <svelte:fragment slot="header">
         Edit Post
     </svelte:fragment>

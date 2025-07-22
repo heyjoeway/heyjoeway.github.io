@@ -26,17 +26,20 @@
 <style>
     .code-container {
         position: relative;
-        margin: 1em 0;
+        margin-bottom: 1em;
     }
-    code {
-      padding-right: 32px;
-    }
+    
     .copy-button {
         position: absolute;
-        top: 4px;
-        right: 4px;
+        top: 7px;
+        right: 7px;
         height: 26px;
         overflow: hidden;
         z-index: 1;
+    }
+    
+    pre {
+      overflow: auto;
+      padding-right: 32px; 
     }
 </style>

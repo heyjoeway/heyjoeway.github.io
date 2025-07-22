@@ -51,40 +51,46 @@
     enctype="multipart/form-data"
     {action}
 >
-    <Textarea
-        name="text"
-        rows={5}
-        width="100%"
-        bind:value={text}
-    />
-    {#if !isEditing}
-        <div class="posting-footer {gotAnyFiles() ? 'open' : ''}">
-            <FileUploadMultiple name="files" bind:files={filePickerFiles} />
-            <div class="buttons">
+    <div style:position="relative">
+        <Textarea
+            name="text"
+            rows={5}
+            width="100%"
+            bind:value={text}
+        />
+        {#if !isEditing}
+            <div class="posting-footer {gotAnyFiles() ? 'open' : ''}">
+                <FileUploadMultiple name="files" bind:files={filePickerFiles} />
+                <div class="buttons">
+                    <Button onClick={menu?.open}>
+                        🧾 Quick Actions
+                    </Button>
+                    <Button onClick={() => postForm?.submit()}>
+                        📝 Post
+                    </Button>
+                </div>
+            </div>
+        {:else}
+            <div class="posting-overlay">
                 <Button onClick={menu?.open}>
-                    🧾 Quick Actions
-                </Button>
-                <Button onClick={() => postForm?.submit()}>
-                    📝 Post
+                    🧾
                 </Button>
             </div>
-        </div>
-    {:else}
-        <div class="posting-footer">
-            <div></div>
-            <Button onClick={menu?.open}>
-                🧾 Quick Actions
-            </Button>
-        </div>
-    {/if}
+        {/if}
+    </div>
 </form>
 
 <style lang="scss">
+    .posting-overlay {
+        position: absolute;
+        right: var(--joeysvelte-general-gap-sm);
+        bottom: var(--joeysvelte-general-gap-sm);
+    }
+    
     .posting-footer {
         display:flex;
         justify-content: space-between;
-        margin-top: 8px;
-        margin-bottom: 8px;
+        margin-bottom: var(--joeysvelte-general-gap-sm);
         flex-wrap: wrap;
         
         &.open {
@@ -95,6 +101,7 @@
             display:flex;
             flex-direction: row;
             flex-wrap: wrap;
+            gap: 8px;
         }
     }
 </style>

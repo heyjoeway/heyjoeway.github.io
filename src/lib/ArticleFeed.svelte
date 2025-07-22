@@ -17,10 +17,10 @@
 </script>
 
 <style lang="scss">
-	.post-meta {
+	.meta {
 		float: right;
 		font-family: "franklin_gothicregular", sans-serif;
-		color: #DDD;
+		color: var(--joeysvelte-text-colors-secondary);
 		font-size: 14px;
 	}
 </style>
@@ -28,7 +28,7 @@
 {#each articles as article}
 	{#if (!!article.fm?.pinned == pinned) || !pinned}
 		<div>
-			<span class="post-meta">{formatDate(article.fm?.date)}</span>
+			<span class="meta">{formatDate(article.fm?.date)}</span>
 			<a href="{article.path}"><h2>{article.fm?.title}</h2></a>
 		</div>
 		<span>{getFirstParagraph(article.code + "")}</span><br>

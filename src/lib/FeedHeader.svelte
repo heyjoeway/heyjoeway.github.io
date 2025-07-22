@@ -17,6 +17,7 @@
 </script>
 
 <div class="header-container">
+    <!-- Yes you actually have to do it like this, prove me wrong -->
     {#await import(`../../src/feeds/${feed.id}/banner.jpg?as=run`) then { default: bannerSrc }}
         <Img style={bannerStyleStr} src={bannerSrc} />
     {:catch}
@@ -75,7 +76,7 @@
             
             .path {
                 font-size: 15px;
-                color: rgba(255,255,255,0.5);
+                color: var(--joeysvelte-text-colors-secondary);
                 margin-bottom: 12px;
             }
         }

@@ -12,9 +12,6 @@
     <slot></slot>
     
     <hr>
-    <Center>
-        <Tags tags={listToTagDetails(data.categories)} />
-    </Center>
-    <br>
+    <Tags center={true} tags={listToTagDetails(data.categories)} />
 </Layout>
 

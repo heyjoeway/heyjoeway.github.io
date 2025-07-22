@@ -9,6 +9,16 @@
 		}
 	}
 	
+	.article-content {
+		:global(a) {
+			&::before {
+				content: "🔗 ";
+			}
+			
+		}
+	}
+
+	
 	.times { 
 		display: inline;
 		text-align: right;
@@ -25,6 +35,12 @@
 		font-size: 15px;
 		margin-right: 8px;
 		vertical-align: middle;;
+	}
+	
+	.left {
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
 	}
 </style>
 
@@ -47,7 +63,7 @@
 
 <ArticleLayout data={data} bgText={bgText}>
 	<div class="header-container">
-		<div>
+		<div class="left">
 			<h1>{data.fm.title}</h1>
 			<Tags tags={strToTagDetails(data.fm.categories)}></Tags>
 		</div>
@@ -62,12 +78,12 @@
 			{/each}
 		</div>
 	</div>
-
 	
-	<br>
 	<hr>
 	
-	<slot></slot>
+	<span class="article-content">
+		<slot></slot>
+	</span>
 	
 	<br>
 

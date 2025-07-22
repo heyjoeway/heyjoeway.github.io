@@ -37,19 +37,12 @@ That leads me to the first part of my debloat empire: [MiniWinDeploy](https://gi
 > The following filetypes are recognized:
 > 
 > - bat:  Runs batch script and waits until exit.
-> 
 > - exe:  Runs executable and waits until exit.
-> 
 > - lnk:  Executes shortcut and waits for process to exit.
-> 
 > - msi:  Executes MSI installer silently and waits until finished. Cancels restarts.
-> 
 > - ps1:  Runs Powershell script and waits until exit.
-> 
 > - reg:  Applies registry patch.
-> 
-> - xml:  For XML files beginning with "Wi-Fi-", registers the wireless profiles.
->         Ignores other XML files.
+> - xml:  For XML files beginning with "Wi-Fi-", registers the wireless profiles. Ignores other XML files.
 >
 > ...
 >
