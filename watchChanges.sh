@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [[ -n "$GIT_USER" && -n "$GIT_PASS" ]]; then
+    git config credential.helper "!f() { echo \"username=${GIT_USER}\\npassword=${GIT_PASS}\"; }; f"
+fi
+
 # Define the command to run
 COMMAND="npm run host"
 
@@ -9,7 +13,7 @@ run_command() {
     COMMAND_PID=$!
 }
 
-# Function to check for local changes and push if no changes for over 5 minutes
+# Check for local changes and push if no changes for over 5 minutes
 check_and_push_local_changes() {
     if [[ -n $(git status --porcelain) ]]; then
         echo "Local changes detected. Waiting for 5 minutes of inactivity before pushing..."
@@ -35,37 +39,18 @@ check_and_push_local_changes() {
     fi
 }
 
-# Function to watch for git changes and restart the command if changes are pulled
+# Watch for git changes and restart the command if changes are pulled
 watch_directory() {
     while true; do
         # First, check and push local changes if any
         check_and_push_local_changes
-        
-        # Then, pull the latest changes
-        git_output=$(git pull)
-        git_submod_output=$(git submodule update --recursive)
-        
-        # Check if there were any changes pulled
-        if [[ $git_output != *"Already up to date."* ]] || [[ -n $git_submod_output ]]; then
-            echo "Changes detected from remote. Restarting command..."
-            
-            # Kill the previous command
-            kill -9 $COMMAND_PID
-            tail --pid=$COMMAND_PID -f /dev/null
-            
-            npm install
-            
-            # Run the command again
-            run_command
-        fi
         
         # Wait for a while before checking again
         sleep 30
     done
 }
 
-# Run the initial command
+# Run the main command in the background
 run_command
 
-# Start watching the directory for changes
 watch_directory
