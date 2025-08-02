@@ -16,4 +16,4 @@ COPY . .
 
 EXPOSE 5173
 
-CMD ["./watchChanges.sh"]
+CMD ["sh", "./watchChanges.sh"]

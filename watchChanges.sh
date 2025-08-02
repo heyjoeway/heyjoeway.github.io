@@ -1,6 +1,7 @@
-#!/bin/bash
+#!/bin/sh
 
-if [[ -n "$GIT_USER" && -n "$GIT_PASS" ]]; then
+GIT_CREDS_PRESENT="[ -n \"$GIT_USER\" ] && [ -n \"$GIT_PASS\" ]"
+if eval "$GIT_CREDS_PRESENT"; then
     git config credential.helper "!f() { echo \"username=${GIT_USER}\\npassword=${GIT_PASS}\"; }; f"
 fi
 
@@ -13,18 +14,25 @@ run_command() {
     COMMAND_PID=$!
 }
 
+# Sleep function to allow interrupts
+sleep_in_seconds() {
+    count=$1
+    for i in $(seq 1 $count); do
+        sleep 1
+    done
+}
+
+
 # Check for local changes and push if no changes for over 5 minutes
 check_and_push_local_changes() {
-    if [[ -n $(git status --porcelain) ]]; then
+    if [ -n "$(git status --porcelain)" ]; then
         echo "Local changes detected. Waiting for 5 minutes of inactivity before pushing..."
         last_change_time=$(date +%s)
         
-        while [[ -n $(git status --porcelain) ]]; do
+        while [ -n $(git status --porcelain) ]; do
             current_time=$(date +%s)
             elapsed_time=$((current_time - last_change_time))
             
-            echo "${elapsed_time}"
-
             if [[ $elapsed_time -ge 300 ]]; then
                 echo "No local changes for 5 minutes. Pushing changes..."
                 git add -A
@@ -34,7 +42,7 @@ check_and_push_local_changes() {
             fi
             
             # Wait before checking again
-            sleep 10
+            sleep_in_seconds 10
         done
     fi
 }
@@ -43,14 +51,22 @@ check_and_push_local_changes() {
 watch_directory() {
     while true; do
         # First, check and push local changes if any
-        check_and_push_local_changes
-        
-        # Wait for a while before checking again
-        sleep 30
+        if eval "$GIT_CREDS_PRESENT"; then
+            check_and_push_local_changes
+        fi
+
+        # Wait for a while before checking again (30 seconds, 1 second at a time)
+        sleep_in_seconds 30
     done
 }
 
 # Run the main command in the background
+echo "Starting command: $COMMAND"
 run_command
 
+if ! eval "$GIT_CREDS_PRESENT"; then
+    echo "Git credentials not set. Will not push changes automatically."
+else
+    echo "Watching for changes in the directory..."
+fi
 watch_directory
