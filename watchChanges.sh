@@ -1,15 +1,27 @@
 #!/bin/sh
 
+git_with_creds() {
+    GIT_ASKPASS="$ASKPASS_SCRIPT" git "$@"
+}
+
 GIT_CREDS_PRESENT="[ -n \"$GITHUB_TOKEN\" ]"
 if eval "$GIT_CREDS_PRESENT"; then
-    git config --global user.email "$GIT_EMAIL"
-    git config --global user.name "$GIT_NAME"
-    git config --global credential.helper store
-    echo "https://x-access-token:${GITHUB_TOKEN}@github.com" > ~/.git-credentials
+    # Create a temporary askpass script
+    ASKPASS_SCRIPT=$(mktemp)
+        cat > "$ASKPASS_SCRIPT" <<EOF
+#!/bin/sh
+case "\$1" in
+    *Username*) echo "x-access-token" ;;
+    *Password*) echo "$GITHUB_TOKEN" ;;
+esac
+EOF
+    chmod +x "$ASKPASS_SCRIPT"
+    
+    git config user.email "$GIT_EMAIL"
+    git config user.name "$GIT_NAME"
 fi
 
-echo -e 'protocol=https\nhost=github.com' | git credential fill
-git config --get-regexp 'credential.*'
+trap 'rm -f "$ASKPASS_SCRIPT"' EXIT
 
 # Define the command to run
 COMMAND="npm run host"
@@ -43,7 +55,7 @@ check_and_push_local_changes() {
                 echo "No local changes for 5 minutes. Pushing changes..."
                 git add -A
                 git commit -m "Auto-commit"
-                git push
+                git_with_creds push
                 break
             fi
             
