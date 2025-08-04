@@ -1,9 +1,18 @@
 #!/bin/sh
 
-GIT_CREDS_PRESENT="[ -n \"$GIT_USER\" ] && [ -n \"$GIT_PASS\" ]"
+GIT_CREDS_PRESENT="[ -n \"$GITHUB_TOKEN\" ]"
 if eval "$GIT_CREDS_PRESENT"; then
-    git config credential.helper "!f() { echo \"username=${GIT_USER}\\npassword=${GIT_PASS}\"; }; f"
+    export GIT_CONFIG_COUNT=2
+    export GIT_CONFIG_KEY_0='credential.https://github.com.username'
+    export GIT_CONFIG_VALUE_0=x-access-token
+    export GIT_CONFIG_KEY_1='credential.https://github.com.helper'
+    export GIT_CONFIG_VALUE_1='!f() { test "$1" = get && echo "password=${GITHUB_TOKEN}"; }; f'
+    git config --global user.email "$GIT_EMAIL"
+    git config --global user.name "$GIT_NAME"
 fi
+
+echo -e 'protocol=https\nhost=github.com' | git credential fill
+git config --get-regexp 'credential.*'
 
 # Define the command to run
 COMMAND="npm run host"
@@ -29,11 +38,11 @@ check_and_push_local_changes() {
         echo "Local changes detected. Waiting for 5 minutes of inactivity before pushing..."
         last_change_time=$(date +%s)
         
-        while [ -n $(git status --porcelain) ]; do
+        while [ -n "$(git status --porcelain)" ]; do
             current_time=$(date +%s)
             elapsed_time=$((current_time - last_change_time))
             
-            if [[ $elapsed_time -ge 300 ]]; then
+            if [ $elapsed_time -ge 300 ]; then
                 echo "No local changes for 5 minutes. Pushing changes..."
                 git add -A
                 git commit -m "Auto-commit"
