@@ -2,13 +2,10 @@
 
 GIT_CREDS_PRESENT="[ -n \"$GITHUB_TOKEN\" ]"
 if eval "$GIT_CREDS_PRESENT"; then
-    export GIT_CONFIG_COUNT=2
-    export GIT_CONFIG_KEY_0='credential.https://github.com.username'
-    export GIT_CONFIG_VALUE_0=x-access-token
-    export GIT_CONFIG_KEY_1='credential.https://github.com.helper'
-    export GIT_CONFIG_VALUE_1='!f() { test "$1" = get && echo "password=${GITHUB_TOKEN}"; }; f'
     git config --global user.email "$GIT_EMAIL"
     git config --global user.name "$GIT_NAME"
+    git config --global credential.helper store
+    echo "https://x-access-token:${GITHUB_TOKEN}@github.com" > ~/.git-credentials
 fi
 
 echo -e 'protocol=https\nhost=github.com' | git credential fill
