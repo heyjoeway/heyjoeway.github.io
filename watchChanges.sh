@@ -16,7 +16,7 @@ case "\$1" in
 esac
 EOF
     chmod +x "$ASKPASS_SCRIPT"
-    
+    git config --unset-all http.https://github.com/.extraheader
     git config user.email "$GIT_EMAIL"
     git config user.name "$GIT_NAME"
 fi
