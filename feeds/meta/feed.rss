@@ -6,7 +6,7 @@
     <description>a feed about developing a platform to host the feed about developing a platform to host the feed about deve</description>
     <language>en-us</language>
     <pubDate>Wed, 12 Feb 2025 15:02:00 GMT</pubDate>
-    <lastBuildDate>Tue, 22 Jul 2025 14:49:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 06 Aug 2025 12:26:00 GMT</lastBuildDate>
     <docs>https://www.rssboard.org/rss-specification</docs>
     <generator>Custom</generator>
     <atom:link href="http://jojudge.com/feeds/meta/feed.rss" rel="self" type="application/rss+xml"/>
@@ -19,7 +19,7 @@
 &lt;/script&gt;
 
 &lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
-&lt;p&gt;please dear god&lt;/p&gt;
+&lt;p&gt;please dear god (i got docker images working for this site!)&lt;/p&gt;
 &lt;/Layout_MDSVEX_DEFAULT&gt;</description>
       <pubDate>Wed, 06 Aug 2025 01:17:00 GMT</pubDate>
       <guid>/feeds/meta/080525_0912PM</guid>
