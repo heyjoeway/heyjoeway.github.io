@@ -1,4 +1,4 @@
-import{a as m,t as u}from"../chunks/disclose-version.D_FZJbBx.js";import"../chunks/legacy.CpgGiEmo.js";import{s as e,f as g}from"../chunks/runtime.RAT1rWNc.js";import{l as b,s as _}from"../chunks/props.BzOUVZJ9.js";import{M as f}from"../chunks/MdsvexLayout.CsLuBmZF.js";import{C as a}from"../chunks/Code.Km0sKGWE.js";const k={title:"Notes: Linux",categories:"software linux",comments:!0};var y=u('<p>Random notes for Linux. Primarily for my own reference.</p> <h1 class="h1-1">Scripting</h1> <!> <h1 class="h1-2">Personal Utilities</h1> <!> <h1 class="h1-3">(My) Ideal Debian VM Setup</h1> <h2 class="h2-1">Serial Access</h2> <!> <h2 class="h2-2">General</h2> <!> <h3 class="h3-1">With Docker</h3> <!> <h3 class="h3-2">With SMB Share</h3> <!>',1);function A(c,d){const l=b(d,["children","$$slots","$$events","$$legacy"]);f(c,_(()=>l,k,{children:(p,$)=>{var s=y(),t=e(g(s),4);a(t,{lang:"bash",code:`# Change Dir to Script Dir
+import{a as m,t as u}from"../chunks/disclose-version.D_FZJbBx.js";import"../chunks/legacy.CpgGiEmo.js";import{s as e,f as g}from"../chunks/runtime.RAT1rWNc.js";import{l as b,s as _}from"../chunks/props.BzOUVZJ9.js";import{M as f}from"../chunks/MdsvexLayout.CsLuBmZF.js";import{C as a}from"../chunks/Code.Km0sKGWE.js";const k={title:"Notes: Linux",categories:"software linux",comments:!0};var y=u('<p>Random notes for Linux. Primarily for my own reference.</p> <h1 class="h1-1">Scripting</h1> <!> <h1 class="h1-2">Personal Utilities</h1> <!> <h1 class="h1-3">(My) Ideal Debian VM Setup</h1> <h2 class="h2-1">Serial Access</h2> <!> <h2 class="h2-2">General</h2> <!> <h3 class="h3-1">With Docker</h3> <!> <h3 class="h3-2">With SMB Share</h3> <!>',1);function A(c,d){const l=b(d,["children","$$slots","$$events","$$legacy"]);f(c,_(()=>l,k,{children:(h,$)=>{var s=y(),t=e(g(s),4);a(t,{lang:"bash",code:`# Change Dir to Script Dir
 cd "$(dirname "$0")"`});var r=e(t,4);a(r,{lang:"bash",code:`echo "Deepseek API Key:"
 read key_deepseek
 cd ~
@@ -32,8 +32,7 @@ apt upgrade -y
 # Enable automatic upgrades
 apt install unattended-upgrades apt-listchanges sudo curl git -y
 echo "Unattended-Upgrade::Automatic-Reboot-WithUsers "true";" > /etc/apt/apt.conf.d/52unattended-upgrades-local`});var n=e(i,4);a(n,{lang:"bash",code:`curl -fsSL https://get.docker.com | sh
-apt install -y docker-compose
-docker run --detach --name watchtower --restart unless-stopped --volume /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower`});var h=e(n,4);a(h,{lang:"bash",code:`#!/bin/bash
+docker run --detach --name watchtower --restart unless-stopped --volume /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower`});var p=e(n,4);a(p,{lang:"bash",code:`#!/bin/bash
 export DEBIAN_FRONTEND=noninteractive
 export NEEDRESTART_MODE=l
 apt install cifs-utils -y
@@ -52,4 +51,4 @@ printf "
 systemctl daemon-reload
 adduser $linux_username
 echo "*/1 *  * * *  mount -a" | crontab - # Hack
-mount -a`}),m(p,s)},$$slots:{default:!0}}))}export{A as component};
+mount -a`}),m(h,s)},$$slots:{default:!0}}))}export{A as component};
