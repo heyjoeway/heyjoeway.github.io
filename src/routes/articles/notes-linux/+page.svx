@@ -65,7 +65,6 @@ echo "Unattended-Upgrade::Automatic-Reboot-WithUsers \"true\";" > /etc/apt/apt.c
 
 ```bash
 curl -fsSL https://get.docker.com | sh
-apt install -y docker-compose
 docker run --detach --name watchtower --restart unless-stopped --volume /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower
 ```
 
