@@ -12,6 +12,19 @@
     <atom:link href="http://jojudge.com/feeds/misc/feed.rss" rel="self" type="application/rss+xml"/>
     <item>
       <title/>
+      <link>http://jojudge.com/feeds/misc/092625_0805PM</link>
+      <description>&lt;script&gt;
+	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
+&lt;/script&gt;
+
+&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
+&lt;p&gt;desktop linux will never be taken seriously unless some organization develops an mdm solution instead of yet another desktop environment&lt;/p&gt;
+&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <pubDate>Sat, 27 Sep 2025 00:10:00 GMT</pubDate>
+      <guid>/feeds/misc/092625_0805PM</guid>
+    </item>
+    <item>
+      <title/>
       <link>http://jojudge.com/feeds/misc/091225_1156AM</link>
       <description>&lt;script&gt;
 	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
