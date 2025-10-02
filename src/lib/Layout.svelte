@@ -6,11 +6,20 @@
 		padding-right: 16px;
 		padding-left: 16px;
 		padding-top: 16px;
+		overflow-x: clip;
+	}
+	
+	@media print {
+		.layout {
+			max-width: 100%;
+			padding: 0;
+			margin: 0;
+		}
 	}
 	
 	.site-title {
 		font-family: "franklin_gothicregular", sans-serif;
-		font-size: 56px;
+		font-size: 32px;
 		margin-bottom: 16px;
 		font-weight: 300;
 		letter-spacing: -1px;
@@ -43,6 +52,7 @@
 	import Background from "$joeysvelte/Background.svelte";
 	import Button from "$joeysvelte/Button.svelte";
 	import ThemeProvider from "$joeysvelte/ThemeProvider.svelte";
+	import HideDuringPrint from "$joeysvelte/HideDuringPrint.svelte";
 	
 	export let bgText: string = "heyjoeway";
 	
@@ -64,20 +74,22 @@
 	</Background>
 	
 	<div class="layout">
-		<div class="header">		
-			<div class="title">
-				<a class="site-title" rel="author" href="/">
-					<span style:color="var(--joeysvelte-brand-colors-1)">hey</span>
-					<span style:color="var(--joeysvelte-brand-colors-2)">joe</span>
-					<span style:color="var(--joeysvelte-brand-colors-3)">way</span>
-					<span style:color="var(--joeysvelte-text-colors-primary)">.</span>
-				</a>
+		<HideDuringPrint>
+			<div class="header">		
+				<div class="title">
+					<a class="site-title" rel="author" href="/">
+						<span style:color="var(--joeysvelte-brand-colors-1)">hey</span>
+						<span style:color="var(--joeysvelte-brand-colors-2)">joe</span>
+						<span style:color="var(--joeysvelte-brand-colors-3)">way</span>
+						<span style:color="var(--joeysvelte-text-colors-primary)">.</span>
+					</a>
+				</div>
+				<div class="nav">
+					<Button onClick="/articles">Articles</Button>
+					<Button onClick="/feeds">Feeds</Button>
+				</div>
 			</div>
-			<div class="nav">
-				<Button onClick="/articles">Articles</Button>
-				<Button onClick="/feeds">Feeds</Button>
-			</div>
-		</div>
+		</HideDuringPrint>
 		
 		<slot></slot>
 	</div>

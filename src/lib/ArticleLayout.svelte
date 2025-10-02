@@ -10,7 +10,6 @@
 
 <Layout bgText={bgText}>
     <slot></slot>
-    
     <hr>
     <Tags center={true} tags={listToTagDetails(data.categories)} />
 </Layout>

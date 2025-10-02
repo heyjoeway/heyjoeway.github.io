@@ -6,7 +6,7 @@ comments: true
 ---
 A quick overview of my logo design.
 
-<Figure frame="light">
+<Figure frame="Light">
     <Image src={imgLogo} />
 </Figure>
 

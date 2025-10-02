@@ -12,19 +12,16 @@ div {
 import FigureHelper from "./_FigureHelper.svelte";
 
 import Frame from "$joeysvelte/Frame.svelte";
-import { bundledThemes } from "$joeysvelte/Theming";
 
 export let itemMinWidth = '300px';
 export let align: 'left' | 'right' | undefined = undefined;
-export let frame: 'light' | 'dark' | undefined = undefined;
+export let frame: string = "";
 
 </script>
 
 {#if frame}
 <div>
-	<Frame
-		theme={bundledThemes[frame == "light" ? "Light" : "Dark"]}
-	>
+	<Frame theme={frame}>
 		<FigureHelper hasFrame={true} {itemMinWidth} {align}>
 			<slot></slot>
 			<slot name="caption"></slot>

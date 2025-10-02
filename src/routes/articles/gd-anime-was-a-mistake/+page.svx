@@ -17,7 +17,7 @@ This design was published as a shirt design on RedBubble back in December of 201
 
 The first thing that was done was obtaining the Super Mario 256 font. This was then used to type the words onto an SVG using Inkscape. A second SVG was used to make the borders for the letters.
 
-<Figure frame="light">
+<Figure frame="Light">
     <Image src={imgLetters} />
     <Image src={imgBorder} />
 </Figure>

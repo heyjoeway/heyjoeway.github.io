@@ -43,6 +43,9 @@
     <ContextMenuItem onClick={() => quickAction("hideHome")}>
         Hide from Homepage
     </ContextMenuItem>
+    <ContextMenuItem onClick={() => quickAction("unlisted")}>
+        Make unlisted
+    </ContextMenuItem>
 </ContextMenu>
 
 <form

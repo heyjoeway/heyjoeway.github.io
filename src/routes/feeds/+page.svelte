@@ -7,7 +7,9 @@
 
 <Layout>
     {#each data.feeds as feed}
-        <FeedHeader feed={feed} />
-        <hr>
+        {#if !feed.meta.unlisted}
+            <FeedHeader feed={feed} />
+            <hr>
+        {/if}
     {/each}
 </Layout>

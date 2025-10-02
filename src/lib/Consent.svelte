@@ -15,8 +15,7 @@
 {:else}
     <Center>
         <p>{@html consentable.disabledMessage}</p>
-        <br>
-        <Button onClick={() => $enable = true}>{consentable.buttonMessage}</Button><br>
+        <p><Button onClick={() => $enable = true}>{consentable.buttonMessage}</Button></p>
         <p style:text-align="center">{@html consentable.privacyMessage}</p>
     </Center>
 {/if}

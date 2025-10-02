@@ -28,8 +28,10 @@
             
             {#if data.posts && data.posts.length > 0}
                 {#each data.posts as post}
-                    <Post post={post} inFeed={true} />
-                    <hr>
+                    {#if !post.fm?.unlisted}
+                        <Post post={post} inFeed={true} />
+                        <hr>
+                    {/if}
                 {/each}
             {:else}
                 <Center>

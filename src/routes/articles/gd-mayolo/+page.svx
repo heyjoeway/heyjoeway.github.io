@@ -16,7 +16,7 @@ This design was a done as commission for someone. I was given the general idea o
 
 I started by writing out the text. After doing some sketches, I settled on this text and translated it into an SVG. I was requested to change the "Y" uppercase and did so in the final SVG. The line was brought down to a middle point in order to place the mayo bottle more easily.
 
-<Figure frame="light">
+<Figure frame="Light">
     <Image src={imgText} />
     <Image src={imgTextSVG} />
 </Figure>
