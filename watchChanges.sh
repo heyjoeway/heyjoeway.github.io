@@ -19,6 +19,7 @@ EOF
     git config --unset-all http.https://github.com/.extraheader
     git config user.email "$GIT_EMAIL"
     git config user.name "$GIT_NAME"
+    git config pull.rebase false
 fi
 
 trap 'rm -f "$ASKPASS_SCRIPT"' EXIT
@@ -55,6 +56,7 @@ check_and_push_local_changes() {
                 echo "No local changes for 5 minutes. Pushing changes..."
                 git add -A
                 git commit -m "Auto-commit"
+                git_with_creds pull
                 git_with_creds push
                 break
             fi
