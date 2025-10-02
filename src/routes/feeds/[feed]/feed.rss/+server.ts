@@ -3,7 +3,8 @@ export const prerender = true;
 import * as xml2js from 'xml2js';
 import type { RequestHandler } from "@sveltejs/kit";
 
-import { getFeed, getFeedIds, type Feed } from '$lib/Feed.js';
+import { getFeed, getFeedIds } from '$lib/Feed.server';
+import { type Feed } from '$lib/Feed';
 import { arrMax, arrMin } from '$lib/Utils.js';
 import {
     getCname

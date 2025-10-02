@@ -3,7 +3,7 @@ import {
     getFeedPost,
     getFeedIds,
     getFeedPostIds
-} from '$lib/Feed.js';
+} from '$lib/Feed.server';
 
 export async function load({ params }) {
     const feed = await getFeed(params.feed);

@@ -1,4 +1,5 @@
-import { getAllFeeds, sortPosts, type Post } from '$lib/Feed.js';
+import { getAllFeeds  } from '$lib/Feed.server';
+import { type Post, sortPosts } from '$lib/Feed';
 
 export async function load() {
 	const feeds = await getAllFeeds(true);

@@ -1,4 +1,4 @@
-import { getFeed, getFeedIds } from '$lib/Feed.js';
+import { getFeed, getFeedIds } from '$lib/Feed.server';
 
 export async function load({ params }) {
     return await getFeed(params.feed, true);
