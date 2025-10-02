@@ -24,18 +24,20 @@ Obviously, I could've just put these games on a laptop and played them there, or
     <Image src={imgSRB2Pic2} />
 </Figure>
 
+https://mb.srb2.org/addons/sonic-robo-blast-2-v2-2-x-switch-port.464/
+
 To people out of the know, this fangame has been in development for roughly 24 years. Twenty. Four. It's based on Doom of all things (can't recall which source port off the top of my head) and is unexpectedly super fun to play. I've followed the game since I was probably like 7 or 8 and wanted a portable version ever since. At the time I ported it, the best options were to play it on something like a GPD Win, OpenPandora, or a PSP, all pretty lacking consoles for the modern age. This was also before an Android or iOS port.
 
-carstene1ns was responsible for the original port. They released a proof-of-concept port that ran at a pretty terrible framerate. I decided to attempt building their port myself, and found that the poor framerate wasn't their fault at all. In the time between our builds, the Switch port of SDL2 had been updated to where it just... worked. So, I picked up maintenance of the port and added some more quality of life things:
+carstene1ns was responsible for the original port. They released a proof-of-concept port that ran at a pretty terrible framerate. I decided to attempt building their port myself, and found that in the time between our builds, the Switch port of SDL2 had been updated to where it just... worked. So, I picked up maintenance of the port and added some more quality of life things:
 
 - Internet connectivity
-    - Fixed on accident while adding nxlink support!
+    - *Fixed on accident while adding nxlink support!*
 - On-screen keyboard support
-- Ability to run in background (to avoid people essentially lag-switching servers)
+- Ability to run in background (to avoid people essentially lag-switching servers by opening the home menu)
 
-In addition to C programming, these ports required knowledge of SDL2, libnx, and GNU Make. At the time, I had limited knowledge of each. By the time I was done, I became fairly affluent in each. Learning to read through git history to pick out breaking changes was an essential skill needed to accomplish this as well. All in all, it was a great learning experience and the gateway to all my other ports.
+Learned a lot about C/C++, Make, gcc, and SDL2. More important though, is being able to trudge though git commits, pick out breaking changes, and binary search my way down to the root of any problem. All in all, it was a great learning experience and the gateway to all my other ports.
 
-My only big regret was that I never got GL working. I made a few attempts, but the sheer size of the codebase, uncertainty of the state of the DevkitPro ports, and layers of complexity involved made it a time sink I wasn't ready to take on.
+My only big regret was that I never got GL working. I made a few attempts, but the sheer size of the codebase and layers of complexity involved made it a time sink I wasn't ready to take on.
 
 
 ## Sonic Robo Blast 2 Kart
@@ -45,7 +47,9 @@ My only big regret was that I never got GL working. I made a few attempts, but t
     <Image src={imgSRB2KPic2} />
 </Figure>
 
-I could try and explain how a mod of a mod of Doom turned into a kart racer, but instead I'll just say that it was a fairly simple ordeal to port changes from SRB2 here. Not much else to say honestly. Play SRB2Kart.
+https://mb.srb2.org/threads/srb2-kart-switch-port.26271/
+
+I could try and explain how a mod of a mod of Doom turned into a kart racer, but instead I'll just say that it was a fairly simple ordeal to port my changes from SRB2 here. Not much else to say honestly. Play SRB2Kart.
 
 ## Sonic 1, 2, and CD Decompilations
 
@@ -56,6 +60,10 @@ I could try and explain how a mod of a mod of Doom turned into a kart racer, but
     <Image src={imgS2Pic2} />
 </Figure>
 
+https://github.com/heyjoeway/Sonic-1-2-2013-Decompilation
+
+https://github.com/heyjoeway/Sonic-CD-11-Decompilation
+
 Sonic CD got a remake from the ground up in 2011, and Sonic 1 and 2 followed suit in 2013. These were all done with Christian Whitehead's (taxman's) Retro Engine. I don't know the full details of how, but they all got decompiled in 2021 by RubberDuckyCooly and RMGRich (and probably a few others, sorry if I didn't list you guys here). At this point, the DevkitPro Switch portlibs had matured to the point where I could mostly just create a Makefile for them and they were good to go. A few fixes to input were needed here and there, along with some cflag changes. These ports were feature-complete, as far as I'm aware.
 
 ## Sonic 3 AIR
@@ -64,6 +72,8 @@ Sonic CD got a remake from the ground up in 2011, and Sonic 1 and 2 followed sui
     <Image src={imgS3AIRPic1} />
     <Image src={imgS3AIRPic2} />
 </Figure>
+
+https://github.com/Eukaryot/sonic3air
 
 Sonic 3 AIR is a fan-done translation of the original Sonic 3 and Knuckles source code into a custom engine and scripting language, done by the legendary Eukaryot. I reached out to them before the source code for this recreation was public, and they agreed to give me access for the production of a Switch port. I got it up and running, feature-complete in about a week, including hardware rendering.
 
@@ -85,7 +95,7 @@ Yup. As soon as I got the thing in my hands, my motivation for Switch developmen
 - Don't have to develop dedicated ports
 - Plays literally everything else I want to play minus (online) Switch games
 
-Having grown up on homebrew and fan projects, I know how much it sucks to see something you like go unmaintained. Being on the other side of the fence now, I can see why so many people go ghost mode. I feel a bit guilty for dropping everything, but I need to change focus until I am happy.
+Having grown up on homebrew and fan projects, I know how much it sucks to see something you like go unmaintained. Being on the other side of the fence now, I can see why so many people go ghost mode. I feel a bit guilty for dropping everything, but I need to change focus until I'm happy.
 
 <script lang="ts">
     import Figure from "$lib/Figure.svelte";
