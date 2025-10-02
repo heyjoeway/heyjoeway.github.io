@@ -1,0 +1,25 @@
+{
+    "experience": {
+        "cves": [4],
+        "impetus": [3],
+        "lcatdb": [2,3,6],
+        "vrc": [4],
+        "nx": null,
+        "me": null,
+        "asrc": null
+    },
+    "skills": {
+        "core": [
+			"🔵 C/C++"
+        ],
+        "supporting": [
+			"🐃 GNU Make"
+        ],
+        "sysadmin": [
+            "💿 Data Storage (TrueNAS Scale)",
+            "🪟 Windows Sysadmin (Server, AD, Group Policy)",
+			"🛜 Networking (IP, DNS, SSL, VLAN, Physical)"
+        ],
+        "additional": null
+    }
+}

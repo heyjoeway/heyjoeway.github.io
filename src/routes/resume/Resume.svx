@@ -1,0 +1,403 @@
+<div class="header">
+
+# Joseph Judge
+
+<address>
+	<div>
+		<EditTag icon="📞" text="[Redacted]" />
+		<EditTag icon="📍" text="[Redacted]" />
+	</div>
+	<div>
+		<Tag url="https://github.com/heyjoeway/">🦊🐙 GitHub: heyjoeway</Tag>
+		<Tag url="mailto:joe@jojudge.com">📧 joe@jojudge.com</Tag>
+		<Tag url="/">🌎 jojudge.com</Tag>
+	</div>
+</address>
+
+</div>
+
+---
+
+<Experience
+	id="cves"
+	title="Computer Programmer"
+	subtitle="Champlain Valley Educational Services"
+	where="Plattsburgh, NY"
+	when="Aug. 2023 - Present"
+	items={[
+		new ExpItem(
+			"Designed and built internal apps that demonstrated the effectiveness of an early low-code platform, driving company-wide adoption and replacing legacy software across multiple CVES divisions.",
+			getPost('092825_0429PM')
+		),
+		new ExpItem("Automated user account creation processes across multiple school districts using Python and Powershell."),
+		new ExpItem(
+			"Identified opportunities within own IT team for time savings via programming.",
+			null,
+			[
+				new ExpItem("Includes deployment scripts, upload tools, scrapers, and general Windows sysadmin scripts.")
+			]
+		),
+		new ExpItem("Maintained legacy Python code <b>without source</b>, analyzing <b>disassembled and decompiled bytecode</b> to determine behavior."),
+		new ExpItem(
+			"Additionally handled IT responsibilities, including:",
+			null,
+			[
+				new ExpItem("Lead multiple school-wide device fleet deployments across multiple districts."),
+				new ExpItem("Use of general network principals including subnetting, VLANs, DNS, and diagnosing failure incidents. Primarily used Meraki networking."),
+				new ExpItem("Some physical network experience. Successfully diagnosed major fiber issue in district."),
+			]
+		)
+	]}
+	{profile}
+/>
+
+<Experience
+	id="vrc"
+	title="Software Developer"
+	subtitle="Clarkson Virtual Reality Coaster"
+	where="Potsdam, NY"
+	when="Jan. 2022 – May 2023"
+	items={[
+		new ExpItem(
+			"Master’s project retrofitting a MaxFlight VR2002 motion simulator with new technologies.",
+			getPost('091425_0247PM')
+		),
+		new ExpItem(
+			"Several <b>Python</b> libraries designed/implemented. APIs produced for use by departments less familiar with programming.",
+			getPost('091425_0247PM')
+		),
+		new ExpItem(
+			"Documentation produced using <b>docstrings, type annotations, and mkdocs</b>",
+			getPost('091425_0247PM')
+		),
+		new ExpItem(
+			"Worked with end users to identify requirements, produce manuals, and provide training for simulator operation.",
+			getPost('091425_0247PM')
+		),
+		new ExpItem("Still in use at Clarkson University as of July 2025."),
+	]}
+	{profile}
+/>
+
+<Experience
+	id="impetus"
+	title="Research Assistant"
+	subtitle="IMPETUS (Clarkson University)"
+	where="Potsdam, NY"
+	when="June 2019 - June 2023"
+	items={[
+		new ExpItem(
+			"Mentored 7th - 12th grade students to support a career path in STEM through assorted activities.",
+			"https://sites.clarkson.edu/impetus/"
+		),
+		new ExpItem("Developed curriculum and Moodle course material for the <b>computer programming</b> component."),
+		new ExpItem(
+			"Taught object-oriented design through video game programming using Scratch and MakeCode Arcade.",
+			getPost('093025_1051AM')
+		),
+		new ExpItem("<b>Administrator</b> of IMPETUS Moodle site. Managed user accounts, permissions, and course material."),
+		new ExpItem(
+			"Produced documentation and <b>Python</b> software to <b>automate deployment of Windows</b> devices for student use.",
+			"https://github.com/heyjoeway/miniwindeploy"
+		)
+	]}
+	{profile}
+/>
+
+<Experience
+	id="nx"
+	title="Nintendo Switch Homebrew Game Ports"
+	when="Jan. 2019 – Oct 2022"
+	items={[
+		new ExpItem(
+			"Homebrew ports of several <b>open-source</b> games to the Nintendo Switch as a hobby project using <b>devkitPro</b>.",
+			getPost('093025_1058AM')
+		),
+		new ExpItem(
+			"Used <b>C/C++, GNU Make, SDL2, and OpenGL</b>. Navigated sparsely documented and complex codebases.",
+			getPost('093025_1058AM')
+		),
+		new ExpItem(
+			"Collaborated with project maintainers using <b>Git<b> commit and diff analysis.",
+			getPost('093025_1058AM')
+		)
+	]}
+	{profile}
+/>
+
+<Experience
+	id="lcatdb"
+	title="Full Stack Developer"
+	subtitle="lcatDB (SUNY Plattsburgh)"
+	where="Plattsburgh, NY"
+	when="May 2017 - May 2019"
+	items={[
+		new ExpItem(
+			"Led development of database/single page application for recording/analyzing vertical water temperature profiles.",
+			"/articles/lcatdb"
+		),
+		new ExpItem(
+			"Produced backend components using <b>Node.JS, Express, MongoDB, and JSON schemas</b>.",
+			"https://github.com/heyjoeway/lcatdb/tree/dev/server"
+		),
+		new ExpItem("Managed a <b>Debian Linux</b> server instance on <b>Linode</b> to host application."),
+		new ExpItem("Configured networking (domain registration, DNS) required for public access to app."),
+		new ExpItem(
+			"Designed and implemented a single-page web application using Bootstrap/jQuery.",
+			"https://github.com/heyjoeway/lcatdb/tree/dev/client"
+		),
+		new ExpItem("Met with clients on a weekly basis to provide updates, identify short/long-term goals, and refine project direction."),
+		new ExpItem("Supported by the SUNY Plattsburgh Center for Earth & Environmental Science and the Lake Champlain Sea Grant.")
+	]}
+	{profile}
+/>
+
+<Experience
+	id="asrc"
+	title="Research Intern"
+	subtitle="Whiteface ASRC (SUNY Albany)"	
+	where="Wilmington, NY"
+	when="May 2018 - Aug. 2018"
+	items={[
+		new ExpItem(
+			"In-browser VR tour of mountain summit developed using three.js.",
+			"https://jojudge.com/whitefacetour",
+			[
+				new ExpItem(
+					"Custom JSON-based scene system and editor produced using <b>JavaScript, bundled using webpack.</b>",
+					"https://github.com/heyjoeway/planetariumvr"
+				),
+				new ExpItem(
+					"Currently hosted using a <b>GitHub Actions/GitHub Pages CI/CD workflow</b>.",
+					"https://github.com/heyjoeway/whitefacetour"
+				)
+			]
+		),
+		new ExpItem("Automated summit camera system produced using <b>Python</b> to provide live shots and process time-lapses."),
+		new ExpItem("Software for kiosk video players and information screens developed using <b>Raspberry Pi SBC</b> and <b>Python.</b>"),
+		new ExpItem("Performed regular maintenance of atmospheric monitoring equipment (mass spectrometers).")
+	]}
+	{profile}
+/>
+
+<Experience
+	id="me"
+	title="A Lot"
+	subtitle="My Home"
+	where="[Redacted], NY"
+	when="2022 - Present"
+	items={[
+		new ExpItem("Operates Proxmox cluster across 2 machines hosting 21 virtual servers. It's a homelab alright."),
+		new ExpItem("Hosts several home and routine critical services including Home Assistant, TrueNAS Scale (NAS), Actual Budget. Home Assistant is critical for me as it handles medication reminders and home security."),
+		new ExpItem("Developing grocery app that syncronizes across multiple clients in realtime using Svelte and Supabase. GitHub Actions for CI/CD Docker images, hosted as an app on TrueNas Scale. <i>If this goes down my wife will let me know it.</i>"),
+	]}
+	{profile}
+/>
+
+<AvoidPageBreak>
+
+# Education
+___
+
+<Education
+	degree="Master’s in Computer Science"
+	university="Clarkson University"
+	gpa={3.64}
+	where="Potsdam, NY"
+	when="Aug. 2019 – May 2023"
+/>
+
+<Education
+	degree="BS in Computer Science"
+	university="SUNY Plattsburgh"
+	gpa={3.62}
+	where="Plattsburgh, NY"
+	when="Aug. 2016 – Aug. 2019"
+/>
+
+</AvoidPageBreak>
+
+<AvoidPageBreak>
+
+# Skills
+___
+
+<SkillGroup
+	id="core"
+	proficiency="Core Dev."
+	skills={[
+		new Skill(
+			"🟠 Svelte",
+			getPost('093025_0205PM')
+		),
+		new Skill(
+			"🟦🟨 TypeScript/JavaScript",
+			getPost('093025_0228PM')
+		),
+		new Skill(
+			"🐍 Python",
+			getPost('093025_0137PM')
+		),
+		new Skill(
+			"🔵 C/C++",
+			"Used for my Switch homebrew ports. I like it but don't find too many applications for it in what I do now."
+		),
+		new Skill(
+			"🦊🐙 Version Control (Git/GitHub)",
+			"My GitHub should speak for itself! https://github.com/heyjoeway?tab=repositories"
+		),
+	]}
+	{profile}
+/>
+
+<SkillGroup
+	id="supporting"
+	proficiency="Support"
+	skills={[
+		new Skill(
+			"🗄️ Databases (SQL, mongoDB)",
+			"My grocery app uses Supabase which is built on PostgreSQL. I'm familiar with common query and join operations. For lcatDB I used mongoDB."
+		),
+		new Skill(
+			"⚛️ React",
+			"I briefly experimented with React after lcatDB, with the realization that jQuery was not up to the task for SPAs. It introduced me to the pattern of hierarchical 'state', which inspired the development of my framework for the Whiteface ASRC VR tour. I still prefer Svelte though."
+		),
+		new Skill(
+			"3️⃣ HTML/CSS/SCSS",
+			"I mean HTML/CSS is kinda a given for web dev, but I'm putting it here just for clarity. SCSS is an extension of CSS that adds some quality-of-life features including rule nesting, variables, mixins, and functions."
+		),
+		new Skill(
+			"🐃 GNU Make",
+			"Used for my Switch homebrew ports. I like it but don't find too many applications for it in what I do now."
+		),
+		new Skill(
+			"🔄 Continuous Integration/Deployment (GitHub Actions)",
+			"Gotten quite comfy with GitHub Actions. The website you're reading this on is built and deployed using it, as well as my grocery app. (I still don't know why GitHub gives this away for free...)"
+		),
+	]}
+	{profile}
+/>
+
+<SkillGroup
+	id="sysadmin"
+	proficiency="Systems"
+	skills={[
+		new Skill(
+			"🐧 Linux Sysadmin (Ubuntu/Debian)",
+			"Most of my LXC containers and virtual servers run Linux, specifically Debian and Ubuntu. I've been sleuthing around with various Linux distros since ~2012."
+		),
+		new Skill(
+			"🧩💻 Virtualization (Proxmox, Hyper-V)",
+			"I run a Proxmox cluster at home with 2 nodes and 21 virtual servers. I've found Proxmox to be the best hypervisor for keeping existing services stable while facilitating experimentation/expansion. At CVES we use Hyper-V for our Windows servers, which I've helped to maintain."
+		),
+		new Skill(
+			"🪟 Windows Sysadmin (Server, AD, Group Policy)",
+			"Mostly from my time doing IT at CVES. I've set up and maintained several Windows Server instances, managed Active Directory, and created Group Policies for various deployments and tweaks."
+		),
+		new Skill(
+			"🛜 Networking (IP, DNS, SSL, VLAN, Physical)",
+			"I do a bit of this at CVES, generally using Meraki equipment. Also got real familiar with fiber during one particular incident. I also handle networking for my home lab."
+		),
+		new Skill(
+			"🚢 Containers (Docker, LXC)",
+			"It's only more recently that I've come to appreciate the stability and reproducibility of containers. A lot of my home lab runs in LXC containers to facilitate experimentation, but I've started moving more thing to Docker. My end goal is to have everything distributable to others looking to host their own services. Also when I'm talking about familiarity with Docker, I mean being able to deploy/manage pre-made images AND create my own Dockerfiles and images. My website and grocery app are both containerized with Docker."
+		),
+		new Skill(
+			"🖥️ PowerShell",
+			"Used this a lot at CVES. Lots of Active Directory and Intune automation."
+		),	
+		new Skill(
+			"💿 Data Storage (TrueNAS Scale)",
+			"I run a TrueNAS Scale instance at home for my NAS. Two drives in RAID1 making a 10TB pool. I use it for backups, general storage, and hosting some Docker containers. I also have a second machine that does offline redundant backups on a weekly basis."
+		),
+		new Skill(
+			"☁️ Cloud Hosting (VPS, GitHub Pages)",
+			"I used Linode and other VPS providers for hosting things in the past, but nowadays I mostly use GitHub Pages for static sites and my home lab for everything else. Having only static sites publically hosted massively reduces attack surface and is much easier to maintain in the long run."
+		),
+	]}
+	{profile}
+/>
+
+<SkillGroup
+	id="additional"
+	proficiency="Additional"
+	skills={[
+		new Skill(
+			"🧊 Unity",
+			"I got *real* familiar with Unity with one of my fangame projects, where I recreated the first zone of Sonic 1 as a vertical slice. (https://www.sonicfangameshq.com/forums/showcase/i-cant-believe-its-not-sonic-1.346/) When I do game dev, Unity is stil generally what I come back to."
+		),
+		new Skill(
+			"🌐 Emscripten",
+			"I did some weird experiments with this that came as a tangent from my Switch homebrew stuff. I think the longest lasting thing that's come of it was my web port of SRB2 which got picked up and maintained by some others in the community. (https://snesfx.github.io/srb2-web/)"
+		),
+		new Skill(
+			"🌇 Raster Image Editing (Krita, GIMP)",
+			"I do a lot of my own graphics for various projects. I used GIMP primarily for a long time but have recently moved to Krita. I have used Photoshop but these do what I need and so I use them more often."
+		),
+		new Skill(
+			"📐 3D Modeling/CAD (Blender, Shapr3D, SketchUp)",
+			"When push comes to shove and I need a model that doesn't exist yet, I do it. I've played around with Blender a bit (especially in conjunction with Unity) and for CAD I've historically used SketchUp a lot. Recently I've been learning Shapr3D and massively prefer it after years of watching SketchUp stagnate. Also here's an example: https://www.thingiverse.com/thing:2172789"
+		)
+	]}
+	{profile}
+/>
+
+</AvoidPageBreak>
+
+<script lang="ts">
+	import HideDuringPrint from "$joeysvelte/HideDuringPrint.svelte"
+	import AvoidPageBreak from "$joeysvelte/AvoidPageBreak.svelte"
+	
+	import Tag from "$lib/Tag.svelte"
+	import { type Feed } from "$lib/Feed"
+	
+	import Experience from "./Experience.svelte"
+	import Education from "./Education.svelte"
+	import SkillGroup from "./SkillGroup.svelte"
+	import EditTag from "./EditTag.svelte"
+	import ExpItem from "./ExpItem"
+	import Skill from "./Skill"
+	import type Profile from "./Profile";
+
+	export let data: { feeds: Feed[], profile?: Profile };
+	let profile = data.profile ?? {};
+	let portfolioFeed = data.feeds.find(feed => feed.id == "portfolio");
+		
+	function getPost(postId: string) {
+		return portfolioFeed.posts.find(post => post.id == postId);
+	}
+</script>
+
+<style lang="scss">
+
+.header {
+	display: flex;
+
+	h1 {
+		margin: 0;
+		flex-shrink: 0;
+		max-width: fit-content;
+	}
+	
+	address {
+		text-align: right;
+	}
+	
+	justify-content: space-between;
+}
+
+@media print {
+	h1 {
+		color: black !important;
+	}
+	
+	.header h1 {
+		font-size: 42px !important;
+	}
+}
+
+address div {
+	margin-bottom: 8px;
+}
+
+</style>

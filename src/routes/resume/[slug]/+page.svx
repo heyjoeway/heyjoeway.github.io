@@ -1,0 +1,25 @@
+<script lang="ts">
+    import HideDuringPrint from "$joeysvelte/HideDuringPrint.svelte";
+    import Button from "$joeysvelte/Button.svelte";
+    
+    import Resume from "../Resume.svx";
+    export let data;
+</script>
+
+<HideDuringPrint>
+
+---
+
+This interactive resume contains additional details, links, and proofs of work. For the best experience, view on a device with JavaScript enabled.
+
+---
+
+</HideDuringPrint>
+
+<Resume data={data} />
+
+<HideDuringPrint>
+    <hr>
+    <Button onClick="../">View Full Resume</Button>
+    <br>
+</HideDuringPrint>
