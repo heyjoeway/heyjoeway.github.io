@@ -1,0 +1,1 @@
+const A={},o={src:""+new URL("../assets/SCR-20250930-mnoq.DNXqCdJl.png",import.meta.url).href,w:1276,h:1200,lqip:"UklGRjQAAABXRUJQVlA4ICgAAACQAQCdASoQAA8ABUB8JaQAApeogAAA/ohQdGMPv374yRL/GIhu6bAA"},s={sources:A,img:o};export{s as default,o as img,A as sources};

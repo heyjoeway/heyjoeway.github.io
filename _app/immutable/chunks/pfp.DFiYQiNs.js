@@ -1,0 +1,1 @@
+const A={},s={src:""+new URL("../assets/pfp.Ctpma3cD.png",import.meta.url).href,w:126,h:126,lqip:"UklGRjoAAABXRUJQVlA4IC4AAADwAQCdASoQABAABUB8JZQC7AEN3vdM8HAA/tOKW+V3dL+WFTSGwIpKade42gAA"},p={sources:A,img:s};export{p as default,s as img,A as sources};

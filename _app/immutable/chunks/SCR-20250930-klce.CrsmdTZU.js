@@ -1,0 +1,1 @@
+const A={},s={src:""+new URL("../assets/SCR-20250930-klce.TtxsJYw0.png",import.meta.url).href,w:665,h:1200,lqip:"UklGRlwAAABXRUJQVlA4IFAAAADQAwCdASoQAB0APzmGuVOvKSWisAgB4CcJYgDA3BuVF0S463xR8AAA/I98U8shLmWHtZsHRzn7dlHFanW0HyydzC4Z2yA3+1Y7ippyvzEgAA=="},e={sources:A,img:s};export{e as default,s as img,A as sources};

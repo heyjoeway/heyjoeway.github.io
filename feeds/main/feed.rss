@@ -12,6 +12,14 @@
     <atom:link href="http://jojudge.com/feeds/main/feed.rss" rel="self" type="application/rss+xml"/>
     <item>
       <title/>
+      <link>http://jojudge.com/feeds/main/093025_1135AM</link>
+      <description>&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
+&lt;p&gt;I figure I should give an update on the grocery app since I'm working on my portfolio! Its gotten a bit of a glow up and is feature complete for use with a single list. Multi-list and authentication is still a WIP, but since my wife and I have been so satisfied with it, that should be next on the m</description>
+      <pubDate>Thu, 02 Oct 2025 16:02:00 GMT</pubDate>
+      <guid>/feeds/main/093025_1135AM</guid>
+    </item>
+    <item>
+      <title/>
       <link>http://jojudge.com/feeds/main/043025_0517PM</link>
       <description>&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
 &lt;p&gt;Grocery apps are generally terrible, unfocused, and made by people I'm convinced don't even shop for themselves. So I made one last weekend. &lt;/p&gt;
