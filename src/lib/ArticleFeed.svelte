@@ -26,13 +26,11 @@
 </style>
 
 {#each articles as article}
-	{#if (!!article.fm?.pinned == pinned) || !pinned}
-		<div>
-			<span class="meta">{formatDate(article.fm?.date)}</span>
-			<a href="{article.path}"><h2>{article.fm?.title}</h2></a>
-		</div>
-		<span>{getFirstParagraph(article.code + "")}</span><br>
-		<Tags tags={strToTagDetails(article.fm?.categories + "")} />
-		<br><br>
-	{/if}
+	<div>
+		<span class="meta">{formatDate(article.fm?.date)}</span>
+		<a href="{article.path}"><h2>{article.fm?.title}</h2></a>
+	</div>
+	<span>{getFirstParagraph(article.code + "")}</span><br>
+	<Tags tags={strToTagDetails(article.fm?.categories + "")} />
+	<br><br>
 {/each}
