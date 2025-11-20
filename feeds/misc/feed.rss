@@ -13,7 +13,12 @@
     <item>
       <title/>
       <link>http://jojudge.com/feeds/misc/101525_0617PM</link>
-      <description>&lt;script&gt;
+      <description>&lt;script context="module"&gt;
+	export const metadata = {"hideHome":true};
+	const { hideHome } = metadata;
+&lt;/script&gt;
+
+&lt;script&gt;
 	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
 &lt;/script&gt;
 
@@ -26,7 +31,12 @@
     <item>
       <title/>
       <link>http://jojudge.com/feeds/misc/092625_0805PM</link>
-      <description>&lt;script&gt;
+      <description>&lt;script context="module"&gt;
+	export const metadata = {"hideHome":true};
+	const { hideHome } = metadata;
+&lt;/script&gt;
+
+&lt;script&gt;
 	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
 &lt;/script&gt;
 
@@ -44,7 +54,7 @@
 &lt;/script&gt;
 
 &lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;nearly every time I've gone shopping for the past 6 months the flag is at half mast, and I can't help but think now "great, what the FUCK could it be this </description>
+&lt;p&gt;nearly every time I've gone shopping for the past 6 months the flag is at half mast, and I can't help but think now "great, what the FUCK could it be this ...&lt;/p&gt;</description>
       <pubDate>Fri, 12 Sep 2025 16:02:00 GMT</pubDate>
       <guid>/feeds/misc/091225_1156AM</guid>
     </item>
@@ -74,7 +84,7 @@
 &lt;/script&gt;
 
 &lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;here's a fun new game you can play with your friends and your family and your friends: take turns hammering needles into a rubber power plug until someone </description>
+&lt;p&gt;here's a fun new game you can play with your friends and your family and your friends: take turns hammering needles into a rubber power plug until someone ...&lt;/p&gt;</description>
       <pubDate>Tue, 22 Jul 2025 14:44:00 GMT</pubDate>
       <guid>/feeds/misc/072225_1038AM</guid>
     </item>
@@ -86,7 +96,7 @@
 &lt;/script&gt;
 
 &lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;can we stop putting every single possible argument to a command in the default help message for programs and just boil it down to the most common use cases</description>
+&lt;p&gt;can we stop putting every single possible argument to a command in the default help message for programs and just boil it down to the most common use cases...&lt;/p&gt;</description>
       <pubDate>Sat, 12 Jul 2025 00:13:00 GMT</pubDate>
       <guid>/feeds/misc/071125_0807PM</guid>
     </item>
@@ -113,7 +123,7 @@
 &lt;/script&gt;
 
 &lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;i want to be enthralled by open source stuff as much as everyone else but i gotta be honest, obsidian at its best is still worse than notion at its worst. </description>
+&lt;p&gt;i want to be enthralled by open source stuff as much as everyone else but i gotta be honest, obsidian at its best is still worse than notion at its worst. ...&lt;/p&gt;</description>
       <pubDate>Tue, 25 Mar 2025 15:17:00 GMT</pubDate>
       <guid>/feeds/misc/032525_1112AM</guid>
     </item>
@@ -185,7 +195,7 @@
 &lt;/script&gt;
 
 &lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;to all the people saying that it's zoomers' fault they are worse with tech: i just tried to copy the recipients from an email in outlook and paste it to th</description>
+&lt;p&gt;to all the people saying that it's zoomers' fault they are worse with tech: i just tried to copy the recipients from an email in outlook and paste it to th...&lt;/p&gt;</description>
       <pubDate>Wed, 26 Feb 2025 15:39:00 GMT</pubDate>
       <guid>/feeds/misc/022625_1034AM</guid>
     </item>

@@ -46,7 +46,12 @@
     <item>
       <title/>
       <link>http://jojudge.com/feeds/vidya/040725_0753PM</link>
-      <description>&lt;script&gt;
+      <description>&lt;script context="module"&gt;
+	export const metadata = {"hideHome":true};
+	const { hideHome } = metadata;
+&lt;/script&gt;
+
+&lt;script&gt;
 	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
 &lt;/script&gt;
 
@@ -96,7 +101,7 @@
 &lt;/script&gt;
 
 &lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;so i have no investment in prime 4 but i take it if we don't get a release date in the next hour and a half we should probably all stay inside for a few da</description>
+&lt;p&gt;so i have no investment in prime 4 but i take it if we don't get a release date in the next hour and a half we should probably all stay inside for a few da...&lt;/p&gt;</description>
       <pubDate>Thu, 27 Mar 2025 12:49:00 GMT</pubDate>
       <guid>/feeds/vidya/032725_0844AM</guid>
     </item>
@@ -121,7 +126,12 @@
     <item>
       <title/>
       <link>http://jojudge.com/feeds/vidya/030325_0703PM</link>
-      <description>&lt;script&gt;
+      <description>&lt;script context="module"&gt;
+	export const metadata = {"hideHome":true};
+	const { hideHome } = metadata;
+&lt;/script&gt;
+
+&lt;script&gt;
 	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
 &lt;/script&gt;
 
@@ -208,7 +218,7 @@ oh my god. oh my god. oh my god. oh my god. oh my god. oh my GOD&lt;/p&gt;
 &lt;/script&gt;
 
 &lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;okay so throwing out a prediction because if i'm right i'm gonna be the rightest ever: next mainline zelda game is a reimagining of oot in the format of bo</description>
+&lt;p&gt;okay so throwing out a prediction because if i'm right i'm gonna be the rightest ever: next mainline zelda game is a reimagining of oot in the format of bo...&lt;/p&gt;</description>
       <pubDate>Thu, 27 Feb 2025 03:02:00 GMT</pubDate>
       <guid>/feeds/vidya/022625_0956PM</guid>
     </item>
@@ -220,7 +230,7 @@ oh my god. oh my god. oh my god. oh my god. oh my god. oh my GOD&lt;/p&gt;
 &lt;/script&gt;
 
 &lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;also i want to post clips here but i'm not usually playing on the switch, so i'm currently working on a system where i can add quick captures to any hdmi o</description>
+&lt;p&gt;also i want to post clips here but i'm not usually playing on the switch, so i'm currently working on a system where i can add quick captures to any hdmi o...&lt;/p&gt;</description>
       <pubDate>Thu, 27 Feb 2025 03:02:00 GMT</pubDate>
       <guid>/feeds/vidya/022625_1000PM</guid>
     </item>

@@ -6,7 +6,7 @@
     <description>Mostly just citations for my resume :)</description>
     <language>en-us</language>
     <pubDate>Thu, 02 Oct 2025 16:02:00 GMT</pubDate>
-    <lastBuildDate>Thu, 02 Oct 2025 16:02:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 20 Nov 2025 18:12:00 GMT</lastBuildDate>
     <docs>https://www.rssboard.org/rss-specification</docs>
     <generator>Custom</generator>
     <atom:link href="http://jojudge.com/feeds/portfolio/feed.rss" rel="self" type="application/rss+xml"/>
@@ -18,7 +18,7 @@
 &lt;/script&gt;
 
 &lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;In February of 2021, I began my Master's project: a refresh of Clarkson University's MaxFlight VR2004 motion simulator, dubbed the Virtual Reality Coaster </description>
+&lt;p&gt;In February of 2021, I began my Master's project: a refresh of Clarkson University's MaxFlight VR2004 motion simulator, dubbed the Virtual Reality Coaster ...&lt;/p&gt;</description>
       <pubDate>Thu, 02 Oct 2025 16:02:00 GMT</pubDate>
       <guid>/feeds/portfolio/091425_0247PM</guid>
     </item>
@@ -30,7 +30,7 @@
 &lt;/script&gt;
 
 &lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;lcatDB (Lake Champlain Anglers’ Temperature Database) was an online database and single page application (SPA) meant to provide a centralized means of reco</description>
+&lt;p&gt;lcatDB (Lake Champlain Anglers’ Temperature Database) was an online database and single page application (SPA) meant to provide a centralized means of reco...&lt;/p&gt;</description>
       <pubDate>Thu, 02 Oct 2025 16:02:00 GMT</pubDate>
       <guid>/feeds/portfolio/091425_0452PM</guid>
     </item>
@@ -42,7 +42,7 @@
 &lt;/script&gt;
 
 &lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;While working at Champlain Valley Educational Services, I lead the development and deployment of several internal databases and applications using the low-</description>
+&lt;p&gt;While working at Champlain Valley Educational Services, I lead the development and deployment of several internal databases and applications using the low-...&lt;/p&gt;</description>
       <pubDate>Thu, 02 Oct 2025 16:02:00 GMT</pubDate>
       <guid>/feeds/portfolio/092825_0429PM</guid>
     </item>
@@ -58,7 +58,7 @@
 &lt;ul&gt;
 &lt;li&gt;2023 - now: CVES
 &lt;ul&gt;
-&lt;li&gt;Data processing for user accounts, synchronizing multiple da</description>
+&lt;li&gt;Data processing for user accounts, synchronizing multiple da...&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description>
       <pubDate>Thu, 02 Oct 2025 16:02:00 GMT</pubDate>
       <guid>/feeds/portfolio/093025_0137PM</guid>
     </item>
@@ -70,7 +70,7 @@
 &lt;/script&gt;
 
 &lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;The site that you're reading right now is entirely Svelte-based. What you're reading right now is a &lt;em&gt;static&lt;/em&gt; build of the site. That means anything that woul</description>
+&lt;p&gt;The site that you're reading right now is entirely Svelte-based. What you're reading right now is a &lt;em&gt;static&lt;/em&gt; build of the site. That means anything that woul...&lt;/p&gt;</description>
       <pubDate>Thu, 02 Oct 2025 16:02:00 GMT</pubDate>
       <guid>/feeds/portfolio/093025_0205PM</guid>
     </item>
@@ -86,7 +86,7 @@
 &lt;ul&gt;
 &lt;li&gt;2024 - 2025: CVES
 &lt;ul&gt;
-&lt;li&gt;Various userscripts to extract data from web</description>
+&lt;li&gt;Various userscripts to extract data from web...&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description>
       <pubDate>Thu, 02 Oct 2025 16:02:00 GMT</pubDate>
       <guid>/feeds/portfolio/093025_0228PM</guid>
     </item>
@@ -98,7 +98,7 @@
 &lt;/script&gt;
 
 &lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;In order to teach students programming in a way that can directly convert between block-based code (ala Scratch) and written code, we did a roll out of the</description>
+&lt;p&gt;In order to teach students programming in a way that can directly convert between block-based code (ala Scratch) and written code, we did a roll out of the...&lt;/p&gt;</description>
       <pubDate>Thu, 02 Oct 2025 16:02:00 GMT</pubDate>
       <guid>/feeds/portfolio/093025_1051AM</guid>
     </item>
@@ -110,7 +110,7 @@
 &lt;/script&gt;
 
 &lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;As a hobby project, I ported several open-source games to the Nintendo Switch. This required a lot of deep-diving into the git history of other port projec</description>
+&lt;p&gt;As a hobby project, I ported several open-source games to the Nintendo Switch. This required a lot of deep-diving into the git history of other port projec...&lt;/p&gt;</description>
       <pubDate>Thu, 02 Oct 2025 16:02:00 GMT</pubDate>
       <guid>/feeds/portfolio/093025_1058AM</guid>
     </item>
