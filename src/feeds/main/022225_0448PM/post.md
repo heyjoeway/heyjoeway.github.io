@@ -1,5 +1,4 @@
-Alright, so I'm pretty much done developing v1 of this Twitter-clone... thing so I guess it's time to start using this. So, hi! By the end of this you'll probably realize that the character limit on posts is 1̵̨̡̭̜̣̝̖̗̩͈͚̻͚͍̿̄͆͂̀͝ͅ.̵̨̠͔̥͐̓̏͋͂8̷͓̈́̾̈́̀̂̾̾͑̓̀̿̚̕͠7̷̡̞͇̦̦̗̮̹̭̿͒̈́͑́̓͐͊́̉͑̉4̶̨̧̩̹̺͉̹̦̖̩̟̮̘̹͙̀͆̄̄̍̈́̉͠3̵̞̼̮̙̟̙͛̀̄̉͌̈͊͐̂̂̀͝e̴̢̡̳̰̭͚̖̦̺͔͗́̄4̷̡̩̺̞̟̘͈̼̫͎̭̝̘͍̘͎̊̒͝7̸̡̨̢̼̣͓͕̻̜͔̻͚͍̻̟͆̀̓͑̏͊̊͗̈̿̾̉̈́̾͆4̸̠̜̠͇̫̜̞̜͈͋͊̀̎͛̓8̴̧̛̺̘͖̜̖̻̰̹̜͎̠̭̱̾̀͐̈́͛̄̏̔͑̒͆͛́͐̚͠5̶̧̛͓̘̻̙̐̀̀̍̾̒̔̾͊́̚̚͝7̷̱͖̟̹͍̎̾̾̓͝4̸͔̬̜̠̜̪̳̹̋̌̕8̷̹̣̏̌͂̓̈́̽̏̈́́͊͠4̸̨̡͇͍͎͔͎͔̱̦̬͔̜͕̰̺̙͛͌̍̃̋̍́͊̔̂̑͗̃̚̚̚3̷̙̝̫͕͙̝̲̿̔͋͜͜ͅ9̶̧̮̟̺̠͚͍̯̮̟͍̳̣͇́̈́̿̉̽̉͋̄̓̀̊̂͆͊̕͜0̸̨̗̺̳͓̞̦̿̈̆̓͑̅̐͐̑͆̈́̎̒̕͝͝7̷̧͎̙̫͎̳͓̖̺̥̹͔̑̽͒4̴̧̨̨̜̺̘̺̣͖͇͓̝͇͕̮̳̄̋̆̏͛́̿̊̓̄̀͆͂͜͝͝
-
+Alright, so I'm pretty much done developing v1 of this Twitter-clone... thing so I guess it's time to start using this. So, hi! By the end of this you'll probably realize that the character limit on posts is 1̵̨̡̭̜̣̝̖̗̩͈͚̻͚͍̿̄͆͂̀͝ͅ.̵̨̠͔̥͐̓̏͋͂8̷͓̈́̾̈́̀̂̾̾͑̓̀̿̚̕͠7̷̡̞͇̦̦̗̮̹̭̿͒̈́͑́̓͐͊́̉͑̉4̶̨̧̩̹̺͉̹̦̖̩̟̮̘̹͙̀͆̄̄̍̈́̉͠3̵̞̼̮̙̟̙͛̀̄̉͌̈͊͐̂̂̀͝e̴̢̡̳̰̭͚̖̦̺͔͗́̄4̷̡̩̺̞̟̘͈̼̫͎̭̊̒͝
 
 ## Where the HELL did you go
 
@@ -7,7 +6,7 @@ So IIRC I vanished off of Twitter at like, what, mid 2023? Late 2022? Deadass I 
 
 *tl;dr: I needed to lock the fuck in.*
 
-Grad school was wrapping up (not the cleanest exit to say the least) and I had some VERY important decisions to make. Like for example, where my wife and I were gonna live! Permanently! We got an EXTREMELY good offer on a small house with a small catch. Just an, uh, teeny tiny itty bitty little thing. It wasn't finished. Not in the "needs renovation" sense, no, I mean the house got halfway through construction before some... circumstances... left it unfinished.
+Grad school was wrapping up and I had some VERY important decisions to make. Like for example, where my wife and I were gonna live! Permanently! We got an EXTREMELY good offer on a small house with a small catch. Just an, uh, teeny tiny itty bitty little thing. It wasn't finished. Not in the "needs renovation" sense, no, I mean the house got halfway through construction before some... circumstances... left it unfinished.
 
 So I graduate and we're lucky enough that we're able to take a loan out to purchase the house and property on my parents' credit (since it's a construction loan and certain stipulations come with that and blah blah blblblbla), although we handle all expenses. And now I'm out of grad school and into NEET territory while I look for a job.
 

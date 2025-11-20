@@ -50,4 +50,8 @@
 			}
 		}
 	}
+	
+	span {
+		display: inline-block;
+	}
 </style>

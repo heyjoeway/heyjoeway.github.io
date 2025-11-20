@@ -2,9 +2,9 @@ import YAML from 'yaml';
 
 export function formatDate(rawDateStr: string | undefined) {
 	if (!rawDateStr) return "";
-	
+
 	const date = new Date(rawDateStr);
-	
+
 	const monthNames = [
 		"Jan", "Feb", "Mar", "Apr", "May", "Jun",
 		"Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
@@ -14,7 +14,7 @@ export function formatDate(rawDateStr: string | undefined) {
 
 export function formatDateTime(rawDateStr: string | undefined) {
 	if (!rawDateStr) return "";
-	
+
 	const dateStr = formatDate(rawDateStr);
 
 	const timeStr = new Date(rawDateStr).toLocaleTimeString('en-US', {
@@ -22,7 +22,7 @@ export function formatDateTime(rawDateStr: string | undefined) {
 		minute: '2-digit',
 		hour12: true
 	});
-	
+
 	return `${dateStr} at ${timeStr}`;
 }
 
@@ -60,56 +60,14 @@ export function humanReadableSize(bytes: number): string {
 	return `${bytes.toFixed(1)} ${units[units.length - 1]}`;
 }
 
-// Thanks to:
-// - https://codegolf.stackexchange.com/questions/32964/reduce-html-to-n-characters-while-keeping-the-formatting
-// - ChatGPT
-export function splitHtmlAt(str: string, n: number): string {
-	let result = '';
-	let count = 0;
-	let inTag = false;
-	let tagBuffer = '';
-	let prevChar = '';
-  
-	for (let i = 0; i < str.length; i++) {
-	  const char = str[i];
-	  if (char === '<') {
-		inTag = true;
-		tagBuffer = '';
-	  } else if (char === '>') {
-		inTag = false;
-		tagBuffer += '>';
-		result += tagBuffer;
-		continue;
-	  }
-  
-	  if (inTag) {
-		tagBuffer += char;
-	  } else {
-		if (count < n) {
-		  if (prevChar === '\n' && char === '<') {
-			result = result.trimEnd();
-		  }
-		  result += char;
-		  count++;
-		} else {
-		  break;
-		}
-	  }
-	  prevChar = char;
-	}
-  
-	return result;
-}
-
 export function extractFrontmatter(mdStr: string): [Record<string, any>, string] {
-	// regex: ^(?:---\n)?.*\n---\n
 	const frontmatterRegex = /^(?:---\n)?([\s\S]*?)\n---\n/;
 	const match = frontmatterRegex.exec(mdStr);
 	if (!match) return [{}, mdStr];
-	
+
 	const frontmatterStr = match[1];
 	const content = mdStr.slice(match[0].length);
-	
+
 	const frontmatter = YAML.parse(frontmatterStr);
 	return [frontmatter, content];
 }

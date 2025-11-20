@@ -12,7 +12,7 @@
 	.article-content {
 		:global(a) {
 			&::before {
-				content: "🔗 ";
+				content: "🔗";
 			}
 			
 		}

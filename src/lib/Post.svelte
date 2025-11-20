@@ -143,9 +143,7 @@
         {@html post.htmlShort}
         {#if postHtmlNeedsShortening}
             <a href={post.url}>
-                <span>
-                    ... (Read More)
-                </span>
+                <span>(Read More)</span>
             </a>
         {/if}
     {/if}
@@ -306,7 +304,7 @@
     .post {
 		:global(a) {
 			&::before {
-				content: "🔗 ";
+				content: "🔗";
 			}
 			
 		}

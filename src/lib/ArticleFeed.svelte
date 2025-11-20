@@ -5,7 +5,6 @@
 	import { type ArticleLoaded } from "$lib/Article";
 	
 	export let articles: ArticleLoaded[];	
-	export let pinned: boolean = false;
 	
 	// Get the first paragraph of the article using regex to find the contents of the first <p> element	
 	function getFirstParagraph(article: string) {

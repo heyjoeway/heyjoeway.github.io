@@ -14,8 +14,9 @@ import {
     splitext,
     arrMax,
     arrMin,
-    splitHtmlAt
 } from '$lib/Utils';
+
+import truncate from "html-truncate";
 
 import fs from 'fs';
 import path from 'path';
@@ -239,9 +240,9 @@ export async function getFeedPost(feed: Feed, postId: string): Promise<Post> {
         htmlShort = htmlShort.substring(endTagIndex).trim();
     }
     
-    if (htmlShort.length > 350) {
+    if (htmlShort.length > 400) {
         const htmlShortOriginal = htmlShort;
-        htmlShort = splitHtmlAt(htmlShort, 300);
+        htmlShort = truncate(htmlShort, 350);
         if (htmlShortOriginal.length <= htmlShort.length) {
             htmlShort = htmlShortOriginal;
         }
