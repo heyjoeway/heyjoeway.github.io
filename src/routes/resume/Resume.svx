@@ -26,7 +26,7 @@
 	when="Aug. 2023 - Present"
 	items={[
 		new ExpItem(
-			"Designed and built internal apps that demonstrated the effectiveness of an early low-code platform, driving company-wide adoption and replacing legacy software across multiple CVES divisions.",
+			"Produced internal apps, pushing company-wide adoption of a low-code platform and replacing legacy software.",
 			getPost('092825_0429PM')
 		),
 		new ExpItem("Automated user account creation processes across multiple school districts using Python and Powershell."),
@@ -38,15 +38,11 @@
 			]
 		),
 		new ExpItem("Maintained legacy Python code <b>without source</b>, analyzing <b>disassembled and decompiled bytecode</b> to determine behavior."),
-		new ExpItem(
-			"Additionally handled IT responsibilities, including:",
-			null,
-			[
-				new ExpItem("Lead multiple school-wide device fleet deployments across multiple districts."),
-				new ExpItem("Use of general network principals including subnetting, VLANs, DNS, and diagnosing failure incidents. Primarily used Meraki networking."),
-				new ExpItem("Some physical network experience. Successfully diagnosed major fiber issue in district."),
-			]
-		)
+		new ExpItem("Managed several services: Microsoft 365, Intune, Teams, SharePoint, Apple Business Manager, Google, Cisco Umbrella."),
+		new ExpItem("Managed several Windows Server instances for on-site software through Hyper-V."),
+		new ExpItem("Led school-wide device fleet deployments across multiple districts."),
+		new ExpItem("Networking, including management of VLANs, DNS, and diagnosing failure incidents. Primarily used Meraki."),
+		new ExpItem("Physical network experience. Successfully diagnosed major fiber issue in district.")
 	]}
 	{profile}
 />
@@ -95,7 +91,9 @@
 			"Taught object-oriented design through video game programming using Scratch and MakeCode Arcade.",
 			getPost('093025_1051AM')
 		),
-		new ExpItem("<b>Administrator</b> of IMPETUS Moodle site. Managed user accounts, permissions, and course material."),
+		new ExpItem("<b>Administrator</b> of IMPETUS Moodle website. Managed user accounts, permissions, plug-ins, and course material."),
+		new ExpItem("Handled graphic design for promotional material including flyers, posters, and social media posts."),
+		new ExpItem("Led the purchase and deployment of ~50 device Windows fleet."),
 		new ExpItem(
 			"Produced documentation and <b>Python</b> software to <b>automate deployment of Windows</b> devices for student use.",
 			"https://github.com/heyjoeway/miniwindeploy"
