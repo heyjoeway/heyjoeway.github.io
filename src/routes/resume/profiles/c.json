@@ -1,0 +1,25 @@
+{
+    "experience": {
+        "cves": [2,3],
+        "vrc": [1,4],
+        "impetus": [1,2,4,6],
+        "nx": null,
+        "lcatdb": [1,4,6],
+        "asrc": null,
+        "me": null
+    },
+    "skills": {
+        "core": [
+            "🟠 Svelte",
+			"🔵 C/C++",
+            "🦊🐙 Version Control (Git/GitHub)"
+        ],
+        "supporting": [
+			"🐃 GNU Make",
+            "⚛️ React",
+            "🔄 Continuous Integration/Deployment (GitHub Actions)"
+        ],
+        "sysadmin": [],
+        "additional": null
+    }
+}
