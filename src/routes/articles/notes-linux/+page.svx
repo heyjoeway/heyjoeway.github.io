@@ -29,6 +29,20 @@ export EDITOR=micro
 alias ai="aichat -e"
 alias l="ls -la"
 alias e="micro"
+fixperms() {
+  dir="$1"
+  user="$2"
+  group="$3"
+
+  [ -d "$dir" ] || {
+    echo "usage: fixperms <dir> <user> <group>" >&2
+    return 1
+  }
+
+  chown -R "$user" "$dir" &&
+  chgrp -R "$group" "$dir" &&
+  chmod -R u+rwx,g+rwx,o-rwx "$dir"
+}
 EOF
 mkdir -p ~/.config/aichat/
 cat << EOF > ~/.config/aichat/config.yaml
