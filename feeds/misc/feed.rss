@@ -12,6 +12,24 @@
     <atom:link href="http://jojudge.com/feeds/misc/feed.rss" rel="self" type="application/rss+xml"/>
     <item>
       <title/>
+      <link>http://jojudge.com/feeds/misc/011426_0325PM</link>
+      <description>&lt;script context="module"&gt;
+	export const metadata = {"hideHome":true};
+	const { hideHome } = metadata;
+&lt;/script&gt;
+
+&lt;script&gt;
+	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
+&lt;/script&gt;
+
+&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
+&lt;p&gt;please start writing stuff in svelte please please please i beg of you&lt;/p&gt;
+&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <pubDate>Wed, 14 Jan 2026 20:31:00 GMT</pubDate>
+      <guid>/feeds/misc/011426_0325PM</guid>
+    </item>
+    <item>
+      <title/>
       <link>http://jojudge.com/feeds/misc/101525_0617PM</link>
       <description>&lt;script context="module"&gt;
 	export const metadata = {"hideHome":true};
