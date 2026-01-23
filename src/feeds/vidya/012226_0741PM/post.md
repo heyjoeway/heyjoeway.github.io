@@ -1,0 +1,3 @@
+as i hit shuffle on my game library i'm gonna try and catalog them here so I don't forget them. i'll start there and do full reviews if I ever feel like it. anyway:
+
+new discovery: Ball Jacks for the megadrive. eu/jp only. fun little game by 1993 Namco where you pilot a lil robot trying to keep 4 balls on your side of the screen by reaching out and grabbing them from your oponent. really good music and ui/vfx design. so overstimulating but it's really fun trying to figure out all the weird mechanics and rules. apparently it reviewed really bad when it came out? I guess if I paid $100 i'd be pissed but as just a silent blip in a sea of games it stands out.
