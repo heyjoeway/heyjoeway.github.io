@@ -12,6 +12,21 @@
     <atom:link href="http://jojudge.com/feeds/main/feed.rss" rel="self" type="application/rss+xml"/>
     <item>
       <title/>
+      <link>http://jojudge.com/feeds/main/022526_0816PM</link>
+      <description>
+&lt;script&gt;
+	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
+&lt;/script&gt;
+
+&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
+&lt;p&gt;grocery app update: going Good
+(multi-list and auth is IN. bonus of now knowing how to do RLS. polishing and doing more fundamental but out of the way functions.)&lt;/p&gt;
+&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <pubDate>Thu, 26 Feb 2026 01:21:00 GMT</pubDate>
+      <guid>/feeds/main/022526_0816PM</guid>
+    </item>
+    <item>
+      <title/>
       <link>http://jojudge.com/feeds/main/093025_1135AM</link>
       <description>&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
 &lt;p&gt;I figure I should give an update on the grocery app since I'm working on my portfolio! Its gotten a bit of a glow up and is feature complete for use with a single list. Multi-list and authentication is still a WIP, but since my wife and I have been so satisfied with it, that should be next on the menu. I've also...&lt;/p&gt;</description>

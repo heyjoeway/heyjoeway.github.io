@@ -1,0 +1,1 @@
+const A={},s={src:""+new URL("../assets/chrome_nbZbyCoEr1.BWX0TGWO.png",import.meta.url).href,w:625,h:912,lqip:"UklGRkAAAABXRUJQVlA4IDQAAADwAgCdASoQABcAPzmGuVOvKSWisAgB4CcJaQAAerHYAAD+7wiGTmi9UkvsPxEzlqR47wAA"},o={sources:A,img:s};export{o as default,s as img,A as sources};
