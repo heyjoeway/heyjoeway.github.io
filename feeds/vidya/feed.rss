@@ -12,6 +12,24 @@
     <atom:link href="http://jojudge.com/feeds/vidya/feed.rss" rel="self" type="application/rss+xml"/>
     <item>
       <title/>
+      <link>http://jojudge.com/feeds/vidya/041626_0952AM</link>
+      <description>&lt;script context="module"&gt;
+	export const metadata = {"hideHome":true};
+	const { hideHome } = metadata;
+&lt;/script&gt;
+
+&lt;script&gt;
+	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
+&lt;/script&gt;
+
+&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
+&lt;p&gt;mother 3&lt;/p&gt;
+&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <pubDate>Thu, 16 Apr 2026 13:57:00 GMT</pubDate>
+      <guid>/feeds/vidya/041626_0952AM</guid>
+    </item>
+    <item>
+      <title/>
       <link>http://jojudge.com/feeds/vidya/012226_0741PM</link>
       <description>&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
 &lt;p&gt;as i hit shuffle on my game library i'm gonna try and catalog them here so I don't forget them. i'll start there and do full reviews if I ever feel like it. anyway:&lt;/p&gt;

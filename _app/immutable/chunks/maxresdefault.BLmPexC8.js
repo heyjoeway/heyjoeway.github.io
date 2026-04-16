@@ -1,0 +1,1 @@
+const A={},e={src:""+new URL("../assets/maxresdefault.DLt5emZV.jpeg",import.meta.url).href,w:1280,h:720,lqip:"UklGRjAAAABXRUJQVlA4ICQAAAAwAQCdASoQAAkABUB8JZwAA3AA/vA8noX6xxtT2PhQwXmAAAA="},s={sources:A,img:e};export{s as default,e as img,A as sources};
