@@ -1,0 +1,1 @@
+const A={},s={src:""+new URL("../assets/chrome_AQRIENHJZn.DmXZiu8D.png",import.meta.url).href,w:1091,h:1088,lqip:"UklGRjQAAABXRUJQVlA4ICgAAABwAQCdASoQABAABUB8JaVsKAGIAAD+8A6JWRKcIr49/mGMLFIW0AAA"},e={sources:A,img:s};export{e as default,s as img,A as sources};

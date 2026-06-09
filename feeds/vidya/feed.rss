@@ -12,6 +12,24 @@
     <atom:link href="http://jojudge.com/feeds/vidya/feed.rss" rel="self" type="application/rss+xml"/>
     <item>
       <title/>
+      <link>http://jojudge.com/feeds/vidya/060926_0843AM</link>
+      <description>&lt;script context="module"&gt;
+	export const metadata = {"hideHome":true};
+	const { hideHome } = metadata;
+&lt;/script&gt;
+
+&lt;script&gt;
+	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
+&lt;/script&gt;
+
+&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
+
+&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <pubDate>Tue, 09 Jun 2026 12:48:00 GMT</pubDate>
+      <guid>/feeds/vidya/060926_0843AM</guid>
+    </item>
+    <item>
+      <title/>
       <link>http://jojudge.com/feeds/vidya/041626_0952AM</link>
       <description>&lt;script context="module"&gt;
 	export const metadata = {"hideHome":true};
