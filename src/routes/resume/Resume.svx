@@ -297,7 +297,7 @@ ___
 			"I do a bit of this at CVES, generally using Meraki equipment. Also got real familiar with fiber during one particular incident. I also handle networking for my home lab."
 		),
 		new Skill(
-			"🚢 Containers (Docker, LXC)",
+			"🚢 Containers (Docker/Compose, LXC)",
 			"It's only more recently that I've come to appreciate the stability and reproducibility of containers. A lot of my home lab runs in LXC containers to facilitate experimentation, but I've started moving more thing to Docker. My end goal is to have everything distributable to others looking to host their own services. Also when I'm talking about familiarity with Docker, I mean being able to deploy/manage pre-made images AND create my own Dockerfiles and images. My website and grocery app are both containerized with Docker."
 		),
 		new Skill(
