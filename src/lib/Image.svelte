@@ -12,8 +12,12 @@
     export let enableLightbox = true;
     export let square = false;
     export let exif: ExifReader.Tags | undefined = undefined;
+    export let alt: string = " ";
+    export let hAlign: "left" | "center" | "right" = "center";
     import Img from "@zerodevx/svelte-img";
     import { styleObjToStr } from './Utils';
+
+    $: hAlignCss = hAlign === "left" ? "flex-start" : hAlign === "right" ? "flex-end" : "center";
     
     let skipSvelteImg = false;
     let nearestScaling = false;
@@ -67,7 +71,8 @@
     style={styleObjToStr({
         "--img-max-height": maxHeight,
         "--img-width": width,
-        "--img-height": height
+        "--img-height": height,
+        "--img-h-align": hAlignCss
     })}
     on:click={() => {overlayOpen = true}}
 >
@@ -75,14 +80,14 @@
         <img
             class={clsx(classes)}
             {src}
-            alt=" "
+            {alt}
             style={nearestScaling ? "image-rendering: pixelated;" : ""}
         />
     {:else}
         <Img
             class={clsx(classes)}
             {src}
-            alt=" "
+            {alt}
         />
     {/if}
 </div>
@@ -162,7 +167,7 @@
         max-width: 100%;
         vertical-align: middle;
         display: flex;
-        justify-content: center;
+        justify-content: var(--img-h-align, center);
         align-items: center;
     }
 

@@ -1,0 +1,255 @@
+---
+title:  "One Shot: Minutes of Silence, Occasionally Interrupted By"
+date:   2026-07-11
+categories: tools
+---
+<Image
+  src={imgSlop}
+  maxHeight="100px"
+  alt="Slop Advisory: Artificial Content"
+  hAlign="left"
+/>
+<br>
+
+Useful little HTML thingy Claude slopped out:
+
+> write an inline html app that allows me to upload an audio file and have it play after a random (configurable) amount of time infinitely. add a toggle to display the remaining time and a button to randomize the current time remaining
+
+---
+
+<div>
+  <h1>Random interval audio player</h1>
+  <div class="sub">Upload a sound. It plays after a random wait, then the countdown resets and repeats forever.</div>
+
+  <div class="card">
+    <label for="audioFile">Audio file</label>
+    <input
+        type="file"
+        id="audioFile"
+        accept="audio/*"
+        on:change={handleFileChange}
+        disabled={running}
+    />
+
+    <div class="row">
+      <div>
+        <label for="minSec">Min wait (seconds)</label>
+        <input type="number" id="minSec" bind:value={minSec} min="0" />
+      </div>
+      <div>
+        <label for="maxSec">Max wait (seconds)</label>
+        <input type="number" id="maxSec" bind:value={maxSec} min="0" />
+      </div>
+    </div>
+
+    <div class="toggle-row">
+      <input type="checkbox" id="showRemaining" bind:checked={showRemaining}>
+      <label for="showRemaining" style="margin:0;">Show remaining time</label>
+    </div>
+
+    <button
+      on:click={start}
+      disabled={!hasAudio || running}
+    >
+      Start
+    </button>
+    <button
+      on:click={stop}
+      class="secondary"
+      disabled={!running}
+    >
+      Stop
+    </button>
+    <button
+      on:click={randomize}
+      class="secondary"
+      disabled={!running}
+    >
+      Randomize current wait
+    </button>
+
+    <div class="status" id="statusBox">
+      <div>Status: <span>{status}</span></div>
+      <div class="time" class:hidden={!showRemaining}>{displayedTime}</div>
+    </div>
+  </div>
+
+  <audio bind:this={player} on:ended={handleEnded}></audio>
+</div>
+
+<script>
+  import Figure from "$lib/Figure.svelte";
+  import Image from "$lib/Image.svelte";
+
+  import imgSlop from "./slopadvisory.png?as=run";
+  
+  import { onDestroy } from 'svelte';
+
+  let player;
+  let objectUrl = null;
+  let remainingMs = 0;
+  let tickHandle = null;
+  let running = false;
+  let status = 'idle';
+
+  let minSec = 30;
+  let maxSec = 120;
+  let showRemaining = true;
+  let hasAudio = false;
+
+  function fmt(ms) {
+    const s = Math.max(0, Math.ceil(ms / 1000));
+    const m = Math.floor(s / 60);
+    const r = s % 60;
+    return m > 0 ? `${m}m ${r.toString().padStart(2, '0')}s` : `${r}s`;
+  }
+
+  function getMinMax() {
+    let min = Number(minSec) || 0;
+    let max = Number(maxSec) || 0;
+    if (max < min) [min, max] = [max, min];
+    return { min, max };
+  }
+
+  function randomWaitMs() {
+    const { min, max } = getMinMax();
+    const seconds = min + Math.random() * (max - min);
+    return seconds * 1000;
+  }
+
+  function clearTimer() {
+    if (tickHandle) {
+      clearInterval(tickHandle);
+      tickHandle = null;
+    }
+  }
+
+  function scheduleNext(ms) {
+    remainingMs = ms;
+    status = 'waiting';
+    clearTimer();
+    const target = Date.now() + ms;
+
+    tickHandle = setInterval(() => {
+      remainingMs = target - Date.now();
+      if (remainingMs <= 0) {
+        clearTimer();
+        playSound();
+      }
+    }, 200);
+  }
+
+  function playSound() {
+    if (!player) return;
+    status = 'playing';
+    player.currentTime = 0;
+    player.play().catch(() => {});
+  }
+
+  function handleEnded() {
+    if (running) scheduleNext(randomWaitMs());
+  }
+
+  function handleFileChange(event) {
+    const file = event.currentTarget.files?.[0];
+    if (!file) return;
+    if (objectUrl) URL.revokeObjectURL(objectUrl);
+    objectUrl = URL.createObjectURL(file);
+    if (player) player.src = objectUrl;
+    hasAudio = true;
+  }
+
+  function start() {
+    if (!hasAudio || !player?.src) return;
+    running = true;
+    scheduleNext(randomWaitMs());
+  }
+
+  function stop() {
+    running = false;
+    clearTimer();
+    player?.pause();
+    status = 'stopped';
+    remainingMs = 0;
+  }
+
+  function randomize() {
+    if (!running) return;
+    scheduleNext(randomWaitMs());
+  }
+
+  onDestroy(() => {
+    clearTimer();
+    if (objectUrl) URL.revokeObjectURL(objectUrl);
+  });
+  
+  $: displayedTime = fmt(remainingMs);
+</script>
+
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    max-width: 480px;
+    margin: 60px auto;
+    padding: 0 20px;
+  }
+  h1 { font-size: 20px; margin-bottom: 4px; }
+  .sub { 
+    font-size: 13px;
+    margin-bottom: 24px;
+  }
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  label {
+    display: block;
+    font-size: 13px;
+    margin: 14px 0 4px;
+  }
+  input[type=file], input[type=number] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  .row { display: flex; gap: 12px; }
+  .row > div { flex: 1; }
+  button {
+    margin-top: 16px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 8px;
+  }
+  button:disabled { 
+    cursor: not-allowed;
+  }
+  button.secondary {
+    border: 1px solid #ccc;
+  }
+  .status {
+    margin-top: 20px;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  .status .time {
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 4px;
+  }
+  .toggle-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    font-size: 13px;
+  }
+  .hidden { display: none; }
+</style>
