@@ -43,3 +43,9 @@
 	font-weight: normal;
 	font-style: normal
 }
+
+html {
+	--joeysvelte-brand-colors-1: #db7093;
+	--joeysvelte-brand-colors-2: #ffa500;
+	--joeysvelte-brand-colors-3: #87ceeb;
+}

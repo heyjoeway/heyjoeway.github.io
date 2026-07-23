@@ -22,6 +22,10 @@
 		color: var(--joeysvelte-text-colors-secondary);
 		font-size: 14px;
 	}
+	
+	.peek {
+		margin-bottom: 8px;
+	}
 </style>
 
 {#each articles as article}
@@ -29,7 +33,7 @@
 		<span class="meta">{formatDate(article.fm?.date)}</span>
 		<a href="{article.path}"><h2>{article.fm?.title}</h2></a>
 	</div>
-	<span>{getFirstParagraph(article.code + "")}</span><br>
+	<div class="peek">{getFirstParagraph(article.code + "")}</div>
 	<Tags tags={strToTagDetails(article.fm?.categories + "")} />
 	<br><br>
 {/each}
