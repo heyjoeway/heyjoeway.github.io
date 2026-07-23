@@ -12,6 +12,20 @@
     <atom:link href="http://jojudge.com/feeds/main/feed.rss" rel="self" type="application/rss+xml"/>
     <item>
       <title/>
+      <link>http://jojudge.com/feeds/main/072226_0941PM</link>
+      <description>
+&lt;script&gt;
+	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
+&lt;/script&gt;
+
+&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
+&lt;p&gt;&lt;a href="https://atgroceries.com" rel="nofollow"&gt;atgroceries.com&lt;/a&gt; gource&lt;/p&gt;
+&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <pubDate>Thu, 23 Jul 2026 01:46:00 GMT</pubDate>
+      <guid>/feeds/main/072226_0941PM</guid>
+    </item>
+    <item>
+      <title/>
       <link>http://jojudge.com/feeds/main/022526_0816PM</link>
       <description>
 &lt;script&gt;
