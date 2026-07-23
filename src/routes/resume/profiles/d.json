@@ -1,0 +1,30 @@
+{
+    "experience": {
+        "atgroceries": [3,4,5,9],
+        "cves": [2,4,5,6,7,8],
+        "vrc": [4],
+        "lcatdb": [2,3,5,6],
+        "impetus": null,
+        "nx": null,
+        "me": null,
+        "asrc": null
+    },
+    "skills": {
+        "core": [
+            "🔵 C/C++"
+        ],
+        "supporting": [
+            "🗄️ Databases (SQL, mongoDB)",
+            "🐃 GNU Make"
+        ],
+        "sysadmin": [
+            "🧩💻 Virtualization (Proxmox, Hyper-V)",
+			"🪟 Windows Sysadmin (Server, AD, Group Policy)",
+            "🛜 Networking (IP, DNS, SSL, VLAN, Physical)",
+            "🚢 Containers (Docker/Compose, LXC)",
+            "🖥️ PowerShell",
+            "💿 Data Storage (TrueNAS Scale)"
+        ],
+        "additional": null
+    }
+}

@@ -19,6 +19,30 @@
 ---
 
 <Experience
+	id="atgroceries"
+	title="Solo Developer, Designer, and Sysadmin"
+	subtitle="@Groceries (Upcoming Small Business)"
+	when="Apr. 2025 - Present"
+	items={[
+		new ExpItem(
+			"Handled every aspect of development, design, and business management for an upcoming grocery list app.",
+			"https://atgroceries.com"
+		),
+		new ExpItem("Used Supabase as backend for real-time synchronization across multiple clients."),
+		new ExpItem("Front-end SPA developed using SvelteKit (Vite included!) and TypeScript."),
+		new ExpItem("Designed database schema, RLS policies, and migration system."),
+		new ExpItem("Wrote Dockerfiles for multiple services."),
+		new ExpItem("Used Docker Compose to orchestrate containers for development and production."),
+		new ExpItem("Forked experimental open-source project Svupa to resolve issues."),
+		new ExpItem("Used Flowbite-Svelte for UI design and prototyping."),
+		new ExpItem("Produced branding and marketing material including logo, demo videos, and documentation."),
+		new ExpItem("Hosting on local Proxmox instance routed through remote VPS for public access while masking IP."),
+		new ExpItem("Used multiple AI models and services to brainstorm and delegate work."),
+	]}
+	{profile}
+/>
+
+<Experience
 	id="cves"
 	title="Computer Programmer"
 	subtitle="Champlain Valley Educational Services"
@@ -30,13 +54,7 @@
 			getPost('092825_0429PM')
 		),
 		new ExpItem("Automated user account creation processes across multiple school districts using Python and Powershell."),
-		new ExpItem(
-			"Identified opportunities within own IT team for time savings via programming.",
-			null,
-			[
-				new ExpItem("Includes deployment scripts, upload tools, scrapers, and general Windows sysadmin scripts.")
-			]
-		),
+		new ExpItem("Produced scripts for deployment, browser automation, scrapers, and Windows sysadmin."),
 		new ExpItem("Maintained legacy Python code <b>without source</b>, analyzing <b>disassembled and decompiled bytecode</b> to determine behavior."),
 		new ExpItem("Managed several services: Microsoft 365, Intune, Teams, SharePoint, Apple Business Manager, Google, Cisco Umbrella."),
 		new ExpItem("Managed several Windows Server instances for on-site software through Hyper-V."),
@@ -52,7 +70,7 @@
 	title="Software Developer"
 	subtitle="Clarkson Virtual Reality Coaster"
 	where="Potsdam, NY"
-	when="Jan. 2022 – May 2023"
+	when="Jan. 2022 - May 2023"
 	items={[
 		new ExpItem(
 			"Master’s project retrofitting a MaxFlight VR2002 motion simulator with new technologies.",
@@ -105,7 +123,7 @@
 <Experience
 	id="nx"
 	title="Nintendo Switch Homebrew Game Ports"
-	when="Jan. 2019 – Oct 2022"
+	when="Jan. 2019 - Oct 2022"
 	items={[
 		new ExpItem(
 			"Homebrew ports of several <b>open-source</b> games to the Nintendo Switch as a hobby project using <b>devkitPro</b>.",
@@ -198,11 +216,11 @@
 ___
 
 <Education
-	degree="Master’s in Computer Science"
+	degree="Master's in Computer Science"
 	university="Clarkson University"
 	gpa={3.64}
 	where="Potsdam, NY"
-	when="Aug. 2019 – May 2023"
+	when="Aug. 2019 - May 2023"
 />
 
 <Education
@@ -210,7 +228,7 @@ ___
 	university="SUNY Plattsburgh"
 	gpa={3.62}
 	where="Plattsburgh, NY"
-	when="Aug. 2016 – Aug. 2019"
+	when="Aug. 2016 - Aug. 2019"
 />
 
 </AvoidPageBreak>
@@ -269,9 +287,13 @@ ___
 			"Used for my Switch homebrew ports. I like it but don't find too many applications for it in what I do now."
 		),
 		new Skill(
-			"🔄 Continuous Integration/Deployment (GitHub Actions)",
-			"Gotten quite comfy with GitHub Actions. The website you're reading this on is built and deployed using it, as well as my grocery app. (I still don't know why GitHub gives this away for free...)"
+			"🔄 CI/CD (GitHub Actions)",
+			"Gotten quite comfy with GitHub Actions. The website you're reading this on is built and deployed using it! (I still don't know why GitHub gives this away for free...)"
 		),
+		new Skill(
+			"🟪⚡ Vite",
+			"Used for @Groceries and my website as it comes with SvelteKit. Makes setting up routes and scaling a project very easy."
+		)
 	]}
 	{profile}
 />
@@ -329,11 +351,11 @@ ___
 			"I did some weird experiments with this that came as a tangent from my Switch homebrew stuff. I think the longest lasting thing that's come of it was my web port of SRB2 which got picked up and maintained by some others in the community. (https://snesfx.github.io/srb2-web/)"
 		),
 		new Skill(
-			"🌇 Raster Image Editing (Krita, GIMP)",
-			"I do a lot of my own graphics for various projects. I used GIMP primarily for a long time but have recently moved to Krita. I have used Photoshop but these do what I need and so I use them more often."
+			"🌇 Raster Image Editing (Affinity, GIMP)",
+			"I do a lot of my own graphics for various projects. I used GIMP primarily for a long time but have recently moved to Affinity Photo. I have used Photoshop but these do what I need and so I use them more often."
 		),
 		new Skill(
-			"📐 3D Modeling/CAD (Blender, Shapr3D, SketchUp)",
+			"📐 3D Modeling/CAD (Shapr3D, Blender, SketchUp)",
 			"When push comes to shove and I need a model that doesn't exist yet, I do it. I've played around with Blender a bit (especially in conjunction with Unity) and for CAD I've historically used SketchUp a lot. Recently I've been learning Shapr3D and massively prefer it after years of watching SketchUp stagnate. Also here's an example: https://www.thingiverse.com/thing:2172789"
 		)
 	]}
@@ -343,7 +365,6 @@ ___
 </AvoidPageBreak>
 
 <script lang="ts">
-	import HideDuringPrint from "$joeysvelte/HideDuringPrint.svelte"
 	import AvoidPageBreak from "$joeysvelte/AvoidPageBreak.svelte"
 	
 	import Tag from "$lib/Tag.svelte"
