@@ -12,6 +12,19 @@
     <atom:link href="http://jojudge.com/feeds/vidya/feed.rss" rel="self" type="application/rss+xml"/>
     <item>
       <title/>
+      <link>http://jojudge.com/feeds/vidya/093026_0707PM</link>
+      <description>&lt;script&gt;
+	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
+&lt;/script&gt;
+
+&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
+&lt;p&gt;okay so wasn't 100% right but still hella right.&lt;/p&gt;
+&lt;p&gt;next prediction: steam deck mini by 2028, snapdragon elite processor. 16gb ram. if i got to choose the nam...&lt;/p&gt;</description>
+      <pubDate>Wed, 30 Sep 2026 23:12:00 GMT</pubDate>
+      <guid>/feeds/vidya/093026_0707PM</guid>
+    </item>
+    <item>
+      <title/>
       <link>http://jojudge.com/feeds/vidya/060926_0843AM</link>
       <description>&lt;script context="module"&gt;
 	export const metadata = {"hideHome":true};
