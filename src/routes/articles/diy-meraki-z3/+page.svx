@@ -1,0 +1,226 @@
+---
+title: "Building a DIY Meraki Z3 with WireGuard and OPNsense"
+description: "A cheap VPS, a mini PC running OPNsense, and a full-tunnel WireGuard link. Plus a long detour through MTU hell that turned out to be a virtual NIC."
+categories: software linux
+comments: true
+---
+I want to host a SaaS business. I also have a lot of old hardware sitting around that would totally be capable of handling that. VPSs start cheap, but can balloon in cost fast. However, I'm not too keen on exposing my residential IP for a business venture OR renting expensive-to-scale cloud infrastructure.
+
+Anyway, I work in IT. I get exposed to a lot of weird lil devices. One of them happens to be the Cisco Meraki Z3: a little teleworker box. You plug internet into one ethernet port, you get a VPN-protected connection out the other. It's as if you're plugging into a switch on a remote site. Everything behind it comes out on the internet from the hub's address.
+
+Wait a minute. You can find cheap VPS rentals with static IPs and pretty high monthly transfer limits. Also Wireguard kicks ass. What if...
+
+## The design
+```
+ [LAN devices] ── [OPNsense box] ══ WireGuard (full tunnel) ══ [Debian VPS] ── internet
+                  10.10.10.0/24      10.200.0.2                 10.200.0.1
+```
+
+- **Hub:** a Debian VPS running WireGuard at `10.200.0.1`. It NATs everything out to the internet.
+- **Appliance:** OPNsense at `10.200.0.2` on the tunnel, with the remote LAN (`10.10.10.0/24`) behind it.
+- **Other peers:** my own devices join the same tunnel (for example `10.200.0.3`) so I can reach things on the remote LAN through the hub.
+
+The goals were:
+
+1. All remote-LAN traffic leaves via the VPS, and the remote ISP's address never shows up.
+2. If the tunnel dies, nothing falls back to the local connection.
+3. The OPNsense GUI is not reachable from the LAN side or from the VPS.
+
+## Part 1: The VPS
+I wanted the VPS to have as small an attack surface as possible: SSH disabled, a firewall that only allows the WireGuard port, and automatic updates (with automatic reboots). This separation also greatly reduces the chance that those auto updates break stuff.
+
+```bash
+systemctl disable ssh
+systemctl stop ssh
+ufw reset
+ufw default deny incoming
+ufw default allow outgoing
+ufw allow <WG_PORT>/udp
+ufw enable
+apt update
+apt install wireguard -y
+```
+
+Generate the server keypair, and keep the private key to yourself:
+
+```bash
+umask 077
+wg genkey | tee /etc/wireguard/server.key | wg pubkey > /etc/wireguard/server.pub
+```
+
+Then `/etc/wireguard/wg0.conf`:
+
+```ini
+[Interface]
+Address = 10.200.0.1/24
+ListenPort = <WG_PORT>
+PrivateKey = <SERVER_PRIVATE_KEY>
+PostUp = sysctl -w net.ipv4.ip_forward=1; iptables -A FORWARD -i wg0 -j ACCEPT; iptables -t nat -A POSTROUTING -o enp1s0 -j MASQUERADE
+PostDown = iptables -D FORWARD -i wg0 -j ACCEPT; iptables -t nat -D POSTROUTING -o enp1s0 -j MASQUERADE
+
+# opnsense appliance
+[Peer]
+PublicKey = <OPNSENSE_PUBLIC_KEY>
+AllowedIPs = 10.200.0.2/32, 10.10.10.0/24
+
+# my workstation
+[Peer]
+PublicKey = <WORKSTATION_PUBLIC_KEY>
+AllowedIPs = 10.200.0.3/32
+```
+
+A few notes:
+
+- **`enp1s0` is my VPS's uplink.** Many guides say `eth0`. Check yours with `ip route | grep default`. If the name is wrong, the MASQUERADE rule matches nothing and all the tunnel traffic silently goes nowhere.
+- **The OPNsense peer's `AllowedIPs` includes the remote LAN.** That's how the server knows `10.10.10.0/24` lives behind `10.200.0.2`, and it's what lets my other peers reach the remote LAN through the hub.
+- **`FORWARD -i wg0 -j ACCEPT`** also covers peer-to-peer traffic, since that arrives on `wg0` and leaves on `wg0`.
+
+Enable it at boot:
+
+```bash
+systemctl enable wg-quick@wg0
+systemctl start wg-quick@wg0
+```
+
+## Part 2: OPNsense
+Recent OPNsense versions have WireGuard built in, so there's no plugin to install. This is what I configured, in order.
+
+### WAN
+- **Interfaces > WAN:** disable *Block private networks*.
+- **Firewall > Rules > WAN:** add a rule to allow admin access to *This Firewall*.
+- **System > Settings > Administration:** set the listen interface to WAN only, so the GUI isn't served on the LAN side at all.
+- **Firewall > Settings > Advanced:** disable the anti-lockout rule, since I'm managing access with explicit rules instead.
+
+### The tunnel
+**VPN > WireGuard > Instances**
+- Name: `Main`
+- Tunnel address: `10.200.0.2/24`
+- Generate a keypair and paste the public half into the VPS's `[Peer]` block.
+- Peers: `Main`
+
+**VPN > WireGuard > Peers**
+- Name: `Main`
+- Public key: the VPS's public key
+- Allowed IPs: `0.0.0.0/0` (this is what makes it a full tunnel)
+- Endpoint: `<VPS_IP>`, port `<WG_PORT>`
+- Keepalive: `25`
+
+**Interfaces > Assignments:** add `wg0` and name it `WG`. Then open it and tick *Enable*.
+
+### The route you must not forget
+With a peer that has `0.0.0.0/0` as allowed IPs, OPNsense will happily try to send the WireGuard handshake packets *into the tunnel they are supposed to establish*, causing an infinite loop of failure. On my setup this showed up as follows. I could ping the VPS's tunnel address when I listed explicit subnets, but pinging it failed the moment I switched to `0.0.0.0/0`.
+
+The fix is a more specific route for the VPS's public address so it always leaves via the real WAN:
+
+**System > Routes > Configuration**
+- Network: `<VPS_IP>/32`
+- Gateway: `WAN_DHCP`
+- Description: `WireGuard endpoint bypass`
+
+Longest prefix wins, so `/32` beats `0.0.0.0/0`.
+
+### Outbound NAT
+Out of the box, OPNsense only NATs traffic leaving the WAN. For this setup you also need to masquerade LAN traffic leaving through the WireGuard interface, otherwise the VPS sees `10.10.10.x` source addresses it has no route back to.
+
+**Firewall > NAT > Outbound:** switch to *Hybrid*, then add a rule:
+- Interface: `WG`
+- Source: the LAN network (`10.10.10.0/24`)
+- Translation: *Interface address*
+- Description: `Masquerade LAN out WireGuard`
+
+### Firewall rules
+**LAN**
+1. *Block*, destination `WAN net`, moved to the top. This is my "don't leak out the regular connection" rule.
+2. *Block*, TCP/UDP, destination *This Firewall*, port 443. This stops the GUI being reachable from the LAN.
+3. The default *Allow LAN to any* rule below those.
+
+**WG**
+1. *Block*, destination *This Firewall*, TCP port 443, moved to the top. This is "no GUI or SSH access from the VPS". If the VPS is ever compromised, it shouldn't be a stepping stone to the firewall.
+2. *Block*, destination `WAN net`.
+3. *Pass* all, described as `Allow inbound from WG tunnel`. Return traffic from the internet needs this to get back in.
+
+Rules are evaluated top-down and the first match wins, so the blocks have to sit above the broader allows.
+
+### Housekeeping
+- **System > Settings > Miscellaneous:** set the thermal sensor to `coretemp` so the dashboard shows CPU temperature.
+- **System > Settings > Cron:** add two jobs on Tuesdays. One runs the automatic firmware update, then at 01:00 another reboots the box.
+
+### A caveat on the "kill switch"
+`WAN net` in OPNsense means the subnet of the WAN interface, not "the internet", so rule 1 above is a weaker kill switch than it looks. A sturdier approach is a pair of floating rules on WAN: pass UDP to the VPS endpoint, then block everything else outbound. Whichever you use, test it by taking the tunnel down on purpose and checking that a LAN client can't reach the internet, and that `curl ifconfig.me` doesn't return your home address.
+
+## Footnote: e(vil)1000
+I ended up doing a lot of troubleshooting when I was trying to get my virtualized workstation connected to the VPN. Long story short: I was using the e1000 virtual device as a workaround to get Moonlight working, and that device was mangling MTU values. If you're curious, you can expand the section below, but it won't be super relevant for most. Regardless: test your setup with the simplest possible connection, because the complexity Proxmox introduced wasted me a lot of time. (But I learned a lot!)
+
+<Collapse>
+
+<p>Everything above worked: LAN clients got the VPS's address and the tunnel was stable! The last thing I wanted was to reach the Proxmox host on the remote LAN (<code>10.10.10.2</code>) from my workstation (<code>10.200.0.3</code>), over the tunnel, through the hub.</p>
+
+<p>Symptoms:</p>
+
+<ul>
+	<li><code>ping 10.10.10.2</code> worked.</li>
+	<li>SSH worked, roughly. Sessions would sometimes freeze, and some commands that produced a lot of output hung.</li>
+	<li>The Proxmox web GUI on port 8006 just timed out.</li>
+</ul>
+
+<p>If you've done networking for a while, you've already guessed "MTU". I did too, eventually. Here's the order I tried things in.</p>
+
+<h3>Theory 1: Proxmox's firewall</h3>
+<p>Proxmox has its own firewall, so I added an accept rule for the WireGuard subnet, then turned the firewall off completely. No change. (The config files for the firewall didn't even exist, so it was never configured in the first place.)</p>
+
+<h3>Theory 2: pveproxy is broken</h3>
+<p><code>curl -k https://localhost:8006</code> hung over an SSH session but worked from the physical console. That looked bad, but <code>ss -tlnp</code> showed pveproxy happily listening on <code>*:8006</code>, and the service was healthy. The SSH weirdness turned out to be a symptom, not a cause, and I'll get to that.</p>
+
+<h3>Theory 3: the packet capture</h3>
+<p>This is where it got interesting. <code>tcpdump</code> on the Proxmox side during a failed request showed:</p>
+
+<ul>
+	<li>The TCP handshake completes.</li>
+	<li>The client sends its TLS hello (418 bytes). Fine.</li>
+	<li>Proxmox replies with a 1340-byte segment, then a 530-byte one.</li>
+	<li>The client SACKs the <em>second</em> segment (<code>&#123;1341:1871&#125;</code>) over and over, and never acknowledges the <em>first</em>.</li>
+	<li>Proxmox retransmits the first one until the client gives up.</li>
+</ul>
+
+<p>The small packet gets through, and the big one disappears. Classic.</p>
+
+<h3>Theory 4: MTU and MSS, everywhere</h3>
+<p>So I set MTUs on every device along the path and clamped MSS with <code>iptables -t mangle</code> on Proxmox, first with <code>--clamp-mss-to-pmtu</code> and then hardcoded values. I changed the WireGuard MTU on both ends to 1420, then on the workstation to 1320 and lower. The SYN-ACK did show the lower MSS after clamping, which proved the clamp was working. But the failing segment just got smaller (1340, then 1280) and still vanished.</p>
+
+<p>A test ping made it look like path MTU discovery was broken:</p>
+
+<pre><code>&gt; ping -l 1400 10.10.10.2
+Request timed out. (x4)</code></pre>
+
+<p>I spent a while adding ICMP pass rules to OPNsense. They were not the problem, and a capture on OPNsense showed the oversized echo request arriving and the reply leaving with no complaint.</p>
+
+<h3>Theory 5: Windows</h3>
+<p>Windows reported the WireGuard adapter's MTU as around two billion, which sent me down a path of <code>Set-NetIPInterface</code>, disabling LSO, checksum offload, and a handful of <code>netsh</code> tweaks. That <em>did</em> break things further: at one point the tunnel was half-dead and <code>tcpdump</code> saw nothing at all.</p>
+
+<h3>The actual cause</h3>
+<p>Then I tried the same tunnel config from a different device, and the GUI loaded instantly.</p>
+
+<p>My "workstation" is a Windows VM running on another Proxmox host, and I had given it an <strong>Intel e1000</strong> virtual NIC. The emulated e1000 has well-known problems with TCP segmentation offload and checksum handling, and they show up exactly like this: small packets fine, large ones silently eaten, SACK stalls. Switching the VM's NIC model to <strong>VirtIO</strong> fixed it. Everything I'd done to MTUs, MSS, ICMP rules, and Windows offload settings was compensating for a problem that was never in the network.</p>
+
+<h3>Lessons</h3>
+<ol>
+	<li><strong>Test your tunnel from a second, independent client before you go down a diagnostic rabbit hole.</strong> If I'd done this at the start I'd have saved hours.</li>
+	<li><strong>Say what your client actually is.</strong> I was describing a "workstation" without mentioning it was a VM, and so was whoever was helping me debug. The most important fact was missing.</li>
+	<li><strong>Don't use the Intel e1000 NIC model in Proxmox</strong> for anything you care about. Use VirtIO.</li>
+	<li><strong>"Ping works, SSH mostly works, big transfers hang" means MTU or segmentation problems.</strong> The SSH freezes weren't a Proxmox quirk. They were the same dropped-big-packet problem showing up in a different place.</li>
+	<li><strong>Capture on both sides of a hop.</strong> Seeing that the server was sending a full segment and the client never ACKed it narrowed the problem to "somewhere in between", even though "in between" turned out to include the client's own virtual hardware.</li>
+	<li><strong>Undo your experiments.</strong> If you went through the same detour, flush the mangle rules on the Proxmox host (<code>iptables -t mangle -F</code>), restore <code>vmbr0</code> and the physical NIC to MTU 1500, and set the tunnel MTU back to a sane default.</li>
+</ol>
+
+</Collapse>
+
+## Claude's Suggestions
+- Tightening the WAN-side admin rule. For now it's open to the upstream network and I'd like to restrict that.
+- A real kill switch with floating rules rather than relying on `WAN net`.
+- Monitoring: Grafana with Telegraf on the OPNsense box, so I get the dashboard that the Meraki gives you for free.
+
+...and one more suggestion from me: I'd really like to find a system that checks for zero-day CVEs, cuts off internet if not yet patched, and repeatedly checks for updates until patched. But that's a bigger project for another time.
+
+<script lang="ts">
+    import Collapse from "$lib/Collapse.svelte";
+</script>
