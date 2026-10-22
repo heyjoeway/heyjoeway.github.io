@@ -36,7 +36,10 @@
 		new ExpItem("Forked experimental open-source project Svupa to resolve issues."),
 		new ExpItem("Used Flowbite-Svelte for UI design and prototyping."),
 		new ExpItem("Produced branding and marketing material including logo, demo videos, and documentation."),
-		new ExpItem("Hosting on local Proxmox instance routed through remote VPS for public access while masking IP."),
+		new ExpItem(
+			"Hosting on local Proxmox instance routed through remote VPS for public access while masking IP.",
+			"/articles/diy-meraki-z3"
+		),
 		new ExpItem("Used multiple AI models and services to brainstorm and delegate work."),
 	]}
 	{profile}
@@ -55,12 +58,11 @@
 		),
 		new ExpItem("Automated user account creation processes across multiple school districts using Python and Powershell."),
 		new ExpItem("Produced scripts for deployment, browser automation, scrapers, and Windows sysadmin."),
-		new ExpItem("Maintained legacy Python code <b>without source</b>, analyzing <b>disassembled and decompiled bytecode</b> to determine behavior."),
-		new ExpItem("Managed several services: Microsoft 365, Intune, Teams, SharePoint, Apple Business Manager, Google, Cisco Umbrella."),
-		new ExpItem("Managed several Windows Server instances for on-site software through Hyper-V."),
+		new ExpItem("Maintained legacy Python code without source, analyzing disassembled and decompiled bytecode to determine behavior."),
+		new ExpItem("Managed several services: Azure, Microsoft 365, Intune, Teams, Entra, Apple Business Manager, Google."),
+		new ExpItem("Handled migration of locally hosted Windows Server VMs (Hyper-V) to Azure."),
 		new ExpItem("Led school-wide device fleet deployments across multiple districts."),
-		new ExpItem("Networking, including management of VLANs, DNS, and diagnosing failure incidents. Primarily used Meraki."),
-		new ExpItem("Physical network experience. Successfully diagnosed major fiber issue in district.")
+		new ExpItem("Networking, including management of VLANs, DNS, and physical failures. Primarily used Meraki.")
 	]}
 	{profile}
 />
@@ -77,15 +79,15 @@
 			getPost('091425_0247PM')
 		),
 		new ExpItem(
-			"Several <b>Python</b> libraries designed/implemented. APIs produced for use by departments less familiar with programming.",
+			"Several Python libraries designed/implemented. APIs produced for use by departments less familiar with programming.",
 			getPost('091425_0247PM')
 		),
 		new ExpItem(
-			"Documentation produced using <b>docstrings, type annotations, and mkdocs</b>",
+			"Documentation produced using docstrings, type annotations, and mkdocs",
 			getPost('091425_0247PM')
 		),
 		new ExpItem(
-			"Worked with end users to identify requirements, produce manuals, and provide training for simulator operation.",
+			"Worked with end users to identify requirements, produce manuals (mkdocs), and provide training for simulator operation.",
 			getPost('091425_0247PM')
 		),
 		new ExpItem("Still in use at Clarkson University as of July 2025."),
@@ -104,16 +106,16 @@
 			"Mentored 7th - 12th grade students to support a career path in STEM through assorted activities.",
 			"https://sites.clarkson.edu/impetus/"
 		),
-		new ExpItem("Developed curriculum and Moodle course material for the <b>computer programming</b> component."),
+		new ExpItem("Developed curriculum and Moodle course material for the computer programming component."),
 		new ExpItem(
 			"Taught object-oriented design through video game programming using Scratch and MakeCode Arcade.",
 			getPost('093025_1051AM')
 		),
-		new ExpItem("<b>Administrator</b> of IMPETUS Moodle website. Managed user accounts, permissions, plug-ins, and course material."),
+		new ExpItem("Administrator of IMPETUS Moodle website. Managed user accounts, permissions, plug-ins, and course material."),
 		new ExpItem("Handled graphic design for promotional material including flyers, posters, and social media posts."),
 		new ExpItem("Led the purchase and deployment of ~50 device Windows fleet."),
 		new ExpItem(
-			"Produced documentation and <b>Python</b> software to <b>automate deployment of Windows</b> devices for student use.",
+			"Produced documentation and Python software to automate deployment of Windows devices for student use.",
 			"https://github.com/heyjoeway/miniwindeploy"
 		)
 	]}
@@ -126,15 +128,15 @@
 	when="Jan. 2019 - Oct 2022"
 	items={[
 		new ExpItem(
-			"Homebrew ports of several <b>open-source</b> games to the Nintendo Switch as a hobby project using <b>devkitPro</b>.",
+			"Homebrew ports of several open-source games to the Nintendo Switch as a hobby project using devkitPro.",
 			getPost('093025_1058AM')
 		),
 		new ExpItem(
-			"Used <b>C/C++, GNU Make, SDL2, and OpenGL</b>. Navigated sparsely documented and complex codebases.",
+			"Used C/C++, GNU Make, SDL2, and OpenGL. Navigated sparsely documented and complex codebases.",
 			getPost('093025_1058AM')
 		),
 		new ExpItem(
-			"Collaborated with project maintainers using <b>Git<b> commit and diff analysis.",
+			"Collaborated with project maintainers using Git commit and diff analysis.",
 			getPost('093025_1058AM')
 		)
 	]}
@@ -153,10 +155,10 @@
 			"/articles/lcatdb"
 		),
 		new ExpItem(
-			"Produced backend components using <b>Node.JS, Express, MongoDB, and JSON schemas</b>.",
+			"Produced backend components using Node.JS, Express, MongoDB, and JSON schemas.",
 			"https://github.com/heyjoeway/lcatdb/tree/dev/server"
 		),
-		new ExpItem("Managed a <b>Debian Linux</b> server instance on <b>Linode</b> to host application."),
+		new ExpItem("Managed a Debian Linux server instance on Linode to host application."),
 		new ExpItem("Configured networking (domain registration, DNS) required for public access to app."),
 		new ExpItem(
 			"Designed and implemented a single-page web application using Bootstrap/jQuery.",
@@ -180,17 +182,17 @@
 			"https://jojudge.com/whitefacetour",
 			[
 				new ExpItem(
-					"Custom JSON-based scene system and editor produced using <b>JavaScript, bundled using webpack.</b>",
+					"Custom JSON-based scene system and editor produced using JavaScript, bundled using webpack.",
 					"https://github.com/heyjoeway/planetariumvr"
 				),
 				new ExpItem(
-					"Currently hosted using a <b>GitHub Actions/GitHub Pages CI/CD workflow</b>.",
+					"Currently hosted using a GitHub Actions/GitHub Pages CI/CD workflow.",
 					"https://github.com/heyjoeway/whitefacetour"
 				)
 			]
 		),
-		new ExpItem("Automated summit camera system produced using <b>Python</b> to provide live shots and process time-lapses."),
-		new ExpItem("Software for kiosk video players and information screens developed using <b>Raspberry Pi SBC</b> and <b>Python.</b>"),
+		new ExpItem("Automated summit camera system produced using Python to provide live shots and process time-lapses."),
+		new ExpItem("Software for kiosk video players and information screens developed using Raspberry Pi SBC and Python."),
 		new ExpItem("Performed regular maintenance of atmospheric monitoring equipment (mass spectrometers).")
 	]}
 	{profile}

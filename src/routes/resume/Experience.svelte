@@ -48,7 +48,7 @@
 .experience {
 	display: flex;
 	flex-direction: row;
-	margin-bottom: 12px;
+	margin-bottom: 8px;
 	align-items: center;
 	justify-content: space-between;
 }

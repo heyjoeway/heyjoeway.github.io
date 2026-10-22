@@ -1,8 +1,9 @@
 {
     "experience": {
-        "cves": [2,3],
-        "vrc": [1,4],
-        "impetus": [1,2,4,6],
+        "atgroceries": [1,2,3,6,7,8],
+        "cves": [2,3,6],
+        "vrc": [2,4],
+        "impetus": null,
         "nx": null,
         "lcatdb": [1,4,6],
         "asrc": null,
@@ -17,9 +18,13 @@
         "supporting": [
 			"🐃 GNU Make",
             "⚛️ React",
+            "3️⃣ HTML/CSS/SCSS",
+            "🟪⚡ Vite",
             "🔄 Continuous Integration/Deployment (GitHub Actions)"
         ],
-        "sysadmin": [],
+        "sysadmin": [
+            "💿 Data Storage (TrueNAS Scale)"
+        ],
         "additional": null
     }
 }
