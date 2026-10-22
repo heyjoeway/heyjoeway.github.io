@@ -89,7 +89,7 @@
 
 	{#if data.fm.comments}
 		<hr>
-		<Comments pageID={data.id} pageTitle={data.fm.title} />
+		<!-- <Comments pageID={data.id} pageTitle={data.fm.title} /> -->
 	{/if}
 
 </ArticleLayout>
