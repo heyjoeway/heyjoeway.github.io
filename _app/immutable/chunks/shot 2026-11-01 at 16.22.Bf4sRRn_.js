@@ -1,0 +1,1 @@
+const A={},s={src:""+new URL("../assets/shot_202026-11-01_20at_2016.22.BKWqDl1_.png",import.meta.url).href,w:850,h:662,lqip:"UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoQAAwABUB8JZQCw8Jfw8fpd8AA/kr4ztIrGzJwhhUDTtSvcJBC/Yo5jNVVzFMhOmpGwVXNfwr46Fi17GUAAA=="},t={sources:A,img:s};export{t as default,s as img,A as sources};

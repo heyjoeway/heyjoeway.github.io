@@ -12,6 +12,24 @@
     <atom:link href="http://jojudge.com/feeds/vidya/feed.rss" rel="self" type="application/rss+xml"/>
     <item>
       <title/>
+      <link>http://jojudge.com/feeds/vidya/110126_0422PM</link>
+      <description>&lt;script context="module"&gt;
+	export const metadata = {"hideHome":true};
+	const { hideHome } = metadata;
+&lt;/script&gt;
+
+&lt;script&gt;
+	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
+&lt;/script&gt;
+
+&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
+&lt;p&gt;found one of the SA2 chao garden fonts lol&lt;/p&gt;
+&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <pubDate>Sun, 01 Nov 2026 21:28:00 GMT</pubDate>
+      <guid>/feeds/vidya/110126_0422PM</guid>
+    </item>
+    <item>
+      <title/>
       <link>http://jojudge.com/feeds/vidya/093026_0707PM</link>
       <description>&lt;script&gt;
 	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
