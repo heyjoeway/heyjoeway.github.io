@@ -1,6 +1,7 @@
 <script lang="ts">
 	import ArticleLayout from "$lib/ArticleLayout.svelte";
 	import ArticleFeed from "$lib/ArticleFeed.svelte";
+	import Button from "$joeysvelte/Button.svelte";
 	
 	export let data;
 	
@@ -18,6 +19,19 @@
 		<hr>
 		<p>No articles found.</p>
 	{/if}
-	<h1>Recent Articles</h1>
+	<div class="heading">
+		<h1>Recent Articles</h1>
+		<Button onClick="/articles/feed.rss">📡 RSS</Button>
+	</div>
 	<ArticleFeed articles={articlesUnpinned} />
 </ArticleLayout>
+
+<style>
+	.heading {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		justify-content: space-between;
+		gap: 8px;
+	}
+</style>
