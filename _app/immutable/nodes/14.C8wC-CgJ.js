@@ -45,7 +45,7 @@ apt update
 apt upgrade -y
 # Enable automatic upgrades
 apt install unattended-upgrades apt-listchanges sudo curl git -y
-echo "Unattended-Upgrade::Automatic-Reboot-WithUsers "true";" > /etc/apt/apt.conf.d/52unattended-upgrades-local`});var n=e(i,4);a(n,{lang:"bash",code:`curl -fsSL https://get.docker.com | sh
+echo "Unattended-Upgrade::Automatic-Reboot-WithUsers \\"true\\";" > /etc/apt/apt.conf.d/52unattended-upgrades-local`});var n=e(i,4);a(n,{lang:"bash",code:`curl -fsSL https://get.docker.com | sh
 docker run --detach --name watchtower --restart unless-stopped --volume /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower`});var h=e(n,4);a(h,{lang:"bash",code:`#!/bin/bash
 export DEBIAN_FRONTEND=noninteractive
 export NEEDRESTART_MODE=l
@@ -57,11 +57,8 @@ read smb_username
 echo "SMB Password: "
 read smb_password
 mkdir /media/share
-printf "username=$smb_username
-password=$smb_password" > /root/sharecreds.txt
-printf "
-//10.10.10.4/home /media/share cifs credentials=/root/sharecreds.txt,uid=$linux_username,gid=$linux_username,file_mode=0770,dir_mode=0770,noperm 0 0
-" >> /etc/fstab
+printf "username=$smb_username\\npassword=$smb_password" > /root/sharecreds.txt
+printf "\\n//10.10.10.4/home /media/share cifs credentials=/root/sharecreds.txt,uid=$linux_username,gid=$linux_username,file_mode=0770,dir_mode=0770,noperm 0 0\\n" >> /etc/fstab
 systemctl daemon-reload
 adduser $linux_username
 echo "*/1 *  * * *  mount -a" | crontab - # Hack

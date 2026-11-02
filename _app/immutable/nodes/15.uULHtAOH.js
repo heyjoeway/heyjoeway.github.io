@@ -25,7 +25,7 @@ notepad $profile`});var r=e(o,6);t(r,{lang:"powershell",code:`function Add-Perma
 $original_dir = Get-Location
 $key_deepseek = Read-Host "Deepseek API Key"
 cd ~
-New-Item -Path .\bin -ItemType Directory -Force
+New-Item -Path .\\bin -ItemType Directory -Force
 Add-PermanentPathUser $(Resolve-Path ~\\bin)
 cd bin
 Invoke-WebRequest https://github.com/zyedidia/eget/releases/download/v1.3.4/eget-1.3.4-windows_amd64.zip -OutFile eget.zip
@@ -46,7 +46,7 @@ function l { ls $args }
 function e { micro $args }
 \`$ENV:EDITOR = "$(Resolve-Path ~\\bin\\micro.exe)"
 "@
-$aichat_dir = $($env:APPDATA) + "aichat"
+$aichat_dir = $($env:APPDATA) + "\\aichat"
 New-Item -Path $aichat_dir -ItemType Directory -Force
 cd $aichat_dir
 Set-Content config.yaml @"

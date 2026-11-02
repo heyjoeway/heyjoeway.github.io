@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>heyjoeway: windows articles</title>
+    <link>https://jojudge.com/category/windows/</link>
+    <description>Articles from heyjoeway tagged windows</description>
+    <language>en-us</language>
+    <pubDate>Tue, 04 Mar 2025 03:08:14 GMT</pubDate>
+    <lastBuildDate>Mon, 02 Nov 2026 16:29:51 GMT</lastBuildDate>
+    <docs>https://www.rssboard.org/rss-specification</docs>
+    <atom:link href="https://jojudge.com/category/windows/feed.rss" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Notes: Windows</title>
+      <link>https://jojudge.com/articles/notes-windows/</link>
+      <description>&lt;p&gt;Random notes for Windows. Primarily for my own reference. At some point I’ll talk about &lt;a href="https://github.com/heyjoeway/joeydebloat" rel="nofollow"&gt;JoeyDebloat&lt;/a&gt;.&lt;/p&gt; &lt;h1 class="h1-1"&gt;Commands&lt;/h1&gt; &lt;div class="code-container svelte-1alrmox"&gt;&lt;div class="copy-button svelte-1alrmox"&gt;&lt;span class="not-link svelte-he95jo"&gt;&lt;div style="width: default; height: 26px; pointer-events: auto; opacity: 100%; filter: none;" class="clickable svelte-73054b"&gt; 📋&lt;/div&gt;&lt;/span&gt;&lt;/div&gt; &lt;pre class="svelte-1alrmox"&gt;&lt;code&gt;&lt;span class="code-line"&gt;&lt;span class="hljs-comment"&gt;# VSCode Remote Tunneling&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;code tunnel&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-comment"&gt;# WinSxS Cleanup&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;Dism.exe /online /Cleanup&lt;span class="hljs-literal"&gt;-Image&lt;/span&gt; /StartComponentCleanup /ResetBase&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-comment"&gt;# [Source](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/clean-up-the-winsxs-folder?view=windows-11)&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-comment"&gt;# System Volume Information Cleanup&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;wmic shadowcopy delete /nointeractive&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-comment"&gt;# Edit Powershell profile (.bashrc equivalent)&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;notepad &lt;span class="hljs-variable"&gt;$profile&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt; &lt;h1 class="h1-2"&gt;Personal Utilities&lt;/h1&gt; &lt;p&gt;(This assumes you ran JoeyDebloat first as it relies on some of the tools installed there.)&lt;/p&gt; &lt;div class="code-container svelte-1alrmox"&gt;&lt;div class="copy-button svelte-1alrmox"&gt;&lt;span class="not-link svelte-he95jo"&gt;&lt;div style="width: default; height: 26px; pointer-events: auto; opacity: 100%; filter: none;" class="clickable svelte-73054b"&gt; 📋&lt;/div&gt;&lt;/span&gt;&lt;/div&gt; &lt;pre class="svelte-1alrmox"&gt;&lt;code&gt;&lt;span class="code-line"&gt;&lt;span class="hljs-function"&gt;&lt;span class="hljs-keyword"&gt;function&lt;/span&gt; &lt;span class="hljs-title"&gt;Add-PermanentPathUser&lt;/span&gt;&lt;/span&gt; {&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="hljs-keyword"&gt;param&lt;/span&gt;(&lt;/span&gt;
+&lt;span class="code-line"&gt;        [&lt;span class="hljs-built_in"&gt;string&lt;/span&gt;]&lt;span class="hljs-variable"&gt;$Path&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    )&lt;/span&gt;
+&lt;span class="code-line"&gt;    [&lt;span class="hljs-type"&gt;Environment&lt;/span&gt;]::SetEnvironmentVariable(&lt;/span&gt;
+&lt;span class="code-line"&gt;        &lt;span class="hljs-string"&gt;&amp;quot;Path&amp;quot;&lt;/span&gt;,&lt;/span&gt;
+&lt;span class="code-line"&gt;        [&lt;span class="hljs-type"&gt;Environment&lt;/span&gt;]::GetEnvironmentVariable(&lt;/span&gt;
+&lt;span class="code-line"&gt;            &lt;span class="hljs-string"&gt;&amp;quot;Path&amp;quot;&lt;/span&gt;,&lt;/span&gt;
+&lt;span class="code-line"&gt;            [&lt;span class="hljs-type"&gt;EnvironmentVariableTarget&lt;/span&gt;]::USER&lt;/span&gt;
+&lt;span class="code-line"&gt;        ) + &lt;span class="hljs-string"&gt;&amp;quot;;&lt;span class="hljs-variable"&gt;$Path&lt;/span&gt;&amp;quot;&lt;/span&gt;,&lt;/span&gt;
+&lt;span class="code-line"&gt;        [&lt;span class="hljs-type"&gt;EnvironmentVariableTarget&lt;/span&gt;]::USER&lt;/span&gt;
+&lt;span class="code-line"&gt;    )&lt;/span&gt;
+&lt;span class="code-line"&gt;}&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-variable"&gt;$original_dir&lt;/span&gt; = &lt;span class="hljs-built_in"&gt;Get-Location&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-variable"&gt;$key_deepseek&lt;/span&gt; = &lt;span class="hljs-built_in"&gt;Read-Host&lt;/span&gt; &lt;span class="hljs-string"&gt;&amp;quot;Deepseek API Key&amp;quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-built_in"&gt;cd&lt;/span&gt; ~&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-built_in"&gt;New-Item&lt;/span&gt; &lt;span class="hljs-literal"&gt;-Path&lt;/span&gt; .\bin &lt;span class="hljs-literal"&gt;-ItemType&lt;/span&gt; Directory &lt;span class="hljs-literal"&gt;-Force&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-built_in"&gt;Add-PermanentPathUser&lt;/span&gt; &lt;span class="hljs-variable"&gt;$&lt;/span&gt;(&lt;span class="hljs-built_in"&gt;Resolve-Path&lt;/span&gt; ~\bin)&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-built_in"&gt;cd&lt;/span&gt; bin&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-built_in"&gt;Invoke-WebRequest&lt;/span&gt; https://github.com/zyedidia/eget/releases/download/v1.&lt;span class="hljs-number"&gt;3.4&lt;/span&gt;/e&lt;span class="hljs-built_in"&gt;get-1&lt;/span&gt;.&lt;span class="hljs-number"&gt;3.4&lt;/span&gt;&lt;span class="hljs-literal"&gt;-windows_amd64&lt;/span&gt;.zip &lt;span class="hljs-literal"&gt;-OutFile&lt;/span&gt; eget.zip&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-built_in"&gt;Expand-Archive&lt;/span&gt; eget.zip&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-built_in"&gt;mv&lt;/span&gt; .\eget\e&lt;span class="hljs-built_in"&gt;get-1&lt;/span&gt;.&lt;span class="hljs-number"&gt;3.4&lt;/span&gt;&lt;span class="hljs-literal"&gt;-windows_amd64&lt;/span&gt;\eget.exe .&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-built_in"&gt;Remove-Item&lt;/span&gt; &lt;span class="hljs-literal"&gt;-Recurse&lt;/span&gt; eget&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-built_in"&gt;Remove-Item&lt;/span&gt; eget.zip&lt;/span&gt;
+&lt;span class="code-line"&gt;.\eget zyedidia/eget&lt;/span&gt;
+&lt;span class="code-line"&gt;.\eget sigoden/aichat&lt;/span&gt;
+&lt;span class="code-line"&gt;.\eget zyedidia/micro&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-built_in"&gt;cd&lt;/span&gt; ~&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-keyword"&gt;if&lt;/span&gt; (!(&lt;span class="hljs-built_in"&gt;Test-Path&lt;/span&gt; &lt;span class="hljs-variable"&gt;$profile&lt;/span&gt;)) {&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="hljs-built_in"&gt;New-Item&lt;/span&gt; &lt;span class="hljs-literal"&gt;-Path&lt;/span&gt; &lt;span class="hljs-variable"&gt;$profile&lt;/span&gt; &lt;span class="hljs-literal"&gt;-ItemType&lt;/span&gt; File &lt;span class="hljs-literal"&gt;-Force&lt;/span&gt;    &lt;/span&gt;
+&lt;span class="code-line"&gt;}&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-built_in"&gt;Add-Content&lt;/span&gt; &lt;span class="hljs-variable"&gt;$profile&lt;/span&gt; &lt;span class="hljs-string"&gt;@&amp;quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-string"&gt;function ai { aichat -e &amp;quot;&lt;span class="hljs-variable"&gt;$args&lt;/span&gt;&amp;quot; }&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-string"&gt;function l { ls &lt;span class="hljs-variable"&gt;$args&lt;/span&gt; }&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-string"&gt;function e { micro &lt;span class="hljs-variable"&gt;$args&lt;/span&gt; }&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-string"&gt;`$ENV:EDITOR = &amp;quot;&lt;span class="hljs-variable"&gt;$&lt;/span&gt;(Resolve-Path ~\bin\micro.exe)&amp;quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-string"&gt;&amp;quot;@&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-variable"&gt;$aichat_dir&lt;/span&gt; = &lt;span class="hljs-variable"&gt;$&lt;/span&gt;(&lt;span class="hljs-variable"&gt;$env:APPDATA&lt;/span&gt;) + &lt;span class="hljs-string"&gt;&amp;quot;\aichat&amp;quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-built_in"&gt;New-Item&lt;/span&gt; &lt;span class="hljs-literal"&gt;-Path&lt;/span&gt; &lt;span class="hljs-variable"&gt;$aichat_dir&lt;/span&gt; &lt;span class="hljs-literal"&gt;-ItemType&lt;/span&gt; Directory &lt;span class="hljs-literal"&gt;-Force&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-built_in"&gt;cd&lt;/span&gt; &lt;span class="hljs-variable"&gt;$aichat_dir&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-built_in"&gt;Set-Content&lt;/span&gt; config.yaml &lt;span class="hljs-string"&gt;@&amp;quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-string"&gt;# see https://github.com/sigoden/aichat/blob/main/config.example.yaml&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-string"&gt;model: deepseek:deepseek-chat&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-string"&gt;clients:&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-string"&gt;- type: openai-compatible&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-string"&gt;  name: deepseek&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-string"&gt;  api_base: https://api.deepseek.com&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-string"&gt;  api_key: &lt;span class="hljs-variable"&gt;$key_deepseek&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-string"&gt;&amp;quot;@&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-built_in"&gt;cd&lt;/span&gt; &lt;span class="hljs-variable"&gt;$original_dir&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;. &lt;span class="hljs-variable"&gt;$profile&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;refreshenv&lt;/span&gt;
+&lt;span&gt;&lt;span class="hljs-built_in"&gt;echo&lt;/span&gt; &lt;span class="hljs-string"&gt;&amp;quot;You may need to restart your terminal for the changes to take effect.&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt; &lt;h1 class="h1-3"&gt;Scripting&lt;/h1&gt; &lt;h2 class="h2-1"&gt;Batch&lt;/h2&gt; &lt;div class="code-container svelte-1alrmox"&gt;&lt;div class="copy-button svelte-1alrmox"&gt;&lt;span class="not-link svelte-he95jo"&gt;&lt;div style="width: default; height: 26px; pointer-events: auto; opacity: 100%; filter: none;" class="clickable svelte-73054b"&gt; 📋&lt;/div&gt;&lt;/span&gt;&lt;/div&gt; &lt;pre class="svelte-1alrmox"&gt;&lt;code&gt;&lt;span class="code-line"&gt;:: Change directory to script location in batch&lt;/span&gt;
+&lt;span&gt;cd /D "%~dp0"&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt; &lt;h1 class="h1-4"&gt;Software&lt;/h1&gt; &lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Description&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;a href="https://sysprogs.com/legacy/tools/srvman/" rel="nofollow"&gt;SrvMan&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Create services, manage hidden services&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href="https://github.com/lostindark/DriverStoreExplorer" rel="nofollow"&gt;DriverStoreExplorer (Rapr)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Clean driverstore packages, reclaim space&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href="https://www.homedev.com.au/Free/PatchCleaner" rel="nofollow"&gt;PatchCleaner&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Cleans up old/redundant installers, reclaim space&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href="https://geeks3d.com/furmark/" rel="nofollow"&gt;FurMark&lt;/a&gt;&lt;/td&gt;&lt;td&gt;GPU stress test&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href="https://www.mersenne.org/download/" rel="nofollow"&gt;Prime95&lt;/a&gt;&lt;/td&gt;&lt;td&gt;CPU/RAM stress test&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href="https://rufus.ie/en/" rel="nofollow"&gt;Rufus&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Create USB install media&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</description>
+      <pubDate>Tue, 04 Mar 2025 03:08:14 GMT</pubDate>
+      <guid>https://jojudge.com/articles/notes-windows/</guid>
+    </item>
+  </channel>
+</rss>
