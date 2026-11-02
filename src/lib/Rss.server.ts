@@ -56,11 +56,20 @@ export function absoluteUrl(url: string): string {
 }
 
 // Feed readers have no base URL to resolve root-relative links against
-function absolutizeHtml(html: string): string {
-    return html.replace(
-        /(\s(?:href|src)=")(\/[^"]*)"/g,
-        (_, attr, url) => `${attr}${absoluteUrl(url)}"`
-    );
+export function absolutizeHtml(html: string): string {
+    return html
+        .replace(
+            /(\s(?:href|src|poster)=")(\/[^"]*)"/g,
+            (_, attr, url) => `${attr}${absoluteUrl(url)}"`
+        )
+        // srcset is a comma-separated list of "url descriptor" pairs
+        .replace(
+            /(\ssrcset=")([^"]*)"/g,
+            (_, attr, srcset: string) => `${attr}${srcset.split(",").map(candidate => {
+                const [url, ...descriptors] = candidate.trim().split(/\s+/);
+                return [url.startsWith("/") ? absoluteUrl(url) : url, ...descriptors].join(" ");
+            }).join(", ")}"`
+        );
 }
 
 function mediaHtml(post: Post): string {
@@ -154,7 +163,9 @@ export function buildRss(channel: RssChannel): string {
         }
     };
 
-    return new xml2js.Builder().buildObject(rss);
+    // Strip characters XML 1.0 can't represent rather than failing the build
+    return new xml2js.Builder().buildObject(rss)
+        .replace(/[\0-\x08\x0B\f\x0E-\x1F\uFFFE\uFFFF]/g, '');
 }
 
 export function rssResponse(xml: string): Response {
