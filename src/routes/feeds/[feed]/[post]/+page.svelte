@@ -3,8 +3,6 @@
     import Layout from "$lib/Layout.svelte";
     import Comments from "$lib/Comments.svelte";
     
-    import { formatDateTime } from "$lib/Utils";
-    
     export let data;
 </script>
 
@@ -13,10 +11,7 @@
         <div class="inner-container">
             <Post post={data.post} />
             <hr>
-            <Comments
-                pageID={data.post.url}
-                pageTitle={formatDateTime(data.post.fm.date)}
-            />
+            <Comments pageID={data.post.url} />
         </div>
     </div>
 </Layout>
