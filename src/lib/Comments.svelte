@@ -1,67 +1,53 @@
-<style lang="scss">
-    #cusdis_thread > :global(iframe) {
-        height: 75vh;
-    }
-    
-    
-</style>
-
 <script lang="ts">
-    import { onMount } from 'svelte';
-    
     import Consent from './Consent.svelte';
     import type { Consentable } from './Consent';
-        
+
+    // Site path of the page, e.g. /feeds/main/101826_0950AM. Used as the
+    // discussion's term, since pages don't have unique <title>s to map on.
     export let pageID: string;
-    export let pageTitle: string;
-    
-    const cusdisStyle = `
-html, body {
-    background: none transparent;
-}
-`;
-    
-    // AI wrote this shit but it seems to work
-    function onIframeAdded(callback: (node: Element) => void) {
-        onMount(() => {
-            const observer = new MutationObserver((mutations) => {
-                for (const mutation of mutations) {
-                    if (mutation.type !== 'childList') continue;
-                    for (const node of mutation.addedNodes) {
-                        if (node.nodeName !== 'IFRAME') continue;
-                        callback(node as Element);
-                        return;
-                    }
-                }
-            });
-            const targetNode = document.getElementById('cusdis_thread');
-            if (targetNode) observer.observe(targetNode, { childList: true });
-            return () => observer.disconnect();
-        });
+
+    const giscusConfig = {
+        "repo": "heyjoeway/heyjoeway.github.io",
+        "repo-id": "R_kgDOIY5oyQ",
+        "category": "General",
+        "category-id": "DIC_kwDOIY5oyc4DKOks",
+        "mapping": "specific",
+        "strict": "0",
+        "reactions-enabled": "1",
+        "emit-metadata": "1",
+        "input-position": "top",
+        "theme": "dark_high_contrast",
+        "lang": "en",
+        "loading": "lazy"
+    };
+
+    // Navigating between pages reuses this element, so reload the embed
+    // whenever the page changes
+    function giscus(node: HTMLElement, term: string) {
+        function load(term: string) {
+            node.replaceChildren();
+            const script = document.createElement('script');
+            script.src = "https://giscus.app/client.js";
+            for (const [key, value] of Object.entries(giscusConfig)) {
+                script.setAttribute(`data-${key}`, value);
+            }
+            script.setAttribute("data-term", term);
+            script.crossOrigin = "anonymous";
+            script.async = true;
+            node.appendChild(script);
+        }
+        load(term);
+        return { update: load };
     }
-    
-    onIframeAdded((node: Element) => {
-        let srcdoc = node.getAttribute("srcdoc") || "";
-        const styleTag = `<style>${cusdisStyle}</style>`;
-        srcdoc = srcdoc.replace('</head>', `${styleTag}</head>`);
-        node.setAttribute("srcdoc", srcdoc);
-    });
-    
-    const cusdisConsentable = {
+
+    const giscusConsentable = {
+        key: "giscus",
         disabledMessage: "Comments are currently disabled.",
         buttonMessage: "Enable Comments",
-        privacyMessage: `By enabling comments, you agree to allow this website to connect to Cusdis and to the <a href="https://cusdis.com/privacy-policy" target="_blank">Cusdis Privacy Policy</a>.`
+        privacyMessage: `By enabling comments, you agree to allow this website to connect to giscus and GitHub, and to the <a href="https://github.com/giscus/giscus/blob/main/PRIVACY-POLICY.md" target="_blank">giscus Privacy Policy</a>.`
     } as Consentable;
 </script>
 
-<Consent consentable={cusdisConsentable}>
-    <div id="cusdis_thread"
-        data-host="https://cusdis.com"
-        data-app-id="93e3be58-0fd2-46ce-881f-6608d54d2fd4"
-        data-page-id={pageID}
-        data-page-title={pageTitle}
-        data-theme="dark"
-    ></div>
-    
-    <script async defer src="/cusdis.es.js"></script>
+<Consent consentable={giscusConsentable}>
+    <div class="giscus" use:giscus={pageID}></div>
 </Consent>
