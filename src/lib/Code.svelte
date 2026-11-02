@@ -4,6 +4,7 @@
 -->
 
 <script lang="ts">
+    import { browser } from "$app/environment";
     import { highlightCode } from "$lib/JSUtils.js";
     import Button from "$joeysvelte/Button.svelte";
     
@@ -12,6 +13,8 @@
 </script>
 
 <div class="code-container">
+    <!-- Not when server-rendered for RSS, where it can't do anything -->
+    {#if browser}
     <div class="copy-button">
       <Button
         height="26px"
@@ -20,6 +23,7 @@
         📋
       </Button>
     </div>
+    {/if}
     <pre><code>{@html highlightCode(code, lang)}</code></pre>
 </div>
 

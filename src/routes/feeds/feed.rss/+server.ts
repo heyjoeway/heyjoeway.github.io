@@ -22,7 +22,7 @@ export const GET: RequestHandler = async () => {
     ) as Post[];
     
     const xml = buildRss({
-        title: "heyjoeway: all posts",
+        title: "heyjoeway: feeds - all posts",
         link: absoluteUrl("/"),
         description: "Posts from every feed on heyjoeway",
         self: absoluteUrl("/feeds/feed.rss"),

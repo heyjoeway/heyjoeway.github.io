@@ -17,7 +17,7 @@
 </script>
 
 <svelte:head>
-    <link rel="alternate" type="application/rss+xml" title={feed.meta.title} href={feed.rss}>
+    <link rel="alternate" type="application/rss+xml" title="heyjoeway: feeds - {feed.meta.title}" href={feed.rss}>
 </svelte:head>
 
 <div class="header-container">

@@ -66,7 +66,7 @@ export async function buildArticlesRss(category?: string): Promise<string> {
     }));
     
     return buildRss({
-        title: category ? `heyjoeway: ${category} articles` : "heyjoeway: articles",
+        title: category ? `heyjoeway: articles - ${category}` : "heyjoeway: articles",
         link: absoluteUrl(path),
         description: category ? `Articles from heyjoeway tagged ${category}` : "Articles from heyjoeway",
         self: absoluteUrl(`${path}feed.rss`),

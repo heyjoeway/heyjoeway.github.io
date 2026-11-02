@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-	<link rel="alternate" type="application/rss+xml" title="heyjoeway: {data.slug} articles" href={rss}>
+	<link rel="alternate" type="application/rss+xml" title="heyjoeway: articles - {data.slug}" href={rss}>
 </svelte:head>
 
 <Layout bgText={data.slug}>

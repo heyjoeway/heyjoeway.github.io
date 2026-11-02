@@ -14,7 +14,7 @@ export const GET: RequestHandler = async ({ params }) => {
     const feed = await getFeed(params.feed!, true);
     
     const xml = buildRss({
-        title: feed.meta.title,
+        title: `heyjoeway: feeds - ${feed.meta.title}`,
         link: absoluteUrl(feed.url + "/"),
         description: feed.meta.description,
         self: absoluteUrl(feed.rss),
