@@ -1,7 +1,7 @@
 import { mdsvex } from "mdsvex";
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
-import { escapeBackticks } from "./src/lib/JSUtils.js";
+import { escapeTemplateLiteral } from "./src/lib/JSUtils.js";
 
 function remarkAddHeadingSequenceClasses() {
 	/**
@@ -45,7 +45,7 @@ const config = {
 					return `
 						<Components.pre
 							lang="${lang}"
-							code="{\`${escapeBackticks(code)}\`}"
+							code="{\`${escapeTemplateLiteral(code)}\`}"
 						/>
 					`;
 				}

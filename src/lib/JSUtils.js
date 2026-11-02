@@ -1,12 +1,16 @@
 import hljs from 'highlight.js';
 
 /**
- * Escapes backticks in a string.
+ * Escapes a string for use inside a JS template literal, so that it comes out
+ * unchanged (backslashes included).
  * @param {string} str
  * @returns {string}
  */
-export function escapeBackticks(str) {
-	return str.replace(/`/g, "\\`");
+export function escapeTemplateLiteral(str) {
+	return str
+		.replace(/\\/g, "\\\\")
+		.replace(/`/g, "\\`")
+		.replace(/\$\{/g, "\\${");
 }
 
 /**
