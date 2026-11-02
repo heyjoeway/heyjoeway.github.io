@@ -1,221 +1,99 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" ml-update="aware" ml-stage="preload" ml-view="top">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>miscway</title>
-    <link>http://jojudge.com/feeds/misc</link>
+    <link>https://jojudge.com/feeds/misc/</link>
     <description>everything else goes here</description>
     <language>en-us</language>
-    <pubDate>Wed, 26 Feb 2025 15:39:00 GMT</pubDate>
-    <lastBuildDate>Thu, 02 Oct 2025 16:02:00 GMT</lastBuildDate>
+    <pubDate>Wed, 14 Jan 2026 20:31:00 GMT</pubDate>
+    <lastBuildDate>Wed, 14 Jan 2026 20:31:00 GMT</lastBuildDate>
     <docs>https://www.rssboard.org/rss-specification</docs>
-    <generator>Custom</generator>
-    <atom:link href="http://jojudge.com/feeds/misc/feed.rss" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://jojudge.com/feeds/misc/feed.rss" rel="self" type="application/rss+xml"/>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/misc/011426_0325PM</link>
-      <description>&lt;script context="module"&gt;
-	export const metadata = {"hideHome":true};
-	const { hideHome } = metadata;
-&lt;/script&gt;
-
-&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;please start writing stuff in svelte please please please i beg of you&lt;/p&gt;
-&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <link>https://jojudge.com/feeds/misc/011426_0325PM/</link>
+      <description>&lt;p&gt;please start writing stuff in svelte please please please i beg of you&lt;/p&gt;</description>
       <pubDate>Wed, 14 Jan 2026 20:31:00 GMT</pubDate>
-      <guid>/feeds/misc/011426_0325PM</guid>
+      <guid>https://jojudge.com/feeds/misc/011426_0325PM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/misc/101525_0617PM</link>
-      <description>&lt;script context="module"&gt;
-	export const metadata = {"hideHome":true};
-	const { hideHome } = metadata;
-&lt;/script&gt;
-
-&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;i'm gonna be real, i don't think happy tree friends was like, a good thing, at all. especially considering when i watched it&lt;/p&gt;
-&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <link>https://jojudge.com/feeds/misc/101525_0617PM/</link>
+      <description>&lt;p&gt;i'm gonna be real, i don't think happy tree friends was like, a good thing, at all. especially considering when i watched it&lt;/p&gt;</description>
       <pubDate>Wed, 15 Oct 2025 22:23:00 GMT</pubDate>
-      <guid>/feeds/misc/101525_0617PM</guid>
+      <guid>https://jojudge.com/feeds/misc/101525_0617PM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/misc/092625_0805PM</link>
-      <description>&lt;script context="module"&gt;
-	export const metadata = {"hideHome":true};
-	const { hideHome } = metadata;
-&lt;/script&gt;
-
-&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;desktop linux will never be taken seriously unless some organization develops an mdm solution instead of yet another desktop environment&lt;/p&gt;
-&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <link>https://jojudge.com/feeds/misc/092625_0805PM/</link>
+      <description>&lt;p&gt;desktop linux will never be taken seriously unless some organization develops an mdm solution instead of yet another desktop environment&lt;/p&gt;</description>
       <pubDate>Sat, 27 Sep 2025 00:10:00 GMT</pubDate>
-      <guid>/feeds/misc/092625_0805PM</guid>
+      <guid>https://jojudge.com/feeds/misc/092625_0805PM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/misc/091225_1156AM</link>
-      <description>&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;nearly every time I've gone shopping for the past 6 months the flag is at half mast, and I can't help but think now "great, what the FUCK could it be this ...&lt;/p&gt;</description>
+      <link>https://jojudge.com/feeds/misc/091225_1156AM/</link>
+      <description>&lt;p&gt;nearly every time I've gone shopping for the past 6 months the flag is at half mast, and I can't help but think now "great, what the FUCK could it be this time"&lt;/p&gt;</description>
       <pubDate>Fri, 12 Sep 2025 16:02:00 GMT</pubDate>
-      <guid>/feeds/misc/091225_1156AM</guid>
+      <guid>https://jojudge.com/feeds/misc/091225_1156AM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/misc/081825_0856AM</link>
-      <description>&lt;script context="module"&gt;
-	export const metadata = {"hideHome":true};
-	const { hideHome } = metadata;
-&lt;/script&gt;
-
-&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;the best way to check if a repo is dead is to see how long non-bot PRs have been sitting idle&lt;/p&gt;
-&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <link>https://jojudge.com/feeds/misc/081825_0856AM/</link>
+      <description>&lt;p&gt;the best way to check if a repo is dead is to see how long non-bot PRs have been sitting idle&lt;/p&gt;</description>
       <pubDate>Mon, 18 Aug 2025 13:01:00 GMT</pubDate>
-      <guid>/feeds/misc/081825_0856AM</guid>
+      <guid>https://jojudge.com/feeds/misc/081825_0856AM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/misc/072225_1038AM</link>
-      <description>&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;here's a fun new game you can play with your friends and your family and your friends: take turns hammering needles into a rubber power plug until someone ...&lt;/p&gt;</description>
-      <pubDate>Tue, 22 Jul 2025 14:44:00 GMT</pubDate>
-      <guid>/feeds/misc/072225_1038AM</guid>
-    </item>
-    <item>
-      <title/>
-      <link>http://jojudge.com/feeds/misc/071125_0807PM</link>
-      <description>&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;can we stop putting every single possible argument to a command in the default help message for programs and just boil it down to the most common use cases...&lt;/p&gt;</description>
+      <link>https://jojudge.com/feeds/misc/071125_0807PM/</link>
+      <description>&lt;p&gt;can we stop putting every single possible argument to a command in the default help message for programs and just boil it down to the most common use cases, because it is really obnoxious to be looking for one simple argument (&lt;code&gt;-o&lt;/code&gt; in this case) only to be met with THIS&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/SCR-20250711-rlzu.DOshxJ3P.png" alt=""&gt;&lt;/p&gt;</description>
       <pubDate>Sat, 12 Jul 2025 00:13:00 GMT</pubDate>
-      <guid>/feeds/misc/071125_0807PM</guid>
+      <guid>https://jojudge.com/feeds/misc/071125_0807PM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/misc/062325_0232PM</link>
-      <description>
-&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
-&lt;p&gt;"damn kids dont play outside like they used to"&lt;/p&gt;
+      <link>https://jojudge.com/feeds/misc/062325_0232PM/</link>
+      <description>&lt;p&gt;"damn kids dont play outside like they used to"&lt;/p&gt;
 &lt;p&gt;the outside in question:&lt;/p&gt;
-&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/Screenshot_20250623-143015.Dq-YmIq3.png" alt=""&gt;&lt;/p&gt;</description>
       <pubDate>Mon, 23 Jun 2025 18:37:00 GMT</pubDate>
-      <guid>/feeds/misc/062325_0232PM</guid>
+      <guid>https://jojudge.com/feeds/misc/062325_0232PM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/misc/032525_1112AM</link>
-      <description>&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;i want to be enthralled by open source stuff as much as everyone else but i gotta be honest, obsidian at its best is still worse than notion at its worst. ...&lt;/p&gt;</description>
+      <link>https://jojudge.com/feeds/misc/032525_1112AM/</link>
+      <description>&lt;p&gt;i want to be enthralled by open source stuff as much as everyone else but i gotta be honest, obsidian at its best is still worse than notion at its worst. and the gap is BIG.&lt;/p&gt;
+&lt;p&gt;biggest problems:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;i am not paying $4/month to sync my notes, especially if that number could go up. i would rather waste time building my own app than pay monthly for something as basic as notes.&lt;/li&gt;
+&lt;li&gt;the obsidian livesync plugin is buggy and whiny. and its still the best free sync obsidian has.&lt;/li&gt;
+&lt;li&gt;git syncing is such a pain in the ass, don't even bother.&lt;/li&gt;
+&lt;li&gt;databases? I'm sure you could hack something together with dataview and templater, god knows i tried. prepare to spend hours on something notion has an actual system for.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I'm coming out of this completely disillusioned with obsidian. i do not understand the hype and i think a lot of people are singing its praises only to justify their own sunk cost&lt;/p&gt;</description>
       <pubDate>Tue, 25 Mar 2025 15:17:00 GMT</pubDate>
-      <guid>/feeds/misc/032525_1112AM</guid>
+      <guid>https://jojudge.com/feeds/misc/032525_1112AM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/misc/031925_1118AM</link>
-      <description>
-&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
-&lt;p&gt;very happy with &lt;a href="https://immich.app/" rel="nofollow"&gt;immich&lt;/a&gt; so far. haven't had a single problem with it past initial setup. (don't put the postgres db on an smb share) team rossman proves to be based once again&lt;/p&gt;
-&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <link>https://jojudge.com/feeds/misc/031925_1118AM/</link>
+      <description>&lt;p&gt;very happy with &lt;a href="https://immich.app/" rel="nofollow"&gt;immich&lt;/a&gt; so far. haven't had a single problem with it past initial setup. (don't put the postgres db on an smb share) team rossman proves to be based once again&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/chrome_mH221CNvWb.DTDJSkBB.png" alt=""&gt;&lt;/p&gt;</description>
       <pubDate>Wed, 19 Mar 2025 15:24:00 GMT</pubDate>
-      <guid>/feeds/misc/031925_1118AM</guid>
+      <guid>https://jojudge.com/feeds/misc/031925_1118AM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/misc/031825_1148AM</link>
-      <description>
-&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
-&lt;p&gt;debit card at the ready&lt;/p&gt;
-&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <link>https://jojudge.com/feeds/misc/031825_1148AM/</link>
+      <description>&lt;p&gt;debit card at the ready&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/Screenshot_20250318-114659.DJGqRlxD.png" alt=""&gt;&lt;/p&gt;</description>
       <pubDate>Tue, 18 Mar 2025 15:53:00 GMT</pubDate>
-      <guid>/feeds/misc/031825_1148AM</guid>
+      <guid>https://jojudge.com/feeds/misc/031825_1148AM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/misc/031725_0144PM</link>
-      <description>
-&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
-&lt;p&gt;nearly every microsoft product i use brings me genuine anguish. the only ones that don't off the top of my head are xbox controllers, the core office suite, todo, github, and vscode&lt;/p&gt;
-&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <link>https://jojudge.com/feeds/misc/031725_0144PM/</link>
+      <description>&lt;p&gt;nearly every microsoft product i use brings me genuine anguish. the only ones that don't off the top of my head are xbox controllers, the core office suite, todo, github, and vscode&lt;/p&gt;</description>
       <pubDate>Mon, 17 Mar 2025 17:50:00 GMT</pubDate>
-      <guid>/feeds/misc/031725_0144PM</guid>
+      <guid>https://jojudge.com/feeds/misc/031725_0144PM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/misc/022625_0622PM</link>
-      <description>&lt;script context="module"&gt;
-	export const metadata = {"hideHome":true};
-	const { hideHome } = metadata;
-&lt;/script&gt;
-
-&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;mood&lt;/p&gt;
-&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <link>https://jojudge.com/feeds/misc/022625_0622PM/</link>
+      <description>&lt;p&gt;mood&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/SCR-20250226-qbgv.AhEENYHQ.png" alt=""&gt;&lt;/p&gt;</description>
       <pubDate>Wed, 26 Feb 2025 23:28:00 GMT</pubDate>
-      <guid>/feeds/misc/022625_0622PM</guid>
-    </item>
-    <item>
-      <title/>
-      <link>http://jojudge.com/feeds/misc/022625_1034AM</link>
-      <description>&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;to all the people saying that it's zoomers' fault they are worse with tech: i just tried to copy the recipients from an email in outlook and paste it to th...&lt;/p&gt;</description>
-      <pubDate>Wed, 26 Feb 2025 15:39:00 GMT</pubDate>
-      <guid>/feeds/misc/022625_1034AM</guid>
+      <guid>https://jojudge.com/feeds/misc/022625_0622PM/</guid>
     </item>
   </channel>
 </rss>

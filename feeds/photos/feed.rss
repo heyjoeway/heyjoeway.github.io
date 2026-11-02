@@ -1,70 +1,61 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" ml-update="aware" ml-stage="preload" ml-view="top">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>photoway</title>
-    <link>http://jojudge.com/feeds/photos</link>
+    <link>https://jojudge.com/feeds/photos/</link>
     <description>*SNAP*</description>
     <language>en-us</language>
-    <pubDate>Wed, 12 Feb 2025 15:02:00 GMT</pubDate>
-    <lastBuildDate>Wed, 12 Feb 2025 15:18:00 GMT</lastBuildDate>
+    <pubDate>Sun, 13 Jul 2025 18:10:00 GMT</pubDate>
+    <lastBuildDate>Sun, 13 Jul 2025 18:10:00 GMT</lastBuildDate>
     <docs>https://www.rssboard.org/rss-specification</docs>
-    <generator>Custom</generator>
-    <atom:link href="http://jojudge.com/feeds/photos/feed.rss" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://jojudge.com/feeds/photos/feed.rss" rel="self" type="application/rss+xml"/>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/photos/071325_0205PM</link>
-      <description>
-&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
-&lt;p&gt;we made friends with a pigeon last night (also topaz ai unblur is no joke damn)&lt;/p&gt;
-&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <link>https://jojudge.com/feeds/photos/071325_0205PM/</link>
+      <description>&lt;p&gt;we made friends with a pigeon last night (also topaz ai unblur is no joke damn)&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/image.Br3jHxRC.jpeg" alt=""&gt;&lt;/p&gt;</description>
       <pubDate>Sun, 13 Jul 2025 18:10:00 GMT</pubDate>
-      <guid>/feeds/photos/071325_0205PM</guid>
+      <guid>https://jojudge.com/feeds/photos/071325_0205PM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/photos/031025_1101AM</link>
-      <description>
-&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
-&lt;p&gt;frens&lt;/p&gt;
-&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <link>https://jojudge.com/feeds/photos/031025_1101AM/</link>
+      <description>&lt;p&gt;frens&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20250309_143127.lbxfIxqf.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20250309_143219.BKEJVs9B.jpeg" alt=""&gt;&lt;/p&gt;</description>
       <pubDate>Mon, 10 Mar 2025 15:07:00 GMT</pubDate>
-      <guid>/feeds/photos/031025_1101AM</guid>
+      <guid>https://jojudge.com/feeds/photos/031025_1101AM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/photos/030525_1011AM</link>
-      <description>
-&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
-&lt;p&gt;cate&lt;/p&gt;
-&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <link>https://jojudge.com/feeds/photos/030525_1011AM/</link>
+      <description>&lt;p&gt;cate&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20250301_184209.BjpFGYoE.jpeg" alt=""&gt;&lt;/p&gt;</description>
       <pubDate>Wed, 05 Mar 2025 15:18:00 GMT</pubDate>
-      <guid>/feeds/photos/030525_1011AM</guid>
+      <guid>https://jojudge.com/feeds/photos/030525_1011AM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/photos/2024</link>
-      <description>
-&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
-
-&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <link>https://jojudge.com/feeds/photos/2024/</link>
+      <description>&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20240604_164409.8bAT6A6E.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/heyjoeway/heyjoeway.github.io/tree/master/src/feeds/photos/2024/20240702_183439.dng"&gt;20240702_183439.dng&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20240702_183439.CrX-r_Xa.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20240703_194016.CMRNzxvc.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/heyjoeway/heyjoeway.github.io/tree/master/src/feeds/photos/2024/20240703_194016.dng"&gt;20240703_194016.dng&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20240703_194016.CMRNzxvc.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/heyjoeway/heyjoeway.github.io/tree/master/src/feeds/photos/2024/20240816_161624.dng"&gt;20240816_161624.dng&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20240816_161624.DEDuTf-s.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/heyjoeway/heyjoeway.github.io/tree/master/src/feeds/photos/2024/20240816_161628.dng"&gt;20240816_161628.dng&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20240902_190315.DY0zt4oR.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20240903_191057.52EMo_dC.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20240907_145336.C1fwKKLb.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20240907_145340.ClB6Pv_A.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20240909_183014.B8b27pVa.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20240922_210216.BpswFTdv.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20241005_100705.ByPjvi2A.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20241005_100705.B0S_brn5.png" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20241011_161249-2.DrYwNiqo.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20241011_161249.DlaRbNVo.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/DSC_0003_BURST20240322135635559_20(1).0_hK7LeH.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/DSC_0003_BURST20240322135635559.B-8534dZ.jpeg" alt=""&gt;&lt;/p&gt;</description>
       <pubDate>Wed, 12 Feb 2025 15:02:00 GMT</pubDate>
-      <guid>/feeds/photos/2024</guid>
+      <guid>https://jojudge.com/feeds/photos/2024/</guid>
     </item>
   </channel>
 </rss>

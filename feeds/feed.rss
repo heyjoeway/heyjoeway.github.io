@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>heyjoeway: all posts</title>
+    <link>https://jojudge.com/</link>
+    <description>Posts from every feed on heyjoeway</description>
+    <language>en-us</language>
+    <pubDate>Sun, 18 Oct 2026 13:55:00 GMT</pubDate>
+    <lastBuildDate>Sun, 18 Oct 2026 13:55:00 GMT</lastBuildDate>
+    <docs>https://www.rssboard.org/rss-specification</docs>
+    <atom:link href="https://jojudge.com/feeds/feed.rss" rel="self" type="application/rss+xml"/>
+    <item>
+      <link>https://jojudge.com/feeds/main/101826_0950AM/</link>
+      <description>&lt;p&gt;every software developer on the planet right now&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=mlFja3c3vBU"&gt;https://www.youtube.com/watch?v=mlFja3c3vBU&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Sun, 18 Oct 2026 13:55:00 GMT</pubDate>
+      <guid>https://jojudge.com/feeds/main/101826_0950AM/</guid>
+    </item>
+    <item>
+      <link>https://jojudge.com/feeds/main/072226_0941PM/</link>
+      <description>&lt;p&gt;&lt;a href="https://atgroceries.com" rel="nofollow"&gt;atgroceries.com&lt;/a&gt; gource&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=1Ipdw7IW7Ss"&gt;https://www.youtube.com/watch?v=1Ipdw7IW7Ss&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Thu, 23 Jul 2026 01:46:00 GMT</pubDate>
+      <guid>https://jojudge.com/feeds/main/072226_0941PM/</guid>
+    </item>
+    <item>
+      <link>https://jojudge.com/feeds/main/022526_0816PM/</link>
+      <description>&lt;p&gt;grocery app update: going Good
+(multi-list and auth is IN. bonus of now knowing how to do RLS. polishing and doing more fundamental but out of the way functions.)&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/chrome_nbZbyCoEr1.BWX0TGWO.png" alt=""&gt;&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;I figure I should give an update on the grocery app since I'm working on my portfolio! Its gotten a bit of a glow up and is feature complete for use with a single list. Multi-list and authentication is still a WIP, but since my wife and I have been so satisfied with it, that should be next on the menu. I've also Docker-ized it to make future hosting as simple as possible. The item emojis are generated using &lt;a
+  href="https://huggingface.co/KomeijiForce/bart-large-emojilm"
+  rel="nofollow"
+&gt;KomeijiForce/bart-large-emojilm&lt;/a&gt;, and while they're not always the most accurate, they're mainly there to visually break up the list and be easier on the eyes.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/SCR-20250930-klce.TtxsJYw0.png" alt=""&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://jojudge.com/feeds/main/093025_1135AM"&gt;jojudge.com/feeds/main/093025_1135AM&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;</description>
+      <pubDate>Thu, 26 Feb 2026 01:21:00 GMT</pubDate>
+      <guid>https://jojudge.com/feeds/main/022526_0816PM/</guid>
+    </item>
+    <item>
+      <link>https://jojudge.com/feeds/vidya/012226_0741PM/</link>
+      <description>&lt;p&gt;as i hit shuffle on my game library i'm gonna try and catalog them here so I don't forget them. i'll start there and do full reviews if I ever feel like it. anyway:&lt;/p&gt;
+&lt;p&gt;new discovery: Ball Jacks for the megadrive. eu/jp only. fun little game by 1993 Namco where you pilot a lil robot trying to keep 4 balls on your side of the screen by reaching out and grabbing them from your oponent. really good music and ui/vfx design. so overstimulating but it's really fun trying to figure out all the weird mechanics and rules. apparently it reviewed really bad when it came out? I guess if I paid $100 i'd be pissed but as just a silent blip in a sea of games it stands out.&lt;/p&gt;</description>
+      <pubDate>Fri, 23 Jan 2026 00:46:00 GMT</pubDate>
+      <guid>https://jojudge.com/feeds/vidya/012226_0741PM/</guid>
+    </item>
+    <item>
+      <link>https://jojudge.com/feeds/main/093025_1135AM/</link>
+      <description>&lt;p&gt;I figure I should give an update on the grocery app since I'm working on my portfolio! Its gotten a bit of a glow up and is feature complete for use with a single list. Multi-list and authentication is still a WIP, but since my wife and I have been so satisfied with it, that should be next on the menu. I've also Docker-ized it to make future hosting as simple as possible. The item emojis are generated using &lt;a
+  href="https://huggingface.co/KomeijiForce/bart-large-emojilm"
+  rel="nofollow"
+&gt;KomeijiForce/bart-large-emojilm&lt;/a&gt;, and while they're not always the most accurate, they're mainly there to visually break up the list and be easier on the eyes.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/SCR-20250930-klce.TtxsJYw0.png" alt=""&gt;&lt;/p&gt;</description>
+      <pubDate>Thu, 02 Oct 2025 16:02:00 GMT</pubDate>
+      <guid>https://jojudge.com/feeds/main/093025_1135AM/</guid>
+    </item>
+    <item>
+      <link>https://jojudge.com/feeds/photos/071325_0205PM/</link>
+      <description>&lt;p&gt;we made friends with a pigeon last night (also topaz ai unblur is no joke damn)&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/image.Br3jHxRC.jpeg" alt=""&gt;&lt;/p&gt;</description>
+      <pubDate>Sun, 13 Jul 2025 18:10:00 GMT</pubDate>
+      <guid>https://jojudge.com/feeds/photos/071325_0205PM/</guid>
+    </item>
+    <item>
+      <link>https://jojudge.com/feeds/misc/062325_0232PM/</link>
+      <description>&lt;p&gt;"damn kids dont play outside like they used to"&lt;/p&gt;
+&lt;p&gt;the outside in question:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/Screenshot_20250623-143015.Dq-YmIq3.png" alt=""&gt;&lt;/p&gt;</description>
+      <pubDate>Mon, 23 Jun 2025 18:37:00 GMT</pubDate>
+      <guid>https://jojudge.com/feeds/misc/062325_0232PM/</guid>
+    </item>
+    <item>
+      <link>https://jojudge.com/feeds/vidya/051825_0220PM/</link>
+      <description>&lt;p&gt;i reset my quest 1 to sell it, sold it, was told it was mdm locked, and then found out that it doesn't show up under my meta account, making it a brick. i didn't even buy this secondhand, i have the receipt.&lt;/p&gt;
+&lt;p&gt;never give facebook money&lt;/p&gt;</description>
+      <pubDate>Sun, 18 May 2025 18:25:00 GMT</pubDate>
+      <guid>https://jojudge.com/feeds/vidya/051825_0220PM/</guid>
+    </item>
+    <item>
+      <link>https://jojudge.com/feeds/main/043025_0517PM/</link>
+      <description>&lt;p&gt;Grocery apps are generally terrible, unfocused, and made by people I'm convinced don't even shop for themselves. So I made one last weekend. &lt;/p&gt;
+&lt;p&gt;It's designed to require as little interaction as possible so that I can get my thoughts stored and retrieved without getting distracted poking around ads and other clunky crap. Any new features will be designed to not bloat what is already a pretty good workflow. Also it live-syncs between devices and users.&lt;/p&gt;
+&lt;p&gt;Built with Svelte, Supabase, and Flowbite. Shoutout to &lt;a
+  href="https://svupa.vercel.app"
+  rel="nofollow"
+&gt;svupa&lt;/a&gt; for being based.&lt;/p&gt;
+&lt;p&gt;Right now very early. No auth yet, but soon(tm). I will open source it after I'm happy with it but right now I have dollar sign eyes so licensing will have some (fair) twists. If I get there.&lt;/p&gt;
+&lt;p&gt;Comment your thoughts. &lt;strong&gt;Please. &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/Screenshot_20250430-170750.vv0O5KN_.png" alt=""&gt;&lt;/p&gt;</description>
+      <pubDate>Wed, 30 Apr 2025 21:22:00 GMT</pubDate>
+      <guid>https://jojudge.com/feeds/main/043025_0517PM/</guid>
+    </item>
+    <item>
+      <link>https://jojudge.com/feeds/vidya/040225_1006AM/</link>
+      <description>&lt;p&gt;damnit&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/Untitled.B0dMGQSE.png" alt=""&gt;&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/SCR-20250401-rlwy.DwuFupsv.png" alt=""&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://jojudge.com/feeds/vidya/040125_0805PM"&gt;jojudge.com/feeds/vidya/040125_0805PM&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;</description>
+      <pubDate>Wed, 02 Apr 2025 14:11:00 GMT</pubDate>
+      <guid>https://jojudge.com/feeds/vidya/040225_1006AM/</guid>
+    </item>
+    <item>
+      <link>https://jojudge.com/feeds/meta/032425_0239PM/</link>
+      <description>&lt;p&gt;done the self quoting part. for the others, i think i'm gonna have to add some sort of caching system in the post frontmatter so it doesn't pull the posts on every build&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;I think I will have to add self-quoting support very soon, and when I do I also want to add twitter/bluesky/mastodon/reddit/whatever else i can think of embedding as well&lt;/p&gt;&lt;p&gt;&lt;a href="https://jojudge.com/feeds/meta/031925_1128AM"&gt;jojudge.com/feeds/meta/031925_1128AM&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;</description>
+      <pubDate>Mon, 24 Mar 2025 19:03:00 GMT</pubDate>
+      <guid>https://jojudge.com/feeds/meta/032425_0239PM/</guid>
+    </item>
+    <item>
+      <link>https://jojudge.com/feeds/misc/031925_1118AM/</link>
+      <description>&lt;p&gt;very happy with &lt;a href="https://immich.app/" rel="nofollow"&gt;immich&lt;/a&gt; so far. haven't had a single problem with it past initial setup. (don't put the postgres db on an smb share) team rossman proves to be based once again&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/chrome_mH221CNvWb.DTDJSkBB.png" alt=""&gt;&lt;/p&gt;</description>
+      <pubDate>Wed, 19 Mar 2025 15:24:00 GMT</pubDate>
+      <guid>https://jojudge.com/feeds/misc/031925_1118AM/</guid>
+    </item>
+    <item>
+      <link>https://jojudge.com/feeds/misc/031825_1148AM/</link>
+      <description>&lt;p&gt;debit card at the ready&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/Screenshot_20250318-114659.DJGqRlxD.png" alt=""&gt;&lt;/p&gt;</description>
+      <pubDate>Tue, 18 Mar 2025 15:53:00 GMT</pubDate>
+      <guid>https://jojudge.com/feeds/misc/031825_1148AM/</guid>
+    </item>
+    <item>
+      <link>https://jojudge.com/feeds/misc/031725_0144PM/</link>
+      <description>&lt;p&gt;nearly every microsoft product i use brings me genuine anguish. the only ones that don't off the top of my head are xbox controllers, the core office suite, todo, github, and vscode&lt;/p&gt;</description>
+      <pubDate>Mon, 17 Mar 2025 17:50:00 GMT</pubDate>
+      <guid>https://jojudge.com/feeds/misc/031725_0144PM/</guid>
+    </item>
+    <item>
+      <link>https://jojudge.com/feeds/photos/031025_1101AM/</link>
+      <description>&lt;p&gt;frens&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20250309_143127.lbxfIxqf.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20250309_143219.BKEJVs9B.jpeg" alt=""&gt;&lt;/p&gt;</description>
+      <pubDate>Mon, 10 Mar 2025 15:07:00 GMT</pubDate>
+      <guid>https://jojudge.com/feeds/photos/031025_1101AM/</guid>
+    </item>
+    <item>
+      <link>https://jojudge.com/feeds/photos/030525_1011AM/</link>
+      <description>&lt;p&gt;cate&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20250301_184209.BjpFGYoE.jpeg" alt=""&gt;&lt;/p&gt;</description>
+      <pubDate>Wed, 05 Mar 2025 15:18:00 GMT</pubDate>
+      <guid>https://jojudge.com/feeds/photos/030525_1011AM/</guid>
+    </item>
+    <item>
+      <link>https://jojudge.com/feeds/main/030325_1016PM/</link>
+      <description>&lt;p&gt;Moved a few of my personal notes into Articles. Seems like the ordering is screwed up though so they're at the bottom. Will probably fix it tomorrow.&lt;/p&gt;</description>
+      <pubDate>Tue, 04 Mar 2025 03:21:00 GMT</pubDate>
+      <guid>https://jojudge.com/feeds/main/030325_1016PM/</guid>
+    </item>
+    <item>
+      <link>https://jojudge.com/feeds/vidya/030125_0615PM/</link>
+      <description>&lt;p&gt;&lt;a
+  href="https://github.com/hedge-dev/UnleashedRecomp"
+  rel="nofollow"
+&gt;https://github.com/hedge-dev/UnleashedRecomp&lt;/a&gt;
+oh my god. oh my god. oh my god. oh my god. oh my god. oh my GOD&lt;/p&gt;</description>
+      <pubDate>Sat, 01 Mar 2025 23:20:00 GMT</pubDate>
+      <guid>https://jojudge.com/feeds/vidya/030125_0615PM/</guid>
+    </item>
+    <item>
+      <link>https://jojudge.com/feeds/vidya/022825_0729AM/</link>
+      <description>&lt;p&gt;&lt;a
+  href="https://gamebanana.com/mods/573087"
+  rel="nofollow"
+&gt;https://gamebanana.com/mods/573087&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;video src="https://jojudge.com/_app/immutable/assets/Replay%202025-02-27%2019-28-19.Dh5eKozw.mp4" controls&gt;&lt;/video&gt;&lt;/p&gt;</description>
+      <pubDate>Fri, 28 Feb 2025 12:35:00 GMT</pubDate>
+      <guid>https://jojudge.com/feeds/vidya/022825_0729AM/</guid>
+    </item>
+    <item>
+      <link>https://jojudge.com/feeds/main/022225_0448PM/</link>
+      <description>&lt;p&gt;Alright, so I'm pretty much done developing v1 of this Twitter-clone... thing so I guess it's time to start using this. So, hi! By the end of this you'll probably realize that the character limit on posts is 1̵̨̡̭̜̣̝̖̗̩͈͚̻͚͍̿̄͆͂̀͝ͅ.̵̨̠͔̥͐̓̏͋͂8̷͓̈́̾̈́̀̂̾̾͑̓̀̿̚̕͠7̷̡̞͇̦̦̗̮̹̭̿͒̈́͑́̓͐͊́̉͑̉4̶̨̧̩̹̺͉̹̦̖̩̟̮̘̹͙̀͆̄̄̍̈́̉͠3̵̞̼̮̙̟̙͛̀̄̉͌̈͊͐̂̂̀͝e̴̢̡̳̰̭͚̖̦̺͔͗́̄4̷̡̩̺̞̟̘͈̼̫͎̭̊̒͝&lt;/p&gt;
+&lt;h2&gt;Where the HELL did you go&lt;/h2&gt;
+&lt;p&gt;So IIRC I vanished off of Twitter at like, what, mid 2023? Late 2022? Deadass I can't even remember anymore. It was right before Musk bought it and god DAMN am I glad I jumped ship when I did. That being said my decision to get out wasn't really hinging on his ownership but that's a whole can of worms so I'll save that for later.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;tl;dr: I needed to lock the fuck in.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Grad school was wrapping up and I had some VERY important decisions to make. Like for example, where my wife and I were gonna live! Permanently! We got an EXTREMELY good offer on a small house with a small catch. Just an, uh, teeny tiny itty bitty little thing. It wasn't finished. Not in the "needs renovation" sense, no, I mean the house got halfway through construction before some... circumstances... left it unfinished.&lt;/p&gt;
+&lt;p&gt;So I graduate and we're lucky enough that we're able to take a loan out to purchase the house and property on my parents' credit (since it's a construction loan and certain stipulations come with that and blah blah blblblbla), although we handle all expenses. And now I'm out of grad school and into NEET territory while I look for a job.&lt;/p&gt;
+&lt;p&gt;My god, if you're looking for a job right now: the current market with slam you with one of the most depressing, demoralizing, time-wasting experiences you will ever encounter. On one occasion, &lt;strong&gt;I received my rejection email before I got the confirmation that I applied&lt;/strong&gt;. The current narrative I see on Reddit right now that AI ATS filtering isn't a real thing is total astroturf BS. After like 2-3 months of searching though, I found a listing where HR actually DOES do their job, and that position I'm currently quite happy with.&lt;/p&gt;
+&lt;p&gt;The next year is basically spent funneling all of our extra money into building the house. Going by what my budgeting program says, to date we've spent about $20K. Which, for everything the house needed, is actually not that bad. Less than half of that spending came from a loan. I'll probably show off some of the place in the near future. Still not even close to "done", but really when is any house. The place was deemed livable towards the end of July and we &lt;em&gt;instantly&lt;/em&gt; moved in.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The same week:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;One of our cars completely shit the bed. We kinda saw it coming, the car was not exactly in the best state when we bought it. We were hoping we'd get another year out of it though. So there went another chunk of change and another loan to sell our souls with. The usual.&lt;/li&gt;
+&lt;li&gt;Wife got new job.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We also brought to our new place my parents' cat that had really bonded with us. And about a month later, we adopted him a sister so he could have company. You &lt;strong&gt;will&lt;/strong&gt; be seeing them soon.&lt;/p&gt;
+&lt;p&gt;Uhhh okay what else. I've been doing a lot of homelab stuff. Still getting comfortable in our space, putting together rooms and desks and workbenches and stuff. I don't even know man. So much has happened that it is genuinely difficult to remember anything before last year. I'm hoping to break that mental barrier down and rediscover stuff that I used to enjoy. I've got so much other random shit to talk about but I think I'm running out of steam here.&lt;/p&gt;
+&lt;p&gt;If anyone actually reads this PLEASE comment I need Internet Validation&lt;/p&gt;</description>
+      <pubDate>Sat, 22 Feb 2025 21:53:00 GMT</pubDate>
+      <guid>https://jojudge.com/feeds/main/022225_0448PM/</guid>
+    </item>
+    <item>
+      <link>https://jojudge.com/feeds/main/021725_1131PM/</link>
+      <description>&lt;p&gt;Okay so if this works I'm very close to actually starting to post. Testing edits&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/heyjoeway/heyjoeway.github.io/tree/master/src/feeds/main/021725_1131PM/Dino Ornament.stl"&gt;Dino Ornament.stl&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Tue, 18 Feb 2025 14:12:00 GMT</pubDate>
+      <guid>https://jojudge.com/feeds/main/021725_1131PM/</guid>
+    </item>
+    <item>
+      <link>https://jojudge.com/feeds/meta/codetest/</link>
+      <description>&lt;h1&gt;Markdown Test&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;&lt;span class="code-line"&gt;&lt;span class="hljs-keyword"&gt;function&lt;/span&gt; &lt;span class="hljs-title function_"&gt;foo&lt;/span&gt;(&lt;span class="hljs-params"&gt;bar&lt;/span&gt;) {&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="hljs-variable language_"&gt;console&lt;/span&gt;.&lt;span class="hljs-title function_"&gt;log&lt;/span&gt;(bar);&lt;/span&gt;
+&lt;span&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&lt;span class="code-line"&gt;&lt;span class="hljs-keyword"&gt;from&lt;/span&gt; dataclasses &lt;span class="hljs-keyword"&gt;import&lt;/span&gt; dataclass&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-meta"&gt;@dataclass&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-keyword"&gt;class&lt;/span&gt; &lt;span class="hljs-title class_"&gt;Foo&lt;/span&gt;:&lt;/span&gt;
+&lt;span&gt;    bar: &lt;span class="hljs-built_in"&gt;str&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&lt;span class="code-line"&gt;&lt;span class="hljs-built_in"&gt;Set-ExecutionPolicy&lt;/span&gt; Unrestricted&lt;/span&gt;
+&lt;span class="code-line"&gt;&lt;span class="hljs-variable"&gt;$test&lt;/span&gt; = &lt;span class="hljs-selector-tag"&gt;@&lt;/span&gt;(&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="hljs-string"&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span class="code-line"&gt;    &lt;span class="hljs-string"&gt;&amp;quot;bar&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span class="hljs-string"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</description>
+      <pubDate>Wed, 12 Feb 2025 20:20:00 GMT</pubDate>
+      <guid>https://jojudge.com/feeds/meta/codetest/</guid>
+    </item>
+    <item>
+      <link>https://jojudge.com/feeds/vidya/021525_1045AM/</link>
+      <description>&lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=A21wxZKiao8"&gt;https://www.youtube.com/watch?v=A21wxZKiao8&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Wed, 12 Feb 2025 17:22:00 GMT</pubDate>
+      <guid>https://jojudge.com/feeds/vidya/021525_1045AM/</guid>
+    </item>
+    <item>
+      <link>https://jojudge.com/feeds/photos/2024/</link>
+      <description>&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20240604_164409.8bAT6A6E.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/heyjoeway/heyjoeway.github.io/tree/master/src/feeds/photos/2024/20240702_183439.dng"&gt;20240702_183439.dng&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20240702_183439.CrX-r_Xa.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20240703_194016.CMRNzxvc.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/heyjoeway/heyjoeway.github.io/tree/master/src/feeds/photos/2024/20240703_194016.dng"&gt;20240703_194016.dng&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20240703_194016.CMRNzxvc.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/heyjoeway/heyjoeway.github.io/tree/master/src/feeds/photos/2024/20240816_161624.dng"&gt;20240816_161624.dng&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20240816_161624.DEDuTf-s.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/heyjoeway/heyjoeway.github.io/tree/master/src/feeds/photos/2024/20240816_161628.dng"&gt;20240816_161628.dng&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20240902_190315.DY0zt4oR.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20240903_191057.52EMo_dC.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20240907_145336.C1fwKKLb.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20240907_145340.ClB6Pv_A.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20240909_183014.B8b27pVa.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20240922_210216.BpswFTdv.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20241005_100705.ByPjvi2A.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20241005_100705.B0S_brn5.png" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20241011_161249-2.DrYwNiqo.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/20241011_161249.DlaRbNVo.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/DSC_0003_BURST20240322135635559_20(1).0_hK7LeH.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/DSC_0003_BURST20240322135635559.B-8534dZ.jpeg" alt=""&gt;&lt;/p&gt;</description>
+      <pubDate>Wed, 12 Feb 2025 15:02:00 GMT</pubDate>
+      <guid>https://jojudge.com/feeds/photos/2024/</guid>
+    </item>
+    <item>
+      <link>https://jojudge.com/feeds/meta/meme/</link>
+      <description>&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/banner.D0Zk-m-t.png" alt=""&gt;&lt;/p&gt;</description>
+      <pubDate>Wed, 12 Feb 2025 15:02:00 GMT</pubDate>
+      <guid>https://jojudge.com/feeds/meta/meme/</guid>
+    </item>
+  </channel>
+</rss>

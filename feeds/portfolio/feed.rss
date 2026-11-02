@@ -1,118 +1,199 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" ml-update="aware" ml-stage="preload" ml-view="top">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Portfolio</title>
-    <link>http://jojudge.com/feeds/portfolio</link>
+    <link>https://jojudge.com/feeds/portfolio/</link>
     <description>Mostly just citations for my resume :)</description>
     <language>en-us</language>
     <pubDate>Thu, 02 Oct 2025 16:02:00 GMT</pubDate>
     <lastBuildDate>Thu, 20 Nov 2025 18:12:00 GMT</lastBuildDate>
     <docs>https://www.rssboard.org/rss-specification</docs>
-    <generator>Custom</generator>
-    <atom:link href="http://jojudge.com/feeds/portfolio/feed.rss" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://jojudge.com/feeds/portfolio/feed.rss" rel="self" type="application/rss+xml"/>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/portfolio/091425_0247PM</link>
-      <description>&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;In February of 2021, I began my Master's project: a refresh of Clarkson University's MaxFlight VR2004 motion simulator, dubbed the Virtual Reality Coaster ...&lt;/p&gt;</description>
+      <link>https://jojudge.com/feeds/portfolio/091425_0247PM/</link>
+      <description>&lt;p&gt;In February of 2021, I began my Master's project: a refresh of Clarkson University's MaxFlight VR2004 motion simulator, dubbed the Virtual Reality Coaster (VRC)! This machine was purchased from a local arcade sometime in the mid-2000s, and it shows. The software is quite dated, so I produced several resources to bring it up towards modern standards:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;pyMaxFlight:&lt;/strong&gt; Exposes all capabilities of the MaxFlight Motion Client programmatically through Python on a the Control PC. This module only allows for local operation. MaxFlight did not provide their own public API for interfacing with the simulator, so this module works by directly accessing the Motion Client window using the Win32 API, simulating button presses and slider movements. (&lt;a
+  href="https://github.com/Clarkson-IMPETUS/pyMaxFlight"
+  rel="nofollow"
+&gt;GitHub&lt;/a&gt;, &lt;a
+  href="https://pymaxflight.readthedocs.io/en/latest/src/pyMaxFlight/"
+  rel="nofollow"
+&gt;Docs&lt;/a&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;pyWSConsole:&lt;/strong&gt; Provides network communication via WebSockets, with a focus on stability and persistent connections. Uses a console-like interface and provides automatic help documentation. (&lt;a
+  href="https://github.com/heyjoeway/pyWSConsole"
+  rel="nofollow"
+&gt;GitHub&lt;/a&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;VRC-Apps:&lt;/strong&gt; A collection of Python applications to extend the functionality of the VRC using the aforementioned libraries. (&lt;a
+  href="https://github.com/Clarkson-IMPETUS/VRC-Apps"
+  rel="nofollow"
+&gt;GitHub&lt;/a&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/IMG_AA04362AF84B-1.D9WN_J4n.4d2arJkM.jpeg" alt=""&gt;&lt;/p&gt;</description>
       <pubDate>Thu, 02 Oct 2025 16:02:00 GMT</pubDate>
-      <guid>/feeds/portfolio/091425_0247PM</guid>
+      <guid>https://jojudge.com/feeds/portfolio/091425_0247PM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/portfolio/091425_0452PM</link>
-      <description>&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;lcatDB (Lake Champlain Anglers’ Temperature Database) was an online database and single page application (SPA) meant to provide a centralized means of reco...&lt;/p&gt;</description>
+      <link>https://jojudge.com/feeds/portfolio/091425_0452PM/</link>
+      <description>&lt;p&gt;lcatDB (Lake Champlain Anglers’ Temperature Database) was an online database and single page application (SPA) meant to provide a centralized means of recording, accessing, and analyzing vertical water temperature profiles to citizens of the Lake Champlain region. It was supported by the SUNY Plattsburgh Center for Earth &amp; Environmental Science and the Lake Champlain Sea Grant. lcatDB was (what I consider to be) my first attempt at full stack software development. While the app never really took off and is no longer around today, I was able to demonstrate many of my strengths and learned several valuable lessons.&lt;/p&gt;
+&lt;p&gt;You can read more in my &lt;a href="https://jojudge.com/articles/lcatdb"&gt;lcatDB Retrospective&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;video src="https://jojudge.com/_app/immutable/assets/lcatDB%20Responsive%20Demo.CH1cWjrv.mp4" controls&gt;&lt;/video&gt;&lt;/p&gt;</description>
       <pubDate>Thu, 02 Oct 2025 16:02:00 GMT</pubDate>
-      <guid>/feeds/portfolio/091425_0452PM</guid>
+      <guid>https://jojudge.com/feeds/portfolio/091425_0452PM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/portfolio/092825_0429PM</link>
-      <description>&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;While working at Champlain Valley Educational Services, I lead the development and deployment of several internal databases and applications using the low-...&lt;/p&gt;</description>
+      <link>https://jojudge.com/feeds/portfolio/092825_0429PM/</link>
+      <description>&lt;p&gt;While working at Champlain Valley Educational Services, I lead the development and deployment of several internal databases and applications using the low-code app builder &lt;a
+  href="https://budibase.com/"
+  rel="nofollow"
+&gt;Budibase&lt;/a&gt;. This allowed me to prototype, iterate, and ship applications quickly while retaining enough flexibility to not run into dead ends.&lt;/p&gt;
+&lt;p&gt;Budibase was selected only after a thorough analysis of all available "app-builder" services with a preference for solutions which have options for remote hosting, self-hosting, HIPAA compliance, and are generally usable by developers and customers alike.&lt;/p&gt;
+&lt;p&gt;Three applications I created replaced existing FileMaker databases with the goal being drop-in replacement. All of these applications have been deployed for at least 3 months with success.&lt;/p&gt;
+&lt;p&gt;Two original applications were also produced. The first was a simple inventory collection app for use with a barcode scanner. The second was an application to collect check-ins for a public vote on the CVES Capital Project land sale. This collected over 500 submissions and ensured that any duplicate names/addresses were prevented and made aware to staff. This was completed in a rapid iterative process with clients over a period of about 3 weeks.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/chrome_0vhKzo65eV.CDGQMyd4.png" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/chrome_LSgdXQvzca.BA9zgNzm.png" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/chrome_TyQla4JZ5Q.CfKCDbVU.png" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/chrome_pBxk5wcjii.C3D7oEC5.png" alt=""&gt;&lt;/p&gt;</description>
       <pubDate>Thu, 02 Oct 2025 16:02:00 GMT</pubDate>
-      <guid>/feeds/portfolio/092825_0429PM</guid>
+      <guid>https://jojudge.com/feeds/portfolio/092825_0429PM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/portfolio/093025_0137PM</link>
-      <description>&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;Here's (an attempt at) a comprehensive list of everywhere I've used Python:&lt;/p&gt;
+      <link>https://jojudge.com/feeds/portfolio/093025_0137PM/</link>
+      <description>&lt;p&gt;Here's (an attempt at) a comprehensive list of everywhere I've used Python:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;2023 - now: CVES
 &lt;ul&gt;
-&lt;li&gt;Data processing for user accounts, synchronizing multiple da...&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description>
+&lt;li&gt;Data processing for user accounts, synchronizing multiple databases.&lt;/li&gt;
+&lt;li&gt;Headless browser automation for data collection without official APIs. (Selenium)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2019 - 2023: Clarkson Virtual Roller Coaster
+&lt;ul&gt;
+&lt;li&gt;&lt;a
+  href="https://github.com/Clarkson-IMPETUS/VRC-Apps"
+  rel="nofollow"
+&gt;Produced Python API for controlling coaster simulator machine.&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Interfaced with legacy software using Win32 API.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a
+  href="https://github.com/Clarkson-IMPETUS/VRC-Apps"
+  rel="nofollow"
+&gt;Produced example applications using API to demonstrate functionality and replace legacy integrations.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Automatic API documentation produced via mkdocs and annotation strings.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2019 - 2023: Clarkson IMPETUS
+&lt;ul&gt;
+&lt;li&gt;&lt;a
+  href="https://github.com/heyjoeway/miniwindeploy"
+  rel="nofollow"
+&gt;Produced miniwindeploy library for automating deployment of 30+ Windows laptops.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The earliest Python Git repo I have is when I started with GitHub in 2015: &lt;a
+  href="https://github.com/heyjoeway/raspmusicbox-server"
+  rel="nofollow"
+&gt;https://github.com/heyjoeway/raspmusicbox-server&lt;/a&gt;&lt;/p&gt;</description>
       <pubDate>Thu, 02 Oct 2025 16:02:00 GMT</pubDate>
-      <guid>/feeds/portfolio/093025_0137PM</guid>
+      <guid>https://jojudge.com/feeds/portfolio/093025_0137PM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/portfolio/093025_0205PM</link>
-      <description>&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;The site that you're reading right now is entirely Svelte-based. What you're reading right now is a &lt;em&gt;static&lt;/em&gt; build of the site. That means anything that woul...&lt;/p&gt;</description>
+      <link>https://jojudge.com/feeds/portfolio/093025_0205PM/</link>
+      <description>&lt;p&gt;The site that you're reading right now is entirely Svelte-based. What you're reading right now is a &lt;em&gt;static&lt;/em&gt; build of the site. That means anything that would typically involve dynamic routing - such as articles and feeds - are instead compiled ahead of time so that the only hosting is for a directory of files. That is to say, there is no server-side code! For you that means a faster loading site. For me, that means not having to worry about keeping the server running, keeping it secure, and defending against intrusions.&lt;/p&gt;
+&lt;p&gt;However, at home I have a separate copy of the site running in &lt;em&gt;dynamic&lt;/em&gt; mode, I get additional features for post management, which you can see in the picture below. This helps me make quick updates to the site when I'm out and about.&lt;/p&gt;
+&lt;p&gt;My only other major Svelte project at the moment is my Grocery app. I haven't talked about it too much publicly yet but you can read my most recent post about in the embed.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/SCR-20250930-mnoq.DNXqCdJl.png" alt=""&gt;&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;I figure I should give an update on the grocery app since I'm working on my portfolio! Its gotten a bit of a glow up and is feature complete for use with a single list. Multi-list and authentication is still a WIP, but since my wife and I have been so satisfied with it, that should be next on the menu. I've also Docker-ized it to make future hosting as simple as possible. The item emojis are generated using &lt;a
+  href="https://huggingface.co/KomeijiForce/bart-large-emojilm"
+  rel="nofollow"
+&gt;KomeijiForce/bart-large-emojilm&lt;/a&gt;, and while they're not always the most accurate, they're mainly there to visually break up the list and be easier on the eyes.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/SCR-20250930-klce.TtxsJYw0.png" alt=""&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://jojudge.com/feeds/main/093025_1135AM"&gt;jojudge.com/feeds/main/093025_1135AM&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;</description>
       <pubDate>Thu, 02 Oct 2025 16:02:00 GMT</pubDate>
-      <guid>/feeds/portfolio/093025_0205PM</guid>
+      <guid>https://jojudge.com/feeds/portfolio/093025_0205PM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/portfolio/093025_0228PM</link>
-      <description>&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;Here's (an attempt at) a comprehensive list of everywhere I've used JavaScript/TypeScript:&lt;/p&gt;
+      <link>https://jojudge.com/feeds/portfolio/093025_0228PM/</link>
+      <description>&lt;p&gt;Here's (an attempt at) a comprehensive list of everywhere I've used JavaScript/TypeScript:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;2024 - 2025: CVES
 &lt;ul&gt;
-&lt;li&gt;Various userscripts to extract data from web...&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description>
+&lt;li&gt;Various userscripts to extract data from websites programmatically&lt;/li&gt;
+&lt;li&gt;Custom scripts in Budibase&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2024 - now: This site! (Check out my Svelte post in my portfolio, uses TypeScript)&lt;/li&gt;
+&lt;li&gt;2025 - now: &lt;a href="https://jojudge.com/feeds/main/093025_1135AM/"&gt;My grocery app, uses TypeScript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2024 - now: &lt;a
+  href="https://github.com/heyjoeway/startpage"
+  rel="nofollow"
+&gt;My New Tab page, uses TypeScript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2019 - 2022: Clarkson IMPETUS
+&lt;ul&gt;
+&lt;li&gt;&lt;a
+  href="https://github.com/heyjoeway/mca-squid-jump"
+  rel="nofollow"
+&gt;MakeCode Arcade programming&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2018 - 2019: Whiteface ASRC
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://jojudge.com/whitefacetour/" rel="nofollow"&gt;Whiteface Tour&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a
+  href="https://github.com/heyjoeway/planetariumvr"
+  rel="nofollow"
+&gt;planetariumvr&lt;/a&gt; (codename for the framework behind Whiteface Tour)&lt;/li&gt;
+&lt;li&gt;&lt;a
+  href="https://github.com/heyjoeway/whiteface-tv"
+  rel="nofollow"
+&gt;Kiosk display webpage&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2017 - 2018: SUNY Plattsburgh, &lt;a
+  href="https://github.com/heyjoeway/lcatdb"
+  rel="nofollow"
+&gt;lcatDB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2016: &lt;a
+  href="https://github.com/heyjoeway/epots-doc"
+  rel="nofollow"
+&gt;Eagle Pride On the Sky (Science fair project)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The earliest JavaScript Git repo I have is when I started with GitHub in 2015: &lt;a
+  href="https://github.com/heyjoeway/raspmusicbox-client"
+  rel="nofollow"
+&gt;https://github.com/heyjoeway/raspmusicbox-client&lt;/a&gt;&lt;/p&gt;</description>
       <pubDate>Thu, 02 Oct 2025 16:02:00 GMT</pubDate>
-      <guid>/feeds/portfolio/093025_0228PM</guid>
+      <guid>https://jojudge.com/feeds/portfolio/093025_0228PM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/portfolio/093025_1051AM</link>
-      <description>&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;In order to teach students programming in a way that can directly convert between block-based code (ala Scratch) and written code, we did a roll out of the...&lt;/p&gt;</description>
+      <link>https://jojudge.com/feeds/portfolio/093025_1051AM/</link>
+      <description>&lt;p&gt;In order to teach students programming in a way that can directly convert between block-based code (ala Scratch) and written code, we did a roll out of the MakeCode Arcade basic curriculum. And to make sure I understood it myself, I wrote a quick example game!&lt;/p&gt;
+&lt;p&gt;&lt;a
+  href="https://makecode.com/_6w9VAJWkpWRs"
+  rel="nofollow"
+&gt;https://makecode.com/_6w9VAJWkpWRs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;(Or the GitHub repo: &lt;a
+  href="https://github.com/heyjoeway/mca-squid-jump"
+  rel="nofollow"
+&gt;https://github.com/heyjoeway/mca-squid-jump&lt;/a&gt;)&lt;/p&gt;</description>
       <pubDate>Thu, 02 Oct 2025 16:02:00 GMT</pubDate>
-      <guid>/feeds/portfolio/093025_1051AM</guid>
+      <guid>https://jojudge.com/feeds/portfolio/093025_1051AM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/portfolio/093025_1058AM</link>
-      <description>&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;As a hobby project, I ported several open-source games to the Nintendo Switch. This required a lot of deep-diving into the git history of other port projec...&lt;/p&gt;</description>
+      <link>https://jojudge.com/feeds/portfolio/093025_1058AM/</link>
+      <description>&lt;p&gt;As a hobby project, I ported several open-source games to the Nintendo Switch. This required a lot of deep-diving into the git history of other port projects to understand the process independently, which lead to a lot of experience with C/C++ and the GNU Make build system. I no longer maintain these projects, but they are still playable and you can learn more about the experience &lt;a
+  href="https://jojudge.com/articles/switch-ports"
+&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
       <pubDate>Thu, 02 Oct 2025 16:02:00 GMT</pubDate>
-      <guid>/feeds/portfolio/093025_1058AM</guid>
+      <guid>https://jojudge.com/feeds/portfolio/093025_1058AM/</guid>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>heyjoeway: articles</title>
+    <link>https://jojudge.com/articles/</link>
+    <description>Articles from heyjoeway</description>
+    <language>en-us</language>
+    <pubDate>Wed, 21 Oct 2026 22:21:10 GMT</pubDate>
+    <lastBuildDate>Wed, 21 Oct 2026 22:21:10 GMT</lastBuildDate>
+    <docs>https://www.rssboard.org/rss-specification</docs>
+    <atom:link href="https://jojudge.com/articles/feed.rss" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Building a DIY Meraki Z3 with WireGuard and OPNsense</title>
+      <link>https://jojudge.com/articles/diy-meraki-z3/</link>
+      <description>&lt;p&gt;A cheap VPS, a mini PC running OPNsense, and a full-tunnel WireGuard link. Plus a long detour through MTU hell that turned out to be a virtual NIC.&lt;/p&gt;&lt;p&gt;&lt;a href="https://jojudge.com/articles/diy-meraki-z3/"&gt;Read the article&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Wed, 21 Oct 2026 22:21:10 GMT</pubDate>
+      <guid>https://jojudge.com/articles/diy-meraki-z3/</guid>
+    </item>
+    <item>
+      <title>One Shot: Minutes of Silence, Occasionally Interrupted By</title>
+      <link>https://jojudge.com/articles/oneshot-minutes-silence-occasionally-interrupted/</link>
+      <description>&lt;p&gt;&lt;a href="https://jojudge.com/articles/oneshot-minutes-silence-occasionally-interrupted/"&gt;Read the article&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Sat, 11 Jul 2026 00:00:00 GMT</pubDate>
+      <guid>https://jojudge.com/articles/oneshot-minutes-silence-occasionally-interrupted/</guid>
+    </item>
+    <item>
+      <title>Finally Talking about JoeyDebloat</title>
+      <link>https://jojudge.com/articles/joeydebloat/</link>
+      <description>&lt;p&gt;&lt;a href="https://jojudge.com/articles/joeydebloat/"&gt;Read the article&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Wed, 04 Jun 2025 00:00:00 GMT</pubDate>
+      <guid>https://jojudge.com/articles/joeydebloat/</guid>
+    </item>
+    <item>
+      <title>Tools: Proxmox Memory Info</title>
+      <link>https://jojudge.com/articles/tools-proxmox-mem/</link>
+      <description>&lt;p&gt;&lt;a href="https://jojudge.com/articles/tools-proxmox-mem/"&gt;Read the article&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Mon, 07 Apr 2025 17:57:11 GMT</pubDate>
+      <guid>https://jojudge.com/articles/tools-proxmox-mem/</guid>
+    </item>
+    <item>
+      <title>Convert Old PC into Dedicated DVD Player</title>
+      <link>https://jojudge.com/articles/notes-dvdpc/</link>
+      <description>&lt;p&gt;&lt;a href="https://jojudge.com/articles/notes-dvdpc/"&gt;Read the article&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Wed, 05 Mar 2025 18:47:30 GMT</pubDate>
+      <guid>https://jojudge.com/articles/notes-dvdpc/</guid>
+    </item>
+    <item>
+      <title>Notes: Setting Up Postfix on Windows</title>
+      <link>https://jojudge.com/articles/notes-windowspostfix/</link>
+      <description>&lt;p&gt;&lt;a href="https://jojudge.com/articles/notes-windowspostfix/"&gt;Read the article&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Tue, 04 Mar 2025 03:13:37 GMT</pubDate>
+      <guid>https://jojudge.com/articles/notes-windowspostfix/</guid>
+    </item>
+    <item>
+      <title>Notes: Migrate Debian Linode to Proxmox</title>
+      <link>https://jojudge.com/articles/notes-linodemigration/</link>
+      <description>&lt;p&gt;&lt;a href="https://jojudge.com/articles/notes-linodemigration/"&gt;Read the article&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Tue, 04 Mar 2025 03:08:14 GMT</pubDate>
+      <guid>https://jojudge.com/articles/notes-linodemigration/</guid>
+    </item>
+    <item>
+      <title>Notes: Linux</title>
+      <link>https://jojudge.com/articles/notes-linux/</link>
+      <description>&lt;p&gt;&lt;a href="https://jojudge.com/articles/notes-linux/"&gt;Read the article&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Tue, 04 Mar 2025 03:08:14 GMT</pubDate>
+      <guid>https://jojudge.com/articles/notes-linux/</guid>
+    </item>
+    <item>
+      <title>Notes: Windows</title>
+      <link>https://jojudge.com/articles/notes-windows/</link>
+      <description>&lt;p&gt;&lt;a href="https://jojudge.com/articles/notes-windows/"&gt;Read the article&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Tue, 04 Mar 2025 03:08:14 GMT</pubDate>
+      <guid>https://jojudge.com/articles/notes-windows/</guid>
+    </item>
+    <item>
+      <title>Notes: (Ungoogled) Chromium Setup</title>
+      <link>https://jojudge.com/articles/notes-chromium/</link>
+      <description>&lt;p&gt;&lt;a href="https://jojudge.com/articles/notes-chromium/"&gt;Read the article&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Tue, 04 Mar 2025 02:47:57 GMT</pubDate>
+      <guid>https://jojudge.com/articles/notes-chromium/</guid>
+    </item>
+    <item>
+      <title>Retrospective: lcatDB</title>
+      <link>https://jojudge.com/articles/lcatdb/</link>
+      <description>&lt;p&gt;&lt;a href="https://jojudge.com/articles/lcatdb/"&gt;Read the article&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Thu, 18 May 2023 00:00:00 GMT</pubDate>
+      <guid>https://jojudge.com/articles/lcatdb/</guid>
+    </item>
+    <item>
+      <title>Responsive Design Showcase</title>
+      <link>https://jojudge.com/articles/responsive-design/</link>
+      <description>&lt;p&gt;&lt;a href="https://jojudge.com/articles/responsive-design/"&gt;Read the article&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Thu, 18 May 2023 00:00:00 GMT</pubDate>
+      <guid>https://jojudge.com/articles/responsive-design/</guid>
+    </item>
+    <item>
+      <title>The Software Dump Part 2: Multiplatform</title>
+      <link>https://jojudge.com/articles/software-dump-multiplat/</link>
+      <description>&lt;p&gt;&lt;a href="https://jojudge.com/articles/software-dump-multiplat/"&gt;Read the article&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Tue, 11 Apr 2023 00:00:00 GMT</pubDate>
+      <guid>https://jojudge.com/articles/software-dump-multiplat/</guid>
+    </item>
+    <item>
+      <title>Toggling Hidden Files in macOS except it's actually good</title>
+      <link>https://jojudge.com/articles/mac-hidden-files/</link>
+      <description>&lt;p&gt;&lt;a href="https://jojudge.com/articles/mac-hidden-files/"&gt;Read the article&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Tue, 14 Feb 2023 00:00:00 GMT</pubDate>
+      <guid>https://jojudge.com/articles/mac-hidden-files/</guid>
+    </item>
+    <item>
+      <title>The Software Dump Part 1: macOS</title>
+      <link>https://jojudge.com/articles/software-dump-mac/</link>
+      <description>&lt;p&gt;&lt;a href="https://jojudge.com/articles/software-dump-mac/"&gt;Read the article&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Wed, 28 Dec 2022 00:00:00 GMT</pubDate>
+      <guid>https://jojudge.com/articles/software-dump-mac/</guid>
+    </item>
+    <item>
+      <title>My Switch Ports, and the Journey</title>
+      <link>https://jojudge.com/articles/switch-ports/</link>
+      <description>&lt;p&gt;&lt;a href="https://jojudge.com/articles/switch-ports/"&gt;Read the article&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Sun, 13 Nov 2022 00:00:00 GMT</pubDate>
+      <guid>https://jojudge.com/articles/switch-ports/</guid>
+    </item>
+    <item>
+      <title>Photography Megapost</title>
+      <link>https://jojudge.com/articles/photo-megapost/</link>
+      <description>&lt;p&gt;&lt;a href="https://jojudge.com/articles/photo-megapost/"&gt;Read the article&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Mon, 07 Nov 2022 00:00:00 GMT</pubDate>
+      <guid>https://jojudge.com/articles/photo-megapost/</guid>
+    </item>
+    <item>
+      <title>Graphic Design: Whiteface ASRC Logo</title>
+      <link>https://jojudge.com/articles/gd-whiteface/</link>
+      <description>&lt;p&gt;&lt;a href="https://jojudge.com/articles/gd-whiteface/"&gt;Read the article&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Thu, 20 Jan 2022 00:00:00 GMT</pubDate>
+      <guid>https://jojudge.com/articles/gd-whiteface/</guid>
+    </item>
+  </channel>
+</rss>

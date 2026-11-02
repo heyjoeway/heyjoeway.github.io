@@ -1,346 +1,166 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" ml-update="aware" ml-stage="preload" ml-view="top">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>vidyaway</title>
-    <link>http://jojudge.com/feeds/vidya</link>
+    <link>https://jojudge.com/feeds/vidya/</link>
     <description>Video James</description>
     <language>en-us</language>
-    <pubDate>Wed, 12 Feb 2025 17:22:00 GMT</pubDate>
-    <lastBuildDate>Wed, 02 Apr 2025 14:11:00 GMT</lastBuildDate>
+    <pubDate>Sun, 01 Nov 2026 21:28:00 GMT</pubDate>
+    <lastBuildDate>Sun, 01 Nov 2026 21:28:00 GMT</lastBuildDate>
     <docs>https://www.rssboard.org/rss-specification</docs>
-    <generator>Custom</generator>
-    <atom:link href="http://jojudge.com/feeds/vidya/feed.rss" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://jojudge.com/feeds/vidya/feed.rss" rel="self" type="application/rss+xml"/>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/vidya/110126_0422PM</link>
-      <description>&lt;script context="module"&gt;
-	export const metadata = {"hideHome":true};
-	const { hideHome } = metadata;
-&lt;/script&gt;
-
-&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;found one of the SA2 chao garden fonts lol&lt;/p&gt;
-&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <link>https://jojudge.com/feeds/vidya/110126_0422PM/</link>
+      <description>&lt;p&gt;found one of the SA2 chao garden fonts lol&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/shot_202026-11-01_20at_2016.22.BKWqDl1_.png" alt=""&gt;&lt;/p&gt;</description>
       <pubDate>Sun, 01 Nov 2026 21:28:00 GMT</pubDate>
-      <guid>/feeds/vidya/110126_0422PM</guid>
+      <guid>https://jojudge.com/feeds/vidya/110126_0422PM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/vidya/093026_0707PM</link>
-      <description>&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;okay so wasn't 100% right but still hella right.&lt;/p&gt;
-&lt;p&gt;next prediction: steam deck mini by 2028, snapdragon elite processor. 16gb ram. if i got to choose the nam...&lt;/p&gt;</description>
+      <link>https://jojudge.com/feeds/vidya/093026_0707PM/</link>
+      <description>&lt;p&gt;okay so wasn't 100% right but still hella right.&lt;/p&gt;
+&lt;p&gt;next prediction: steam deck mini by 2028, snapdragon elite processor. 16gb ram. if i got to choose the name i'd go with "steam boat". $500. &lt;a
+  href="https://armadaos.dev/"
+  rel="nofollow"
+&gt;no reason i'm thinking this&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;okay so throwing out a prediction because if i'm right i'm gonna be the rightest ever: next mainline zelda game is a reimagining of oot in the format of botw&lt;/p&gt;&lt;p&gt;&lt;a href="https://jojudge.com/feeds/vidya/022625_0956PM"&gt;jojudge.com/feeds/vidya/022625_0956PM&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;</description>
       <pubDate>Wed, 30 Sep 2026 23:12:00 GMT</pubDate>
-      <guid>/feeds/vidya/093026_0707PM</guid>
+      <guid>https://jojudge.com/feeds/vidya/093026_0707PM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/vidya/060926_0843AM</link>
-      <description>&lt;script context="module"&gt;
-	export const metadata = {"hideHome":true};
-	const { hideHome } = metadata;
-&lt;/script&gt;
-
-&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-
-&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <link>https://jojudge.com/feeds/vidya/060926_0843AM/</link>
+      <description>&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/chrome_AQRIENHJZn.DmXZiu8D.png" alt=""&gt;&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;okay so throwing out a prediction because if i'm right i'm gonna be the rightest ever: next mainline zelda game is a reimagining of oot in the format of botw&lt;/p&gt;&lt;p&gt;&lt;a href="https://jojudge.com/feeds/vidya/022625_0956PM"&gt;jojudge.com/feeds/vidya/022625_0956PM&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;</description>
       <pubDate>Tue, 09 Jun 2026 12:48:00 GMT</pubDate>
-      <guid>/feeds/vidya/060926_0843AM</guid>
+      <guid>https://jojudge.com/feeds/vidya/060926_0843AM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/vidya/041626_0952AM</link>
-      <description>&lt;script context="module"&gt;
-	export const metadata = {"hideHome":true};
-	const { hideHome } = metadata;
-&lt;/script&gt;
-
-&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;mother 3&lt;/p&gt;
-&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <link>https://jojudge.com/feeds/vidya/041626_0952AM/</link>
+      <description>&lt;p&gt;mother 3&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/maxresdefault.DLt5emZV.jpeg" alt=""&gt;&lt;/p&gt;</description>
       <pubDate>Thu, 16 Apr 2026 13:57:00 GMT</pubDate>
-      <guid>/feeds/vidya/041626_0952AM</guid>
+      <guid>https://jojudge.com/feeds/vidya/041626_0952AM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/vidya/012226_0741PM</link>
-      <description>&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
-&lt;p&gt;as i hit shuffle on my game library i'm gonna try and catalog them here so I don't forget them. i'll start there and do full reviews if I ever feel like it. anyway:&lt;/p&gt;
-&lt;p&gt;new discovery: Ball Jacks for the megadrive. eu/jp only. fun little game by 1993 Namco where you pilot a lil robot trying to keep 4 balls on your si...&lt;/p&gt;</description>
+      <link>https://jojudge.com/feeds/vidya/012226_0741PM/</link>
+      <description>&lt;p&gt;as i hit shuffle on my game library i'm gonna try and catalog them here so I don't forget them. i'll start there and do full reviews if I ever feel like it. anyway:&lt;/p&gt;
+&lt;p&gt;new discovery: Ball Jacks for the megadrive. eu/jp only. fun little game by 1993 Namco where you pilot a lil robot trying to keep 4 balls on your side of the screen by reaching out and grabbing them from your oponent. really good music and ui/vfx design. so overstimulating but it's really fun trying to figure out all the weird mechanics and rules. apparently it reviewed really bad when it came out? I guess if I paid $100 i'd be pissed but as just a silent blip in a sea of games it stands out.&lt;/p&gt;</description>
       <pubDate>Fri, 23 Jan 2026 00:46:00 GMT</pubDate>
-      <guid>/feeds/vidya/012226_0741PM</guid>
+      <guid>https://jojudge.com/feeds/vidya/012226_0741PM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/vidya/051825_0220PM</link>
-      <description>
-&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
-&lt;p&gt;i reset my quest 1 to sell it, sold it, was told it was mdm locked, and then found out that it doesn't show up under my meta account, making it a brick. i didn't even buy this secondhand, i have the receipt.&lt;/p&gt;
-&lt;p&gt;never give facebook money&lt;/p&gt;
-&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <link>https://jojudge.com/feeds/vidya/051825_0220PM/</link>
+      <description>&lt;p&gt;i reset my quest 1 to sell it, sold it, was told it was mdm locked, and then found out that it doesn't show up under my meta account, making it a brick. i didn't even buy this secondhand, i have the receipt.&lt;/p&gt;
+&lt;p&gt;never give facebook money&lt;/p&gt;</description>
       <pubDate>Sun, 18 May 2025 18:25:00 GMT</pubDate>
-      <guid>/feeds/vidya/051825_0220PM</guid>
+      <guid>https://jojudge.com/feeds/vidya/051825_0220PM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/vidya/041125_1205PM</link>
-      <description>&lt;script context="module"&gt;
-	export const metadata = {"hideHome":true};
-	const { hideHome } = metadata;
-&lt;/script&gt;
-
-&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;god gamer.&lt;/p&gt;
-&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <link>https://jojudge.com/feeds/vidya/041125_1205PM/</link>
+      <description>&lt;p&gt;god gamer.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/SCR-20250411-kxld.Cz-mnXf-.png" alt=""&gt;&lt;/p&gt;</description>
       <pubDate>Fri, 11 Apr 2025 16:10:00 GMT</pubDate>
-      <guid>/feeds/vidya/041125_1205PM</guid>
+      <guid>https://jojudge.com/feeds/vidya/041125_1205PM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/vidya/040725_0753PM</link>
-      <description>&lt;script context="module"&gt;
-	export const metadata = {"hideHome":true};
-	const { hideHome } = metadata;
-&lt;/script&gt;
-
-&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;checking sonic retro for the first time in like 2 years is a good reminder of why i don't like going there anymore&lt;/p&gt;
-&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <link>https://jojudge.com/feeds/vidya/040725_0753PM/</link>
+      <description>&lt;p&gt;checking sonic retro for the first time in like 2 years is a good reminder of why i don't like going there anymore&lt;/p&gt;</description>
       <pubDate>Mon, 07 Apr 2025 23:59:00 GMT</pubDate>
-      <guid>/feeds/vidya/040725_0753PM</guid>
+      <guid>https://jojudge.com/feeds/vidya/040725_0753PM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/vidya/040225_1006AM</link>
-      <description>
-&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
-&lt;p&gt;damnit&lt;/p&gt;
-&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <link>https://jojudge.com/feeds/vidya/040225_1006AM/</link>
+      <description>&lt;p&gt;damnit&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/Untitled.B0dMGQSE.png" alt=""&gt;&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/SCR-20250401-rlwy.DwuFupsv.png" alt=""&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://jojudge.com/feeds/vidya/040125_0805PM"&gt;jojudge.com/feeds/vidya/040125_0805PM&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;</description>
       <pubDate>Wed, 02 Apr 2025 14:11:00 GMT</pubDate>
-      <guid>/feeds/vidya/040225_1006AM</guid>
+      <guid>https://jojudge.com/feeds/vidya/040225_1006AM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/vidya/040125_0805PM</link>
-      <description>&lt;script context="module"&gt;
-	export const metadata = {"hideHome":true};
-	const { hideHome } = metadata;
-&lt;/script&gt;
-
-&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-
-&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <link>https://jojudge.com/feeds/vidya/040125_0805PM/</link>
+      <description>&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/SCR-20250401-rlwy.DwuFupsv.png" alt=""&gt;&lt;/p&gt;</description>
       <pubDate>Wed, 02 Apr 2025 00:11:00 GMT</pubDate>
-      <guid>/feeds/vidya/040125_0805PM</guid>
+      <guid>https://jojudge.com/feeds/vidya/040125_0805PM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/vidya/032725_0844AM</link>
-      <description>&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;so i have no investment in prime 4 but i take it if we don't get a release date in the next hour and a half we should probably all stay inside for a few da...&lt;/p&gt;</description>
+      <link>https://jojudge.com/feeds/vidya/032725_0844AM/</link>
+      <description>&lt;p&gt;so i have no investment in prime 4 but i take it if we don't get a release date in the next hour and a half we should probably all stay inside for a few days to outlast the riots&lt;/p&gt;</description>
       <pubDate>Thu, 27 Mar 2025 12:49:00 GMT</pubDate>
-      <guid>/feeds/vidya/032725_0844AM</guid>
+      <guid>https://jojudge.com/feeds/vidya/032725_0844AM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/vidya/031425_0936PM</link>
-      <description>&lt;script context="module"&gt;
-	export const metadata = {"hideHome":true};
-	const { hideHome } = metadata;
-&lt;/script&gt;
-
-&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;growing up is realizing tyler was fucking right&lt;/p&gt;
-&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <link>https://jojudge.com/feeds/vidya/031425_0936PM/</link>
+      <description>&lt;p&gt;growing up is realizing tyler was fucking right&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://jojudge.com/_app/immutable/assets/WP_20150212_10_38_04_Pro_preview.CMROVRm6.jpeg" alt=""&gt;&lt;/p&gt;</description>
       <pubDate>Sat, 15 Mar 2025 01:41:00 GMT</pubDate>
-      <guid>/feeds/vidya/031425_0936PM</guid>
+      <guid>https://jojudge.com/feeds/vidya/031425_0936PM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/vidya/030325_0703PM</link>
-      <description>&lt;script context="module"&gt;
-	export const metadata = {"hideHome":true};
-	const { hideHome } = metadata;
-&lt;/script&gt;
-
-&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;loving my unleashed playthrough so far but god sega really is running out my patience with adabat night 2 and shamar night 1&lt;/p&gt;
-&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <link>https://jojudge.com/feeds/vidya/030325_0703PM/</link>
+      <description>&lt;p&gt;loving my unleashed playthrough so far but god sega really is running out my patience with adabat night 2 and shamar night 1&lt;/p&gt;</description>
       <pubDate>Tue, 04 Mar 2025 00:08:00 GMT</pubDate>
-      <guid>/feeds/vidya/030325_0703PM</guid>
+      <guid>https://jojudge.com/feeds/vidya/030325_0703PM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/vidya/030125_0615PM</link>
-      <description>
-&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
-&lt;p&gt;&lt;a
+      <link>https://jojudge.com/feeds/vidya/030125_0615PM/</link>
+      <description>&lt;p&gt;&lt;a
   href="https://github.com/hedge-dev/UnleashedRecomp"
   rel="nofollow"
 &gt;https://github.com/hedge-dev/UnleashedRecomp&lt;/a&gt;
-oh my god. oh my god. oh my god. oh my god. oh my god. oh my GOD&lt;/p&gt;
-&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+oh my god. oh my god. oh my god. oh my god. oh my god. oh my GOD&lt;/p&gt;</description>
       <pubDate>Sat, 01 Mar 2025 23:20:00 GMT</pubDate>
-      <guid>/feeds/vidya/030125_0615PM</guid>
+      <guid>https://jojudge.com/feeds/vidya/030125_0615PM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/vidya/022825_0729AM</link>
-      <description>
-&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
-&lt;p&gt;&lt;a
+      <link>https://jojudge.com/feeds/vidya/022825_0729AM/</link>
+      <description>&lt;p&gt;&lt;a
   href="https://gamebanana.com/mods/573087"
   rel="nofollow"
 &gt;https://gamebanana.com/mods/573087&lt;/a&gt;&lt;/p&gt;
-&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+&lt;p&gt;&lt;video src="https://jojudge.com/_app/immutable/assets/Replay%202025-02-27%2019-28-19.Dh5eKozw.mp4" controls&gt;&lt;/video&gt;&lt;/p&gt;</description>
       <pubDate>Fri, 28 Feb 2025 12:35:00 GMT</pubDate>
-      <guid>/feeds/vidya/022825_0729AM</guid>
+      <guid>https://jojudge.com/feeds/vidya/022825_0729AM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/vidya/022725_1010PM</link>
-      <description>&lt;script context="module"&gt;
-	export const metadata = {"hideHome":true};
-	const { hideHome } = metadata;
-&lt;/script&gt;
-
-&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;vexx is definitely the Game Ever&lt;/p&gt;
-&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <link>https://jojudge.com/feeds/vidya/022725_1010PM/</link>
+      <description>&lt;p&gt;vexx is definitely the Game Ever&lt;/p&gt;</description>
       <pubDate>Fri, 28 Feb 2025 03:15:00 GMT</pubDate>
-      <guid>/feeds/vidya/022725_1010PM</guid>
+      <guid>https://jojudge.com/feeds/vidya/022725_1010PM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/vidya/022625_1008PM</link>
-      <description>&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;for now have a clip of the hit video game for the Nintendo Wii &lt;a
+      <link>https://jojudge.com/feeds/vidya/022625_1008PM/</link>
+      <description>&lt;p&gt;for now have a clip of the hit video game for the Nintendo Wii &lt;a
   href="https://en.wikipedia.org/wiki/Golden_Balls"
   rel="nofollow"
 &gt;Golden Balls&lt;/a&gt; Licensed by Nintendo&lt;/p&gt;
-&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+&lt;p&gt;&lt;video src="https://jojudge.com/_app/immutable/assets/replay.BNScykZs.mp4" controls&gt;&lt;/video&gt;&lt;/p&gt;</description>
       <pubDate>Thu, 27 Feb 2025 03:13:00 GMT</pubDate>
-      <guid>/feeds/vidya/022625_1008PM</guid>
+      <guid>https://jojudge.com/feeds/vidya/022625_1008PM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/vidya/022625_0956PM</link>
-      <description>&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;okay so throwing out a prediction because if i'm right i'm gonna be the rightest ever: next mainline zelda game is a reimagining of oot in the format of bo...&lt;/p&gt;</description>
+      <link>https://jojudge.com/feeds/vidya/022625_0956PM/</link>
+      <description>&lt;p&gt;okay so throwing out a prediction because if i'm right i'm gonna be the rightest ever: next mainline zelda game is a reimagining of oot in the format of botw&lt;/p&gt;</description>
       <pubDate>Thu, 27 Feb 2025 03:02:00 GMT</pubDate>
-      <guid>/feeds/vidya/022625_0956PM</guid>
+      <guid>https://jojudge.com/feeds/vidya/022625_0956PM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/vidya/022625_1000PM</link>
-      <description>&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;also i want to post clips here but i'm not usually playing on the switch, so i'm currently working on a system where i can add quick captures to any hdmi o...&lt;/p&gt;</description>
+      <link>https://jojudge.com/feeds/vidya/022625_1000PM/</link>
+      <description>&lt;p&gt;also i want to post clips here but i'm not usually playing on the switch, so i'm currently working on a system where i can add quick captures to any hdmi out&lt;/p&gt;
+&lt;p&gt;(game recording on the steam deck is not very good)&lt;/p&gt;</description>
       <pubDate>Thu, 27 Feb 2025 03:02:00 GMT</pubDate>
-      <guid>/feeds/vidya/022625_1000PM</guid>
+      <guid>https://jojudge.com/feeds/vidya/022625_1000PM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/vidya/022225_0929PM</link>
-      <description>&lt;script context="module"&gt;
-	export const metadata = {"hideHome":true};
-	const { hideHome } = metadata;
-&lt;/script&gt;
-
-&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props} {...metadata}&gt;
-&lt;p&gt;installing sims 3 while listening to huey lewis and the news, if you know you know&lt;/p&gt;
-&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <link>https://jojudge.com/feeds/vidya/022225_0929PM/</link>
+      <description>&lt;p&gt;installing sims 3 while listening to huey lewis and the news, if you know you know&lt;/p&gt;</description>
       <pubDate>Sun, 23 Feb 2025 02:35:00 GMT</pubDate>
-      <guid>/feeds/vidya/022225_0929PM</guid>
+      <guid>https://jojudge.com/feeds/vidya/022225_0929PM/</guid>
     </item>
     <item>
-      <title/>
-      <link>http://jojudge.com/feeds/vidya/021525_1045AM</link>
-      <description>
-&lt;script&gt;
-	import Layout_MDSVEX_DEFAULT, * as Components from '/home/runner/work/heyjoeway.github.io/heyjoeway.github.io/src/lib/MdsvexLayout.svelte';
-&lt;/script&gt;
-
-&lt;Layout_MDSVEX_DEFAULT {...$$props}&gt;
-
-&lt;/Layout_MDSVEX_DEFAULT&gt;</description>
+      <link>https://jojudge.com/feeds/vidya/021525_1045AM/</link>
+      <description>&lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=A21wxZKiao8"&gt;https://www.youtube.com/watch?v=A21wxZKiao8&lt;/a&gt;&lt;/p&gt;</description>
       <pubDate>Wed, 12 Feb 2025 17:22:00 GMT</pubDate>
-      <guid>/feeds/vidya/021525_1045AM</guid>
+      <guid>https://jojudge.com/feeds/vidya/021525_1045AM/</guid>
     </item>
   </channel>
 </rss>
