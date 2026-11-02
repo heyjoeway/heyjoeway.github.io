@@ -1,10 +1,10 @@
 import * as fs from 'fs';
-import * as util from 'util';
 import { compile } from 'mdsvex';
 import {
 	getLatestCommitDate,
 	getFirstCommitDate
 } from '$lib/Git.server';
+import { cachedDuringBuild } from '$lib/BuildCache.server';
 
 export interface ArticleFrontmatter {
 	title: string;
@@ -28,6 +28,12 @@ interface MdsvexCompiled {
     code: string;
     data?: Record<string, unknown>;
     map?: string;
+}
+
+function compileArticle(svxPath: string): Promise<MdsvexCompiled> {
+	return cachedDuringBuild(`article:${svxPath}`, async () => (
+		await compile(fs.readFileSync(svxPath, 'utf-8')) as MdsvexCompiled
+	));
 }
 
 export async function getAllArticleSlugs(): Promise<string[]> {
@@ -55,9 +61,7 @@ export async function getAllCategories(): Promise<string[]> {
 	await Promise.all(articleSlugs.map(async slug => {
 		const postPath = `src/routes/articles/${slug}/+page.svx`;
 		try {
-			const postContents = fs.readFileSync(postPath, 'utf-8');
-			const compiled = await compile(postContents);
-			const frontmatter = await getArticleFrontmatter(postPath, compiled);
+			const frontmatter = await getArticleFrontmatter(postPath);
 			frontmatter.categories?.split(" ").forEach(category => categorySet.add(category));
 		} catch (e) {
 			console.warn(`Error processing article ${slug}:`, e);
@@ -70,11 +74,7 @@ export async function getArticle(slug: string): Promise<ArticleLoaded | undefine
 	const path = `/articles/${slug}`;
 	const svxPath = `src/routes/articles/${slug}/+page.svx`;
 	try {
-		const articleRaw = (
-			await util.promisify(fs.readFile)
-				(svxPath, 'utf-8')
-		) as string;
-		const compiled = await compile(articleRaw) as MdsvexCompiled;
+		const compiled = await compileArticle(svxPath);
 		const code = compiled?.code;
 		const fm = await getArticleFrontmatter(svxPath, compiled);
 		return {
@@ -115,10 +115,7 @@ export async function getArticleFrontmatter(
 	postPath: string,
 	postCompiled: MdsvexCompiled | undefined = undefined
 ): Promise<ArticleFrontmatter> {
-	if (!postCompiled) {
-		const postContents = fs.readFileSync(postPath, 'utf-8');
-		postCompiled = await compile(postContents);
-	}
+	if (!postCompiled) postCompiled = await compileArticle(postPath);
 	const fm = postCompiled?.data?.fm as ArticleFrontmatter;
 	
 	if (!fm.last_modified_at) {

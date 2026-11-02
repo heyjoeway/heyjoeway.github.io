@@ -22,6 +22,7 @@ import fs from 'fs';
 import path from 'path';
 
 import { highlightCode } from "$lib/JSUtils.js";
+import { cachedDuringBuild } from '$lib/BuildCache.server';
 
 import {
     type PostedAndEditedDate,
@@ -152,6 +153,15 @@ export async function getFeedPostEmbedsSelf(postContents: string) {
 
 
 export async function getFeedPost(feed: Feed, postId: string): Promise<Post> {
+    // Cached without the feed, since callers pass feed objects with or without posts
+    const post = await cachedDuringBuild(
+        `post:${feed.id}/${postId}`,
+        () => loadFeedPost(feed, postId)
+    );
+    return { ...post, feed };
+}
+
+async function loadFeedPost(feed: Feed, postId: string): Promise<Omit<Post, 'feed'>> {
     const media = await getFeedPostMedia(feed.id, postId);
     
     let postContents = "";
@@ -257,9 +267,8 @@ export async function getFeedPost(feed: Feed, postId: string): Promise<Post> {
         media,
         fm,
         idFull: `${feed.id}/${postId}`,
-        url: `/feeds/${feed.id}/${postId}`,
-        feed
-    } as Post
+        url: `/feeds/${feed.id}/${postId}`
+    };
 }
 
 export async function getFeedPosts(feed: Feed): Promise<Post[]> {
