@@ -176,22 +176,26 @@ export async function getFeedPost(feed: Feed, postId: string): Promise<Post> {
     
     let embeds = embedsYoutube.concat(embedsSelf);
     
+    // No layout: with one, mdsvex wraps the output in Svelte component source
+    // (including an import with this machine's absolute path)
     const compiled = await compile(
         filteredPostContents,
         {
             smartypants: false,
-            layout: "./src/lib/MdsvexLayout.svelte",
 			highlight: {
-				highlighter: highlightCode
+				// Same markup as Code.svelte uses for articles
+				highlighter: (code: string, lang: string | null | undefined) => (
+					`<pre><code>${highlightCode(code, lang)}</code></pre>`
+				)
 			},
         }
     );
     
-    // https://github.com/pngwn/MDsveX/issues/392#issuecomment-1013755667
     const html = (
         compiled?.code
-            .replace(/>{@html `<code class="language-/g, '><code class="language-')
-            .replace(/<\/code>`}<\/pre>/g, '</code></pre>')
+            // Frontmatter is exported as a module script; we already have it in fm
+            .replace(/^\s*<script context="module">[\s\S]*?<\/script>/, '')
+            .trim()
         || ''
     );
     
@@ -232,13 +236,7 @@ export async function getFeedPost(feed: Feed, postId: string): Promise<Post> {
         }
     }
     
-    let htmlShort = html.trim();
-    
-    // If htmlShort begins with a script tag, remove it
-    if (htmlShort.startsWith('<script')) {
-        const endTagIndex = htmlShort.indexOf('</script>') + 9;
-        htmlShort = htmlShort.substring(endTagIndex).trim();
-    }
+    let htmlShort = html;
     
     if (htmlShort.length > 400) {
         const htmlShortOriginal = htmlShort;
