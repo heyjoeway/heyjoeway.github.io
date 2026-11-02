@@ -4,11 +4,13 @@ import {
     type DefaultLogFields
 } from 'simple-git';
 
+import { cachedDuringBuild } from '$lib/BuildCache.server';
+
 const git = simpleGit({
     maxConcurrentProcesses: 64 // big number go brrr
 });
 
-export async function getLatestCommitDate(path: string): Promise<string | undefined> {
+async function _getLatestCommitDate(path: string): Promise<string | undefined> {
     try {
         const gitLog: LogResult<DefaultLogFields> = await new Promise(
             (resolve, reject) => git.log(
@@ -29,7 +31,7 @@ export async function getLatestCommitDate(path: string): Promise<string | undefi
     }
 }
 
-export async function getFirstCommitDate(path: string): Promise<string | undefined> {
+async function _getFirstCommitDate(path: string): Promise<string | undefined> {
     try {
         const gitLog: LogResult<DefaultLogFields> = await new Promise(
             (resolve, reject) => git.log(
@@ -57,7 +59,7 @@ interface FirstAndLatestCommitDates {
     latest: string | undefined; // ISO8601
 }
 
-export async function getFirstAndLatestCommitDates(path: string): Promise<FirstAndLatestCommitDates> {
+async function _getFirstAndLatestCommitDates(path: string): Promise<FirstAndLatestCommitDates> {
     try {
         const gitLog: LogResult<DefaultLogFields> = await new Promise(
             (resolve, reject) => git.log(
@@ -112,4 +114,16 @@ export async function getTreeUrl() {
     
     _treeUrl = `${url}/tree/${branch}/`;
     return _treeUrl;
+}
+
+export function getLatestCommitDate(path: string) {
+    return cachedDuringBuild(`latest:${path}`, () => _getLatestCommitDate(path));
+}
+
+export function getFirstCommitDate(path: string) {
+    return cachedDuringBuild(`first:${path}`, () => _getFirstCommitDate(path));
+}
+
+export function getFirstAndLatestCommitDates(path: string) {
+    return cachedDuringBuild(`both:${path}`, () => _getFirstAndLatestCommitDates(path));
 }
