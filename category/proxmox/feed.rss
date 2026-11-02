@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>heyjoeway: proxmox articles</title>
+    <title>heyjoeway: articles - proxmox</title>
     <link>https://jojudge.com/category/proxmox/</link>
     <description>Articles from heyjoeway tagged proxmox</description>
     <language>en-us</language>
@@ -12,7 +12,7 @@
     <item>
       <title>Tools: Proxmox Memory Info</title>
       <link>https://jojudge.com/articles/tools-proxmox-mem/</link>
-      <description>&lt;p&gt;Proxmox doesn’t have a built-in way to check if you’re overcommitting memory on your host. (That I know of?) This is a simple tool that gives you a summary of your memory usage using some shell commands and copypasta.&lt;/p&gt; &lt;h2 class="h2-1"&gt;Paste the output of…&lt;/h2&gt; &lt;div class="code-container svelte-1alrmox"&gt;&lt;div class="copy-button svelte-1alrmox"&gt;&lt;span class="not-link svelte-he95jo"&gt;&lt;div style="width: default; height: 26px; pointer-events: auto; opacity: 100%; filter: none;" class="clickable svelte-73054b"&gt; 📋&lt;/div&gt;&lt;/span&gt;&lt;/div&gt; &lt;pre class="svelte-1alrmox"&gt;&lt;code&gt;&lt;span&gt;qm list&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt; &lt;p&gt;down here:&lt;/p&gt; &lt;div class="svelte-16b6hx2"&gt; &lt;textarea name="" placeholder="" rows="10" style="width:100%;height:300px;min-width:100%;max-width:100%;text-wrap:nowrap" class="svelte-16b6hx2"&gt;      VMID NAME                 STATUS     MEM(MB)    BOOTDISK(GB) PID       
+      <description>&lt;p&gt;Proxmox doesn’t have a built-in way to check if you’re overcommitting memory on your host. (That I know of?) This is a simple tool that gives you a summary of your memory usage using some shell commands and copypasta.&lt;/p&gt; &lt;h2 class="h2-1"&gt;Paste the output of…&lt;/h2&gt; &lt;div class="code-container svelte-1alrmox"&gt; &lt;pre class="svelte-1alrmox"&gt;&lt;code&gt;&lt;span&gt;qm list&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt; &lt;p&gt;down here:&lt;/p&gt; &lt;div class="svelte-16b6hx2"&gt; &lt;textarea name="" placeholder="" rows="10" style="width:100%;height:300px;min-width:100%;max-width:100%;text-wrap:nowrap" class="svelte-16b6hx2"&gt;      VMID NAME                 STATUS     MEM(MB)    BOOTDISK(GB) PID       
        100 fdsa                 running    4608              32.00 2826770   
        101 asdf                 running    8192              24.00 2828068   
        103 vcxz                 running    6144             170.00 4083340   
@@ -21,7 +21,7 @@
        108 qwer                 running    10240            280.00 2828390   
        116 poiu                 stopped    1024              16.00 0         
        119 uiop                 running    2048              16.00 2828601   
-&lt;/textarea&gt;&lt;/div&gt; &lt;h2 class="h2-2"&gt;Paste the output of…&lt;/h2&gt; &lt;div class="code-container svelte-1alrmox"&gt;&lt;div class="copy-button svelte-1alrmox"&gt;&lt;span class="not-link svelte-he95jo"&gt;&lt;div style="width: default; height: 26px; pointer-events: auto; opacity: 100%; filter: none;" class="clickable svelte-73054b"&gt; 📋&lt;/div&gt;&lt;/span&gt;&lt;/div&gt; &lt;pre class="svelte-1alrmox"&gt;&lt;code&gt;&lt;span&gt;pct list | grep -v VMID | awk &lt;span class="hljs-string"&gt;&amp;#x27;{&amp;#x27;&lt;/span&gt;{&lt;span class="hljs-string"&gt;&amp;#x27;} print $1 {&amp;#x27;&lt;/span&gt;}&lt;span class="hljs-string"&gt;&amp;#x27;}&amp;#x27;&lt;/span&gt; | xargs -I x sh -c &lt;span class="hljs-string"&gt;&amp;#x27;pct status x -verbose &amp;amp;&amp;amp; echo ===&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt; &lt;p&gt;down here:&lt;/p&gt; &lt;div class="svelte-16b6hx2"&gt; &lt;textarea name="" placeholder="" rows="10" style="width:100%;height:300px;min-width:100%;max-width:100%;text-wrap:nowrap" class="svelte-16b6hx2"&gt;cpus: 4
+&lt;/textarea&gt;&lt;/div&gt; &lt;h2 class="h2-2"&gt;Paste the output of…&lt;/h2&gt; &lt;div class="code-container svelte-1alrmox"&gt; &lt;pre class="svelte-1alrmox"&gt;&lt;code&gt;&lt;span&gt;pct list | grep -v VMID | awk &lt;span class="hljs-string"&gt;&amp;#x27;{&amp;#x27;&lt;/span&gt;{&lt;span class="hljs-string"&gt;&amp;#x27;} print $1 {&amp;#x27;&lt;/span&gt;}&lt;span class="hljs-string"&gt;&amp;#x27;}&amp;#x27;&lt;/span&gt; | xargs -I x sh -c &lt;span class="hljs-string"&gt;&amp;#x27;pct status x -verbose &amp;amp;&amp;amp; echo ===&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt; &lt;p&gt;down here:&lt;/p&gt; &lt;div class="svelte-16b6hx2"&gt; &lt;textarea name="" placeholder="" rows="10" style="width:100%;height:300px;min-width:100%;max-width:100%;text-wrap:nowrap" class="svelte-16b6hx2"&gt;cpus: 4
 disk: 8607637504
 diskread: 5604175872
 diskwrite: 5664735232
@@ -253,7 +253,7 @@ type: lxc
 uptime: 0
 vmid: 121
 ===
-&lt;/textarea&gt;&lt;/div&gt; &lt;h2 class="h2-3"&gt;Paste the output of…&lt;/h2&gt; &lt;div class="code-container svelte-1alrmox"&gt;&lt;div class="copy-button svelte-1alrmox"&gt;&lt;span class="not-link svelte-he95jo"&gt;&lt;div style="width: default; height: 26px; pointer-events: auto; opacity: 100%; filter: none;" class="clickable svelte-73054b"&gt; 📋&lt;/div&gt;&lt;/span&gt;&lt;/div&gt; &lt;pre class="svelte-1alrmox"&gt;&lt;code&gt;&lt;span&gt;&lt;span class="hljs-built_in"&gt;cat&lt;/span&gt; /proc/meminfo&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt; &lt;p&gt;down here:&lt;/p&gt; &lt;div class="svelte-16b6hx2"&gt; &lt;textarea name="" placeholder="" rows="10" style="width:100%;height:300px;min-width:100%;max-width:100%;text-wrap:nowrap" class="svelte-16b6hx2"&gt;MemTotal:       48588200 kB
+&lt;/textarea&gt;&lt;/div&gt; &lt;h2 class="h2-3"&gt;Paste the output of…&lt;/h2&gt; &lt;div class="code-container svelte-1alrmox"&gt; &lt;pre class="svelte-1alrmox"&gt;&lt;code&gt;&lt;span&gt;&lt;span class="hljs-built_in"&gt;cat&lt;/span&gt; /proc/meminfo&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt; &lt;p&gt;down here:&lt;/p&gt; &lt;div class="svelte-16b6hx2"&gt; &lt;textarea name="" placeholder="" rows="10" style="width:100%;height:300px;min-width:100%;max-width:100%;text-wrap:nowrap" class="svelte-16b6hx2"&gt;MemTotal:       48588200 kB
 MemFree:         2121064 kB
 MemAvailable:    5148580 kB
 Buffers:          165496 kB
