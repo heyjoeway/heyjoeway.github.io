@@ -16,6 +16,10 @@
     });
 </script>
 
+<svelte:head>
+    <link rel="alternate" type="application/rss+xml" title={feed.meta.title} href={feed.rss}>
+</svelte:head>
+
 <div class="header-container">
     <!-- Yes you actually have to do it like this, prove me wrong -->
     {#await import(`../../src/feeds/${feed.id}/banner.jpg?as=run`) then { default: bannerSrc }}
