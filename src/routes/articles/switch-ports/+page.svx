@@ -4,8 +4,9 @@ date:   2022-11-13
 categories: games programming life
 last_modified_at: 2022-11-13
 comments: true
+unlisted: true
 ---
-I was considering making this intro a lot more long winded, but instead I'll just say this: my motivation for porting these games to the Switch mostly came from wanting to play them there myself. At the time I ported these games, the Switch was the best option to play these games on for several reasons:
+My motivation for porting these games to the Switch mostly came from wanting to play them there myself. At the time I ported these games, the Switch was the best option to play these games on for several reasons:
 
 - Easy to homebrew (if you have a vulnerable unit)
 - Dockable (obvious)
@@ -15,7 +16,7 @@ I was considering making this intro a lot more long winded, but instead I'll jus
 - Lightweight
 - Decent battery
 
-Obviously, I could've just put these games on a laptop and played them there, or used an Android phone and a controller, or whatever else, but it just doesn't fit the bill of having a console-like experience. The Switch is in my top 3 consoles with the GameCube. So, what did I want on there?
+Obviously, I could've just put these games on a laptop and played them there, or used an Android phone and a controller, or whatever else, but it just doesn't fit the bill of having a console-like experience. So, what did I want on there?
 
 ## Sonic Robo Blast 2
 
@@ -77,26 +78,6 @@ https://github.com/Eukaryot/sonic3air
 
 Sonic 3 AIR is a fan-done translation of the original Sonic 3 and Knuckles source code into a custom engine and scripting language, done by the legendary Eukaryot. I reached out to them before the source code for this recreation was public, and they agreed to give me access for the production of a Switch port. I got it up and running, feature-complete in about a week, including hardware rendering.
 
-# Why I Left, and an Apology
-
-This year has been filled with a lot of grief, anxiety, and pain. I had to make a lot of changes to find happiness. I'll probably write more about this towards the end of the year. One of those change included dropping maintenance of my Switch port to make time for things that mattered more to me: friends, family, my studies, and my career goals.
-
-On top of that, the whole motivation for wanting these ports had been torn to shreds... remember how I mentioned that the Switch and the GameCube were two of my favorite consoles? You may have also noticed all these screenshots are 16:10. Well, I've got something else sitting at number one now...
-
-<Figure>
-    <Image src={imgDeck} />
-</Figure>
-
-Yup. As soon as I got the thing in my hands, my motivation for Switch development honestly went out the window.
-
-- Similar form factor to the Switch
-- Better feeling controls
-- Easier to "homebrew" (I mean, it's just Arch underneath)
-- Don't have to develop dedicated ports
-- Plays literally everything else I want to play minus (online) Switch games
-
-Having grown up on homebrew and fan projects, I know how much it sucks to see something you like go unmaintained. Being on the other side of the fence now, I can see why so many people go ghost mode. I feel a bit guilty for dropping everything, but I need to change focus until I'm happy.
-
 <script lang="ts">
     import Figure from "$lib/Figure.svelte";
     import Image from "$lib/Image.svelte";
@@ -111,5 +92,4 @@ Having grown up on homebrew and fan projects, I know how much it sucks to see so
     import imgS2Pic2 from "./20221114185539_1.jpg?as=run";
     import imgS3AIRPic1 from "./20221114185702_1.jpg?as=run";
     import imgS3AIRPic2 from "./20221114185646_1.jpg?as=run";
-    import imgDeck from "./IMG_2002.jpg?as=run";
 </script>

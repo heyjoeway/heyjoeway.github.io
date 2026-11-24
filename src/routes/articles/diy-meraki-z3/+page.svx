@@ -1,7 +1,7 @@
 ---
 title: "Building a DIY Meraki Z3 with WireGuard and OPNsense"
 description: "A cheap VPS, a mini PC running OPNsense, and a full-tunnel WireGuard link. Plus a long detour through MTU hell that turned out to be a virtual NIC."
-categories: software linux
+categories: ai software linux
 comments: true
 ---
 I want to host a SaaS business. I also have a lot of old hardware sitting around that would totally be capable of handling that. VPSs start cheap, but can balloon in cost fast. However, I'm not too keen on exposing my residential IP for a business venture OR renting expensive-to-scale cloud infrastructure.

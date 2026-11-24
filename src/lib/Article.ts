@@ -15,6 +15,7 @@ export interface ArticleFrontmatter {
 	bgText: string | undefined;
 	comments: boolean | undefined;
 	last_modified_at: string | undefined;
+	unlisted: string | undefined;
 }
 
 export interface ArticleLoaded {

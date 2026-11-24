@@ -29,11 +29,13 @@
 </style>
 
 {#each articles as article}
-	<div>
-		<span class="meta">{formatDate(article.fm?.date)}</span>
-		<a href="{article.path}"><h2>{article.fm?.title}</h2></a>
-	</div>
-	<div class="peek">{getFirstParagraph(article.code + "")}</div>
-	<Tags tags={strToTagDetails(article.fm?.categories + "")} />
-	<br><br>
+	{#if !article.fm?.unlisted}
+		<div>
+			<span class="meta">{formatDate(article.fm?.date)}</span>
+			<a href="{article.path}"><h2>{article.fm?.title}</h2></a>
+		</div>
+		<div class="peek">{getFirstParagraph(article.code + "")}</div>
+		<Tags tags={strToTagDetails(article.fm?.categories + "")} />
+		<br>
+	{/if}
 {/each}

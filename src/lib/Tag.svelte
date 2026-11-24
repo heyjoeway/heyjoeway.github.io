@@ -1,14 +1,23 @@
 <script lang="ts">
 	export let url: string = "";
+	export let warn: boolean = false;
 	
 	import { createEventDispatcher } from 'svelte';
 	const dispatch = createEventDispatcher();
+
+	const classes = [
+		warn ? "warn" : ""
+	].join(" ");
 </script>
 
 {#if url}
-	<a href={url}><slot /></a>
+	<a href={url} class={classes}>
+		<slot />
+	</a>
 {:else}
-	<span on:click={() => dispatch('click')}><slot /></span>
+	<span on:click={() => dispatch('click')} class={classes}>
+		<slot />
+	</span>
 {/if}
 
 
@@ -28,5 +37,9 @@
 		position: relative;
 		box-sizing: border-box;
 		display: inline-block;
+		
+		&.warn {
+			background: color-mix(in srgb, var(--joeysvelte-action-colors-warning) 40%, transparent);;
+		}
 	}
 </style>
