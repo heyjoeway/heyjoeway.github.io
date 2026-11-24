@@ -3,14 +3,6 @@ title:  "One Shot: Minutes of Silence, Occasionally Interrupted By"
 date:   2026-07-11
 categories: ai tools
 ---
-<Image
-  src={imgSlop}
-  maxHeight="100px"
-  alt="Slop Advisory: Artificial Content"
-  hAlign="left"
-/>
-<br>
-
 Useful little HTML thingy Claude slopped out:
 
 > write an inline html app that allows me to upload an audio file and have it play after a random (configurable) amount of time infinitely. add a toggle to display the remaining time and a button to randomize the current time remaining
@@ -77,12 +69,7 @@ Useful little HTML thingy Claude slopped out:
   <audio bind:this={player} on:ended={handleEnded}></audio>
 </div>
 
-<script>
-  import Figure from "$lib/Figure.svelte";
-  import Image from "$lib/Image.svelte";
-
-  import imgSlop from "./slopadvisory.png?as=run";
-  
+<script> 
   import { onDestroy } from 'svelte';
 
   let player;

@@ -1,7 +1,6 @@
 <script lang="ts">
     import { listToTagDetails } from "$lib/Tags";
     import Tags from "$lib/Tags.svelte";
-    import Center from "$lib/Center.svelte";
     import Layout from "./Layout.svelte";
     
     export let data;

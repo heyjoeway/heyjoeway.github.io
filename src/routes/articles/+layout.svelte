@@ -20,7 +20,6 @@
 
 	
 	.times { 
-		display: inline;
 		text-align: right;
 		flex-shrink: 0;
 	}
@@ -33,14 +32,25 @@
 	time {
 		font-family: "franklin_gothicregular", sans-serif;
 		font-size: 15px;
-		margin-right: 8px;
 		vertical-align: middle;;
 	}
 	
 	.left {
 		display: flex;
 		flex-direction: column;
-		justify-content: start;
+		justify-content: space-between;
+	}
+	
+	.right { 
+		flex-shrink: 0;
+
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	h1 {
+		padding-top: 0;
 	}
 </style>
 
@@ -50,15 +60,21 @@
 	import ArticleLayout from "$lib/ArticleLayout.svelte";
 	import { strToTagDetails } from "$lib/Tags";
 	import Comments from "$lib/Comments.svelte";
+	import Image from "$lib/Image.svelte";
+
+	import imgSlop from "./slopadvisory.png?as=run";
 	
 	export let data;
+	
+	console.log(data);
 	
 	const bgText = data.fm.bgText ? data.fm.bgText : data.fm.title;
 	
 	const dateDetails = [
 		{ date: data.fm.date, type: "Published" },
 		{ date: data.fm.last_modified_at, type: "Last modified" }
-	]
+	];
+	
 </script>
 
 <ArticleLayout data={data} bgText={bgText}>
@@ -67,15 +83,25 @@
 			<h1>{data.fm.title}</h1>
 			<Tags tags={strToTagDetails(data.fm.categories)}></Tags>
 		</div>
-		<div class="times">
-			{#each dateDetails as dateDetail}
-				{#if dateDetail.date}
-					<time class="dt" datetime={dateDetail.date} itemprop="datePublished">
-						{dateDetail.type} {formatDate(dateDetail.date)}
-					</time>
-					<br>
-				{/if}
-			{/each}
+		<div class="right">
+			<div class="times">
+				{#each dateDetails as dateDetail}
+					{#if dateDetail.date}
+						<time class="dt" datetime={dateDetail.date} itemprop="datePublished">
+							{dateDetail.type} {formatDate(dateDetail.date)}
+						</time>
+						<br>
+					{/if}
+				{/each}
+			</div>
+			{#if data.fm.categories?.includes("ai")}
+				<Image
+					src={imgSlop}
+					maxHeight="60px"
+					alt="Slop Advisory: Artificial Content"
+					hAlign="center"
+				/>
+			{/if}
 		</div>
 	</div>
 	
