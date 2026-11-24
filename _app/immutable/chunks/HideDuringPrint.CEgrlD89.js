@@ -1,1 +1,0 @@
-import{a as i,t as o}from"./disclose-version.BHkXeLHK.js";import"./legacy.qqXksNzz.js";import{c as e,r as n}from"./runtime.BEdS-Pg2.js";import{s as p}from"./Button.svelte_svelte_type_style_lang.Dq0uybtK.js";var l=o('<span class="hide-during-print svelte-1azilyd"><!></span>');function c(r,t){var a=l(),s=e(a);p(s,t,"default",{},null),n(a),i(r,a)}export{c as H};
